@@ -1,0 +1,17 @@
+.intro_text_section {
+  width: 75%;
+}
+
+.bottom_logos {
+  width: 60%;
+}
+
+@media (max-width: 768px) {
+  .intro_text_section {
+    width: 100%;
+  }
+
+  .bottom_logos {
+    width: 100%;
+  }
+}
