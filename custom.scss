@@ -10,6 +10,9 @@ $theme-colors: (
   "cardImageBorder": rgba(55, 91, 210, 0.034),
   "cardDescriptionColor": #727272,
   "investmentGraphBg": #254ac7,
+  "tableFontColor": #a9a9a9,
+  "tableDataColor": #2c3131,
+  "success": #53d258,
 );
 
 @import "~bootstrap/scss/bootstrap.scss";

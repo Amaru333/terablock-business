@@ -1,4 +1,5 @@
 import React from "react";
+import BuyCryptoSection from "./Components/BuyCryptoSection";
 import FeaturesSection from "./Components/FeaturesSection";
 import IntroSection from "./Components/IntroSection";
 import InvestmentGraph from "./Components/InvestmentGraph";
@@ -11,6 +12,7 @@ function HomepageLayout() {
       <IntroSection />
       <FeaturesSection />
       <InvestmentGraph />
+      <BuyCryptoSection />
     </div>
   );
 }
