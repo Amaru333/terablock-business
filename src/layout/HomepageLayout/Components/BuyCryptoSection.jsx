@@ -12,7 +12,7 @@ function BuyCryptoSection() {
         </h3>
         <p className="text-primaryTextGray">Securely buy, sell, invest, track and transfer cryptocurrencies</p>
       </div>
-      <div className="mx-0 mx-md-5">
+      <div className="mx-4 mx-md-5">
         <BuyCryptoTable />
       </div>
     </div>

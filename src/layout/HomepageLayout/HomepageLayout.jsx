@@ -1,6 +1,7 @@
 import React from "react";
 import AboutTerablockSection from "./Components/AboutTerablockSection";
 import BuyCryptoSection from "./Components/BuyCryptoSection";
+import DescriptionSection from "./Components/DescriptionSection";
 import EssentialsSection from "./Components/EssentialsSection";
 import FeaturesSection from "./Components/FeaturesSection";
 import GetStartedSection from "./Components/GetStartedSection";
@@ -21,6 +22,7 @@ function HomepageLayout() {
       <GetStartedSection />
       <EssentialsSection />
       <QuizSection />
+      <DescriptionSection />
     </div>
   );
 }
