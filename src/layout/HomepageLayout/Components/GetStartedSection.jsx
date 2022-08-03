@@ -14,7 +14,7 @@ function GetStartedSection() {
         <p className="text-primaryTextGray">Get started in a few minutes with these easy steps.</p>
       </div>
       <div className="row mx-0 mx-md-5 mt-5">
-        <div className="col-12 col-md-4 px-0 px-sm-3 px-md-3">
+        <div className="col-12 col-md-4 px-3">
           <UICard>
             <div className="d-flex flex-row justify-content-between align-items-center">
               <div>
@@ -22,11 +22,11 @@ function GetStartedSection() {
               </div>
               <h1 className="text-lightBlueText fw-bolder">1</h1>
             </div>
-            <p className="fs-4 fw-bolder text-primaryBlue mt-2">Connect Web3 wallet</p>
-            <p className="fs-6 text-primaryTextGray">Follow simple step by step process to create a new Web3 wallet or connect an existing wallet.</p>
+            <p className="fs-4 fw-bolder text-primaryBlue mt-2 text-center text-md-start">Connect Web3 wallet</p>
+            <p className="fs-6 text-primaryTextGray text-center text-md-start">Follow simple step by step process to create a new Web3 wallet or connect an existing wallet.</p>
           </UICard>
         </div>
-        <div className="col-12 col-md-4 px-0 px-sm-3 px-md-3">
+        <div className="col-12 col-md-4 px-3">
           <UICard>
             <div className="d-flex flex-row justify-content-between align-items-center">
               <div>
@@ -34,11 +34,11 @@ function GetStartedSection() {
               </div>
               <h1 className="text-lightBlueText fw-bolder">2</h1>
             </div>
-            <p className="fs-4 fw-bolder text-primaryBlue mt-2">Add fund to your wallet</p>
-            <p className="fs-6 text-primaryTextGray">Easily buy cryptocurrencies with a bank card or transfer funds to your web3 wallet.</p>
+            <p className="fs-4 fw-bolder text-primaryBlue mt-2 text-center text-md-start">Add fund to your wallet</p>
+            <p className="fs-6 text-primaryTextGray text-center text-md-start">Easily buy cryptocurrencies with a bank card or transfer funds to your web3 wallet.</p>
           </UICard>
         </div>
-        <div className="col-12 col-md-4 px-0 px-sm-3 px-md-3">
+        <div className="col-12 col-md-4 px-3">
           <UICard>
             <div className="d-flex flex-row justify-content-between align-items-center">
               <div>
@@ -46,8 +46,8 @@ function GetStartedSection() {
               </div>
               <h1 className="text-lightBlueText fw-bolder">3</h1>
             </div>
-            <p className="fs-4 fw-bolder text-primaryBlue mt-2">Start trading instantly</p>
-            <p className="fs-6 text-primaryTextGray">You're good to go! Set up recurring buys for your investments and discover what TeraBlock has to offer.</p>
+            <p className="fs-4 fw-bolder text-primaryBlue mt-2 text-center text-md-start">Start trading instantly</p>
+            <p className="fs-6 text-primaryTextGray text-center text-md-start">You're good to go! Set up recurring buys for your investments and discover what TeraBlock has to offer.</p>
           </UICard>
         </div>
       </div>

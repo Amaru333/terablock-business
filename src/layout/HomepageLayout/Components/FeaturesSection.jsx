@@ -12,10 +12,10 @@ function FeaturesSection() {
         </h3>
         <p className="text-primaryTextGray">Whether you're starting with $100 or $100 million, we're here to help you better invest in cryptocurrencies.</p>
       </div>
-      <div className="row mx-5 px-4 px-md-5 mt-5">
+      <div className="row mx-5 px-0 px-md-5 mt-5">
         <div className="col-md-4">
           <UICard>
-            <div>
+            <div className="text-center text-md-start">
               <img src="./assets/images/simplified-logo.png" className="bg-cardImageBg border border-2 border-cardImageBorder p-3 rounded" style={{ "--bs-border-opacity": 0.2 }} />
               <h4 className="text-primaryBlue mt-3">Simplified</h4>
               <p className="text-cardDescriptionColor">The tools and information you need to buy, sell, trade, invest, and manage cryptocurrencies.</p>
@@ -27,7 +27,7 @@ function FeaturesSection() {
         </div>
         <div className="col-md-4">
           <UICard>
-            <div>
+            <div className="text-center text-md-start">
               <img src="./assets/images/optimised-logo.png" className="bg-cardImageBg border border-2 border-cardImageBorder p-3 rounded" style={{ "--bs-border-opacity": 0.2 }} />
               <h4 className="text-primaryBlue mt-3">Optimised</h4>
               <p className="text-cardDescriptionColor">The tools and information you need to buy, sell, trade, invest, and manage cryptocurrencies.</p>
@@ -39,7 +39,7 @@ function FeaturesSection() {
         </div>
         <div className="col-md-4">
           <UICard>
-            <div>
+            <div className="text-center text-md-start">
               <img src="./assets/images/decentralized-logo.png" className="bg-cardImageBg border border-2 border-cardImageBorder p-3 rounded" style={{ "--bs-border-opacity": 0.2 }} />
               <h4 className="text-primaryBlue mt-3">Decentralised</h4>
               <p className="text-cardDescriptionColor">The tools and information you need to buy, sell, trade, invest, and manage cryptocurrencies.</p>
