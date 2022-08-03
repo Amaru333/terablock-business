@@ -1,4 +1,5 @@
 import React from "react";
+import AboutTerablockSection from "./Components/AboutTerablockSection";
 import BuyCryptoSection from "./Components/BuyCryptoSection";
 import FeaturesSection from "./Components/FeaturesSection";
 import IntroSection from "./Components/IntroSection";
@@ -13,6 +14,7 @@ function HomepageLayout() {
       <FeaturesSection />
       <InvestmentGraph />
       <BuyCryptoSection />
+      <AboutTerablockSection />
     </div>
   );
 }
