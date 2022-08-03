@@ -1,0 +1,21 @@
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #254ac7;
+  margin-top: 7px;
+}
+
+.flex {
+  display: flex;
+}
+
+.half_container {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .half_container {
+    width: 90%;
+  }
+}

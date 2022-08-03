@@ -12,7 +12,7 @@ function FeaturesSection() {
         </h3>
         <p className="text-primaryTextGray">Whether you're starting with $100 or $100 million, we're here to help you better invest in cryptocurrencies.</p>
       </div>
-      <div className="row mx-0 px-4 px-md-5 mt-5">
+      <div className="row mx-5 px-4 px-md-5 mt-5">
         <div className="col-md-4">
           <UICard>
             <div>

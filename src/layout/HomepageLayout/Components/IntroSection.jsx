@@ -41,7 +41,7 @@ function IntroSection() {
         <img src="./assets/images/news-btc.png" />
         <img src="./assets/images/coin-quora.png" />
       </div>
-      <div className="row row-cols-3 row-cols-md-5 bg-primaryBlue px-4 mx-0">
+      <div className="row row-cols-3 row-cols-md-5 bg-backgroundBlue px-4 mx-0">
         <div className="py-4 col">
           <p className="mb-0 text-center text-white">$ 20,000,000</p>
           <p className="mb-0 text-center text-white">Transaction Volume</p>
