@@ -13,7 +13,7 @@ function GetStartedSection() {
         </h3>
         <p className="text-primaryTextGray">Get started in a few minutes with these easy steps.</p>
       </div>
-      <div className="row mx-0 mx-md-5 mt-5">
+      <div className="row mx-5 mt-5">
         <div className="col-12 col-md-4 px-3">
           <UICard>
             <div className="d-flex flex-row justify-content-between align-items-center">

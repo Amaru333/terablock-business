@@ -6,6 +6,7 @@ import FeaturesSection from "./Components/FeaturesSection";
 import GetStartedSection from "./Components/GetStartedSection";
 import IntroSection from "./Components/IntroSection";
 import InvestmentGraph from "./Components/InvestmentGraph";
+import QuizSection from "./Components/QuizSection";
 import TopNotification from "./Components/TopNotification";
 
 function HomepageLayout() {
@@ -19,6 +20,7 @@ function HomepageLayout() {
       <AboutTerablockSection />
       <GetStartedSection />
       <EssentialsSection />
+      <QuizSection />
     </div>
   );
 }
