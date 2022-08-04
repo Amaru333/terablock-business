@@ -3,6 +3,7 @@ import AboutTerablockSection from "./Components/AboutTerablockSection";
 import BuyCryptoSection from "./Components/BuyCryptoSection";
 import DescriptionSection from "./Components/DescriptionSection";
 import EssentialsSection from "./Components/EssentialsSection";
+import FAQSection from "./Components/FAQSection";
 import FeaturesSection from "./Components/FeaturesSection";
 import GetStartedSection from "./Components/GetStartedSection";
 import IntroSection from "./Components/IntroSection";
@@ -23,6 +24,7 @@ function HomepageLayout() {
       <EssentialsSection />
       <QuizSection />
       <DescriptionSection />
+      <FAQSection />
     </div>
   );
 }
