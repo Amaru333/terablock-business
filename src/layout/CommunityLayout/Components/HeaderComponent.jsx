@@ -23,7 +23,7 @@ function HeaderComponent() {
           )}
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
-          <img src="./assets/images/community-header.png" className="pe-0 pe-md-5" />
+          <img src="./assets/images/community-header.png" className="pe-0 mt-3 mt-md-0 pe-md-5" />
         </div>
       </div>
     </div>
