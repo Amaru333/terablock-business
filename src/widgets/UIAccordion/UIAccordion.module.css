@@ -10,7 +10,7 @@
 }
 
 .header::after {
-  background: url("../../../public/assets/icons/accordion-close.svg") !important;
+  background: url("../../../public/assets/icons/accordion-close.svg");
   padding: 11px;
 }
 
