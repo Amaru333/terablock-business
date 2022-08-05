@@ -6,9 +6,7 @@ function RewardsTypeSection() {
   return (
     <div className="pb-5">
       <div className="text-center mt-5 px-4 px-md-5">
-        <h4 className="text-primaryTextDark fw-normal">
-          <b>Types of Rewards</b>
-        </h4>
+        <h4 className="text-primaryTextDark">Types of Rewards</h4>
         <p className="text-primaryTextGray mb-0">TeraBlock Rewards incentivize users to acquire and hold TBC.</p>
         <p className="text-primaryTextGray">Here are the different types of rewards available for users participating in TeraBlock's staking:</p>
       </div>

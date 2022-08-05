@@ -29,7 +29,7 @@ function AmbassadorProgramSection() {
         </p>
         <img src="./assets/icons/underline-gray.svg" width="90px" />
       </div>
-      <div className="row mx-0 ps-3 ps-md-5 d-flex flex-column-reverse flex-md-row">
+      <div className="row mx-0 px-3 px-md-5 d-flex flex-column-reverse flex-md-row">
         <div className="col-12 col-md-6 d-flex flex-column justify-content-around pt-0 pt-md-5 pb-0 pb-md-5">
           <DataCard image="./assets/images/priority-access.png" title="Priority access to our products" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
           <DataCard image="./assets/images/giveaway.png" title="Take part in giveaways" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
