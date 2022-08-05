@@ -30,9 +30,9 @@ function CommunityConnectionsSection() {
         <div>
           <div className="d-flex align-items-center">
             <div>
-              <img src={logo} />
+              <img src={logo} width="35px" />
             </div>
-            <p className="h3 fw-bolder ms-2 ms-md-3">{title}</p>
+            <p className="h3 fw-bolder ms-2 ms-md-3 mb-0">{title}</p>
           </div>
           <p className="mb-0 mt-3 text-primaryBlue fw-bold">{message} →</p>
         </div>
