@@ -1,6 +1,7 @@
 import React from "react";
 import HeaderComponent from "./Components/HeaderComponent";
 import RewardsProgramSection from "./Components/RewardsProgramSection";
+import RewardsTypeSection from "./Components/RewardsTypeSection";
 import StayConnectedSection from "./Components/StayConnectedSection";
 
 function CommunityLayout() {
@@ -9,6 +10,7 @@ function CommunityLayout() {
       <HeaderComponent />
       <StayConnectedSection />
       <RewardsProgramSection />
+      <RewardsTypeSection />
     </div>
   );
 }
