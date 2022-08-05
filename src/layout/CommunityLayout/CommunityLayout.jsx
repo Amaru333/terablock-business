@@ -1,5 +1,6 @@
 import React from "react";
 import AmbassadorProgramSection from "./Components/AmbassadorProgramSection";
+import CommunityConnectionsSection from "./Components/CommunityConnectionsSection";
 import HeaderComponent from "./Components/HeaderComponent";
 import JoinAmbassador from "./Components/JoinAmbassador";
 import RewardsProgramSection from "./Components/RewardsProgramSection";
@@ -15,6 +16,7 @@ function CommunityLayout() {
       <RewardsTypeSection />
       <AmbassadorProgramSection />
       <JoinAmbassador />
+      <CommunityConnectionsSection />
     </div>
   );
 }

@@ -25,7 +25,7 @@ function JoinAmbassador() {
   const JoinCard = ({ text, index, image }) => {
     return (
       <div className="d-flex align-items-center">
-        <div className="flex-grow-1">
+        <div className="flex-grow-1" style={{ textAlign: "-webkit-center" }}>
           <div className="card shadow p-3 mb-5 mb-md-0 bg-white rounded mx-0 border-primaryText" style={{ "--bs-border-opacity": 0.25, maxWidth: width > 768 && "260px" }}>
             <div className="d-flex justify-content-between pe-2">
               <div>
@@ -33,7 +33,7 @@ function JoinAmbassador() {
               </div>
               <h1 className="text-lightBlueText fw-bolder">{index + 1}</h1>
             </div>
-            <p className="mb-0 mt-3 text-primaryDark fw-bolder">{text}</p>
+            <p className="mb-0 mt-3 text-primaryDark fw-bolder text-start">{text}</p>
           </div>
         </div>
       </div>
