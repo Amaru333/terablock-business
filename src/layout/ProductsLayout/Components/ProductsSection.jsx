@@ -117,7 +117,7 @@ function ProductsSection() {
           </div>
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center">
-          <img src="./assets/images/wallet-management.png" className={width < 768 && "w-100"} />
+          <img src="./assets/images/wallet-management.png" className={width < 768 ? "w-100" : ""} />
         </div>
       </div>
     </div>

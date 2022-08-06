@@ -1,0 +1,8 @@
+.start_journey {
+  background-image: url("../../../../public/assets/images/featured-bg-large.png");
+  width: 75%;
+  margin: auto;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+}

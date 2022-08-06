@@ -15,7 +15,7 @@ function ProductsHeaderSection() {
           {width > 768 && <UIButton type="primary">Get Started</UIButton>}
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center">
-          <img src="./assets/images/product-header.png" className={width < 768 && "w-100"} />
+          <img src="./assets/images/product-header.png" className={width < 768 ? "w-100" : ""} />
         </div>
         {width < 768 && (
           <div className="d-flex justify-content-center mt-2">

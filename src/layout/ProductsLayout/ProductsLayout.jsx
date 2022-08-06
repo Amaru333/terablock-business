@@ -1,5 +1,6 @@
 import React from "react";
 import DescriptionSection from "./Components/DescriptionSection";
+import FeaturedInSection from "./Components/FeaturedInSection";
 import ProductsHeaderSection from "./Components/ProductsHeaderSection";
 import ProductsSection from "./Components/ProductsSection";
 import RecentNewsSection from "./Components/RecentNewsSection";
@@ -11,6 +12,7 @@ function ProductsLayout() {
       <ProductsSection />
       <DescriptionSection />
       <RecentNewsSection />
+      <FeaturedInSection />
     </div>
   );
 }

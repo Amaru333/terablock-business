@@ -32,7 +32,7 @@ function RecentNewsSection() {
     },
   ];
   return (
-    <div>
+    <div className="pb-4">
       <div className="text-center mt-5 px-4 px-md-5 mx-0 mx-md-5 pb-5">
         <h3 className="text-primaryTextDark">
           <b>
@@ -47,7 +47,7 @@ function RecentNewsSection() {
           </div>
         ))}
       </div>
-      <div className="d-flex justify-content-center my-4">
+      <div className="d-flex justify-content-center my-5">
         <UIButton type="primary">Learn More</UIButton>
       </div>
     </div>
