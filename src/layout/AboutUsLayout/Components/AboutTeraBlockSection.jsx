@@ -4,7 +4,7 @@ import { getScreenSize } from "../../../functions/getScreenSize";
 function AboutTeraBlockSection() {
   const width = getScreenSize().width;
   return (
-    <div className="py-5">
+    <div className="py-5 bg-white">
       <div className="text-center mb-2 px-3">
         <h3 className="text-primaryTextDark">
           <b>
