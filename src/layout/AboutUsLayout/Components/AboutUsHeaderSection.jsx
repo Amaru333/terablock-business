@@ -28,7 +28,7 @@ function AboutUsHeaderSection() {
             </div>
           )}
         </div>
-        <div className="bg-primaryBlue" style={width > 768 ? { width: "10vw", height: "25vh", position: "fixed", top: 0, right: 0, zIndex: -1 } : { width: "15vw", height: "10vh", position: "absolute", right: 0, bottom: "10%", zIndex: -1 }}></div>
+        <div className="bg-primaryBlue" style={width > 768 ? { width: "10vw", height: "25vh", position: "absolute", top: 0, right: 0, zIndex: -1 } : { width: "15vw", height: "10vh", position: "absolute", right: 0, bottom: "10%", zIndex: -1 }}></div>
       </div>
       <img src="./assets/icons/3x4.svg" width="30px" className="ms-5 mt-3" />
     </div>

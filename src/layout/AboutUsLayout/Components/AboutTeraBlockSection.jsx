@@ -16,7 +16,7 @@ function AboutTeraBlockSection() {
       <div className="row mx-0 px-2 px-md-5 pt-3 d-flex flex-column-reverse flex-md-row">
         <div className="col-12 col-md-6 mt-4 mt-md-0 d-flex align-items-center">
           <div>
-            <p className="text-primaryTextDark fs-4 text-center text-md-start">What is TeraBlock?</p>
+            <p className="text-primaryTextDark fs-4 text-center text-md-start fw-bold">What is TeraBlock?</p>
             <p className="text-cardDescriptionColor fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
             <p className="text-cardDescriptionColor fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
           </div>
