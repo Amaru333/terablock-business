@@ -12,7 +12,7 @@ function AboutUsHeaderSection() {
             <h1 className="text-primaryTextDark">
               We are a team of Creators & Innovators<span className="text-primaryViolet">.</span>
             </h1>
-            <p className="text-primaryTextGray mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p className="text-primaryTextGray mb-0 fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             {width > 768 && (
               <div className="mt-4">
                 <UIButton type="primary">Know more</UIButton>

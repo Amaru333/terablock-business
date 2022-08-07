@@ -11,7 +11,7 @@ function AboutTeraBlockSection() {
             About TeraBlock<span className="text-primaryViolet">.</span>
           </b>
         </h3>
-        <p className="text-primaryTextGray">Get to know the people and communities pushing the crypto economy forward</p>
+        <p className="text-primaryTextGray fs-6">Get to know the people and communities pushing the crypto economy forward</p>
       </div>
       <div className="row mx-0 px-2 px-md-5 pt-3 d-flex flex-column-reverse flex-md-row">
         <div className="col-12 col-md-6 mt-4 mt-md-0 d-flex align-items-center">
