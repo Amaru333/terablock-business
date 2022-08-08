@@ -41,7 +41,7 @@ function JoinAmbassador() {
   };
   return (
     <div className="bg-white pb-5">
-      <div className="text-center mt-5 px-4 px-md-5">
+      <div className="text-center px-4 px-md-5">
         <h4 className="text-primaryTextDark">Steps to join Ambassador Program</h4>
         <p className="text-primaryTextGray">Lets look at the steps involved in joining the Ambassador Program</p>
       </div>

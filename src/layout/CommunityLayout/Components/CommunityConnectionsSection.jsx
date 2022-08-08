@@ -40,8 +40,8 @@ function CommunityConnectionsSection() {
     );
   };
   return (
-    <div>
-      <div className="text-center mt-5 px-4 px-md-5">
+    <div className="bg-white">
+      <div className="text-center pt-5 px-4 px-md-5">
         <h3 className="text-primaryTextDark">
           <b>
             Connect with the global community<span className="text-primaryViolet">.</span>
@@ -56,6 +56,7 @@ function CommunityConnectionsSection() {
           </div>
         ))}
       </div>
+      <img src="./assets/icons/4x3.svg" style={{ width: "50px" }} className="pb-3" />
     </div>
   );
 }

@@ -17,7 +17,7 @@ function AmbassadorProgramSection() {
     );
   };
   return (
-    <div>
+    <div className="bg-white py-5">
       <div className="text-center mt-5 px-4 px-md-5">
         <h3 className="text-primaryTextDark">
           <b>

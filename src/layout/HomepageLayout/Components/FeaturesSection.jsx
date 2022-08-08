@@ -1,7 +1,9 @@
 import React from "react";
+import { getScreenSize } from "../../../functions/getScreenSize";
 import UICard from "../../../widgets/UICard/UICard";
 
 function FeaturesSection() {
+  const width = getScreenSize().width;
   return (
     <div>
       <div className="text-center mt-5 px-4 px-md-5">
@@ -12,7 +14,7 @@ function FeaturesSection() {
         </h3>
         <p className="text-primaryTextGray">Whether you're starting with $100 or $100 million, we're here to help you better invest in cryptocurrencies.</p>
       </div>
-      <div className="row mx-5 px-0 px-md-5 mt-5">
+      <div className="row mx-5 px-0 px-md-5 mt-5 position-relative">
         <div className="col-md-4">
           <UICard>
             <div className="text-center text-md-start">
@@ -49,6 +51,7 @@ function FeaturesSection() {
             </div>
           </UICard>
         </div>
+        {width > 768 && <img src="./assets/icons/4x5.svg" style={{ width: "60px", position: "absolute", bottom: "2rem", left: "3rem" }} />}
       </div>
     </div>
   );

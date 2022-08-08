@@ -1,8 +1,10 @@
 import React from "react";
 import CardWithLogo from "../../../common/Cards/CardWithLogo";
+import { getScreenSize } from "../../../functions/getScreenSize";
 import UIButton from "../../../widgets/UIButtons/UIButton";
 
 function RewardsTypeSection() {
+  const width = getScreenSize().width;
   return (
     <div className="pb-5">
       <div className="text-center mt-5 px-4 px-md-5">
@@ -10,7 +12,7 @@ function RewardsTypeSection() {
         <p className="text-primaryTextGray mb-0">TeraBlock Rewards incentivize users to acquire and hold TBC.</p>
         <p className="text-primaryTextGray">Here are the different types of rewards available for users participating in TeraBlock's staking:</p>
       </div>
-      <div className="row mx-4 mx-md-5 mt-5">
+      <div className="row mx-4 mx-md-5 mt-5 position-relative">
         <div className="col-12 col-md-4">
           <CardWithLogo image="./assets/icons/percent.svg" title="Earn Interest">
             Earn a minimum 30% APR on TBC Staking Pools under the TeraBlock Earn protocol.
@@ -26,6 +28,7 @@ function RewardsTypeSection() {
             25% of the total fees collected on the TeraBlock ecosystem will be distributed among TeraBlock stakers as loyalty rewards.
           </CardWithLogo>
         </div>
+        {width > 768 && <img src="./assets/icons/4x5.svg" style={{ width: "50px", position: "absolute", bottom: "2rem", left: "0.5rem" }} />}
       </div>
       <div className="d-flex flex-row justify-content-center">
         <UIButton type="primary">Apply Now</UIButton>
