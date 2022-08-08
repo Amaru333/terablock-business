@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../common/Footer/Footer";
 import AboutSwidgeSection from "./Components/AboutSwidgeSection";
 import GamersSection from "./Components/GamersSection";
 import SwidgePageHeader from "./Components/SwidgePageHeader";

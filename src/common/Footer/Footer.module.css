@@ -1,0 +1,11 @@
+.horizontal_line {
+  height: 1px;
+  background-color: #c2c2c2;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .horizontal_line {
+    width: 50%;
+  }
+}
