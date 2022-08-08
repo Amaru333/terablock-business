@@ -1,11 +1,6 @@
 import React from "react";
 import { getScreenSize } from "../../../functions/getScreenSize";
-import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import { makeStyles } from "@mui/styles";
+
 import UIButton from "../../../widgets/UIButtons/UIButton";
 
 // function TabPanel(props) {
