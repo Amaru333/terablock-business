@@ -1,4 +1,5 @@
 import React from "react";
+import AboutSwidgeSection from "./Components/AboutSwidgeSection";
 import GamersSection from "./Components/GamersSection";
 import SwidgePageHeader from "./Components/SwidgePageHeader";
 import TeraBlockSwidgeSection from "./Components/TeraBlockSwidgeSection";
@@ -9,6 +10,7 @@ function SwidgePageLayout() {
       <SwidgePageHeader />
       <GamersSection />
       <TeraBlockSwidgeSection />
+      <AboutSwidgeSection />
     </div>
   );
 }

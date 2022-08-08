@@ -3,7 +3,7 @@ import CardWithLogo from "../../../common/Cards/CardWithLogo";
 
 function StayConnectedSection() {
   return (
-    <div className="bg-white">
+    <div className="bg-white py-5">
       <div className="text-center mt-5 px-4 px-md-5">
         <h3 className="text-primaryTextDark">
           <b>
