@@ -12,7 +12,12 @@ function ProductsHeaderSection() {
             TeraBlock products built for all<span className="text-primaryViolet">.</span>
           </h1>
           <p className="text-primaryTextGray mb-0">Truly decentralised app that gives you the tools, inspiration, and support you need to become a better crypto investor.</p>
-          {width > 768 && <UIButton type="primary">Get Started</UIButton>}
+          {width > 768 && (
+            <>
+              <UIButton type="primary">Get Started</UIButton>
+              <img src="./assets/icons/3x4.svg" style={{ width: "30px" }} />
+            </>
+          )}
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center">
           <img src="./assets/images/product-header.png" className={width < 768 ? "w-100" : ""} />

@@ -24,8 +24,14 @@ body {
   background: #f8f9fc !important;
 }
 
-.visible50 {
-  width: 50% !important;
+.primary-gradient {
+  background: rgb(35, 73, 198) !important;
+  background: linear-gradient(90deg, rgba(35, 73, 198, 1) 0%, rgba(79, 114, 233, 1) 96%) !important;
+}
+
+.primary-reverse-gradient {
+  background: rgb(75, 112, 232) !important;
+  background: linear-gradient(138deg, rgba(75, 112, 232, 1) 0%, rgba(11, 58, 211, 1) 96%) !important;
 }
 
 @import "~bootstrap/scss/bootstrap.scss";

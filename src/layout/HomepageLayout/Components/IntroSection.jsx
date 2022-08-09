@@ -49,7 +49,7 @@ function IntroSection() {
       </div>
       {width > 768 && <img src="./assets/icons/3x4.svg" className="position-absolute" style={{ width: "30px", bottom: "7rem", left: "1rem" }} />}
 
-      <div className="row bg-backgroundBlue px-4 mx-0 justify-content-center">
+      <div className="row primary-gradient px-4 mx-0 justify-content-center">
         <div className="py-4 col-4 col-md">
           <p className="mb-0 text-center text-white">$ 20,000,000</p>
           <p className="mb-0 text-center text-white">Transaction Volume</p>

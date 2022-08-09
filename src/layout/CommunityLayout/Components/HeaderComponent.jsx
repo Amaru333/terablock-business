@@ -5,7 +5,7 @@ import UIButton from "../../../widgets/UIButtons/UIButton";
 function HeaderComponent() {
   const screenSize = getScreenSize();
   return (
-    <div className="bg-primaryBlue">
+    <div className="primary-reverse-gradient">
       <div className="row mx-0 px-3 px-md-5 py-5">
         <div className="col-12 col-md-6 text-center text-md-start d-flex flex-column justify-content-evenly">
           <div className={screenSize.width > 768 ? "w-75" : "w-100"}>

@@ -33,7 +33,7 @@ function EssentialsSection() {
     },
   ];
   return (
-    <div className="bg-primaryBlue pb-5">
+    <div className="primary-gradient pb-5">
       <div className="text-center mt-5 px-4 px-md-5 pb-3">
         <h3 className="text-white pt-5">
           <b>
