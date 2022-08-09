@@ -1,11 +1,14 @@
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useState } from "react";
 import { getScreenSize } from "../../functions/getScreenSize";
 import UIButton from "../../widgets/UIButtons/UIButton";
+
+import HeaderStyle from "./Header.module.css";
 
 function Header() {
   const router = useRouter();
   const width = getScreenSize().width;
+  const [isOpen, setIsOpen] = useState(false);
   const NavbarMenu = ({ name, link }) => {
     return (
       <p className="mb-0 px-3" onClick={() => router.push(link)} style={{ fontSize: "14px", fontWeight: 500, cursor: "pointer" }}>
@@ -34,6 +37,10 @@ function Header() {
       name: "Community",
       link: "/community",
     },
+    {
+      name: "Swidge",
+      link: "/swidge",
+    },
   ];
   if (width > 1000) {
     return (
@@ -60,8 +67,28 @@ function Header() {
           <UIButton type="primary">
             <p className="mb-0 fs-6">Get Started</p>
           </UIButton>
-          <img src="./assets/icons/hamburger-menu.svg" className="ms-2" />
+          <img src="./assets/icons/hamburger-menu.svg" style={{ cursor: "pointer" }} className="ms-2" onClick={() => setIsOpen(true)} />
         </div>
+        {isOpen && (
+          <>
+            <div className={HeaderStyle.navbar_container} onClick={() => setIsOpen(false)}></div>
+            <div className={["bg-primaryDark d-flex flex-column align-items-end pe-4", HeaderStyle.navbar_mobile].join(" ")}>
+              <img src="./assets/icons/close_button.svg" className="my-5" style={{ cursor: "pointer" }} onClick={() => setIsOpen(false)} />
+              {menu_items.map((item) => (
+                <p
+                  onClick={() => {
+                    router.push(item.link);
+                    setIsOpen(false);
+                  }}
+                  className="fw-bolder text-white fs-5"
+                  style={{ cursor: "pointer" }}
+                >
+                  {item.name}
+                </p>
+              ))}
+            </div>
+          </>
+        )}
       </div>
     );
   }

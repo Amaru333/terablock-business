@@ -6,6 +6,7 @@ import Script from "next/script";
 
 import FooterStyle from "./Footer.module.css";
 import LanguageSelector from "../Inputs/LanguageSelector/LanguageSelector";
+import { useRouter } from "next/router";
 
 function Footer() {
   const sitemap_data = [
@@ -13,33 +14,43 @@ function Footer() {
       title: "TBC Token",
       pages: [
         {
+          link: "/",
           name: "Stake TBC",
         },
         {
+          link: "/",
           name: "Buy TBC on PancakeSwap",
         },
         {
+          link: "/",
           name: "Buy TBC on HitBTC",
         },
         {
+          link: "/",
           name: "Buy TBC on FMFW.io",
         },
         {
+          link: "/",
           name: "TBC on BSC",
         },
         {
+          link: "/",
           name: "TBC on Etherscan",
         },
         {
+          link: "/",
           name: "TBC on CoinMarketCap",
         },
         {
+          link: "/",
           name: "TBC on CoinGecko",
         },
         {
+          link: "/",
           name: "Tokenomics",
         },
         {
+          link: "/",
           name: "Utility",
         },
       ],
@@ -48,27 +59,35 @@ function Footer() {
       title: "Company",
       pages: [
         {
+          link: "/about-us",
           name: "About",
         },
         {
+          link: "/",
           name: "Careers",
         },
         {
+          link: "/",
           name: "Resources",
         },
         {
+          link: "/",
           name: "Press",
         },
         {
+          link: "/",
           name: "Security",
         },
         {
+          link: "/",
           name: "Token Listing",
         },
         {
+          link: "/",
           name: "Partners & Investors",
         },
         {
+          link: "/",
           name: "Legacy & Privacy",
         },
       ],
@@ -77,30 +96,39 @@ function Footer() {
       title: "Products",
       pages: [
         {
+          link: "/",
           name: "Get Started",
         },
         {
+          link: "/",
           name: "Buy",
         },
         {
+          link: "/",
           name: "Coins List",
         },
         {
+          link: "/",
           name: "Earn",
         },
         {
+          link: "/",
           name: "Convert",
         },
         {
+          link: "/",
           name: "Bridge",
         },
         {
+          link: "/",
           name: "Rewards Program",
         },
         {
+          link: "/",
           name: "Referral Program",
         },
         {
+          link: "/",
           name: "Ambassador Program",
         },
       ],
@@ -109,15 +137,19 @@ function Footer() {
       title: "Support",
       pages: [
         {
+          link: "/",
           name: "Help Center",
         },
         {
+          link: "/",
           name: "Contacts",
         },
         {
+          link: "/",
           name: "Bug Bounty",
         },
         {
+          link: "/",
           name: "Status",
         },
       ],
@@ -126,35 +158,45 @@ function Footer() {
       title: "Learn",
       pages: [
         {
+          link: "/",
           name: "Blog",
         },
         {
+          link: "/",
           name: "Browse Cryptocurrencies",
         },
         {
+          link: "/",
           name: "Crypto Basics",
         },
         {
+          link: "/",
           name: "How to set up a web3 wallet?",
         },
         {
+          link: "/",
           name: "How to buy crypto?",
         },
         {
+          link: "/",
           name: "What is Bitcoin & Ethereum?",
         },
         {
+          link: "/",
           name: "What is DeFi?",
         },
         {
+          link: "/",
           name: "What is Blockchain?",
         },
         {
+          link: "/",
           name: "What is staking?",
         },
       ],
     },
   ];
+  const router = useRouter();
   const width = getScreenSize().width;
 
   const Newsletter = () => {
@@ -177,7 +219,9 @@ function Footer() {
       <div>
         <p className="h4 mb-3">{data.title}</p>
         {data.pages.map((page) => (
-          <p className="mb-0 fw-light my-2">{page.name}</p>
+          <p className="mb-0 fw-light my-2" style={{ cursor: "pointer" }} onClick={() => router.push(page.link)}>
+            {page.name}
+          </p>
         ))}
       </div>
     );
