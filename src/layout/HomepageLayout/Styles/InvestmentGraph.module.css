@@ -14,6 +14,52 @@
   width: 50%;
 }
 
+.graph_background {
+  width: 100%;
+  background: linear-gradient(180deg, #254ac7 50%, #ffffff00 50%);
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background-color: rgb(227, 41, 126);
+  outline: none;
+  opacity: 1;
+}
+
+.slider::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 24px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border: 0;
+  border-radius: 50%;
+  background-image: url("../../../../public/assets/images/thumb.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 24px;
+  border: 0;
+  border-radius: 50%;
+  background-image: url("../../../../public/assets/images/thumb.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .half_container {
     width: 90%;
