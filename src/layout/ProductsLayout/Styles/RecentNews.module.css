@@ -1,5 +1,6 @@
 .horizontal_scroll {
   overflow-x: scroll;
+  scroll-behavior: smooth;
 }
 .horizontal_scroll::-webkit-scrollbar {
   display: none;
