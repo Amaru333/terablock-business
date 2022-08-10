@@ -20,7 +20,7 @@ function SwidgePageHeader() {
             )}
           </div>
           <div className="col-12 col-md-6 d-flex justify-content-center">
-            <img src="./assets/images/swidge-header.png" className={width < 768 ? "w-100 mx-5 px-2" : "w-75"} style={{ zIndex: 1 }} />
+            <img src="./assets/images/swidge-header.png" style={{ zIndex: 1, maxWidth: width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
           </div>
           {width < 768 && (
             <div className="d-flex justify-content-center mt-5">

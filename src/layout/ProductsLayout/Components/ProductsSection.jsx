@@ -72,7 +72,7 @@ function ProductsSection() {
           </div>
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center">
-          <img src="./assets/images/wallet-management.png" className={width < 768 ? "w-100" : ""} />
+          <img src="./assets/images/wallet-management.png" style={{ maxWidth: width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
         </div>
       </div>
     );
@@ -106,7 +106,7 @@ function ProductsSection() {
           </div>
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center">
-          <img src="./assets/images/bridge-tab.png" className={width < 768 ? "w-100" : ""} />
+          <img src="./assets/images/bridge-tab.png" style={{ maxWidth: width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
         </div>
       </div>
     );

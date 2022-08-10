@@ -20,7 +20,7 @@ function ProductsHeaderSection() {
           )}
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center">
-          <img src="./assets/images/product-header.png" className={width < 768 ? "w-100" : ""} />
+          <img src="./assets/images/product-header.png" style={{ maxWidth: width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
         </div>
         {width < 768 && (
           <div className="d-flex justify-content-center mt-2">

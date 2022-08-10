@@ -12,7 +12,7 @@ function RewardsTypeSection() {
         <p className="text-primaryTextGray mb-0">TeraBlock Rewards incentivize users to acquire and hold TBC.</p>
         <p className="text-primaryTextGray">Here are the different types of rewards available for users participating in TeraBlock's staking:</p>
       </div>
-      <div className="row mx-4 mx-md-5 mt-5 position-relative">
+      <div className="row mx-4 mx-md-0 mx-xl-5 mt-5 position-relative">
         <div className="col-12 col-md-4">
           <CardWithLogo image="./assets/icons/percent.svg" title="Earn Interest">
             Earn a minimum 30% APR on TBC Staking Pools under the TeraBlock Earn protocol.

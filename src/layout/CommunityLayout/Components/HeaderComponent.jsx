@@ -26,7 +26,7 @@ function HeaderComponent() {
           )}
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
-          <img src="./assets/images/community-header.png" className={`pe-0 mt-3 mt-md-0 pe-md-5 ${screenSize.width < 768 && "w-100"}`} />
+          <img src="./assets/images/community-header.png" className={`pe-0 mt-3 mt-md-0 pe-md-5`} style={{ maxWidth: screenSize.width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
         </div>
       </div>
     </div>

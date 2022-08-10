@@ -2,8 +2,8 @@ import React from "react";
 import { getScreenSize } from "../../../functions/getScreenSize";
 
 function AmbassadorProgramSection() {
+  const width = getScreenSize().width;
   const DataCard = ({ image, title, description }) => {
-    const width = getScreenSize().width;
     return (
       <div className={`d-flex ${width > 768 && "w-75"}`}>
         <div>
@@ -36,7 +36,7 @@ function AmbassadorProgramSection() {
           <DataCard image="./assets/images/operational.png" title="Work with operations team" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center">
-          <img src="./assets/images/ambassador-program.png" className="w-100" />
+          <img src="./assets/images/ambassador-program.png" style={{ maxWidth: width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
         </div>
       </div>
     </div>

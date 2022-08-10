@@ -23,7 +23,7 @@ function AboutTeraBlockSection() {
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center">
           <div>
-            <img src="./assets/images/about-terablock.png" className={`shadow rounded ${width < 768 && "w-100"}`} />
+            <img src="./assets/images/about-terablock.png" className={`shadow rounded`} style={{ maxWidth: width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
           </div>
         </div>
       </div>

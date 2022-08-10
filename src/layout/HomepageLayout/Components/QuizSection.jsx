@@ -42,7 +42,7 @@ function QuizSection() {
       </div>
       <div className="row mx-0 px-0 mx-md-5 px-md-5">
         {quizCardData.map((data) => (
-          <div className="col-6 col-md-3">
+          <div className="col-6 col-xl-3">
             <QuizCard title={data.title} image={data.image} />
           </div>
         ))}

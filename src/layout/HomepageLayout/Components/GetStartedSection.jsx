@@ -15,8 +15,8 @@ function GetStartedSection() {
         </h3>
         <p className="text-primaryTextGray">Get started in a few minutes with these easy steps.</p>
       </div>
-      <div className="row mx-5 mt-5 position-relative">
-        <div className="col-12 col-md-4 px-3">
+      <div className="row mx-5 mx-md-1 mx-xl-5 mt-5 position-relative">
+        <div className="col-12 col-md-4 px-3 px-md-0 px-xl-3">
           <UICard>
             <div className="d-flex flex-row justify-content-between align-items-center">
               <div>
@@ -28,7 +28,7 @@ function GetStartedSection() {
             <p className="fs-6 text-primaryTextGray text-center text-md-start">Follow simple step by step process to create a new Web3 wallet or connect an existing wallet.</p>
           </UICard>
         </div>
-        <div className="col-12 col-md-4 px-3">
+        <div className="col-12 col-md-4 px-3 px-md-0 px-xl-3">
           <UICard>
             <div className="d-flex flex-row justify-content-between align-items-center">
               <div>
@@ -40,7 +40,7 @@ function GetStartedSection() {
             <p className="fs-6 text-primaryTextGray text-center text-md-start">Easily buy cryptocurrencies with a bank card or transfer funds to your web3 wallet.</p>
           </UICard>
         </div>
-        <div className="col-12 col-md-4 px-3">
+        <div className="col-12 col-md-4 px-3 px-md-0 px-xl-3">
           <UICard>
             <div className="d-flex flex-row justify-content-between align-items-center">
               <div>
