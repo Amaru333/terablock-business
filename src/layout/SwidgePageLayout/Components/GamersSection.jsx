@@ -1,10 +1,10 @@
 import React from "react";
-import { getScreenSize } from "../../../functions/getScreenSize";
+import { useScreenSize } from "../../../functions/useScreenSize";
 
 import GamersSectionStyle from "../Styles/GamersSection.module.css";
 
 function GamersSection() {
-  const width = getScreenSize().width;
+  const width = useScreenSize().width;
   return (
     <div className="py-5 bg-white">
       <div className="text-center mb-2 px-3">

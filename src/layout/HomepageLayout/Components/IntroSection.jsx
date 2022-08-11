@@ -1,10 +1,10 @@
 import React from "react";
-import { getScreenSize } from "../../../functions/getScreenSize";
+import { useScreenSize } from "../../../functions/useScreenSize";
 import UIButton from "../../../widgets/UIButtons/UIButton";
 import IntroSectionStyles from "../Styles/IntroSection.module.css";
 
 function IntroSection() {
-  const width = getScreenSize().width;
+  const width = useScreenSize().width;
   return (
     <div className="text-center text-md-start position-relative">
       <div className="row mx-0 p-4">

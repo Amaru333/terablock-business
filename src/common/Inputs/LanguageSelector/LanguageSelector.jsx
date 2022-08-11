@@ -31,8 +31,9 @@ function LanguageSelector() {
           </div>
           {active && (
             <div className="bg-white" style={{ width: "135px", position: "absolute", top: "42px" }}>
-              {languages.map((language) => (
+              {languages.map((language, index) => (
                 <div
+                  key={index}
                   className={["d-flex p-2", LanguageSelectorStyle.options].join(" ")}
                   onClick={() => {
                     setSelectedLanguage(language);

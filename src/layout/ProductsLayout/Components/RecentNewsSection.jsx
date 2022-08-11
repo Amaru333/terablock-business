@@ -1,11 +1,11 @@
 import React from "react";
-import { getScreenSize } from "../../../functions/getScreenSize";
+import { useScreenSize } from "../../../functions/useScreenSize";
 import UIButton from "../../../widgets/UIButtons/UIButton";
 import UIImageCard from "../../../widgets/UICard/UIImageCard";
 import RecentNewsStyles from "../Styles/RecentNews.module.css";
 
 function RecentNewsSection() {
-  const width = getScreenSize().width;
+  const width = useScreenSize().width;
   const news_details = [
     {
       image: "./assets/images/learn-image-1.png",
@@ -43,8 +43,8 @@ function RecentNewsSection() {
         </h3>
       </div>
       <div className={["d-flex ps-5 ms-0 ms-md-5", RecentNewsStyles.horizontal_scroll].join(" ")}>
-        {news_details.map((item) => (
-          <div className="pe-5 pb-3">
+        {news_details.map((item, index) => (
+          <div key={index} className="pe-5 pb-3">
             <UIImageCard title={item.title} image={item.image} description={item.description} />
           </div>
         ))}

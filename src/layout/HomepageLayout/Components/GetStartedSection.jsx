@@ -1,10 +1,10 @@
 import React from "react";
-import { getScreenSize } from "../../../functions/getScreenSize";
+import { useScreenSize } from "../../../functions/useScreenSize";
 import UIButton from "../../../widgets/UIButtons/UIButton";
 import UICard from "../../../widgets/UICard/UICard";
 
 function GetStartedSection() {
-  const width = getScreenSize().width;
+  const width = useScreenSize().width;
   return (
     <div>
       <div className="text-center mt-5 px-4 px-md-5">
@@ -49,7 +49,7 @@ function GetStartedSection() {
               <h1 className="text-lightBlueText fw-bolder">3</h1>
             </div>
             <p className="fs-4 fw-bolder text-primaryBlue mt-2 text-center text-md-start">Start trading instantly</p>
-            <p className="fs-6 text-primaryTextGray text-center text-md-start">You're good to go! Set up recurring buys for your investments and discover what TeraBlock has to offer.</p>
+            <p className="fs-6 text-primaryTextGray text-center text-md-start">You&apos;re good to go! Set up recurring buys for your investments and discover what TeraBlock has to offer.</p>
           </UICard>
         </div>
         {width > 768 && <img src="./assets/icons/4x5.svg" style={{ width: "60px", position: "absolute", bottom: "2rem", left: "1rem" }} />}

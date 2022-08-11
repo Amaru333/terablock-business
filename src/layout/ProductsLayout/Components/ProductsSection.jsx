@@ -1,12 +1,12 @@
 import React, { useRef, useState } from "react";
-import { getScreenSize } from "../../../functions/getScreenSize";
+import { useScreenSize } from "../../../functions/useScreenSize";
 
 import UIButton from "../../../widgets/UIButtons/UIButton";
 
 import ProductStyle from "../Styles/ProductsSection.module.css";
 
 function ProductsSection() {
-  const width = getScreenSize().width;
+  const width = useScreenSize().width;
   const [tab, setTab] = useState("Wallet Management");
   const ref = useRef({});
   const tab_list = [
@@ -122,8 +122,8 @@ function ProductsSection() {
       <div className="d-flex align-items-center">
         {ref.current.scrollWidth > ref.current.offsetWidth && <img onClick={() => scroll(-offset)} src="./assets/icons/left-arrow-blue.svg" />}
         <div className={ProductStyle.tab_bar} ref={ref}>
-          {tab_list.map((tabItem) => (
-            <div onClick={() => setTab(tabItem.name)} className={[ProductStyle.tab_items, tabItem.name == tab ? ProductStyle.tab_active : ProductStyle.tab_inactive].join(" ")}>
+          {tab_list.map((tabItem, index) => (
+            <div key={index} onClick={() => setTab(tabItem.name)} className={[ProductStyle.tab_items, tabItem.name == tab ? ProductStyle.tab_active : ProductStyle.tab_inactive].join(" ")}>
               <img className={[ProductStyle.tab_icon, tabItem.name == tab && ProductStyle.tab_icon_active].join(" ")} src={tabItem.icon} />
               <p className={[ProductStyle.tab_name, tabItem.name == tab ? ProductStyle.tab_name_active : ProductStyle.tab_name_inactive].join(" ")}>{tabItem.name}</p>
             </div>

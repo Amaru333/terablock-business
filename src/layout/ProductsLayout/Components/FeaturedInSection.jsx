@@ -1,9 +1,9 @@
 import React from "react";
 import StartCryptoJourneyCard from "../../../common/Cards/StartCryptoJourneyCard/StartCryptoJourneyCard";
-import { getScreenSize } from "../../../functions/getScreenSize";
+import { useScreenSize } from "../../../functions/useScreenSize";
 
 function FeaturedInSection() {
-  const width = getScreenSize().width;
+  const width = useScreenSize().width;
   const ImageCard = ({ image }) => {
     return (
       <div className="card shadow p-3 mb-3 mb-md-5 bg-white rounded mx-0 mx-md-4 border-white d-flex justify-content-center align-items-center" style={{ height: "100px", zIndex: 1 }}>
@@ -33,8 +33,8 @@ function FeaturedInSection() {
         </h3>
       </div>
       <div className="row mx-3 mx-md-4">
-        {images.map((image) => (
-          <div className="col-6 col-md-3">
+        {images.map((image, index) => (
+          <div className="col-6 col-md-3" key={index}>
             <ImageCard image={image} />
           </div>
         ))}

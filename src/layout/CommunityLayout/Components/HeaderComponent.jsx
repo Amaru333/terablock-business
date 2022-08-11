@@ -1,9 +1,9 @@
 import React from "react";
-import { getScreenSize } from "../../../functions/getScreenSize";
+import { useScreenSize } from "../../../functions/useScreenSize";
 import UIButton from "../../../widgets/UIButtons/UIButton";
 
 function HeaderComponent() {
-  const screenSize = getScreenSize();
+  const screenSize = useScreenSize();
   return (
     <div className="primary-reverse-gradient">
       <div className="row mx-0 px-3 px-md-5 py-5">

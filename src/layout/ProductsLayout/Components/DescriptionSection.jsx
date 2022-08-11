@@ -67,8 +67,8 @@ function DescriptionSection() {
         <p className="text-center text-white mt-3 fs-6 fw-lighter">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
       </div>
       <div className="row mx-0">
-        {descriptionData.map((data) => (
-          <div className="col-6 col-md-3 px-3 px-md-5 pb-3 pb-md-5 text-center text-md-start">
+        {descriptionData.map((data, index) => (
+          <div key={index} className="col-6 col-md-3 px-3 px-md-5 pb-3 pb-md-5 text-center text-md-start">
             <DescriptionCard title={data.title} image={data.image} description={data.description} />
           </div>
         ))}

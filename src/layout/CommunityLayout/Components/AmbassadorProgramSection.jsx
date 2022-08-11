@@ -1,8 +1,8 @@
 import React from "react";
-import { getScreenSize } from "../../../functions/getScreenSize";
+import { useScreenSize } from "../../../functions/useScreenSize";
 
 function AmbassadorProgramSection() {
-  const width = getScreenSize().width;
+  const width = useScreenSize().width;
   const DataCard = ({ image, title, description }) => {
     return (
       <div className={`d-flex ${width > 768 && "w-75"}`}>

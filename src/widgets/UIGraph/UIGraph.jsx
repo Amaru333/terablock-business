@@ -1,5 +1,5 @@
 import React from "react";
-import { getScreenSize } from "../../functions/getScreenSize";
+import { useScreenSize } from "../../functions/useScreenSize";
 import UIGraphStyle from "./UIGraph.module.css";
 
 function UIGraph() {
@@ -275,7 +275,7 @@ function UIGraph() {
       ],
     },
   ];
-  const width = getScreenSize().width;
+  const width = useScreenSize().width;
   return (
     <div className="d-flex bg-white rounded px-4 px-md-5 py-4 py-md-5 justify-content-center shadow" style={{ width: "fit-content", margin: "auto" }}>
       <div className="d-flex flex-column">
@@ -310,8 +310,10 @@ function UIGraph() {
           ))}
         </div>
         <div className="d-flex justify-content-between mt-3">
-          {graph_data.map((each_data) => (
-            <p className="mb-0 fw-bold text-primaryDark">{each_data.year}</p>
+          {graph_data.map((each_data, index) => (
+            <p className="mb-0 fw-bold text-primaryDark" key={index}>
+              {each_data.year}
+            </p>
           ))}
         </div>
       </div>

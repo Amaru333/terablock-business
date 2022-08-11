@@ -1,13 +1,13 @@
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import { getScreenSize } from "../../functions/getScreenSize";
+import { useScreenSize } from "../../functions/useScreenSize";
 import UIButton from "../../widgets/UIButtons/UIButton";
 
 import HeaderStyle from "./Header.module.css";
 
 function Header() {
   const router = useRouter();
-  const width = getScreenSize().width;
+  const width = useScreenSize().width;
   const [isOpen, setIsOpen] = useState(false);
   const NavbarMenu = ({ name, link }) => {
     return (
@@ -47,8 +47,8 @@ function Header() {
       <div className="d-flex justify-content-between px-5 py-2 shadow bg-white">
         <div className="d-flex align-items-center">
           <img src="./assets/icons/logo-blue.svg" className="pe-4" style={{ cursor: "pointer" }} onClick={() => router.push("/")} />
-          {menu_items.map((item) => (
-            <NavbarMenu name={item.name} link={item.link} />
+          {menu_items.map((item, index) => (
+            <NavbarMenu key={index} name={item.name} link={item.link} />
           ))}
         </div>
         <div className="d-flex align-items-center">
@@ -74,8 +74,9 @@ function Header() {
             <div className={HeaderStyle.navbar_container} onClick={() => setIsOpen(false)}></div>
             <div className={["bg-primaryDark d-flex flex-column align-items-end pe-4", HeaderStyle.navbar_mobile].join(" ")}>
               <img src="./assets/icons/close_button.svg" className="my-5" style={{ cursor: "pointer" }} onClick={() => setIsOpen(false)} />
-              {menu_items.map((item) => (
+              {menu_items.map((item, index) => (
                 <p
+                  key={index}
                   onClick={() => {
                     router.push(item.link);
                     setIsOpen(false);

@@ -1,10 +1,10 @@
 import React from "react";
 import StartCryptoJourneyCard from "../../../common/Cards/StartCryptoJourneyCard/StartCryptoJourneyCard";
-import { getScreenSize } from "../../../functions/getScreenSize";
+import { useScreenSize } from "../../../functions/useScreenSize";
 import UICard from "../../../widgets/UICard/UICard";
 
 function ImportantContactsSection() {
-  const width = getScreenSize().width;
+  const width = useScreenSize().width;
   const ContactCard = ({ name, designation, email }) => {
     return (
       <UICard>
@@ -64,8 +64,8 @@ function ImportantContactsSection() {
           <p className="text-primaryTextGray">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
         <div className="row mx-2 mx-md-5 px-1 justify-content-center">
-          {contacts.map((data) => (
-            <div className="px-2 py-2 py-md-4 col-6 col-sm-4 col-xxl-3">
+          {contacts.map((data, index) => (
+            <div className="px-2 py-2 py-md-4 col-6 col-sm-4 col-xxl-3" key={index}>
               <ContactCard name={data.name} designation={data.designation} email={data.email} />
             </div>
           ))}

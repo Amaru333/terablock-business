@@ -1,9 +1,9 @@
 import React from "react";
 import BuyCryptoTable from "../../../common/Table/BuyCryptoTable";
-import { getScreenSize } from "../../../functions/getScreenSize";
+import { useScreenSize } from "../../../functions/useScreenSize";
 
 function BuyCryptoSection() {
-  const width = getScreenSize().width;
+  const width = useScreenSize().width;
   return (
     <div>
       <div className="text-center mt-5 px-4 px-md-5">

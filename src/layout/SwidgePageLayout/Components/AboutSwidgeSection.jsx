@@ -1,6 +1,6 @@
 import React from "react";
 import StartCryptoJourneyCard from "../../../common/Cards/StartCryptoJourneyCard/StartCryptoJourneyCard";
-import { getScreenSize } from "../../../functions/getScreenSize";
+import { useScreenSize } from "../../../functions/useScreenSize";
 import UICard from "../../../widgets/UICard/UICard";
 
 function AboutSwidgeSection() {
@@ -39,7 +39,7 @@ function AboutSwidgeSection() {
       description: "Tokens are swapped, bridged & transferred",
     },
   ];
-  const width = getScreenSize().width;
+  const width = useScreenSize().width;
   return (
     <div className="pb-5">
       <div className="position-relative">
@@ -53,7 +53,7 @@ function AboutSwidgeSection() {
         </div>
         <div className="row mx-4 mx-md-3 mx-xl-5 mt-5 justify-content-center">
           {data.map((data, index) => (
-            <div className="col-12 col-md-4 px-3">
+            <div className="col-12 col-md-4 px-3" key={index}>
               <DataCard index={index + 1} description={data.description} image={data.image} />
             </div>
           ))}

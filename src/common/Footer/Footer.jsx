@@ -1,5 +1,5 @@
 import React from "react";
-import { getScreenSize } from "../../functions/getScreenSize";
+import { useScreenSize } from "../../functions/useScreenSize";
 import UIButton from "../../widgets/UIButtons/UIButton";
 
 import Script from "next/script";
@@ -197,7 +197,7 @@ function Footer() {
     },
   ];
   const router = useRouter();
-  const width = getScreenSize().width;
+  const width = useScreenSize().width;
 
   const Newsletter = () => {
     return (
@@ -218,8 +218,8 @@ function Footer() {
     return (
       <div>
         <p className="h4 mb-3">{data.title}</p>
-        {data.pages.map((page) => (
-          <p className="mb-0 fw-light my-2" style={{ cursor: "pointer" }} onClick={() => router.push(page.link)}>
+        {data.pages.map((page, index) => (
+          <p key={index} className="mb-0 fw-light my-2" style={{ cursor: "pointer" }} onClick={() => router.push(page.link)}>
             {page.name}
           </p>
         ))}
@@ -235,8 +235,8 @@ function Footer() {
           <div className="col-12 col-md-3">
             <Newsletter />
           </div>
-          {sitemap_data.map((data) => (
-            <div className="col-6 col-md pt-5 pt-md-0">
+          {sitemap_data.map((data, index) => (
+            <div className="col-6 col-md pt-5 pt-md-0" key={index}>
               <Sitemap data={data} />
             </div>
           ))}
@@ -265,8 +265,8 @@ function Footer() {
         </p>
         <p className="fw-lighter mb-0 pb-3 col-12 col-md-4 px-4">
           Investments: Not FDIC Insured • No Bank Guarantee • May Lose Value. Investing in Digital Currencies involves risks, and there is always the potential of losing money when you invest in Digital Currencies. Before investing, consider your investment objectives and TeraBlock’ charges and expenses. TeraBlock internet-based services are
-          designed to assist clients in achieving discrete financial goals. They are not intended to provide comprehensive tax advice or financial planning with respect to every aspect of a client's financial situation and do not incorporate specific investments that clients hold elsewhere. Past performance does not guarantee future results, and
-          the likelihood of investment outcomes are hypothetical in nature. Not an offer, solicitation of an offer, or advice to buy or sell Digital Currencies in jurisdictions where TeraBlock is not registered.{" "}
+          designed to assist clients in achieving discrete financial goals. They are not intended to provide comprehensive tax advice or financial planning with respect to every aspect of a client&apos;s financial situation and do not incorporate specific investments that clients hold elsewhere. Past performance does not guarantee future results,
+          and the likelihood of investment outcomes are hypothetical in nature. Not an offer, solicitation of an offer, or advice to buy or sell Digital Currencies in jurisdictions where TeraBlock is not registered.{" "}
         </p>
         <p className="fw-lighter mb-0 pb-3 col-12 col-md-4 px-4 text-center text-md-end">
           The information provided by TeraBlock is educational only and is not investment or tax advice.

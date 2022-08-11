@@ -1,15 +1,15 @@
 import React from "react";
 import CardWithLogo from "../../../common/Cards/CardWithLogo";
-import { getScreenSize } from "../../../functions/getScreenSize";
+import { useScreenSize } from "../../../functions/useScreenSize";
 
 function StayConnectedSection() {
-  const width = getScreenSize().width;
+  const width = useScreenSize().width;
   return (
     <div className="bg-white py-5">
       <div className="text-center mt-5 px-4 px-md-5">
         <h3 className="text-primaryTextDark">
           <b>
-            Let's stay connected<span className="text-primaryViolet">.</span>
+            Let&apos;s stay connected<span className="text-primaryViolet">.</span>
           </b>
         </h3>
         <p className="text-primaryTextGray">Get to know the people and communities pushing the crypto economy forward</p>

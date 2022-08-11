@@ -1,9 +1,9 @@
 import React from "react";
-import { getScreenSize } from "../../../functions/getScreenSize";
+import { useScreenSize } from "../../../functions/useScreenSize";
 import UIAccordion from "../../../widgets/UIAccordion/UIAccordion";
 
 function FAQSection() {
-  const width = getScreenSize().width;
+  const width = useScreenSize().width;
   return (
     <div className="pb-5 position-relative">
       <div className="text-center mt-5 px-4 px-md-5 mx-0 mx-md-5 pb-3">

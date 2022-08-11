@@ -43,8 +43,8 @@ function EssentialsSection() {
         <p className="text-white">Get up to speed on Bitcoin, Ethereum, Web3 wallet, Decentralised Finance (DeFi) and basics of crypto ecosystem. </p>
       </div>
       <div className={["d-flex ps-5 ms-0 ms-md-5", EssentialsSectionStyle.horizontal_scroll].join(" ")}>
-        {essential_details.map((item) => (
-          <div className="pe-5">
+        {essential_details.map((item, index) => (
+          <div className="pe-5" key={index}>
             <UIImageCard title={item.title} image={item.image} description={item.description} />
           </div>
         ))}

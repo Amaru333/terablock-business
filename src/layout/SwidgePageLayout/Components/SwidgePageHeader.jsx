@@ -1,9 +1,9 @@
 import React from "react";
-import { getScreenSize } from "../../../functions/getScreenSize";
+import { useScreenSize } from "../../../functions/useScreenSize";
 import UIButton from "../../../widgets/UIButtons/UIButton";
 
 function SwidgePageHeader() {
-  const width = getScreenSize().width;
+  const width = useScreenSize().width;
   return (
     <div className="pb-5">
       <div className="pt-5 position-relative">
@@ -12,7 +12,7 @@ function SwidgePageHeader() {
             <h1 className="text-primaryTextDark">
               TeraBlock Swidge<span className="text-primaryViolet">.</span>
             </h1>
-            <p className="text-primaryTextGray mb-0 fs-6">TeraBlock Swidge lets users buy crypto through bank cards, swap, bridge and transfer tokens from a unified platform to any blockchain game in just a few clicks. It's an automation Web3 protocol designed explicitly for Blockchain-based games.</p>
+            <p className="text-primaryTextGray mb-0 fs-6">TeraBlock Swidge lets users buy crypto through bank cards, swap, bridge and transfer tokens from a unified platform to any blockchain game in just a few clicks. It&apos;s an automation Web3 protocol designed explicitly for Blockchain-based games.</p>
             {width > 768 && (
               <div className="mt-4">
                 <UIButton type="primary">Launch Swidge</UIButton>

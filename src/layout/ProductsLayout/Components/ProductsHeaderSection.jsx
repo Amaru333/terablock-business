@@ -1,9 +1,9 @@
 import React from "react";
 import UIButton from "../../../widgets/UIButtons/UIButton";
-import { getScreenSize } from "../../../functions/getScreenSize";
+import { useScreenSize } from "../../../functions/useScreenSize";
 
 function ProductsHeaderSection() {
-  const width = getScreenSize().width;
+  const width = useScreenSize().width;
   return (
     <div>
       <div className="row mx-0">

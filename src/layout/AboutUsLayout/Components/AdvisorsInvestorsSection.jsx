@@ -1,10 +1,10 @@
 import React from "react";
-import { getScreenSize } from "../../../functions/getScreenSize";
+import { useScreenSize } from "../../../functions/useScreenSize";
 
 import AdvisorsInvestorsStyle from "../Styles/AdvisorsInvestors.module.css";
 
 function AdvisorsInvestorsSection() {
-  const width = getScreenSize().width;
+  const width = useScreenSize().width;
   const InvestorCard = ({ name, image }) => {
     return (
       <div className="text-center">
@@ -64,8 +64,8 @@ function AdvisorsInvestorsSection() {
         <p className="text-primaryTextGray">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
       </div>
       <div className="row mx-2 mx-md-5 justify-content-center">
-        {investors.map((data) => (
-          <div className="px-2 py-3 col-6 col-sm-4 col-md-3 col-xxl-2">
+        {investors.map((data, index) => (
+          <div key={index} className="px-2 py-3 col-6 col-sm-4 col-md-3 col-xxl-2">
             <InvestorCard name={data.name} image={data.image} />
           </div>
         ))}

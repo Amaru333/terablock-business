@@ -1,10 +1,10 @@
 import React from "react";
-import { getScreenSize } from "../../functions/getScreenSize";
+import { useScreenSize } from "../../functions/useScreenSize";
 import UIButton from "../../widgets/UIButtons/UIButton";
 import UICard from "../../widgets/UICard/UICard";
 
 function BuyCryptoTable() {
-  const screenSize = getScreenSize();
+  const screenSize = useScreenSize();
   const tableData = [
     {
       name: "BNB",
@@ -52,8 +52,8 @@ function BuyCryptoTable() {
             <p className="col mb-2">Market Cap</p>
             <p className="col mb-2">Actions</p>
           </div>
-          {tableData.map((data) => (
-            <div className="row mx-4 text-center align-items-center justify-content-center my-2">
+          {tableData.map((data, index) => (
+            <div className="row mx-4 text-center align-items-center justify-content-center my-2" key={index}>
               <div className="col d-flex flex-row align-items-center">
                 <div>
                   <img src={data.image} />
@@ -86,8 +86,8 @@ function BuyCryptoTable() {
       <div>
         <UICard>
           <p className="fs-4 fw-bolder border-bottom pb-2 mb-0">Trending Market</p>
-          {tableData.map((data) => (
-            <div className="row">
+          {tableData.map((data, index) => (
+            <div className="row" key={index}>
               <div className="col d-flex flex-row align-items-center">
                 <div>
                   <img src={data.image} className="me-2" />

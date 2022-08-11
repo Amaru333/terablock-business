@@ -64,8 +64,8 @@ function TeraBlockSwidgeSection() {
         <p className="text-center text-white mt-3 fs-6 fw-lighter">Get to know the people and communities pushing the crypto economy forward</p>
       </div>
       <div className="row mx-0 justify-content-center">
-        {descriptionData.map((data) => (
-          <div className="col-6 col-md-4 col-xl-3 px-3 px-md-5 pb-3 pb-md-5">
+        {descriptionData.map((data, index) => (
+          <div className="col-6 col-md-4 col-xl-3 px-3 px-md-5 pb-3 pb-md-5" key={index}>
             <DescriptionCard title={data.title} image={data.image} description={data.description} />
           </div>
         ))}

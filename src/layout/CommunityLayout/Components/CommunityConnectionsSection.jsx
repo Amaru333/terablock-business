@@ -50,8 +50,8 @@ function CommunityConnectionsSection() {
         <p className="text-primaryTextGray mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
       <div className="row mx-2 mx-md-5 mt-5">
-        {social_data.map((data) => (
-          <div className="col-6 col-md">
+        {social_data.map((data, index) => (
+          <div className="col-6 col-md" key={index}>
             <SocialCards title={data.title} logo={data.logo} message={data.message} />
           </div>
         ))}

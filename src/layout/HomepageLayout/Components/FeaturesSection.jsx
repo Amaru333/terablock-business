@@ -1,9 +1,9 @@
 import React from "react";
-import { getScreenSize } from "../../../functions/getScreenSize";
+import { useScreenSize } from "../../../functions/useScreenSize";
 import UICard from "../../../widgets/UICard/UICard";
 
 function FeaturesSection() {
-  const width = getScreenSize().width;
+  const width = useScreenSize().width;
   return (
     <div>
       <div className="text-center mt-5 px-4 px-md-5">
@@ -12,7 +12,7 @@ function FeaturesSection() {
             Investing built for a better future<span className="text-primaryViolet">.</span>
           </b>
         </h3>
-        <p className="text-primaryTextGray">Whether you're starting with $100 or $100 million, we're here to help you better invest in cryptocurrencies.</p>
+        <p className="text-primaryTextGray">Whether you&apos;re starting with $100 or $100 million, we&apos;re here to help you better invest in cryptocurrencies.</p>
       </div>
       <div className="row mx-5 mx-sm-0 px-0 px-md-1 px-xl-5 mt-5 position-relative">
         <div className="col-md-4">
