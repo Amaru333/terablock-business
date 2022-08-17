@@ -9,7 +9,7 @@ function WhatAreCoinlistsSection() {
   return (
     <div className="py-5 bg-white">
       <div className="text-center mb-2 px-3">
-        <h3 className="text-primaryTextDark">
+        <h3 className="text-primaryTextDark fw-bold">
           <b>
             What are CoinsLists<span className="text-primaryViolet">.</span>
           </b>

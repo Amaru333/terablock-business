@@ -122,7 +122,7 @@ function CoinsListSection() {
   return (
     <div className="pb-5 position-relative">
       <div className="text-center mt-5 px-4 px-md-5 mx-0 mx-md-5 pb-5">
-        <h3 className="text-primaryTextDark">
+        <h3 className="text-primaryTextDark fw-bold">
           <b>
             Coins you shouldn't miss<span className="text-primaryViolet">.</span>
           </b>
