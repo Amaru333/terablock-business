@@ -1,8 +1,8 @@
 import React from "react";
 import CoinsListsLayout from "../../src/layout/CoinsListsLayout/CoinsListsLayout";
 
-function index() {
+function CoinsLists() {
   return <CoinsListsLayout />;
 }
 
-export default index;
+export default CoinsLists;

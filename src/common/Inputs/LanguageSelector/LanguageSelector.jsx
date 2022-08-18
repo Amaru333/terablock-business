@@ -8,15 +8,15 @@ function LanguageSelector() {
   const languages = [
     {
       name: "English",
-      icon: "./assets/icons/eng.svg",
+      icon: "/assets/icons/eng.svg",
     },
     {
       name: "Spanish",
-      icon: "./assets/icons/eng.svg",
+      icon: "/assets/icons/eng.svg",
     },
     {
       name: "German",
-      icon: "./assets/icons/eng.svg",
+      icon: "/assets/icons/eng.svg",
     },
   ];
   const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
@@ -27,7 +27,7 @@ function LanguageSelector() {
           <div className="text-white d-flex align-items-center py-2 px-3 border-white border rounded" style={{ width: "135px", cursor: "pointer" }} onClick={() => setActive(!active)}>
             <img src={selectedLanguage.icon} />
             <p className="mb-0 px-2">{selectedLanguage.name}</p>
-            <img src="./assets/icons/drop-down.svg" />
+            <img src="/assets/icons/drop-down.svg" />
           </div>
           {active && (
             <div className="bg-white" style={{ width: "135px", position: "absolute", top: "42px" }}>

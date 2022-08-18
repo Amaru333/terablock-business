@@ -46,7 +46,7 @@ function Header() {
     return (
       <div className="d-flex justify-content-between px-5 py-2 shadow bg-white">
         <div className="d-flex align-items-center">
-          <img src="./assets/icons/logo-blue.svg" className="pe-4" style={{ cursor: "pointer" }} onClick={() => router.push("/")} />
+          <img src="/assets/icons/logo-blue.svg" className="pe-4" style={{ cursor: "pointer" }} onClick={() => router.push("/")} />
           {menu_items.map((item, index) => (
             <NavbarMenu key={index} name={item.name} link={item.link} />
           ))}
@@ -62,18 +62,18 @@ function Header() {
   } else {
     return (
       <div className="d-flex justify-content-between px-3 py-3 shadow bg-white">
-        <img src="./assets/icons/logo-blue.svg" className="pe-4" style={{ cursor: "pointer" }} onClick={() => router.push("/")} />
+        <img src="/assets/icons/logo-blue.svg" className="pe-4" style={{ cursor: "pointer" }} onClick={() => router.push("/")} />
         <div className="d-flex align-items-center">
           <UIButton type="primary">
             <p className="mb-0 fs-6">Get Started</p>
           </UIButton>
-          <img src="./assets/icons/hamburger-menu.svg" style={{ cursor: "pointer" }} className="ms-2" onClick={() => setIsOpen(true)} />
+          <img src="/assets/icons/hamburger-menu.svg" style={{ cursor: "pointer" }} className="ms-2" onClick={() => setIsOpen(true)} />
         </div>
         {isOpen && (
           <>
             <div className={HeaderStyle.navbar_container} onClick={() => setIsOpen(false)}></div>
             <div className={["bg-primaryDark d-flex flex-column align-items-end pe-4", HeaderStyle.navbar_mobile].join(" ")}>
-              <img src="./assets/icons/close_button.svg" className="my-5" style={{ cursor: "pointer" }} onClick={() => setIsOpen(false)} />
+              <img src="/assets/icons/close_button.svg" className="my-5" style={{ cursor: "pointer" }} onClick={() => setIsOpen(false)} />
               {menu_items.map((item, index) => (
                 <p
                   key={index}

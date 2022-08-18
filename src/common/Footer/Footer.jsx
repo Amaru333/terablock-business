@@ -202,7 +202,7 @@ function Footer() {
   const Newsletter = () => {
     return (
       <div className="text-center text-md-start">
-        <img src="./assets/icons/logo-white.svg" />
+        <img src="/assets/icons/logo-white.svg" />
         <p className="h4 my-3">Newsletter</p>
         <p className="fw-lighter">Signup to get the latest market news, company updates, new product releases and more.</p>
         <input type="text" placeholder="Email Address" className="w-75 px-3 py-1 rounded border-white mb-3" />
@@ -248,11 +248,11 @@ function Footer() {
         </div>
         <div className="d-flex justify-content-between px-5 pt-0 pb-5 pt-md-4">
           <div>
-            <img src="./assets/icons/twitter-ico-filled.svg" />
+            <img src="/assets/icons/twitter-ico-filled.svg" />
             &nbsp;&nbsp;
-            <img src="./assets/icons/linkedin-ico-filled.svg" />
+            <img src="/assets/icons/linkedin-ico-filled.svg" />
             &nbsp;&nbsp;
-            <img src="./assets/icons/mail-ico-filled.svg" />
+            <img src="/assets/icons/mail-ico-filled.svg" />
           </div>
           <div>
             <LanguageSelector />
