@@ -116,7 +116,6 @@ function ProductsSection() {
     const offset = 250;
     const scroll = (scrollOffset) => {
       ref.current.scrollLeft += scrollOffset;
-      console.log(ref);
     };
     return (
       <div className="d-flex align-items-center">
