@@ -17,7 +17,7 @@ function CoinsListCard({ data }) {
             {width < 1001 && (
               <div className="d-flex align-items-center">
                 <div style={{ display: "flex", padding: "10px", borderRadius: "4px", borderWidth: "1px", borderColor: data.volatile == "High" ? "rgba(255, 153, 153, 0.48)" : data.volatile == "Med" ? "rgba(224, 166, 16, 0.32)" : "rgba(0, 174, 38, 0.32)", borderStyle: "solid" }}>
-                  <img src={`./assets/images/coinslists/${data.volatile}-volatile.svg`} style={{ width: "14px" }} />
+                  <img src={`/assets/images/coinslists/${data.volatile}-volatile.svg`} style={{ width: "14px" }} />
                   <p className="mb-0 ms-2" style={{ fontWeight: "600", fontSize: "10px", color: data.volatile == "High" ? "#D40707" : data.volatile == "Med" ? "#E0A610" : "#00AE26" }}>
                     {data.volatile} Volatile
                   </p>
@@ -47,7 +47,7 @@ function CoinsListCard({ data }) {
             {width > 1000 ? (
               <div className="d-flex align-items-center">
                 <div style={{ display: "flex", padding: "10px", borderRadius: "4px", borderWidth: "1px", borderColor: data.volatile == "High" ? "rgba(255, 153, 153, 0.48)" : data.volatile == "Med" ? "rgba(224, 166, 16, 0.32)" : "rgba(0, 174, 38, 0.32)", borderStyle: "solid" }}>
-                  <img src={`./assets/images/coinslists/${data.volatile}-volatile.svg`} style={{ width: "14px" }} />
+                  <img src={`/assets/images/coinslists/${data.volatile}-volatile.svg`} style={{ width: "14px" }} />
                   <p className="mb-0 ms-2" style={{ fontWeight: "600", fontSize: "10px", color: data.volatile == "High" ? "#D40707" : data.volatile == "Med" ? "#E0A610" : "#00AE26" }}>
                     {data.volatile} Volatile
                   </p>
