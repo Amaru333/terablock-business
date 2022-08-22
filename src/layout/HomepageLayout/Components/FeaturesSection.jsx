@@ -2,6 +2,8 @@ import React from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
 import UICard from "../../../widgets/UICard/UICard";
 
+//TODO: change png to svg
+
 function FeaturesSection() {
   const width = useScreenSize().width;
   return (
@@ -14,11 +16,11 @@ function FeaturesSection() {
         </h3>
         <p className="text-primaryTextGray">Whether you&apos;re starting with $100 or $100 million, we&apos;re here to help you better invest in cryptocurrencies.</p>
       </div>
-      <div className="row mx-5 mx-sm-0 px-0 px-md-1 px-xl-5 mt-5 position-relative">
-        <div className="col-md-4">
+      <div className="row mx-5 mx-sm-0 px-0 px-md-1 px-xl-5 mt-5 position-relative justify-content-md-center">
+        <div className="col-sm-4 col-xl-3">
           <UICard>
             <div className="text-center text-md-start">
-              <img src="./assets/images/simplified-logo.png" className="bg-cardImageBg border border-2 border-cardImageBorder p-3 rounded" style={{ "--bs-border-opacity": 0.2 }} />
+              <img src="./assets/images/simplified-logo.svg" className="bg-cardImageBg border border-2 border-cardImageBorder p-3 rounded" style={{ "--bs-border-opacity": 0.2 }} />
               <h4 className="text-primaryBlue mt-3">Simplified</h4>
               <p className="text-cardDescriptionColor">The tools and information you need to buy, sell, trade, invest, and manage cryptocurrencies.</p>
               <p className="text-cardDescriptionColor">
@@ -27,10 +29,10 @@ function FeaturesSection() {
             </div>
           </UICard>
         </div>
-        <div className="col-md-4">
+        <div className="col-sm-4 col-xl-3">
           <UICard>
             <div className="text-center text-md-start">
-              <img src="./assets/images/optimised-logo.png" className="bg-cardImageBg border border-2 border-cardImageBorder p-3 rounded" style={{ "--bs-border-opacity": 0.2 }} />
+              <img src="./assets/images/optimised-logo.svg" className="bg-cardImageBg border border-2 border-cardImageBorder p-3 rounded" style={{ "--bs-border-opacity": 0.2 }} />
               <h4 className="text-primaryBlue mt-3">Optimised</h4>
               <p className="text-cardDescriptionColor">The tools and information you need to buy, sell, trade, invest, and manage cryptocurrencies.</p>
               <p className="text-cardDescriptionColor">
@@ -39,10 +41,10 @@ function FeaturesSection() {
             </div>
           </UICard>
         </div>
-        <div className="col-md-4">
+        <div className="col-sm-4 col-xl-3">
           <UICard>
             <div className="text-center text-md-start">
-              <img src="./assets/images/decentralized-logo.png" className="bg-cardImageBg border border-2 border-cardImageBorder p-3 rounded" style={{ "--bs-border-opacity": 0.2 }} />
+              <img src="./assets/images/decentralised-logo.svg" className="bg-cardImageBg border border-2 border-cardImageBorder p-3 rounded" style={{ "--bs-border-opacity": 0.2 }} />
               <h4 className="text-primaryBlue mt-3">Decentralised</h4>
               <p className="text-cardDescriptionColor">The tools and information you need to buy, sell, trade, invest, and manage cryptocurrencies.</p>
               <p className="text-cardDescriptionColor">

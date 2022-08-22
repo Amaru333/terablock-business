@@ -74,7 +74,9 @@ function BuyCryptoTable() {
                 {data.market_cap}
               </p>
               <div className="col d-flex justify-content-center">
-                <UIButton type="secondary"> Buy </UIButton>
+                <p className="text-primaryBlue" style={{ border: "1.4px solid #0052FF", padding: "5px 35px", borderRadius: "2px", fontWeight: 600 }}>
+                  Buy
+                </p>
               </div>
             </div>
           ))}
@@ -90,9 +92,9 @@ function BuyCryptoTable() {
             <div className="row" key={index}>
               <div className="col d-flex flex-row align-items-center">
                 <div>
-                  <img src={data.image} className="me-2" />
+                  <img src={data.image} />
                 </div>
-                <p className="mb-0 ms-2 text-tableDataColor" style={{ fontWeight: 600 }}>
+                <p className="mb-0 ms-0 text-tableDataColor ps-1" style={{ fontWeight: 600 }}>
                   {data.name}
                 </p>
               </div>
@@ -101,12 +103,15 @@ function BuyCryptoTable() {
                   {data.last_price}
                 </p>
                 <p className="mb-0 text-success d-flex justify-content-end" style={{ fontSize: "10px", fontWeight: 600 }}>
-                  <img src="./assets/icons/up-square.svg" className="me-1" style={{ width: "10px" }} />
+                  <img src="./assets/icons/up-square.svg" className="me-0" style={{ width: "10px" }} />
                   {data.change}
                 </p>
               </div>
               <div className="col d-flex justify-content-center">
-                <p className="bg-white rounded text-primaryBlue px-4 border border-primaryBlue mx-2 mt-3 pb-1"> Buy </p>
+                <p className="bg-white rounded text-primaryBlue px-4 border border-primaryBlue mt-3 pb-1" style={{ fontWeight: 600 }}>
+                  {" "}
+                  Buy{" "}
+                </p>
               </div>
             </div>
           ))}

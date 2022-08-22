@@ -136,7 +136,7 @@ function ProductsSection() {
   return (
     <div className="mt-5 pt-5 pb-5 bg-white">
       <div className="text-center mb-2 px-4 px-md-5">
-        <h3 className="text-primaryTextDark">
+        <h3 className="text-primaryTextDark fw-bolder">
           <b>
             Powerful, TeraBlock Products<span className="text-primaryViolet">.</span>
           </b>

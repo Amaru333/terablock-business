@@ -1,15 +1,23 @@
 import React from "react";
+import { useScreenSize } from "../../../functions/useScreenSize";
 import UICard from "../../../widgets/UICard/UICard";
 
 function QuizSection() {
+  const width = useScreenSize().width;
   const QuizCard = ({ image, title }) => {
     return (
       <UICard>
-        <div>
-          <img src={image} className="bg-cardImageBg border border-cardImageBorder p-2 rounded" style={{ "--bs-border-opacity": 0.2 }} />
+        <div className="p-1">
+          <div>
+            <img src={image} className="bg-cardImageBg border border-cardImageBorder rounded" style={{ "--bs-border-opacity": 0.2, width: "58px", padding: "12px" }} />
+          </div>
+          <p className="mt-4" style={{ fontWeight: 600, fontSize: width > 768 ? "24px" : "16px" }}>
+            {title}
+          </p>
+          <p className="mb-0 mt-3 text-primaryBlue fw-bold" style={{ fontSize: width > 768 ? "18px" : "14px" }}>
+            Continue →
+          </p>
         </div>
-        <h5 className="mt-3">{title}</h5>
-        <p className="mb-0 mt-3 text-primaryBlue fw-bold">Continue →</p>
       </UICard>
     );
   };

@@ -4,6 +4,7 @@
 
 .bottom_logos {
   width: 60%;
+  padding-left: 7rem !important;
 }
 
 @media (max-width: 768px) {
@@ -13,5 +14,6 @@
 
   .bottom_logos {
     width: 100%;
+    padding-left: 1.5rem !important;
   }
 }

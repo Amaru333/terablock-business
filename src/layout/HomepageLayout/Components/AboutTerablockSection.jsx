@@ -3,7 +3,7 @@ import React from "react";
 function AboutTerablockSection() {
   return (
     <div className="primary-gradient py-5 px-2 px-md-5">
-      <h1 className="text-white text-center">What makes TeraBlock better?</h1>
+      <h1 className="text-white text-center px-3 px-md-0">What makes TeraBlock better?</h1>
       <div className="row mx-0 pt-5">
         <div className="col-6 col-md-4 pb-5">
           <div className="px-0 px-md-4">

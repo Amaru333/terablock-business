@@ -204,11 +204,11 @@ function Footer() {
       <div className="text-center text-md-start">
         <img src="/assets/icons/logo-white.svg" />
         <p className="h4 my-3">Newsletter</p>
-        <p className="fw-lighter">Signup to get the latest market news, company updates, new product releases and more.</p>
+        <p style={{ fontWeight: 300 }}>Signup to get the latest market news, company updates, new product releases and more.</p>
         <input type="text" placeholder="Email Address" className="w-75 px-3 py-1 rounded border-white mb-3" />
         {width > 768 && (
           <div className="d-flex justify-content-center justify-content-md-start">
-            <UIButton type="secondary">Sign Up</UIButton>
+            <button style={{ border: "1px solid #FFFFFF", borderRadius: "4px", padding: "5px 30px", background: "transparent", color: "white" }}>Sign Up</button>
           </div>
         )}
       </div>
@@ -217,7 +217,9 @@ function Footer() {
   const Sitemap = ({ data }) => {
     return (
       <div>
-        <p className="h4 mb-3">{data.title}</p>
+        <p className="h4 mb-3" style={{ fontWeight: "bold" }}>
+          {data.title}
+        </p>
         {data.pages.map((page, index) => (
           <p key={index} className="mb-0 fw-light my-2" style={{ cursor: "pointer" }} onClick={() => router.push(page.link)}>
             {page.name}
@@ -246,29 +248,29 @@ function Footer() {
         <div className="d-flex justify-content-center">
           <div className={FooterStyle.horizontal_line}></div>
         </div>
-        <div className="d-flex justify-content-between px-5 pt-0 pb-5 pt-md-4">
-          <div>
+        <div className="d-flex justify-content-between px-4 px-md-5 pt-0 pb-5 pt-md-4 pb-md-3">
+          <div className="ps-md-4">
             <img src="/assets/icons/twitter-ico-filled.svg" />
             &nbsp;&nbsp;
             <img src="/assets/icons/linkedin-ico-filled.svg" />
             &nbsp;&nbsp;
             <img src="/assets/icons/mail-ico-filled.svg" />
           </div>
-          <div>
+          <div className="pe-md-4">
             <LanguageSelector />
           </div>
         </div>
       </div>
-      <div className="row mx-0 px-3 px-md-5 text-white text-center text-md-start pt-5 pt-md-0">
-        <p className="fw-lighter mb-0 pb-3 col-12 col-md-4 px-4">
+      <div className="row mx-0 px-3 px-md-5 text-white text-center text-md-start pt-5 pt-md-0" style={{ fontWeight: 300 }}>
+        <p className="mb-0 pb-3 col-12 col-md-4 px-4" style={{ textAlign: "justify" }}>
           This website is operated and maintained by TeraBlock Technologies Limited, Terms & Legal Privacy Policy. Unless otherwise specified, all return figures shown above are for illustrative purposes only, and are not actual customer or model returns. Actual returns will vary greatly and depend on personal and market circumstances.
         </p>
-        <p className="fw-lighter mb-0 pb-3 col-12 col-md-4 px-4">
+        <p className="mb-0 pb-3 col-12 col-md-4 px-4" style={{ textAlign: "justify" }}>
           Investments: Not FDIC Insured • No Bank Guarantee • May Lose Value. Investing in Digital Currencies involves risks, and there is always the potential of losing money when you invest in Digital Currencies. Before investing, consider your investment objectives and TeraBlock’ charges and expenses. TeraBlock internet-based services are
           designed to assist clients in achieving discrete financial goals. They are not intended to provide comprehensive tax advice or financial planning with respect to every aspect of a client&apos;s financial situation and do not incorporate specific investments that clients hold elsewhere. Past performance does not guarantee future results,
           and the likelihood of investment outcomes are hypothetical in nature. Not an offer, solicitation of an offer, or advice to buy or sell Digital Currencies in jurisdictions where TeraBlock is not registered.{" "}
         </p>
-        <p className="fw-lighter mb-0 pb-3 col-12 col-md-4 px-4 text-center text-md-end">
+        <p className="mb-0 pb-3 col-12 col-md-4 px-4 text-center text-md-end" style={{ textAlign: "justify" }}>
           The information provided by TeraBlock is educational only and is not investment or tax advice.
           <br />
           <br />© TeraBlock Technologies Limited

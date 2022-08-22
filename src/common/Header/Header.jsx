@@ -11,7 +11,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const NavbarMenu = ({ name, link }) => {
     return (
-      <p className="mb-0 px-3" onClick={() => router.push(link)} style={{ fontSize: "14px", fontWeight: 500, cursor: "pointer" }}>
+      <p className="mb-0 px-3 fw-bold px-xxl-4" onClick={() => router.push(link)} style={{ fontSize: "14px", fontWeight: 500, cursor: "pointer" }}>
         {name}
       </p>
     );
@@ -62,7 +62,7 @@ function Header() {
   } else {
     return (
       <div className="d-flex justify-content-between px-3 py-3 shadow bg-white">
-        <img src="/assets/icons/logo-blue.svg" className="pe-4" style={{ cursor: "pointer" }} onClick={() => router.push("/")} />
+        <img src="/assets/icons/logo-blue.svg" className="pe-2" style={{ cursor: "pointer" }} onClick={() => router.push("/")} />
         <div className="d-flex align-items-center">
           <UIButton type="primary">
             <p className="mb-0 fs-6">Get Started</p>

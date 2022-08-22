@@ -43,7 +43,7 @@ function InvestmentGraph() {
           </div>
         </div>
       </div>
-      <div className={["p-2 p-md-5", InvestmentGraphStyle.graph_background].join(" ")}>
+      <div className={["p-0 p-sm-1 p-md-4", InvestmentGraphStyle.graph_background].join(" ")}>
         <UIGraph />
       </div>
       <div>

@@ -277,7 +277,7 @@ function UIGraph() {
   ];
   const width = useScreenSize().width;
   return (
-    <div className="d-flex bg-white rounded px-4 px-md-5 py-4 py-md-5 justify-content-center shadow" style={{ width: "fit-content", margin: "auto" }}>
+    <div className="d-flex bg-white rounded px-3 px-sm-4 px-md-5 py-4 py-md-5 justify-content-center shadow" style={{ width: "fit-content", margin: "auto" }}>
       <div className="d-flex flex-column">
         <div className="d-flex align-items-end">
           {graph_data.map((each_data) => (
