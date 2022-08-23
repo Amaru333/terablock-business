@@ -1,0 +1,33 @@
+.title {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  color: #1b2d5b;
+  margin-bottom: 0px;
+}
+
+.button {
+  border: none;
+  background: #0052ff;
+  border-radius: 6px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fafafa;
+  padding: 0.75rem 2rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+  }
+  .button {
+    width: 100%;
+    max-width: 290px;
+  }
+}

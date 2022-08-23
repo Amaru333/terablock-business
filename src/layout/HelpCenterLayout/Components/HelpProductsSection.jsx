@@ -68,10 +68,10 @@ function HelpProductsSection() {
           Products
         </p>
         <div className={`row mx-0`}>
-          <div className={`col-12 col-md-8 px-0 ${width > 767 && "border-bottom"}`} style={{ paddingBottom: width > 767 ? "6rem" : "0rem" }}>
+          <div className={`col-12 col-xl-8 px-0 ${width > 1201 && "border-bottom"}`} style={{ paddingBottom: width > 1201 ? "6rem" : "0rem" }}>
             <div className="row mx-0">
               {data.map((data) => (
-                <div className="col-12 col-xl-6">
+                <div className="col-12 col-md-6">
                   <DataCard icon={data.icon} title={data.title}>
                     {data.desc}
                   </DataCard>
@@ -79,7 +79,7 @@ function HelpProductsSection() {
               ))}
             </div>
           </div>
-          <div className={`col-12 col-md-4 d-md-flex justify-content-center ${width < 768 && "border-bottom pb-5"}`}>
+          <div className={`col-12 col-xl-4 d-md-flex justify-content-center ${width < 1200 && "border-bottom pb-5"}`}>
             <div>
               <BulletinCard />
             </div>

@@ -206,7 +206,7 @@ function Footer() {
         <p className="h4 my-3">Newsletter</p>
         <p style={{ fontWeight: 300 }}>Signup to get the latest market news, company updates, new product releases and more.</p>
         <input type="text" placeholder="Email Address" className="w-75 px-3 py-1 rounded border-white mb-3" />
-        {width > 768 && (
+        {width > 767 && (
           <div className="d-flex justify-content-center justify-content-md-start">
             <button style={{ border: "1px solid #FFFFFF", borderRadius: "4px", padding: "5px 30px", background: "transparent", color: "white" }}>Sign Up</button>
           </div>

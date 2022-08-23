@@ -11,7 +11,7 @@ function HelpCenterHeader() {
       <div className="px-0 px-md-2 px-xl-5">
         <div className="row mx-0 d-flex flex-column-reverse flex-md-row">
           <div className="col-12 col-md-7 d-flex flex-column justify-content-center align-items-center align-items-md-start">
-            <h1 className="text-fontDark mb-4 mb-md-3 mt-4 mt-md-0" style={{ fontSize: width > 768 ? "58px" : "24px" }}>
+            <h1 className="text-fontDark mb-4 mb-md-3 mt-4 mt-md-0" style={{ fontSize: width > 1199 ? "58px" : width > 767 ? "40px" : "24px" }}>
               How can we help you ?
             </h1>
             <UISearchBar maxWidth="580px" />
@@ -24,7 +24,7 @@ function HelpCenterHeader() {
             )}
           </div>
           <div className="col-12 col-md-5 d-flex justify-content-center">
-            <img src="/assets/images/help_center/help-header.png" style={{ maxWidth: width > 768 ? "100%" : "80vw", objectFit: "contain" }} />
+            <img src="/assets/images/help_center/help-header.png" style={{ maxWidth: width > 767 ? "100%" : "80vw", objectFit: "contain" }} />
           </div>
         </div>
       </div>

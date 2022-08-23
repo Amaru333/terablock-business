@@ -1,0 +1,44 @@
+.market_trend_tag {
+  background: rgba(40, 75, 191, 0.3);
+  border: 0.6px solid #284bbf;
+}
+
+.defi_tag {
+  background: rgba(255, 236, 0, 0.3);
+  border: 0.6px solid #ffec00;
+}
+
+.news_tag {
+  background: rgba(0, 82, 255, 0.3);
+  border: 0.6px solid #0052ff;
+}
+
+.tag {
+  border-radius: 4px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #18263e;
+  width: fit-content;
+  padding: 0 5px;
+}
+
+.title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #000000;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #464c57;
+}
