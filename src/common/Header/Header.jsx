@@ -31,7 +31,7 @@ function Header() {
     },
     {
       name: "Help Center",
-      link: "/",
+      link: "/help-center",
     },
     {
       name: "Community",
