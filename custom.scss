@@ -42,4 +42,20 @@ body {
   background: linear-gradient(138deg, rgba(75, 112, 232, 1) 0%, rgba(11, 58, 211, 1) 96%) !important;
 }
 
+.bulletin-card-justify {
+  justify-content: center;
+}
+
+@media (max-width: 1700px) {
+  .bulletin-card-justify {
+    justify-content: end;
+  }
+}
+
+@media (max-width: 1200px) {
+  .bulletin-card-justify {
+    justify-content: center;
+  }
+}
+
 @import "~bootstrap/scss/bootstrap.scss";

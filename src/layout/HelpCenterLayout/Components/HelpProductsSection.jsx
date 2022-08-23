@@ -89,7 +89,7 @@ function HelpProductsSection() {
               ))}
             </div>
           </div>
-          <div className={`col-12 col-xl-4 d-md-flex justify-content-center ${width < 1200 && "border-bottom pb-5"}`}>
+          <div className={`col-12 col-xl-4 d-md-flex bulletin-card-justify ${width < 1200 && "border-bottom pb-5"}`}>
             <div>
               <BulletinCard />
             </div>

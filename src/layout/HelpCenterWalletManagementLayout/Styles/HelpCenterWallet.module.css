@@ -1,0 +1,74 @@
+.font {
+  font-family: "Poppins";
+  font-style: normal;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+.icon_container {
+  padding: 8px;
+  background: rgba(247, 248, 252, 0.8);
+  border: 1px solid rgba(0, 82, 255, 0.2);
+  border-radius: 8px;
+  margin: 15px;
+}
+
+.empty_icon {
+  width: 50px;
+}
+
+.card_title {
+  margin: 16px 0px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000000;
+}
+
+.card_container {
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
+.questions {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #464c57;
+  padding: 8px 0px;
+  margin: 0px;
+}
+
+.view_more {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0052ff;
+  text-align: end;
+  margin-bottom: 0;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-weight: 700;
+    font-size: 16px;
+    color: #000000;
+  }
+  .empty_icon {
+    width: 32px;
+  }
+  .view_more {
+    text-align: start;
+    font-weight: 400;
+    font-size: 14px;
+  }
+}

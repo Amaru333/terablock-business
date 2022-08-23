@@ -32,7 +32,6 @@ function ArticleTable({ title, data }) {
   ];
   return (
     <div>
-      <h3>{title}</h3>
       <div className="row mx-0">
         {d.map((data) => (
           <div className="col-12 col-md-6 mb-3">

@@ -9,7 +9,7 @@ function PopularArticlesSection() {
   return (
     <div className={"bg-white pt-0 pt-md-5 pb-5 px-2 px-md-5"}>
       <div className="px-0 px-md-2 px-xl-5">
-        <p className="text-center text-md-start" style={{ color: width > 767 ? "#1B2D5B" : "black", fontSize: width > 767 ? "32px" : "16px", fontWeight: 600 }}>
+        <p className="text-center text-md-start" style={{ color: width > 767 ? "#1B2D5B" : "black", fontSize: width > 767 ? "32px" : "16px", fontWeight: 600, fontFamily: "Poppins" }}>
           Popular articles
         </p>
         <div className={`row mx-0 ${width > 1201 && "border-bottom"}`}>
@@ -18,7 +18,7 @@ function PopularArticlesSection() {
               <ArticleTable />
             </div>
           </div>
-          <div className={`col-12 col-xl-4 d-md-flex justify-content-center ${width < 1200 && "border-bottom pb-5"}`}>
+          <div className={`col-12 col-xl-4 d-md-flex bulletin-card-justify ${width < 1200 && "border-bottom pb-5"}`}>
             <div>
               <BulletinCard />
             </div>

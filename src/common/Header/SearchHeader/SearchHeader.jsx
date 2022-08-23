@@ -2,11 +2,13 @@ import React from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
 import UIButton from "../../../widgets/UIButtons/UIButton";
 import UISearchBar from "../../../widgets/UISearchBar/UISearchBar";
+import { useRouter } from "next/router";
 
 import SearchHeaderStyle from "./SearchHeader.module.css";
 
 function SearchHeader({ breadcrumbs, breadcrumbsMobileVisible = true }) {
   const width = useScreenSize().width;
+  const router = useRouter();
   return (
     <div className="px-2 px-md-5 py-5">
       <div className="px-0 px-md-2 px-xl-5">
@@ -16,8 +18,12 @@ function SearchHeader({ breadcrumbs, breadcrumbsMobileVisible = true }) {
         </div>
         {breadcrumbsMobileVisible && (
           <div className="d-flex mt-3">
-            <p className={SearchHeaderStyle.breadcrumb_inactive}>Help Center{` >`}&nbsp;</p>
-            <p className={SearchHeaderStyle.breadcrumb_active}>Getting Started</p>
+            {breadcrumbs.map((breadcrumb, index) => (
+              <p onClick={() => index != breadcrumbs.length - 1 && router.push(breadcrumb.link)} className={index != breadcrumbs.length - 1 ? SearchHeaderStyle.breadcrumb_inactive : SearchHeaderStyle.breadcrumb_active}>
+                {breadcrumb.name}
+                {index != breadcrumbs.length - 1 && ` >`}&nbsp;
+              </p>
+            ))}
           </div>
         )}
       </div>
