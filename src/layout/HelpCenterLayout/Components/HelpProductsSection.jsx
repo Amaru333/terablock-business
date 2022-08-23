@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React from "react";
 import BulletinCard from "../../../common/Cards/BulletinCard/BulletinCard";
 import { useScreenSize } from "../../../functions/useScreenSize";
@@ -5,9 +6,10 @@ import { useScreenSize } from "../../../functions/useScreenSize";
 import HelpCenterProductsStyle from "../Styles/HelpCenterProducts.module.css";
 
 function HelpProductsSection() {
-  const DataCard = ({ icon, title, children }) => {
+  const router = useRouter();
+  const DataCard = ({ icon, title, children, link }) => {
     return (
-      <div className={HelpCenterProductsStyle.data_card}>
+      <div className={HelpCenterProductsStyle.data_card} onClick={() => router.push(link)}>
         <div className={HelpCenterProductsStyle.icon_container}>
           <img src={`/assets/images/help_center/${icon}.svg`} style={{ width: "25px" }} />
         </div>
@@ -22,41 +24,49 @@ function HelpProductsSection() {
     {
       icon: "wallet",
       title: "Wallet Management",
+      link: "/help-center/wallet-management",
       desc: "Discover about wallet management",
     },
     {
       icon: "learn",
       title: "Learn",
+      link: "/help-center/",
       desc: "Discover about learn programs",
     },
     {
       icon: "bridge",
       title: "Bridge",
+      link: "/help-center/",
       desc: "Discover about bridge",
     },
     {
       icon: "buy",
       title: "Buy",
+      link: "/help-center/",
       desc: "Discover about learn buy",
     },
     {
       icon: "coins",
       title: "Coins List",
+      link: "/help-center/",
       desc: "Discover about earning",
     },
     {
       icon: "swap",
       title: "Swap",
+      link: "/help-center/",
       desc: "Discover about swap",
     },
     {
       icon: "swidge",
       title: "Swidge",
+      link: "/help-center/",
       desc: "Discover about swidge",
     },
     {
       icon: "earn",
       title: "Earn",
+      link: "/help-center/",
       desc: "Discover about earn",
     },
   ];
@@ -72,7 +82,7 @@ function HelpProductsSection() {
             <div className="row mx-0">
               {data.map((data) => (
                 <div className="col-12 col-md-6">
-                  <DataCard icon={data.icon} title={data.title}>
+                  <DataCard icon={data.icon} title={data.title} link={data.link}>
                     {data.desc}
                   </DataCard>
                 </div>

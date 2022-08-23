@@ -1,0 +1,27 @@
+.breadcrumb_inactive {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #a8a8a8;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.breadcrumb_active {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb_inactive {
+    font-size: 14px;
+  }
+  .breadcrumb_active {
+    font-size: 14px;
+  }
+}
