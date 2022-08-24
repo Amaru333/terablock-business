@@ -135,7 +135,7 @@ function PastPerformanceSection() {
         </div>
       </div>
       <div className="d-flex justify-content-center">
-        <p className="text-primaryTextGray w-75 text-center">Note: All performance graphs & numbers are calculated using only the live data and includes rebalances. Past performance doesn't include cost or guarantee future returns.</p>
+        <p className="text-primaryTextGray w-75 text-center">Note: All performance graphs & numbers are calculated using only the live data and includes rebalances. Past performance doesn&apos;t include cost or guarantee future returns.</p>
       </div>
     </div>
   );

@@ -80,8 +80,8 @@ function HelpProductsSection() {
         <div className={`row mx-0`}>
           <div className={`col-12 col-xl-8 px-0 ${width > 1201 && "border-bottom"}`} style={{ paddingBottom: width > 1201 ? "6rem" : "0rem" }}>
             <div className="row mx-0">
-              {data.map((data) => (
-                <div className="col-12 col-md-6">
+              {data.map((data, index) => (
+                <div key={index} className="col-12 col-md-6">
                   <DataCard icon={data.icon} title={data.title} link={data.link}>
                     {data.desc}
                   </DataCard>

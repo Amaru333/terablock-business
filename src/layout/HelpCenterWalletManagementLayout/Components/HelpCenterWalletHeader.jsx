@@ -16,7 +16,7 @@ function HelpCenterWalletHeader() {
         <p className={HelpCenterWalletStyle.card_title}>{data.title}</p>
         <div className={HelpCenterWalletStyle.card_container}>
           {data.questions.map((question, index) => (
-            <div className={`d-flex justify-content-between ${index != data.questions.length - 1 && "border-bottom"}`} style={{ cursor: "pointer" }} onClick={() => router.push(question.link)}>
+            <div key={index} className={`d-flex justify-content-between ${index != data.questions.length - 1 && "border-bottom"}`} style={{ cursor: "pointer" }} onClick={() => router.push(question.link)}>
               <p className={[HelpCenterWalletStyle.questions]}>{question.title}</p>
               <img src="/assets/images/help_center/next.svg" />
             </div>
@@ -174,8 +174,8 @@ function HelpCenterWalletHeader() {
         <div className={`row mx-0`}>
           <div className={`col-12 col-xl-8 px-0`}>
             <div className="row mx-0">
-              {data.map((data) => (
-                <div className="col-12 col-md-6">
+              {data.map((data, index) => (
+                <div key={index} className="col-12 col-md-6">
                   <DataCard data={data}>{data.desc}</DataCard>
                 </div>
               ))}

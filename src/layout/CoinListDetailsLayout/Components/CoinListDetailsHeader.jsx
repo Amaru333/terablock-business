@@ -16,7 +16,7 @@ function CoinListDetailsHeader() {
                   Binance Coin<span className="text-primaryViolet">.</span>
                 </b>
               </h2>
-              <p className="text-primaryTextGray">At TeraBlock we look at investing as everyone's basic fundamental right. It should not be exclusive to high net worth individuals and sophisticated investors.</p>
+              <p className="text-primaryTextGray">At TeraBlock we look at investing as everyone&apos;s basic fundamental right. It should not be exclusive to high net worth individuals and sophisticated investors.</p>
             </div>
           </div>
         </div>

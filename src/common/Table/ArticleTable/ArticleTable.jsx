@@ -33,8 +33,8 @@ function ArticleTable({ title, data }) {
   return (
     <div>
       <div className="row mx-0">
-        {d.map((data) => (
-          <div className="col-12 col-md-6 mb-3">
+        {d.map((data, index) => (
+          <div key={index} className="col-12 col-md-6 mb-3">
             <p className={[ArticleTableStyle.tag, data.tag == "Market trend" ? ArticleTableStyle.market_trend_tag : data.tag == "De-Fi" ? ArticleTableStyle.defi_tag : ArticleTableStyle.news_tag].join(" ")} style={{ marginBottom: 0 }}>
               {data.tag}
             </p>

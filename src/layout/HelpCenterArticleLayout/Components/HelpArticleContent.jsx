@@ -78,7 +78,7 @@ function HelpArticleContent() {
         <p className="mb-4 fs-5-4">Click on “Click here to reveal secret words” to show the seed phrase.</p>
         <p className="fs-5-4">
           MetaMask requires that you store your seed phrase in a safe place. It is the only way to recover your funds should your device crash or your browser reset. We recommend you write it down. The most common method is to write your 12-word phrase on a piece of paper and store it safely in a place where only you have access. Note: if you lose
-          your seed phrase, MetaMask can't help you recover your wallet and your funds will be lost forever.
+          your seed phrase, MetaMask can&apos;t help you recover your wallet and your funds will be lost forever.
         </p>
         <p className="fs-5-4">Never share your seed phrase or your private key to anyone or any site, unless you want them to have full control over your funds.</p>
         <div className="">

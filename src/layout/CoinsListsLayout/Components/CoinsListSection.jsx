@@ -67,7 +67,7 @@ function CoinsListSection() {
       <div className="text-center mt-5 px-4 px-md-5 mx-0 mx-md-5 pb-5">
         <h3 className="text-primaryTextDark fw-bold">
           <b>
-            Coins you shouldn't miss<span className="text-primaryViolet">.</span>
+            Coins you shouldn&apos;t miss<span className="text-primaryViolet">.</span>
           </b>
         </h3>
         <p className="text-primaryTextGray fs-6">CoinsList empowers you to see the possibilities of consistent simplified investments and helps you realize your financial goals.</p>

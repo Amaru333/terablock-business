@@ -39,7 +39,7 @@ function RecentlyViewedSection() {
             Recently Viewed<span className="text-primaryViolet">.</span>
           </b>
         </h2>
-        <p className="text-primaryTextGray fs-6 py-3">You've recently viewed the following CoinsLists.</p>
+        <p className="text-primaryTextGray fs-6 py-3">You&apos;ve recently viewed the following CoinsLists.</p>
       </div>
       <div className="row mx-3 mx-md-4">
         {coinlist_data.map((data, index) => (

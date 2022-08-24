@@ -19,7 +19,7 @@ function SearchHeader({ breadcrumbs, breadcrumbsMobileVisible = true }) {
         {breadcrumbsMobileVisible && (
           <div className="d-flex mt-3">
             {breadcrumbs.map((breadcrumb, index) => (
-              <p onClick={() => index != breadcrumbs.length - 1 && router.push(breadcrumb.link)} className={["fs-5-4", index != breadcrumbs.length - 1 ? SearchHeaderStyle.breadcrumb_inactive : SearchHeaderStyle.breadcrumb_active].join(" ")}>
+              <p key={index} onClick={() => index != breadcrumbs.length - 1 && router.push(breadcrumb.link)} className={["fs-5-4", index != breadcrumbs.length - 1 ? SearchHeaderStyle.breadcrumb_inactive : SearchHeaderStyle.breadcrumb_active].join(" ")}>
                 {breadcrumb.name}
                 {index != breadcrumbs.length - 1 && ` >`}&nbsp;
               </p>
