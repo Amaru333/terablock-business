@@ -6,6 +6,14 @@
   max-width: 280px;
 }
 
+.help_container {
+  background: rgba(70, 76, 87, 0.05);
+  border: 0.8px solid rgba(70, 76, 87, 0.1);
+  border-radius: 8px;
+  padding: 15px;
+  max-width: 280px;
+}
+
 .title {
   font-family: "Poppins";
   font-style: normal;
@@ -35,10 +43,42 @@
   margin-bottom: 32px;
 }
 
+.feedback_title {
+  font-family: "Lexend";
+  font-weight: 600;
+  font-size: 32px;
+  color: #1b2d5b;
+  margin-bottom: 16px;
+}
+
+.feedback_button {
+  padding: 16px 24px;
+  background: #d1d5de;
+  border-radius: 6px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 16px;
+  color: #1b2d5b;
+  border: none;
+  /* margin-right: 16px; */
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: none;
     padding: 30px;
     margin-top: 40px;
+  }
+  .help_container {
+    max-width: none;
+    padding: 30px;
+    margin-top: 40px;
+  }
+  .feedback_title {
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .feedback_button {
+    width: 48%;
   }
 }

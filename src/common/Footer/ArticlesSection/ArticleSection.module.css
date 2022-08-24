@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq::before {
+  content: "\2022";
+  color: #0052ff;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.faq {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 1em;
+  color: #464c57;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: row;
+  }
+}
+@media (max-width: 769px) {
+  .container {
+    flex-direction: column;
+  }
+}

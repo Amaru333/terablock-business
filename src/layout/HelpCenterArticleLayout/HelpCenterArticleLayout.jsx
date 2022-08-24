@@ -1,4 +1,5 @@
 import React from "react";
+import ArticlesSection from "../../common/Footer/ArticlesSection/ArticlesSection";
 import SearchHeader from "../../common/Header/SearchHeader/SearchHeader";
 import HelpArticleContent from "./Components/HelpArticleContent";
 
@@ -21,6 +22,7 @@ function HelpCenterArticleLayout() {
     <div>
       <SearchHeader breadcrumbs={breadcrumbs} />
       <HelpArticleContent />
+      <ArticlesSection article />
     </div>
   );
 }
