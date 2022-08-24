@@ -1,9 +1,8 @@
 import React from "react";
-import ArticlesSection from "../../common/Footer/ArticlesSection/ArticlesSection";
 import SearchHeader from "../../common/Header/SearchHeader/SearchHeader";
-import HelpCenterWalletHeader from "./Components/HelpCenterWalletHeader";
+import HelpArticleContent from "./Components/HelpArticleContent";
 
-function HelpCenterWalletManagement() {
+function HelpCenterArticleLayout() {
   const breadcrumbs = [
     {
       name: "Help Center",
@@ -13,14 +12,17 @@ function HelpCenterWalletManagement() {
       name: "Wallet Management",
       link: "/help-center/wallet-management",
     },
+    {
+      name: "How to create a MetaMask Wallet",
+      link: "/help-center/wallet-management/how-to-create-a-metamask-wallet",
+    },
   ];
   return (
     <div>
       <SearchHeader breadcrumbs={breadcrumbs} />
-      <HelpCenterWalletHeader />
-      <ArticlesSection />
+      <HelpArticleContent />
     </div>
   );
 }
 
-export default HelpCenterWalletManagement;
+export default HelpCenterArticleLayout;

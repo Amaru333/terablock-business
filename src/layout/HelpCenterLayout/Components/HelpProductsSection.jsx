@@ -24,7 +24,7 @@ function HelpProductsSection() {
     {
       icon: "wallet",
       title: "Wallet Management",
-      link: "/help-center/wallet-management",
+      link: "/help-center/wallet-management/",
       desc: "Discover about wallet management",
     },
     {

@@ -1,0 +1,35 @@
+.wallet_help_list_container {
+  background: rgba(248, 248, 248, 0.5);
+  border-radius: 8px;
+  padding: 8px 0px;
+  cursor: pointer;
+}
+
+.wallet_help_header {
+  display: flex;
+  color: #a1aac7;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 14px;
+  padding: 8px 20px;
+}
+
+.wallet_list_active {
+  background: rgba(0, 82, 255, 0.2);
+  border-radius: 4px;
+  padding: 8px 20px;
+  color: #1b2d5b;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
+.wallet_list_inactive {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 14px;
+  padding: 8px 20px;
+  margin-bottom: 0px;
+  color: #a1aac7;
+}

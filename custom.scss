@@ -24,6 +24,7 @@ $theme-colors: (
   "lightBlueBg": #f2f6ff,
   "grayBg": #f7f7f7,
   "fontDark": #1b2d5b,
+  "darkGray": #464c57,
 );
 
 html,
@@ -46,6 +47,26 @@ body {
   justify-content: center;
 }
 
+.lexend {
+  font-family: "Lexend", sans-serif;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.fs-6-5 {
+  font-size: 1.25rem;
+}
+
+.fs-5-4 {
+  font-size: 1rem;
+}
+
+.article-title {
+  color: black;
+}
+
 @media (max-width: 1700px) {
   .bulletin-card-justify {
     justify-content: end;
@@ -55,6 +76,18 @@ body {
 @media (max-width: 1200px) {
   .bulletin-card-justify {
     justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .fs-6-5 {
+    font-size: 1rem;
+  }
+  .fs-5-4 {
+    font-size: 0.75rem;
+  }
+  .article-title {
+    color: #1b2d5b;
   }
 }
 

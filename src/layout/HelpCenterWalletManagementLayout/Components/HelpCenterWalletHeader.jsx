@@ -2,10 +2,13 @@ import React from "react";
 import BulletinCard from "../../../common/Cards/BulletinCard/BulletinCard";
 import { useScreenSize } from "../../../functions/useScreenSize";
 
+import { useRouter } from "next/router";
+
 import HelpCenterWalletStyle from "../Styles/HelpCenterWallet.module.css";
 
 function HelpCenterWalletHeader() {
   const width = useScreenSize().width;
+  const router = useRouter();
   const DataCard = ({ data }) => {
     return (
       <div className="mb-5 pe-2">
@@ -13,7 +16,7 @@ function HelpCenterWalletHeader() {
         <p className={HelpCenterWalletStyle.card_title}>{data.title}</p>
         <div className={HelpCenterWalletStyle.card_container}>
           {data.questions.map((question, index) => (
-            <div className={`d-flex justify-content-between ${index != data.questions.length - 1 && "border-bottom"}`} style={{ cursor: "pointer" }}>
+            <div className={`d-flex justify-content-between ${index != data.questions.length - 1 && "border-bottom"}`} style={{ cursor: "pointer" }} onClick={() => router.push(question.link)}>
               <p className={[HelpCenterWalletStyle.questions]}>{question.title}</p>
               <img src="/assets/images/help_center/next.svg" />
             </div>
@@ -30,7 +33,7 @@ function HelpCenterWalletHeader() {
       questions: [
         {
           title: "What is TeraBlock Wallet ?",
-          link: "/help-center/wallet-management",
+          link: "/help-center/wallet-management/article",
         },
         {
           title: "What is TeraBlock Wallet ?",

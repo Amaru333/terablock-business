@@ -1,8 +1,8 @@
 import React from "react";
-import HelpCenterWalletManagement from "../../../src/layout/HelpCenterWalletManagementLayout/HelpCenterWalletManagement";
+import HelpCenterWalletManagementLayout from "../../../src/layout/HelpCenterWalletManagementLayout/HelpCenterWalletManagementLayout";
 
-function index() {
-  return <HelpCenterWalletManagement />;
+function HelpCenterWalletManagement() {
+  return <HelpCenterWalletManagementLayout />;
 }
 
-export default index;
+export default HelpCenterWalletManagement;

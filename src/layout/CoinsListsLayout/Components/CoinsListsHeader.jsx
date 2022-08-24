@@ -5,7 +5,7 @@ import UIButton from "../../../widgets/UIButtons/UIButton";
 function CoinsListsHeader() {
   const width = useScreenSize().width;
   return (
-    <div className="pb-5">
+    <div className="pb-5 px-0 px-md-2 px-xl-5">
       <div className="pt-5 position-relative">
         <div className="row mx-0" style={{ zIndex: 1 }}>
           <div className="my-5 px-4 px-md-5 col-12 col-md-6 pe-0 pe-md-5 d-flex flex-column justify-content-center text-center pe-4 text-md-start">
