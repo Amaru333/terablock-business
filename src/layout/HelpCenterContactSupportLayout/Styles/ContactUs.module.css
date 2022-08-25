@@ -1,0 +1,80 @@
+.selected {
+  background: rgba(204, 220, 255, 0.1);
+  border: 1px solid #a1aac7;
+  border-radius: 8px;
+  font-family: "Poppins";
+  padding: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.unselected {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ccdcff;
+  border-radius: 8px;
+  font-family: "Poppins";
+  padding: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.icon {
+  width: 20px;
+}
+
+.icon_container {
+  background: rgba(247, 248, 252, 0.8);
+  border: 1px solid #6d7996;
+  border-radius: 8px;
+  padding: 7px;
+}
+
+.selected_icon {
+  width: 24px;
+}
+
+.title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #a1aac7;
+  margin-bottom: 0;
+}
+
+.textarea {
+  background: #ffffff;
+  border: 1px solid #d4dbf5;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  width: 100%;
+}
+
+.textarea::placeholder {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 16px;
+  color: #a1aac7;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 2px;
+  }
+  .description {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
