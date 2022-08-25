@@ -1,0 +1,135 @@
+.container {
+  background: #ffffff;
+  border: 0.25px solid #0000003b;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-family: "Poppins";
+  padding: 1.2rem 1.4rem;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 20px;
+  color: #000000;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 16px;
+  color: #464c57;
+  margin-bottom: 16px;
+}
+
+.category {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+.pagination_active {
+  border: 1px solid #000000;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  color: #000000;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.pagination_inactive {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.empty_container {
+  min-height: 60vh;
+  width: 100%;
+  display: flex;
+}
+
+.empty_message {
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+}
+
+.empty_title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.001em;
+  color: #000000;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+.empty_desc {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #a1aac7;
+  margin-bottom: 0px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    color: #1b1b1b;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .description {
+    font-size: 14px;
+  }
+  .category {
+    font-weight: 500;
+    font-size: 16px;
+    color: #a1aac7;
+  }
+  .pagination_active {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 2px 8px;
+  }
+  .pagination_inactive {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 2px 8px;
+  }
+  .empty_title {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #1b1b1b;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+  .empty_desc {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #a1aac7;
+  }
+  .empty_message {
+    width: 80%;
+  }
+}

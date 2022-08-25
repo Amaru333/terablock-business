@@ -46,7 +46,7 @@ function ArticlesSection({ article = false }) {
             </div>
           </div>
           <div className={`col-12 col-xl-4 d-md-flex bulletin-card-justify ${width < 1200 && "border-bottom pb-5"}`}>
-            {width > 1199 && (
+            {width > 1199 && article && (
               <div className="w-75">
                 <p className="text-start pt-5" style={{ color: "#1B2D5B", fontSize: "32px", fontWeight: 700, fontFamily: "Poppins" }}>
                   FAQS
