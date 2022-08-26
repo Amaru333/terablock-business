@@ -6,7 +6,7 @@ function InvestmentGraph() {
   return (
     <div>
       <div className="bg-investmentGraphBg flex flex-column justify-content-center align-items-center pb-4">
-        <h3 className="text-white text-center pt-5 px-1">
+        <h3 className="text-white text-center fw-bold pt-5 px-1">
           <b>
             Investing is the key to building wealth<span className="text-primaryViolet">.</span>
           </b>

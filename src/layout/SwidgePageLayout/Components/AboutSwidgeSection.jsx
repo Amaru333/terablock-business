@@ -41,10 +41,10 @@ function AboutSwidgeSection() {
   ];
   const width = useScreenSize().width;
   return (
-    <div className="pb-5">
+    <div className="pb-5 px-0 px-md-2 px-xl-5">
       <div className="position-relative">
         <div className="text-center mt-5 px-4 px-md-5">
-          <h3 className="text-primaryTextDark">
+          <h3 className="text-primaryTextDark fw-bold">
             <b>
               Build your truly decentralised crypto portfolio<span className="text-primaryViolet">.</span>
             </b>

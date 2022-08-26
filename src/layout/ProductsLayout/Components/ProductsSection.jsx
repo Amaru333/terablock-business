@@ -45,7 +45,7 @@ function ProductsSection() {
   ];
   const WalletManagement = () => {
     return (
-      <div className="row mx-0 d-flex flex-column-reverse flex-md-row">
+      <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-2 px-xl-5">
         <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-5">
           <h2 className="text-primaryBlue fw-normal text-center text-md-start">
             <b>Wallet</b> Management

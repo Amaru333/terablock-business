@@ -56,7 +56,7 @@ function AdvisorsInvestorsSection() {
   return (
     <div className={["py-5 px-0 px-md-2 px-xl-5", AdvisorsInvestorsStyle.background_image].join(" ")}>
       <div className="text-center mb-2 px-3">
-        <h3 className="text-primaryTextDark">
+        <h3 className="text-primaryTextDark fw-bold">
           <b>
             Our Advisors & Investors<span className="text-primaryViolet">.</span>
           </b>
@@ -65,7 +65,7 @@ function AdvisorsInvestorsSection() {
       </div>
       <div className="row mx-2 mx-md-5 justify-content-center">
         {investors.map((data, index) => (
-          <div key={index} className="px-2 py-3 col-6 col-sm-4 col-md-3 col-xxl-2">
+          <div key={index} className={`px-2 py-3 col-6 col-sm-4 col-md-3 ${width > 1300 && "col-xxl-20p"}`}>
             <InvestorCard name={data.name} image={data.image} />
           </div>
         ))}

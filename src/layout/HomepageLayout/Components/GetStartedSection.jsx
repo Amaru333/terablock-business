@@ -8,7 +8,7 @@ function GetStartedSection() {
   return (
     <div>
       <div className="text-center mt-5 px-4 px-md-5">
-        <h3 className="text-primaryTextDark">
+        <h3 className="text-primaryTextDark fw-bold">
           <b>
             Build your truly decentralised crypto portfolio<span className="text-primaryViolet">.</span>
           </b>

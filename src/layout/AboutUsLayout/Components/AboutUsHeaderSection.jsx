@@ -9,7 +9,7 @@ function AboutUsHeaderSection() {
       <div className="pt-5 position-relative">
         <div className="row mx-0" style={{ zIndex: 1 }}>
           <div className="my-5 px-4 px-md-5 col-12 col-md-6 pe-0 pe-md-5 d-flex flex-column justify-content-around text-center pe-4 text-md-start">
-            <h1 className="text-primaryTextDark">
+            <h1 className="text-primaryTextDark fw-bold">
               We are a team of Creators & Innovators<span className="text-primaryViolet">.</span>
             </h1>
             <p className="text-primaryTextGray mb-0 fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>

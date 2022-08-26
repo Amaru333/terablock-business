@@ -6,9 +6,9 @@ import GamersSectionStyle from "../Styles/GamersSection.module.css";
 function GamersSection() {
   const width = useScreenSize().width;
   return (
-    <div className="py-5 bg-white">
+    <div className="py-5 bg-white px-0 px-md-2 px-xl-5">
       <div className="text-center mb-2 px-3">
-        <h3 className="text-primaryTextDark">
+        <h3 className="text-primaryTextDark fw-bold">
           <b>
             Bringing Gamers Together<span className="text-primaryViolet">.</span>
           </b>

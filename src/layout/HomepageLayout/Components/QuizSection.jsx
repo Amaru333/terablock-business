@@ -42,7 +42,7 @@ function QuizSection() {
   return (
     <div className="mb-5 pb-5">
       <div className="text-center mt-5 px-4 px-md-5 mx-0 mx-md-5 pb-5">
-        <h3 className="text-primaryTextDark">
+        <h3 className="text-primaryTextDark fw-bold">
           <b>
             Want to know how you can make the most of crypto investments? Take our quiz<span className="text-primaryViolet">.</span>
           </b>

@@ -67,11 +67,23 @@ body {
   color: black;
 }
 
+.col-xxl-20p {
+  flex: 0 0 auto !important;
+  width: 20% !important;
+}
+
 @media (max-width: 1700px) {
   .bulletin-card-justify {
     justify-content: end;
   }
 }
+
+// @media (min-width: 1400px) {
+//   .col-xxl-20p {
+//     flex: 0 0 auto !important;
+//     width: 20% !important;
+//   }
+// }
 
 @media (max-width: 1200px) {
   .bulletin-card-justify {

@@ -6,7 +6,7 @@ function CoinsListsFAQ() {
   return (
     <div className="pb-5 position-relative px-0 px-md-2 px-xl-5">
       <div className="text-center mt-5 px-4 px-md-5 mx-0 mx-md-5 pb-3">
-        <h3 className="text-primaryTextDark">
+        <h3 className="text-primaryTextDark fw-bold">
           <b>
             FAQs<span className="text-primaryViolet">.</span>
           </b>

@@ -42,7 +42,7 @@ function CommunityConnectionsSection() {
   return (
     <div className="bg-white">
       <div className="text-center pt-5 px-4 px-md-5">
-        <h3 className="text-primaryTextDark">
+        <h3 className="text-primaryTextDark fw-bold">
           <b>
             Connect with the global community<span className="text-primaryViolet">.</span>
           </b>

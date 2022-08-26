@@ -2,11 +2,11 @@ import React from "react";
 
 function DescriptionSection() {
   return (
-    <div className="primary-gradient py-5">
+    <div className="primary-gradient py-5 px-0 px-md-2 px-xl-5">
       <div className="row mx-0">
         <div className="col-12 col-xl-3 d-flex flex-column ps-5 text-center text-md-start justify-content-center">
-          <h2 className="fw-bolder text-textLightGray">The Powerful,</h2>
-          <h2 className="fw-bolder text-white" style={{ "--bs-border-opacity": 0.77 }}>
+          <h2 className="fw-bolder text-textLightGray fw-bolder">The Powerful,</h2>
+          <h2 className="fw-bolder text-white fw-bolder" style={{ "--bs-border-opacity": 0.77 }}>
             TeraBlock<span className="text-primaryViolet">.</span>
           </h2>
         </div>

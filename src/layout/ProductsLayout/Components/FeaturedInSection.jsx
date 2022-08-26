@@ -24,9 +24,9 @@ function FeaturedInSection() {
     "./assets/images/product_featured/yahoo-finance.png",
   ];
   return (
-    <div className="pb-5 position-relative">
+    <div className="pb-5 position-relative px-0 px-md-2 px-xl-5">
       <div className="text-center mt-5 px-4 px-md-5 mx-0 mx-md-5 pb-5">
-        <h3 className="text-primaryTextDark">
+        <h3 className="text-primaryTextDark fw-bold">
           <b>
             We are featured in<span className="text-primaryViolet">.</span>
           </b>

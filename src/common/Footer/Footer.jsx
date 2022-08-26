@@ -134,27 +134,6 @@ function Footer() {
       ],
     },
     {
-      title: "Support",
-      pages: [
-        {
-          link: "/",
-          name: "Help Center",
-        },
-        {
-          link: "/",
-          name: "Contacts",
-        },
-        {
-          link: "/",
-          name: "Bug Bounty",
-        },
-        {
-          link: "/",
-          name: "Status",
-        },
-      ],
-    },
-    {
       title: "Learn",
       pages: [
         {
@@ -192,6 +171,27 @@ function Footer() {
         {
           link: "/",
           name: "What is staking?",
+        },
+      ],
+    },
+    {
+      title: "Support",
+      pages: [
+        {
+          link: "/",
+          name: "Help Center",
+        },
+        {
+          link: "/",
+          name: "Contacts",
+        },
+        {
+          link: "/",
+          name: "Bug Bounty",
+        },
+        {
+          link: "/",
+          name: "Status",
         },
       ],
     },

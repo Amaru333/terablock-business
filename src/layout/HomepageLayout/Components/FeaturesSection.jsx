@@ -9,7 +9,7 @@ function FeaturesSection() {
   return (
     <div>
       <div className="text-center mt-5 px-4 px-md-5">
-        <h3 className="text-primaryTextDark">
+        <h3 className="text-primaryTextDark fw-bold">
           <b>
             Investing built for a better future<span className="text-primaryViolet">.</span>
           </b>

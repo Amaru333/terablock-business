@@ -34,9 +34,9 @@ function RecentNewsSection() {
     },
   ];
   return (
-    <div className="py-5 position-relative bg-white ">
+    <div className="py-5 position-relative bg-white px-0 px-md-2 px-xl-5">
       <div className="text-center mt-5 px-4 px-md-5 mx-0 mx-md-5 pb-5">
-        <h3 className="text-primaryTextDark">
+        <h3 className="text-primaryTextDark fw-bold">
           <b>
             Recent News<span className="text-primaryViolet">.</span>
           </b>
