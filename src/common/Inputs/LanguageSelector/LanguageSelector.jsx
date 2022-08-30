@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import OutsideAlerter from "../../../functions/outsideAlerter";
+import OutsideAlerter from "../../functions/outsideAlerter";
 
 import LanguageSelectorStyle from "./LanguageSelector.module.css";
 
