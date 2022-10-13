@@ -10,36 +10,36 @@ function ProductsSection() {
   const [tab, setTab] = useState("Wallet Management");
   const ref = useRef({});
   const tab_list = [
+    // {
+    //   name: "Wallet Management",
+    //   icon: "./assets/icons/wallet-tab.svg",
+    // },
+    // {
+    //   name: "Bridge",
+    //   icon: "./assets/icons/bridge.svg",
+    // },
+    // {
+    //   name: "Coin List",
+    //   icon: "./assets/icons/coin-bag.svg",
+    // },
+    // {
+    //   name: "Buy",
+    //   icon: "./assets/icons/bag.svg",
+    // },
+    // {
+    //   name: "Swap",
+    //   icon: "./assets/icons/swap.svg",
+    // },
+    // {
+    //   name: "Swidge",
+    //   icon: "./assets/icons/swidge.svg",
+    // },
     {
-      name: "Wallet Management",
-      icon: "./assets/icons/wallet-tab.svg",
-    },
-    {
-      name: "Bridge",
-      icon: "./assets/icons/bridge.svg",
-    },
-    {
-      name: "Coin List",
-      icon: "./assets/icons/coin-bag.svg",
-    },
-    {
-      name: "Buy",
-      icon: "./assets/icons/bag.svg",
-    },
-    {
-      name: "Swap",
-      icon: "./assets/icons/swap.svg",
-    },
-    {
-      name: "Swidge",
-      icon: "./assets/icons/swidge.svg",
-    },
-    {
-      name: "Earn",
+      name: "Tab 1",
       icon: "./assets/icons/money-bag.svg",
     },
     {
-      name: "Learn",
+      name: "Tab 2",
       icon: "./assets/icons/learn.svg",
     },
   ];
@@ -147,8 +147,10 @@ function ProductsSection() {
         <TabBar />
       </div>
       <div className="px-4 px-md-5">
-        {tab == "Wallet Management" && <WalletManagement />}
-        {tab == "Bridge" && <Bridge />}
+        {/* {tab == "Wallet Management" && <WalletManagement />}
+        {tab == "Bridge" && <Bridge />} */}
+        {tab == "Tab 1" && <div>Contents of tab 1</div>}
+        {tab == "Tab 2" && <div>Contents of tab 2</div>}
       </div>
     </div>
   );

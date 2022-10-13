@@ -7,11 +7,9 @@ function InvestmentGraph() {
     <div>
       <div className="bg-investmentGraphBg flex flex-column justify-content-center align-items-center pb-4">
         <h3 className="text-white text-center fw-bold pt-5 px-1">
-          <b>
-            Investing is the key to building wealth<span className="text-primaryViolet">.</span>
-          </b>
+          <b>Long term investing is the key to sustainable crypto wealth</b>
         </h3>
-        <p className="text-center text-white mt-4 px-2">Slide the coin and see how your crypto investment could have grown over the last five years</p>
+        <p className="text-center text-white mt-4 px-2">Slide the coin and see how your crypto could have grown over time with systematic and periodic investing</p>
         <div className={["m-auto border border-1 rounded border-white px-4 py-2 my-5", InvestmentGraphStyle.half_container].join(" ")} style={{ "--bs-border-opacity": 0.2 }}>
           <p className="text-white mt-2">Monthly Deposit</p>
           <div className={InvestmentGraphStyle.slide_container}>

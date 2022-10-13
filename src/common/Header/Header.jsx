@@ -18,8 +18,12 @@ function Header() {
   };
   const menu_items = [
     {
-      name: "Prices",
-      link: "/",
+      name: "Coinslists",
+      link: "/coinslists",
+    },
+    {
+      name: "Swidge",
+      link: "/swidge",
     },
     {
       name: "Learn",
@@ -36,10 +40,6 @@ function Header() {
     {
       name: "Community",
       link: "/community",
-    },
-    {
-      name: "Swidge",
-      link: "/swidge",
     },
   ];
   if (width > 1000) {

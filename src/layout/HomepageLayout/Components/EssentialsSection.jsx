@@ -33,14 +33,12 @@ function EssentialsSection() {
     },
   ];
   return (
-    <div className="primary-gradient pb-5">
+    <div className="pb-5" style={{ backgroundColor: "#f5f6fa" }}>
       <div className="text-center mt-5 px-4 px-md-5 pb-3">
-        <h3 className="text-white pt-5">
-          <b>
-            Learn the essentials<span className="text-primaryViolet">.</span>
-          </b>
+        <h3 className="pt-5" style={{ color: "#1b2b6b" }}>
+          <b>Learn the essentials</b>
         </h3>
-        <p className="text-white">Get up to speed on Bitcoin, Ethereum, Web3 wallet, Decentralised Finance (DeFi) and basics of crypto ecosystem. </p>
+        <p style={{ color: "#5a5b5b" }}>Learn crypto through simple explanations, guides, tutorials, and market updates</p>
       </div>
       <div className={["d-flex ps-5 ms-0 ms-md-5", EssentialsSectionStyle.horizontal_scroll].join(" ")}>
         {essential_details.map((item, index) => (
@@ -50,8 +48,8 @@ function EssentialsSection() {
         ))}
       </div>
       <div className="d-flex justify-content-center mt-5">
-        <UIButton type="secondary">Get Started</UIButton>
-        <UIButton type="primary-light">Learn More</UIButton>
+        <UIButton type="primary">Get Started</UIButton>
+        <UIButton>Learn More</UIButton>
       </div>
     </div>
   );

@@ -8,11 +8,9 @@ function BuyCryptoSection() {
     <div>
       <div className="text-center mt-5 px-4 px-md-5">
         <h3 className="text-primaryTextDark fw-bold">
-          <b>
-            Buy crypto instantly to your Web3 wallet<span className="text-primaryViolet">.</span>
-          </b>
+          <b>Buy crypto straight into your Web3 wallet!</b>
         </h3>
-        <p className="text-primaryTextGray">Securely buy, sell, invest, track and transfer cryptocurrencies</p>
+        <p className="text-primaryTextGray">Purchase a range of cryptocurrencies securely to your web3 wallet with over 16 payment methods in 180 countries!</p>
       </div>
       <div className="mx-4 mx-md-1 mx-xl-5" style={{ textAlign: "-webkit-center;" }}>
         <div style={{ maxWidth: "1660px", position: "relative" }}>
