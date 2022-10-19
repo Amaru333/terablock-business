@@ -52,23 +52,84 @@ function PowerOfCoinsListsSection() {
       image: "./assets/icons/terablock-swidge/support.svg",
     },
   ];
-  return (
-    <div className="primary-gradient px-0 px-md-2 px-xl-5">
-      <div className="flex flex-column justify-content-center align-items-center pb-4">
-        <h2 className="text-white text-center pt-5 px-1 d-flex flex-column flex-md-row justify-content-center">
-          <span>
-            <b>The Power of CoinsLists</b>
-            <span className="text-primaryViolet">.</span>
-          </span>
-        </h2>
-        <p className="text-center text-white mt-3 fs-6 fw-lighter">Get to know the people and communities pushing the crypto economy forward</p>
+
+  const DescCard = ({ title, desc, img }) => {
+    return (
+      <div className="d-flex mb-4">
+        <div>
+          <img src={`./assets/images/${img}.png`} style={{ width: "64px" }} />
+        </div>
+        <div className="ps-4" style={{ maxWidth: "400px", color: "#1b2b6b" }}>
+          <p className="mb-1" style={{ fontSize: "16px", fontWeight: "600" }}>
+            {title}
+          </p>
+          <p className="mb-0" style={{ fontSize: "13px" }}>
+            {desc}
+          </p>
+        </div>
       </div>
-      <div className="row mx-0 justify-content-center">
+    );
+  };
+
+  const desc_data = [
+    {
+      title: "Buy multiple cryptocurrencies in 1 click",
+      desc: "Place orders for multiple cryptocurrencies in 1 click as CoinsList and save time.",
+      img: "9",
+    },
+    {
+      title: "Track CoinsLists",
+      desc: "Track and manage seamlessly with a real-time value on a multi-protocol unified platform.",
+      img: "12",
+    },
+    {
+      title: "Invest regularly with SIPs",
+      desc: "Start a SIP on your CoinsLists for every week, month, or quarter to invest systematically.",
+      img: "27",
+    },
+    {
+      title: "0% Advisory fee",
+      desc: "Keep more money in your portfolio with no advisory fee, only the fees  associated with trading expenses.",
+      img: "14",
+    },
+    {
+      title: "Low investment amount",
+      desc: "Start small budget investment for $100.",
+      img: "15",
+    },
+  ];
+  return (
+    <div className="bg-white px-0 px-md-2 px-xl-5">
+      <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
+        <div className="flex flex-column justify-content-center align-items-center pb-4">
+          <h2 className="text-center pt-5 px-1 d-flex flex-column flex-md-row justify-content-center" style={{ color: "#1b2b6b" }}>
+            <span>
+              <b>Easy, quick and diversified investment for you</b>
+            </span>
+          </h2>
+          <p className="text-center" style={{ color: "#5a5b5b" }}>
+            Long-term investment portfolios designed by experts
+          </p>
+        </div>
+        <div className="row mx-5 justify-content-center">
+          <div className="col-12 col-md-6 justify-content-center align-items-center d-flex">
+            <img src="./assets/images/iphone-full.png" />
+          </div>
+          <div className="col-12 col-md-6 justify-content-center align-items-center d-flex">
+            <div className="d-flex flex-column">
+              {desc_data.map((data) => (
+                <DescCard title={data.title} img={data.img} desc={data.desc} />
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* <div className="row mx-0 justify-content-center">
         {descriptionData.map((data, index) => (
           <div className="col-6 col-md-4 col-xl-3 px-3 px-md-5 pb-3 pb-md-5" key={index}>
             <DescriptionCard title={data.title} image={data.image} description={data.description} />
           </div>
         ))}
+      </div> */}
       </div>
     </div>
   );

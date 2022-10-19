@@ -1,6 +1,11 @@
 import React from "react";
+import { useScreenSize } from "../../../functions/useScreenSize";
+import UIButton from "../../../widgets/UIButtons/UIButton";
+import UICard from "../../../widgets/UICard/UICard";
 
 function TeraBlockSwidgeSection() {
+  const width = useScreenSize().width;
+
   const DescriptionCard = ({ image, title, description }) => {
     return (
       <>
@@ -53,22 +58,75 @@ function TeraBlockSwidgeSection() {
     },
   ];
   return (
-    <div className="primary-gradient px-0 px-md-2 px-xl-5">
-      <div className="flex flex-column justify-content-center align-items-center pb-4">
-        <h2 className="text-white text-center pt-5 px-1 d-flex flex-column flex-md-row justify-content-center">
-          <span>
-            <b>Why TeraBlock Swidge is best</b>
-            <span className="text-primaryViolet">.</span>
-          </span>
-        </h2>
-        <p className="text-center text-white mt-3 fs-6 fw-lighter">Get to know the people and communities pushing the crypto economy forward</p>
+    // <div className="primary-gradient px-0 px-md-2 px-xl-5">
+    //   <div className="flex flex-column justify-content-center align-items-center pb-4">
+    //     <h2 className="text-white text-center pt-5 px-1 d-flex flex-column flex-md-row justify-content-center">
+    //       <span>
+    //         <b>Why TeraBlock Swidge is best</b>
+    //         <span className="text-primaryViolet">.</span>
+    //       </span>
+    //     </h2>
+    //     <p className="text-center text-white mt-3 fs-6 fw-lighter">Get to know the people and communities pushing the crypto economy forward</p>
+    //   </div>
+    //   <div className="row mx-0 justify-content-center">
+    //     {descriptionData.map((data, index) => (
+    //       <div className="col-6 col-md-4 col-xl-3 px-3 px-md-5 pb-3 pb-md-5" key={index}>
+    //         <DescriptionCard title={data.title} image={data.image} description={data.description} />
+    //       </div>
+    //     ))}
+    //   </div>
+    // </div>
+    <div className="py-5" style={{ backgroundColor: "#0251ff" }}>
+      <div className="text-center pt-5 px-4 px-md-5">
+        <h3 className="text-white fw-bold">
+          <b>How does it work?</b>
+        </h3>
+        <p className="text-white">Follow a guided three steps process to onboard a Dapp in under 5 mins.</p>
       </div>
-      <div className="row mx-0 justify-content-center">
-        {descriptionData.map((data, index) => (
-          <div className="col-6 col-md-4 col-xl-3 px-3 px-md-5 pb-3 pb-md-5" key={index}>
-            <DescriptionCard title={data.title} image={data.image} description={data.description} />
+      <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
+        <div className="row mx-3 mx-md-1 mx-xl-5 mt-5 position-relative">
+          <div className="col-12 col-md-4 px-3 px-md-0 px-xl-3">
+            <UICard>
+              <div className="d-flex flex-row justify-content-between align-items-center">
+                <div>
+                  <img src="./assets/images/swidge/1.png" className="bg-cardImageBg border border-cardImageBorder rounded" style={{ width: "60px", "--bs-border-opacity": 0.2 }} />
+                </div>
+                <h1 className="text-lightBlueText fw-bolder">1</h1>
+              </div>
+              <p className="fs-4 fw-bolder text-primaryBlue mt-2 text-center text-md-start">Create Web3 wallet</p>
+              <p className="fs-6 text-primaryTextGray text-center text-md-start">Follow simple step-by-step guided process to create a new Web3 wallet or connect an existing wallet.</p>
+            </UICard>
           </div>
-        ))}
+          <div className="col-12 col-md-4 px-3 px-md-0 px-xl-3">
+            <UICard>
+              <div className="d-flex flex-row justify-content-between align-items-center">
+                <div>
+                  <img src="./assets/images/swidge/2.png" className="bg-cardImageBg border border-cardImageBorder rounded" style={{ width: "60px", "--bs-border-opacity": 0.2 }} />
+                </div>
+                <h1 className="text-lightBlueText fw-bolder">2</h1>
+              </div>
+              <p className="fs-4 fw-bolder text-primaryBlue mt-2 text-center text-md-start">Buy</p>
+              <p className="fs-6 text-primaryTextGray text-center text-md-start">Buy accepted cryptocurrencies through convenient payment methods or select from your existing funds.</p>
+            </UICard>
+          </div>
+          <div className="col-12 col-md-4 px-3 px-md-0 px-xl-3">
+            <UICard>
+              <div className="d-flex flex-row justify-content-between align-items-center">
+                <div>
+                  <img src="./assets/images/swidge/3.png" className="bg-cardImageBg border border-cardImageBorder rounded" style={{ width: "60px", "--bs-border-opacity": 0.2 }} />
+                </div>
+                <h1 className="text-lightBlueText fw-bolder">3</h1>
+              </div>
+              <p className="fs-4 fw-bolder text-primaryBlue mt-2 text-center text-md-start">Swap + Bridge</p>
+              <p className="fs-6 text-primaryTextGray text-center text-md-start">One-click approval and your selected cryptocurrency is instantly converted and transferred to your in-game or Dapp wallet.</p>
+            </UICard>
+          </div>
+          {width > 768 && <img src="./assets/icons/4x5.svg" style={{ width: "60px", position: "absolute", bottom: "2rem", left: "1rem" }} />}
+        </div>
+      </div>
+      <div className="d-flex align-items-center justify-content-center mt-2 mb-5">
+        <UIButton>Get Started</UIButton>
+        <UIButton type="primary-light">Launch Swidge</UIButton>
       </div>
     </div>
   );

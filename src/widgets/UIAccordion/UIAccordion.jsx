@@ -8,7 +8,7 @@ function UIAccordion({ index, expanded = false, title, children, homepage }) {
     <div className="my-3">
       <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossOrigin="anonymous"></Script>
       <div className="accordion" id={`accodiation${index}`}>
-        <div className={["accordion-item", UIAccordionStyles.accordion_item].join(" ")} style={{ backgroundColor: homepage ? "#0251ff" : "white" }}>
+        <div className={["accordion-item", UIAccordionStyles.accordion_item].join(" ")} style={{ backgroundColor: homepage ? "#155efb" : "white" }}>
           <h2 className="accordion-header" id={`heading${index}`}>
             <button className={["accordion-button collapsed", homepage ? UIAccordionStyles.header_home : UIAccordionStyles.header].join(" ")} type="button" data-bs-toggle="collapse" data-bs-target={`#collapse${index}`} aria-expanded="false" aria-controls={`collapse${index}`}>
               {title}

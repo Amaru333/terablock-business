@@ -11,7 +11,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const NavbarMenu = ({ name, link }) => {
     return (
-      <p className="mb-0 px-3 fw-bold px-xxl-4" onClick={() => router.push(link)} style={{ fontSize: "14px", fontWeight: 500, cursor: "pointer" }}>
+      <p className="mb-0 px-3 fw-bold px-xxl-4" onClick={() => router.push(link)} style={{ fontSize: "14px", fontWeight: 500, cursor: "pointer", color: router.pathname == link ? "#0251ff" : "#212529" }}>
         {name}
       </p>
     );
