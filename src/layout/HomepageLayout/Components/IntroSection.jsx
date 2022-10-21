@@ -6,7 +6,7 @@ import IntroSectionStyles from "../Styles/IntroSection.module.css";
 function IntroSection() {
   const width = useScreenSize().width;
   return (
-    <div className="bg-white text-center text-md-start position-relative">
+    <div className="bg-white text-center text-md-start position-relative pt-5">
       <div className="px-xl-5">
         <div style={{ maxWidth: "1500px", margin: "auto" }}>
           <div className="row mx-0 px-4 pt-4">

@@ -126,7 +126,7 @@ function AboutSwidgeSection() {
     //   </div>
     //   <StartCryptoJourneyCard />
     // </div>
-    <div className="py-5 px-2 px-md-5" style={{ backgroundColor: "white", color: "#1b2b6b" }}>
+    <div className="py-5 px-2 px-md-5" style={{ color: "#1b2b6b" }}>
       <div style={{ maxWidth: "1500px", margin: "auto" }}>
         <h3 className="text-center px-3 px-md-0 pt-md-5">
           <b>Swidge is the simplest way to onboard a Dapp</b>

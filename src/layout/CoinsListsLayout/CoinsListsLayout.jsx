@@ -1,4 +1,5 @@
 import React from "react";
+import TopNotification from "../HomepageLayout/Components/TopNotification";
 import CoinsListSection from "./Components/CoinsListSection";
 import CoinsListsFAQ from "./Components/CoinsListsFAQ";
 import CoinsListsHeader from "./Components/CoinsListsHeader";
@@ -9,6 +10,7 @@ import WhatAreCoinlistsSection from "./Components/WhatAreCoinlistsSection";
 function CoinsListsLayout() {
   return (
     <div>
+      <TopNotification />
       <CoinsListsHeader />
       <WhatAreCoinlistsSection />
       <CoinsListSection />

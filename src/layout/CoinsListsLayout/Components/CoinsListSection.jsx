@@ -1,6 +1,7 @@
 import React from "react";
 import CoinsListCard from "../../../common/Cards/CoinsListCard";
 import { useScreenSize } from "../../../functions/useScreenSize";
+import UIButton from "../../../widgets/UIButtons/UIButton";
 import UICard from "../../../widgets/UICard/UICard";
 
 function CoinsListSection() {
@@ -11,17 +12,17 @@ function CoinsListSection() {
       <UICard>
         <div className="d-flex align-items-center">
           <div style={{ width: "5%" }}>
-            <img src={data.image} />
+            <img src={data.image} style={{ width: "60px" }} />
           </div>
           <div className="ms-3" style={{ width: "40%" }}>
             <div>
               <div className="d-flex justify-content-between align-items-center">
-                <h4 className="fw-bold text-primaryDark mb-0">{data.title}</h4>
+                <h5 className="fw-bold text-primaryDark mb-0">{data.title}</h5>
               </div>
               <p className="text-cardDescriptionColor mb-0">{data.description}</p>
             </div>
           </div>
-          <div className="d-flex" style={{ width: "20%" }}>
+          <div className="d-flex justify-content-center align-items-center" style={{ width: "20%" }}>
             {data.coin_images.map((image, index) => (
               <div>
                 <img src={image} className="me-2 me-md-3" key={index} style={{ width: "32px" }} />
@@ -32,15 +33,15 @@ function CoinsListSection() {
             <div className="d-flex justify-content-evenly text-center align-items-center">
               <div>
                 <p className="text-primaryTextGray mb-1" style={{ fontSize: "12px", fontWeight: "500" }}>
-                  4Yr. CAGR
-                </p>
-                <p className="fw-bold text-success mb-0">{data.cagr}</p>
-              </div>
-              <div>
-                <p className="text-primaryTextGray mb-1" style={{ fontSize: "12px", fontWeight: "500" }}>
                   Min. Amount
                 </p>
                 <p className="fw-bold text-primaryDark mb-0">{data.min_amount}</p>
+              </div>
+              <div>
+                <p className="text-primaryTextGray mb-1" style={{ fontSize: "12px", fontWeight: "500" }}>
+                  4Yr. CAGR
+                </p>
+                <p className="fw-bold text-success mb-0">{data.cagr}</p>
               </div>
               {/* {width > 1000 ? (
               <div className="d-flex align-items-center">
@@ -56,6 +57,9 @@ function CoinsListSection() {
             )} */}
             </div>
           </div>
+          <div style={{ width: "20%", margin: "auto", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <UIButton>View CoinsList</UIButton>
+          </div>
         </div>
       </UICard>
     );
@@ -63,60 +67,60 @@ function CoinsListSection() {
 
   const coinlist_data = [
     {
-      image: "./assets/images/coinslists/btc.png",
-      title: "Binance",
+      image: "./assets/icons/homepage/4.png",
+      title: "High Capitalisation",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-      coin_images: ["./assets/images/coinslists/e-cash.png", "./assets/images/coinslists/btc.png", "./assets/images/coinslists/ripple.png", "./assets/images/coinslists/xss.png", "./assets/images/coinslists/coin-5.png"],
+      coin_images: ["./assets/icons/homepage/coins/1.png", "./assets/icons/homepage/coins/2.png", "./assets/icons/homepage/coins/3.png", "./assets/icons/homepage/coins/4.png"],
       cagr: "24.44%",
       min_amount: "$4,234",
       volatile: "High",
     },
     {
-      image: "./assets/images/coinslists/eth.png",
-      title: "Ethereum",
+      image: "./assets/icons/homepage/5.png",
+      title: "Metaverse",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-      coin_images: ["./assets/images/coinslists/e-cash.png", "./assets/images/coinslists/btc.png", "./assets/images/coinslists/ripple.png", "./assets/images/coinslists/xss.png", "./assets/images/coinslists/coin-5.png"],
+      coin_images: ["./assets/icons/homepage/coins/5.png", "./assets/icons/homepage/coins/6.png", "./assets/icons/homepage/coins/7.png", "./assets/icons/homepage/coins/8.png"],
       cagr: "24.44%",
       min_amount: "$4,234",
       volatile: "Low",
     },
     {
-      image: "./assets/images/coinslists/usdt.png",
-      title: "Tether",
+      image: "./assets/icons/homepage/6.png",
+      title: "Play2Earn",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-      coin_images: ["./assets/images/coinslists/e-cash.png", "./assets/images/coinslists/btc.png", "./assets/images/coinslists/ripple.png", "./assets/images/coinslists/xss.png", "./assets/images/coinslists/coin-5.png"],
+      coin_images: ["./assets/icons/homepage/coins/9.png", "./assets/icons/homepage/coins/10.png", "./assets/icons/homepage/coins/11.png", "./assets/icons/homepage/coins/12.png"],
       cagr: "24.44%",
       min_amount: "$4,234",
       volatile: "Med",
     },
     {
-      image: "./assets/images/coinslists/btc.png",
-      title: "Binance",
+      image: "./assets/icons/homepage/7.png",
+      title: "DeFi",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-      coin_images: ["./assets/images/coinslists/e-cash.png", "./assets/images/coinslists/btc.png", "./assets/images/coinslists/ripple.png", "./assets/images/coinslists/xss.png", "./assets/images/coinslists/coin-5.png"],
+      coin_images: ["./assets/icons/homepage/coins/13.png", "./assets/icons/homepage/coins/1.png", "./assets/icons/homepage/coins/1.png", "./assets/icons/homepage/coins/2.png"],
       cagr: "24.44%",
       min_amount: "$4,234",
       volatile: "High",
     },
-    // {
-    //   image: "./assets/images/coinslists/eth.png",
-    //   title: "Ethereum",
-    //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-    //   coin_images: ["./assets/images/coinslists/e-cash.png", "./assets/images/coinslists/btc.png", "./assets/images/coinslists/ripple.png", "./assets/images/coinslists/xss.png", "./assets/images/coinslists/coin-5.png"],
-    //   cagr: "24.44%",
-    //   min_amount: "$4,234",
-    //   volatile: "Low",
-    // },
-    // {
-    //   image: "./assets/images/coinslists/usdt.png",
-    //   title: "Tether",
-    //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-    //   coin_images: ["./assets/images/coinslists/e-cash.png", "./assets/images/coinslists/btc.png", "./assets/images/coinslists/ripple.png", "./assets/images/coinslists/xss.png", "./assets/images/coinslists/coin-5.png"],
-    //   cagr: "24.44%",
-    //   min_amount: "$4,234",
-    //   volatile: "Med",
-    // },
   ];
+  // {
+  //   image: "./assets/images/coinslists/eth.png",
+  //   title: "Ethereum",
+  //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+  //   coin_images: ["./assets/images/coinslists/e-cash.png", "./assets/images/coinslists/btc.png", "./assets/images/coinslists/ripple.png", "./assets/images/coinslists/xss.png", "./assets/images/coinslists/coin-5.png"],
+  //   cagr: "24.44%",
+  //   min_amount: "$4,234",
+  //   volatile: "Low",
+  // },
+  // {
+  //   image: "./assets/images/coinslists/usdt.png",
+  //   title: "Tether",
+  //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+  //   coin_images: ["./assets/images/coinslists/e-cash.png", "./assets/images/coinslists/btc.png", "./assets/images/coinslists/ripple.png", "./assets/images/coinslists/xss.png", "./assets/images/coinslists/coin-5.png"],
+  //   cagr: "24.44%",
+  //   min_amount: "$4,234",
+  //   volatile: "Med",
+  // },
   return (
     <div className="py-5 position-relative px-0 px-md-2 px-xl-5 text-white" style={{ backgroundColor: "#0251ff" }}>
       <div className="text-center pt-5 px-4 px-md-5 mx-0 mx-md-5 pb-5">

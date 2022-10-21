@@ -14,3 +14,24 @@
   background-color: rgba(37, 75, 199, 1);
   z-index: 1;
 }
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #0251ff;
+  margin-top: 7px;
+}
+
+.flex {
+  display: flex;
+}
+
+.half_container {
+  width: 50%;
+}
+
+.graph_background {
+  width: 100%;
+  background: linear-gradient(180deg, #0251ff 50%, #ffffff00 50%);
+}

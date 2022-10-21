@@ -5,7 +5,7 @@ import { useScreenSize } from "../../../functions/useScreenSize";
 function BuyCryptoSection() {
   const width = useScreenSize().width;
   return (
-    <div>
+    <div className="bg-white pt-5">
       <div className="text-center mt-5 px-4 px-md-5">
         <h3 className="text-primaryTextDark fw-bold">
           <b>Buy crypto straight into your Web3 wallet!</b>

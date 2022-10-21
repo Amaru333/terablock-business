@@ -84,7 +84,24 @@ function FAQSection() {
             <UIButton>Get started</UIButton>
           </UIAccordion>
           <UIAccordion index={4} title="What is TBC token?" homepage>
-            Token name: TeraBlock Token Ticker: TBC Total supply: 400,000,000Blockchain: Binance Smart Chain Type: BEP-20 Listings: CoinMarketCap | CoinGecko
+            Token name: <b>TeraBlock</b>
+            <br />
+            Token Ticker: <b>TBC</b>
+            <br />
+            Total supply: <b>400,000,000</b>
+            <br />
+            Blockchain: <b>Binance Smart Chain</b>
+            <br />
+            Type: <b>BEP-20</b>
+            <br />
+            Listings:{" "}
+            <a style={{ color: "white" }} href="https://coinmarketcap.com/currencies/terablock/" target="_blank">
+              CoinMarketCap
+            </a>{" "}
+            |{" "}
+            <a style={{ color: "white" }} href="https://www.coingecko.com/en/coins/terablock" target="_blank">
+              CoinGecko
+            </a>
             <br />
             <br />
             TeraBlock DeFi Ecosystem is powered by the TeraBlock token (TBC) as its native asset. The TBC token functions as the primary utility inside the TeraBlock Ecosystem and offers discounts and exclusive access to TeraBlock products and services.

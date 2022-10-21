@@ -9,37 +9,37 @@ function InvestmentGraph() {
 
   const coinlist_data = [
     {
-      image: "./assets/images/coinslists/btc.png",
-      title: "Binance",
+      image: "./assets/icons/homepage/4.png",
+      title: "High Capitalisation",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-      coin_images: ["./assets/images/coinslists/e-cash.png", "./assets/images/coinslists/btc.png", "./assets/images/coinslists/ripple.png", "./assets/images/coinslists/xss.png"],
+      coin_images: ["./assets/icons/homepage/coins/1.png", "./assets/icons/homepage/coins/2.png", "./assets/icons/homepage/coins/3.png", "./assets/icons/homepage/coins/4.png"],
       cagr: "24.44%",
       min_amount: "$4,234",
       volatile: "High",
     },
     {
-      image: "./assets/images/coinslists/eth.png",
-      title: "Ethereum",
+      image: "./assets/icons/homepage/5.png",
+      title: "Metaverse",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-      coin_images: ["./assets/images/coinslists/e-cash.png", "./assets/images/coinslists/btc.png", "./assets/images/coinslists/ripple.png", "./assets/images/coinslists/xss.png"],
+      coin_images: ["./assets/icons/homepage/coins/5.png", "./assets/icons/homepage/coins/6.png", "./assets/icons/homepage/coins/7.png", "./assets/icons/homepage/coins/8.png"],
       cagr: "24.44%",
       min_amount: "$4,234",
       volatile: "Low",
     },
     {
-      image: "./assets/images/coinslists/usdt.png",
-      title: "Tether",
+      image: "./assets/icons/homepage/6.png",
+      title: "Play2Earn",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-      coin_images: ["./assets/images/coinslists/e-cash.png", "./assets/images/coinslists/btc.png", "./assets/images/coinslists/ripple.png", "./assets/images/coinslists/xss.png"],
+      coin_images: ["./assets/icons/homepage/coins/9.png", "./assets/icons/homepage/coins/10.png", "./assets/icons/homepage/coins/11.png", "./assets/icons/homepage/coins/12.png"],
       cagr: "24.44%",
       min_amount: "$4,234",
       volatile: "Med",
     },
     {
-      image: "./assets/images/coinslists/btc.png",
-      title: "Binance",
+      image: "./assets/icons/homepage/7.png",
+      title: "DeFi",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-      coin_images: ["./assets/images/coinslists/e-cash.png", "./assets/images/coinslists/btc.png", "./assets/images/coinslists/ripple.png", "./assets/images/coinslists/xss.png"],
+      coin_images: ["./assets/icons/homepage/coins/13.png", "./assets/icons/homepage/coins/1.png", "./assets/icons/homepage/coins/1.png", "./assets/icons/homepage/coins/2.png"],
       cagr: "24.44%",
       min_amount: "$4,234",
       volatile: "High",
@@ -68,7 +68,7 @@ function InvestmentGraph() {
             </div>
             <div className="ms-3">
               <div className="d-flex flex-column">
-                <h5 className="fw-bold text-primaryDark mb-0">{data.title}</h5>
+                <h6 className="fw-bold text-primaryDark mb-1">{data.title}</h6>
                 <div style={{ display: "flex" }}>
                   <img src={`/assets/images/coinslists/${data.volatile}-volatile.svg`} style={{ width: "14px" }} />
                   <p className="mb-0 ms-2" style={{ fontWeight: "600", fontSize: "10px", color: data.volatile == "High" ? "#D40707" : data.volatile == "Med" ? "#E0A610" : "#00AE26" }}>
@@ -129,7 +129,7 @@ function InvestmentGraph() {
 
   return (
     <div>
-      <div className="bg-investmentGraphBg flex flex-column justify-content-center align-items-center pb-4">
+      <div className="flex flex-column justify-content-center align-items-center pb-4" style={{ backgroundColor: "#0251ff" }}>
         <h3 className="text-white text-center fw-bold pt-5 px-1">
           <b>Long term investing is the key to sustainable crypto wealth</b>
         </h3>
@@ -163,7 +163,7 @@ function InvestmentGraph() {
               <p className="mb-0 fs-5">$58,000</p>
             </div>
           </div> */}
-        <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
+        <div className="py-4" style={{ maxWidth: "1350px", margin: "auto" }}>
           <div className="row mx-3 mx-md-4">
             {coinlist_data.map((coins) => (
               <div className="col-12 col-md-3">

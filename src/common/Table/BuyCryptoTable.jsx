@@ -50,7 +50,7 @@ function BuyCryptoTable() {
             <p className="col mb-2">Price</p>
             <p className="col mb-2">Change</p>
             <p className="col mb-2">Chart</p>
-            <p className="col mb-2">Actions</p>
+            <p className="col mb-2">Trade</p>
           </div>
           {tableData.map((data, index) => (
             <div className={`row mx-4 text-center align-items-center justify-content-center my-2 pb-2 ${index < tableData?.length - 1 && "border-bottom"}`} key={index}>
