@@ -18,12 +18,13 @@ function HomepageLayout() {
       <IntroSection />
       <FeaturesSection />
       <InvestmentGraph />
+      <GetStartedSection />
       <BuyCryptoSection />
       <AboutTerablockSection />
-      <GetStartedSection />
+
       <EssentialsSection />
-      <QuizSection />
-      <DescriptionSection />
+      {/* <QuizSection />
+      <DescriptionSection /> */}
       <FAQSection />
     </div>
   );

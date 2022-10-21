@@ -43,38 +43,41 @@ function BuyCryptoTable() {
     return (
       <div>
         <UICard>
-          <p className="fw-bolder text-center fs-5 mt-3">Trending Market</p>
-          <div className="row text-tableFontColor fs-6 border-bottom mt-3 text-center mx-4">
-            <p className="col mb-2 text-start">Token</p>
-            <p className="col mb-2">Symbol</p>
-            <p className="col mb-2">Last Price</p>
-            <p className="col mb-2">24H Change</p>
-            <p className="col mb-2">Market Cap</p>
+          {/* <p className="fw-bolder text-center fs-5 mt-3">Trending Market</p> */}
+          <div className="row text-black border-bottom mt-3 text-center mx-4" style={{ fontWeight: "600", fontSize: "14px" }}>
+            <p className="col-3 col-md-5 mb-2 text-start">Name</p>
+            {/* <p className="col mb-2">Symbol</p> */}
+            <p className="col mb-2">Price</p>
+            <p className="col mb-2">Change</p>
+            <p className="col mb-2">Chart</p>
             <p className="col mb-2">Actions</p>
           </div>
           {tableData.map((data, index) => (
-            <div className="row mx-4 text-center align-items-center justify-content-center my-2" key={index}>
-              <div className="col d-flex flex-row align-items-center">
+            <div className={`row mx-4 text-center align-items-center justify-content-center my-2 pb-2 ${index < tableData?.length - 1 && "border-bottom"}`} key={index}>
+              <div className="col-3 col-md-5 d-flex flex-row align-items-center">
                 <div>
                   <img src={data.image} />
                 </div>
-                <p className="mb-0 ms-2 text-tableDataColor" style={{ fontWeight: 600 }}>
+                <p className="mb-0 ms-2" style={{ fontWeight: 600, color: "#1b2b6b" }}>
                   {data.name}
                 </p>
+                <p className="mb-0 ms-2" style={{ fontWeight: 400, color: "#1b2b6b", fontSize: "14px" }}>
+                  {data.symbol}
+                </p>
               </div>
-              <p className="col mb-0 text-primaryTextGray">{data.symbol}</p>
-              <p className="col mb-0 text-tableDataColor" style={{ fontWeight: 500 }}>
+              {/* <p className="col mb-0 text-primaryTextGray">{data.symbol}</p> */}
+              <p className="col mb-0" style={{ fontWeight: 600, color: "#1b2b6b" }}>
                 {data.last_price}
               </p>
-              <p className="col mb-0 text-success d-flex justify-content-center">
-                <img src="./assets/icons/up-square.svg" className="me-1" />
+              <p className="col mb-0 text-success d-flex justify-content-center" style={{ fontWeight: 600 }}>
+                {/* <img src="./assets/icons/up-square.svg" className="me-1" /> */}
                 {data.change}
               </p>
               <p className="col mb-0 text-tableDataColor" style={{ fontWeight: 500 }}>
-                {data.market_cap}
+                {/* {data.market_cap} */}
               </p>
               <div className="col d-flex justify-content-center">
-                <p className="text-primaryBlue" style={{ border: "1.4px solid #0052FF", padding: "5px 35px", borderRadius: "2px", fontWeight: 600 }}>
+                <p className="text-white mb-0" style={{ padding: "5px 35px", borderRadius: "8px", fontWeight: 600, backgroundColor: "#0251ff" }}>
                   Buy
                 </p>
               </div>
