@@ -12,7 +12,7 @@ function BuyCryptoSection() {
         </h3>
         <p className="text-primaryTextGray">Purchase a range of cryptocurrencies securely to your web3 wallet with over 16 payment methods in 180 countries!</p>
       </div>
-      <div className="mx-4 mx-md-1 mx-xl-5" style={{ textAlign: "-webkit-center;" }}>
+      <div className="mx-4 mx-md-1 mx-xl-5" style={{ textAlign: "-webkit-center" }}>
         <div className="py-4" style={{ maxWidth: "1200px", margin: "auto" }}>
           <div style={{ maxWidth: "1660px", position: "relative" }}>
             <BuyCryptoTable />
