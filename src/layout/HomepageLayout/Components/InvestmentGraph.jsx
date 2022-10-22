@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
 import UICard from "../../../widgets/UICard/UICard";
 import UIGraph from "../../../widgets/UIGraph/UIGraph";
@@ -46,10 +46,10 @@ function InvestmentGraph() {
     },
   ];
 
-  const CoinsCard = ({ data }) => {
+  const CoinsCard = ({ data, index }) => {
     return (
       <div className="pb-5 h-100">
-        <div className="card shadow px-3 mb-3 pt-3 bg-white rounded mx-0 border-primaryText h-100" style={{ "--bs-border-opacity": 0.25, zIndex: 1 }}>
+        <div className="card shadow px-3 mb-3 pt-3 bg-white rounded mx-0 h-100" style={{ "--bs-border-opacity": 0.25, zIndex: 1, border: index == 0 ? "3px solid #ffa900" : "none" }}>
           <div className="d-flex">
             <div>
               <img src={data.image} style={{ width: "48px" }} className="mb-2 text-center" />
@@ -127,22 +127,48 @@ function InvestmentGraph() {
     );
   };
 
+  const [value, setValue] = useState(1);
+  const increment = () => {
+    if (value < 10 && value >= 0) {
+      setValue(parseInt(value) + 1);
+    } else if (value >= 10 && value < 996) {
+      setValue(parseInt(value) + 5);
+    }
+  };
+
+  const decrement = () => {
+    if (value <= 10 && value >= 1) {
+      setValue(parseInt(value) - 1);
+    } else if (value > 10 && value <= 1000) {
+      setValue(parseInt(value) - 5);
+    }
+  };
+
+  console.log(value);
+
   return (
     <div>
       <div className="flex flex-column justify-content-center align-items-center pb-4" style={{ backgroundColor: "#0251ff" }}>
-        <h3 className="text-white text-center fw-bold pt-5 px-1">
-          <b>Long term investing is the key to sustainable crypto wealth</b>
-        </h3>
+        <h3 className="text-white text-center pt-5 px-1">Long term investing is the key to sustainable crypto wealth</h3>
         <p className="text-center text-white mt-4 px-2">Slide the coin and see how your crypto could have grown over time with systematic and periodic investing</p>
-        <div className={["m-auto border border-1 rounded border-white px-4 py-2 my-5", InvestmentGraphStyle.half_container].join(" ")} style={{ "--bs-border-opacity": 0.2 }}>
-          <p className="text-white mt-2">Monthly Deposit</p>
-          <div className={InvestmentGraphStyle.slide_container}>
-            <input type="range" min="1" max="200" className={InvestmentGraphStyle.slider} />
-          </div>
+        <div className={["m-auto rounded border-white px-4 py-2 my-5", InvestmentGraphStyle.half_container].join(" ")} style={{ "--bs-border-opacity": 0.2 }}>
           <div className="d-flex flex-row justify-content-between mt-2">
-            <p className="text-white">$0</p>
-            <p className="text-white">$200</p>
+            <p className="text-white">Monthly Deposit</p>
+            <p className="text-white">$100,000</p>
           </div>
+          <div className="d-flex align-items-center">
+            <span className="text-white border border-white rounded-circle px-2 fw-bold me-2" style={{ height: "23px", lineHeight: "20px", cursor: "pointer" }} onClick={decrement}>
+              -
+            </span>
+            <input type="range" min="0" max="1000" className={InvestmentGraphStyle.slider} value={value} onChange={(e) => setValue(e.target.value)} />
+            <span className="text-white border border-white rounded-circle fw-bold ms-2" style={{ height: "24px", lineHeight: "20px", padding: "0 7px", cursor: "pointer" }} onClick={increment}>
+              +
+            </span>
+          </div>
+          {/* <div className="d-flex flex-row justify-content-between mt-2">
+            <p className="text-white">Monthly Deposit</p>
+            <p className="text-white">$2000</p>
+          </div> */}
         </div>
         {/* <div className={["row m-auto mt-3", InvestmentGraphStyle.half_container].join(" ")}> */}
         {/* <div className={["col bg-white me-3 px-2 py-3 rounded", InvestmentGraphStyle.flex].join(" ")}>
@@ -165,9 +191,9 @@ function InvestmentGraph() {
           </div> */}
         <div className="py-4" style={{ maxWidth: "1350px", margin: "auto" }}>
           <div className="row mx-3 mx-md-4">
-            {coinlist_data.map((coins) => (
+            {coinlist_data.map((coins, index) => (
               <div className="col-12 col-md-3">
-                <CoinsCard data={coins} />
+                <CoinsCard data={coins} index={index} />
               </div>
             ))}
           </div>
@@ -185,8 +211,8 @@ function InvestmentGraph() {
         <UIGraph />
       </div>
       <div>
-        <p className={["text-cardDescriptionColor m-auto text-center", InvestmentGraphStyle.half_container].join(" ")}>
-          Chart is the comparison between the past five year performance of Bitcoin (BTC) and Ethereum (ETH) and savings account with an interest rate of 0.07% yearly. Investing in cryptocurrencies involves risk of loss and performance is not guaranteed.
+        <p className={["text-black m-auto text-center", InvestmentGraphStyle.half_container].join(" ")}>
+          The chart compares the past five-year performance of <b>High Capitalisation CoinsList</b> and savings bank account with an interest rate of 0.07% yearly. Investing in cryptocurrencies involves the risk of loss, and performance is not guaranteed.
         </p>
       </div>
     </div>

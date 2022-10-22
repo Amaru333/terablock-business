@@ -60,6 +60,7 @@ function BuyCryptoTable() {
       x: {
         grid: {
           display: false,
+          drawBorder: false,
         },
         ticks: {
           autoSkip: true,
