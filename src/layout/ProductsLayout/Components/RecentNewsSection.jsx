@@ -8,27 +8,27 @@ function RecentNewsSection() {
   const width = useScreenSize().width;
   const news_details = [
     {
-      image: "./assets/images/learn-image-1.png",
+      image: "/assets/images/learn-image-1.png",
       title: "What is Bitcoin & Etherium?",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
     },
     {
-      image: "./assets/images/learn-image-1.png",
+      image: "/assets/images/learn-image-1.png",
       title: "What is Bitcoin & Etherium?",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
     },
     {
-      image: "./assets/images/learn-image-1.png",
+      image: "/assets/images/learn-image-1.png",
       title: "What is Bitcoin & Etherium?",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
     },
     {
-      image: "./assets/images/learn-image-1.png",
+      image: "/assets/images/learn-image-1.png",
       title: "What is Bitcoin & Etherium?",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
     },
     {
-      image: "./assets/images/learn-image-1.png",
+      image: "/assets/images/learn-image-1.png",
       title: "What is Bitcoin & Etherium?",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
     },
@@ -56,8 +56,8 @@ function RecentNewsSection() {
       )}
       {width < 768 && (
         <>
-          <img src="./assets/icons/6x4-blue.svg" style={{ position: "absolute", bottom: "40%", right: "10%", zIndex: 0 }} />
-          <img src="./assets/icons/6x4-blue.svg" style={{ position: "absolute", bottom: "20%", left: "5%", zIndex: 0 }} />
+          <img src="/assets/icons/6x4-blue.svg" style={{ position: "absolute", bottom: "40%", right: "10%", zIndex: 0 }} />
+          <img src="/assets/icons/6x4-blue.svg" style={{ position: "absolute", bottom: "20%", left: "5%", zIndex: 0 }} />
         </>
       )}
     </div>

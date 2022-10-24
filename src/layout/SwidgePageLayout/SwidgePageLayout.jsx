@@ -1,6 +1,5 @@
 import React from "react";
-import StartCryptoJourneyCard from "../../common/Cards/StartCryptoJourneyCard/StartCryptoJourneyCard";
-import Footer from "../../common/Footer/Footer";
+import TopNotification from "../HomepageLayout/Components/TopNotification";
 import AboutSwidgeSection from "./Components/AboutSwidgeSection";
 import GamersSection from "./Components/GamersSection";
 import StartJourney from "./Components/StartJourney";
@@ -10,6 +9,7 @@ import TeraBlockSwidgeSection from "./Components/TeraBlockSwidgeSection";
 function SwidgePageLayout() {
   return (
     <div>
+      <TopNotification />
       <SwidgePageHeader />
       <GamersSection />
       <TeraBlockSwidgeSection />

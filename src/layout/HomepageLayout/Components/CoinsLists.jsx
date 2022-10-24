@@ -26,7 +26,7 @@ function CoinLists() {
           </div>
           <div className="col-12 col-md-6 d-flex justify-content-center">
             <div className="position-relative align-self-center">
-              <img src="./assets/images/coinslists/coinslists-header.svg" className={`${width < 1120 && "w-100"}`} />
+              <img src="/assets/images/coinslists/coinslists-header.svg" className={`${width < 1120 && "w-100"}`} />
             </div>
           </div>
         </div>

@@ -29,7 +29,7 @@ function CoinsListsHeader() {
               )}
             </div>
             <div className="col-12 col-md-6 d-flex justify-content-center">
-              <img src="./assets/images/coinslists/coinslists-header.svg" style={{ zIndex: 1, maxWidth: width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
+              <img src="/assets/images/coinslists/coinslists-header.svg" style={{ zIndex: 1, maxWidth: width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
             </div>
             {width < 768 && (
               <>
@@ -44,7 +44,7 @@ function CoinsListsHeader() {
             )}
           </div>
         </div>
-        {/* <img src="./assets/icons/3x4.svg" width="30px" className="ms-5 mt-3" /> */}
+        {/* <img src="/assets/icons/3x4.svg" width="30px" className="ms-5 mt-3" /> */}
       </div>
     </div>
   );

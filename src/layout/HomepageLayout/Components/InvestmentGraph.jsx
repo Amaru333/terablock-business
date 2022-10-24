@@ -9,40 +9,44 @@ function InvestmentGraph() {
 
   const coinlist_data = [
     {
-      image: "./assets/icons/homepage/4.png",
+      image: "/assets/icons/homepage/4.png",
       title: "High Capitalisation",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-      coin_images: ["./assets/icons/homepage/coins/1.png", "./assets/icons/homepage/coins/2.png", "./assets/icons/homepage/coins/3.png", "./assets/icons/homepage/coins/4.png"],
-      cagr: "24.44%",
-      min_amount: "$4,234",
-      volatile: "High",
-    },
-    {
-      image: "./assets/icons/homepage/5.png",
-      title: "Metaverse",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-      coin_images: ["./assets/icons/homepage/coins/5.png", "./assets/icons/homepage/coins/6.png", "./assets/icons/homepage/coins/7.png", "./assets/icons/homepage/coins/8.png"],
-      cagr: "24.44%",
-      min_amount: "$4,234",
+      description: "A portfolio of high capitalization cryptocurrencies.",
+      coin_images: ["/assets/icons/homepage/coins/15.png", "/assets/icons/homepage/coins/10.png", "/assets/icons/homepage/coins/1.png", "/assets/icons/homepage/coins/6.png"],
+      cagr: "3,875%",
+      min_amount: "$100",
+      apr: "5",
       volatile: "Low",
     },
     {
-      image: "./assets/icons/homepage/6.png",
-      title: "Play2Earn",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-      coin_images: ["./assets/icons/homepage/coins/9.png", "./assets/icons/homepage/coins/10.png", "./assets/icons/homepage/coins/11.png", "./assets/icons/homepage/coins/12.png"],
-      cagr: "24.44%",
-      min_amount: "$4,234",
-      volatile: "Med",
+      image: "/assets/icons/homepage/5.png",
+      title: "Metaverse",
+      description: "A portfolio of cryptocurrencies revolutionising Metaverse ecosystem.",
+      coin_images: ["/assets/icons/homepage/coins/12.png", "/assets/icons/homepage/coins/13.png", "/assets/icons/homepage/coins/7.png", "/assets/icons/homepage/coins/5.png"],
+      cagr: "2,877%",
+      min_amount: "$250",
+      volatile: "High",
+      apr: "2",
     },
     {
-      image: "./assets/icons/homepage/7.png",
-      title: "DeFi",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-      coin_images: ["./assets/icons/homepage/coins/13.png", "./assets/icons/homepage/coins/1.png", "./assets/icons/homepage/coins/1.png", "./assets/icons/homepage/coins/2.png"],
-      cagr: "24.44%",
-      min_amount: "$4,234",
+      image: "/assets/icons/homepage/6.png",
+      title: "Play2Earn",
+      description: "A portfolio of leading cryptocurrencies of Play-to-Earn games.",
+      coin_images: ["/assets/icons/homepage/coins/16.png", "/assets/icons/homepage/coins/14.png", "/assets/icons/homepage/coins/3.png", "/assets/icons/homepage/coins/8.png"],
+      cagr: "2,861%",
+      min_amount: "$250",
       volatile: "High",
+      apr: "2",
+    },
+    {
+      image: "/assets/icons/homepage/7.png",
+      title: "DeFi",
+      description: "A portfolio of innovative businesses in DeFi ecosystem.",
+      coin_images: ["/assets/icons/homepage/coins/4.png", "/assets/icons/homepage/coins/11.png", "/assets/icons/homepage/coins/2.png", "/assets/icons/homepage/coins/9.png"],
+      cagr: "458.9%",
+      min_amount: "$250",
+      volatile: "Med",
+      apr: "5",
     },
   ];
 
@@ -53,15 +57,15 @@ function InvestmentGraph() {
           <div className="d-flex">
             <div>
               <img src={data.image} style={{ width: "48px" }} className="mb-2 text-center" />
-              <div>
+              <div style={{ lineHeight: "18px" }}>
                 <p className="text-primaryTextGray mb-0 text-center" style={{ fontSize: "12px", fontWeight: "500" }}>
                   Min. Amt
                 </p>
-                <p className="fw-bold text-primaryDark mb-2">{data.min_amount}</p>
+                <p className="fw-bold text-primaryDark mb-2 text-center">{data.min_amount}</p>
               </div>
-              <div>
+              <div style={{ lineHeight: "18px" }}>
                 <p className="text-primaryTextGray mb-0 text-center" style={{ fontSize: "12px", fontWeight: "500" }}>
-                  2Y AP
+                  {data.apr}Y APR
                 </p>
                 <p className="fw-bold text-success mb-0">{data.cagr}</p>
               </div>
@@ -85,7 +89,7 @@ function InvestmentGraph() {
                 </div>
               </div> */}
               </div>
-              <div className="mt-2">
+              <div className="my-2">
                 {data.coin_images?.map((image, index) => (
                   <img src={image} className="me-2 my-1" key={index} style={{ width: "32px" }} />
                 ))}
@@ -189,7 +193,7 @@ function InvestmentGraph() {
               <p className="mb-0 fs-5">$58,000</p>
             </div>
           </div> */}
-        <div className="py-4" style={{ maxWidth: "1350px", margin: "auto" }}>
+        <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
           <div className="row mx-3 mx-md-4">
             {coinlist_data.map((coins, index) => (
               <div className="col-12 col-md-3">

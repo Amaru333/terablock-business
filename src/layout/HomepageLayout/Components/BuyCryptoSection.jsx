@@ -16,8 +16,8 @@ function BuyCryptoSection() {
         <div className="py-4" style={{ maxWidth: "1200px", margin: "auto" }}>
           <div style={{ maxWidth: "1660px", position: "relative" }}>
             <BuyCryptoTable />
-            {/* {width > 768 && <img src="./assets/icons/4x5.svg" style={{ width: "50px", position: "absolute", bottom: "2rem", left: "0rem" }} />}
-          <img src="./assets/icons/rectangle-blue.svg" style={{ width: "50px", position: "absolute", top: "-1rem", right: "0rem" }} /> */}
+            {/* {width > 768 && <img src="/assets/icons/4x5.svg" style={{ width: "50px", position: "absolute", bottom: "2rem", left: "0rem" }} />}
+          <img src="/assets/icons/rectangle-blue.svg" style={{ width: "50px", position: "absolute", top: "-1rem", right: "0rem" }} /> */}
           </div>
         </div>
       </div>

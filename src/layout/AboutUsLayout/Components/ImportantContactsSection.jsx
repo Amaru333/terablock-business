@@ -70,8 +70,8 @@ function ImportantContactsSection() {
             </div>
           ))}
         </div>
-        <img src="./assets/icons/4x5.svg" className="position-absolute" style={{ bottom: width > 768 ? "4rem" : "3rem", left: width > 768 ? "4rem" : "0.5rem", zIndex: "0" }} />
-        {width > 768 && <img src="./assets/icons/4x5.svg" className="position-absolute" style={{ bottom: "4rem", right: "4rem", zIndex: "0" }} />}
+        <img src="/assets/icons/4x5.svg" className="position-absolute" style={{ bottom: width > 768 ? "4rem" : "3rem", left: width > 768 ? "4rem" : "0.5rem", zIndex: "0" }} />
+        {width > 768 && <img src="/assets/icons/4x5.svg" className="position-absolute" style={{ bottom: "4rem", right: "4rem", zIndex: "0" }} />}
       </div>
       <StartCryptoJourneyCard />
     </div>

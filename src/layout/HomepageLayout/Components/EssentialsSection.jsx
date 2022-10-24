@@ -7,27 +7,27 @@ import EssentialsSectionStyle from "../Styles/EssentialsSection.module.css";
 function EssentialsSection() {
   const essential_details = [
     {
-      image: "./assets/images/learn-image-1.png",
+      image: "/assets/images/learn-image-1.png",
       title: "What is Etherium?",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
     },
     {
-      image: "./assets/images/learn-image-2.png",
+      image: "/assets/images/learn-image-2.png",
       title: "What is Etherium?",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
     },
     {
-      image: "./assets/images/learn-image-3.png",
+      image: "/assets/images/learn-image-3.png",
       title: "What is Etherium?",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
     },
     {
-      image: "./assets/images/learn-image-4.png",
+      image: "/assets/images/learn-image-4.png",
       title: "What is Etherium?",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
     },
     {
-      image: "./assets/images/learn-image-4.png",
+      image: "/assets/images/learn-image-4.png",
       title: "What is Etherium?",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
     },

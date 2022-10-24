@@ -14,14 +14,14 @@ function FeaturedInSection() {
     );
   };
   const images = [
-    "./assets/images/product_featured/coin-telegraph.png",
-    "./assets/images/product_featured/daily-hodl.png",
-    "./assets/images/product_featured/news-btc.png",
-    "./assets/images/product_featured/yahoo-finance.png",
-    "./assets/images/product_featured/coin-telegraph.png",
-    "./assets/images/product_featured/daily-hodl.png",
-    "./assets/images/product_featured/news-btc.png",
-    "./assets/images/product_featured/yahoo-finance.png",
+    "/assets/images/product_featured/coin-telegraph.png",
+    "/assets/images/product_featured/daily-hodl.png",
+    "/assets/images/product_featured/news-btc.png",
+    "/assets/images/product_featured/yahoo-finance.png",
+    "/assets/images/product_featured/coin-telegraph.png",
+    "/assets/images/product_featured/daily-hodl.png",
+    "/assets/images/product_featured/news-btc.png",
+    "/assets/images/product_featured/yahoo-finance.png",
   ];
   return (
     <div className="pb-5 position-relative px-0 px-md-2 px-xl-5">
@@ -40,15 +40,15 @@ function FeaturedInSection() {
         ))}
       </div>
       <div className="d-flex flex-row justify-content-center">
-        <img src="./assets/icons/left-block-arrow.svg" />
-        <img src="./assets/icons/right-block-arrow.svg" />
+        <img src="/assets/icons/left-block-arrow.svg" />
+        <img src="/assets/icons/right-block-arrow.svg" />
       </div>
       <StartCryptoJourneyCard />
       {width > 768 && (
         <>
-          <img src="./assets/icons/ellipse-blue.svg" style={{ width: "64px", position: "absolute", top: "-1rem", right: "0rem" }} />
-          <img src="./assets/icons/ellipse-blue.svg" style={{ width: "32px", position: "absolute", top: "2rem", right: "5rem" }} />
-          <img src="./assets/icons/3x4.svg" style={{ width: "32px", position: "absolute", top: "45%", left: "2.5rem", zIndex: 0 }} />
+          <img src="/assets/icons/ellipse-blue.svg" style={{ width: "64px", position: "absolute", top: "-1rem", right: "0rem" }} />
+          <img src="/assets/icons/ellipse-blue.svg" style={{ width: "32px", position: "absolute", top: "2rem", right: "5rem" }} />
+          <img src="/assets/icons/3x4.svg" style={{ width: "32px", position: "absolute", top: "45%", left: "2.5rem", zIndex: 0 }} />
         </>
       )}
     </div>

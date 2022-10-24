@@ -17,7 +17,9 @@ function CoinsListSection() {
           <div className="ms-3" style={{ width: "40%" }}>
             <div>
               <div className="d-flex justify-content-between align-items-center">
-                <h5 className="fw-bold text-primaryDark mb-0">{data.title}</h5>
+                <p className="fw-bold text-primaryDark mb-0" style={{ fontSize: "18px" }}>
+                  {data.title}
+                </p>
               </div>
               <p className="text-cardDescriptionColor mb-0">{data.description}</p>
             </div>
@@ -39,7 +41,7 @@ function CoinsListSection() {
               </div>
               <div>
                 <p className="text-primaryTextGray mb-1" style={{ fontSize: "12px", fontWeight: "500" }}>
-                  4Yr. CAGR
+                  {data.apr}Yr. APR
                 </p>
                 <p className="fw-bold text-success mb-0">{data.cagr}</p>
               </div>
@@ -67,56 +69,60 @@ function CoinsListSection() {
 
   const coinlist_data = [
     {
-      image: "./assets/icons/homepage/4.png",
+      image: "/assets/icons/homepage/4.png",
       title: "High Capitalisation",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-      coin_images: ["./assets/icons/homepage/coins/1.png", "./assets/icons/homepage/coins/2.png", "./assets/icons/homepage/coins/3.png", "./assets/icons/homepage/coins/4.png"],
-      cagr: "24.44%",
-      min_amount: "$4,234",
-      volatile: "High",
-    },
-    {
-      image: "./assets/icons/homepage/5.png",
-      title: "Metaverse",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-      coin_images: ["./assets/icons/homepage/coins/5.png", "./assets/icons/homepage/coins/6.png", "./assets/icons/homepage/coins/7.png", "./assets/icons/homepage/coins/8.png"],
-      cagr: "24.44%",
-      min_amount: "$4,234",
+      description: "A portfolio of high capitalization cryptocurrencies.",
+      coin_images: ["/assets/icons/homepage/coins/15.png", "/assets/icons/homepage/coins/10.png", "/assets/icons/homepage/coins/1.png", "/assets/icons/homepage/coins/6.png"],
+      cagr: "3,875%",
+      min_amount: "$100",
+      apr: "5",
       volatile: "Low",
     },
     {
-      image: "./assets/icons/homepage/6.png",
-      title: "Play2Earn",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-      coin_images: ["./assets/icons/homepage/coins/9.png", "./assets/icons/homepage/coins/10.png", "./assets/icons/homepage/coins/11.png", "./assets/icons/homepage/coins/12.png"],
-      cagr: "24.44%",
-      min_amount: "$4,234",
-      volatile: "Med",
+      image: "/assets/icons/homepage/5.png",
+      title: "Metaverse",
+      description: "A portfolio of cryptocurrencies revolutionising Metaverse ecosystem.",
+      coin_images: ["/assets/icons/homepage/coins/12.png", "/assets/icons/homepage/coins/13.png", "/assets/icons/homepage/coins/7.png", "/assets/icons/homepage/coins/5.png"],
+      cagr: "2,877%",
+      min_amount: "$250",
+      volatile: "High",
+      apr: "2",
     },
     {
-      image: "./assets/icons/homepage/7.png",
-      title: "DeFi",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-      coin_images: ["./assets/icons/homepage/coins/13.png", "./assets/icons/homepage/coins/1.png", "./assets/icons/homepage/coins/1.png", "./assets/icons/homepage/coins/2.png"],
-      cagr: "24.44%",
-      min_amount: "$4,234",
+      image: "/assets/icons/homepage/6.png",
+      title: "Play2Earn",
+      description: "A portfolio of leading cryptocurrencies of Play-to-Earn games.",
+      coin_images: ["/assets/icons/homepage/coins/16.png", "/assets/icons/homepage/coins/14.png", "/assets/icons/homepage/coins/3.png", "/assets/icons/homepage/coins/8.png"],
+      cagr: "2,861%",
+      min_amount: "$250",
       volatile: "High",
+      apr: "2",
+    },
+    {
+      image: "/assets/icons/homepage/7.png",
+      title: "DeFi",
+      description: "A portfolio of innovative businesses in DeFi ecosystem.",
+      coin_images: ["/assets/icons/homepage/coins/4.png", "/assets/icons/homepage/coins/11.png", "/assets/icons/homepage/coins/2.png", "/assets/icons/homepage/coins/9.png"],
+      cagr: "458.9%",
+      min_amount: "$250",
+      volatile: "Med",
+      apr: "2",
     },
   ];
   // {
-  //   image: "./assets/images/coinslists/eth.png",
+  //   image: "/assets/images/coinslists/eth.png",
   //   title: "Ethereum",
   //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-  //   coin_images: ["./assets/images/coinslists/e-cash.png", "./assets/images/coinslists/btc.png", "./assets/images/coinslists/ripple.png", "./assets/images/coinslists/xss.png", "./assets/images/coinslists/coin-5.png"],
+  //   coin_images: ["/assets/images/coinslists/e-cash.png", "/assets/images/coinslists/btc.png", "/assets/images/coinslists/ripple.png", "/assets/images/coinslists/xss.png", "/assets/images/coinslists/coin-5.png"],
   //   cagr: "24.44%",
   //   min_amount: "$4,234",
   //   volatile: "Low",
   // },
   // {
-  //   image: "./assets/images/coinslists/usdt.png",
+  //   image: "/assets/images/coinslists/usdt.png",
   //   title: "Tether",
   //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-  //   coin_images: ["./assets/images/coinslists/e-cash.png", "./assets/images/coinslists/btc.png", "./assets/images/coinslists/ripple.png", "./assets/images/coinslists/xss.png", "./assets/images/coinslists/coin-5.png"],
+  //   coin_images: ["/assets/images/coinslists/e-cash.png", "/assets/images/coinslists/btc.png", "/assets/images/coinslists/ripple.png", "/assets/images/coinslists/xss.png", "/assets/images/coinslists/coin-5.png"],
   //   cagr: "24.44%",
   //   min_amount: "$4,234",
   //   volatile: "Med",
@@ -125,9 +131,9 @@ function CoinsListSection() {
     <div className="py-5 position-relative px-0 px-md-2 px-xl-5 text-white" style={{ backgroundColor: "#0251ff" }}>
       <div className="text-center pt-5 px-4 px-md-5 mx-0 mx-md-5 pb-5">
         <h3 className="fw-bold">
-          <b>Coins you shouldn&apos;t miss</b>
+          <b>Popular CoinsLists</b>
         </h3>
-        <p className="fs-6">CoinsList empowers you to see the possibilities of consistent simplified investments and helps you realize your financial goals.</p>
+        <p className="fs-6">Looking to start with small investment? Bullish on Metaverse? Choose from diversified CoinsLists.</p>
       </div>
       <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
         <div className="row mx-3 mx-md-4">
@@ -141,11 +147,11 @@ function CoinsListSection() {
       {/* {width > 768 && (
         <>
           <div className="d-flex flex-row justify-content-center">
-            <img src="./assets/icons/left-block-arrow.svg" />
-            <img src="./assets/icons/right-block-arrow.svg" />
+            <img src="/assets/icons/left-block-arrow.svg" />
+            <img src="/assets/icons/right-block-arrow.svg" />
           </div>
-          <img src="./assets/icons/3x4.svg" className="position-absolute" style={{ width: "30px", bottom: "9rem", right: "3rem" }} />
-          <img src="./assets/icons/3x4.svg" className="position-absolute" style={{ width: "30px", bottom: "9rem", left: "3rem" }} />
+          <img src="/assets/icons/3x4.svg" className="position-absolute" style={{ width: "30px", bottom: "9rem", right: "3rem" }} />
+          <img src="/assets/icons/3x4.svg" className="position-absolute" style={{ width: "30px", bottom: "9rem", left: "3rem" }} />
         </>
       )} */}
     </div>

@@ -19,7 +19,7 @@ function HowCoinListsWorkSection() {
     //   </div>
     //   <div className="d-flex row mx-0">
     //     <div className="col-12 col-md-6 d-flex justify-content-center">
-    //       <img src="./assets/images/coinslists/coinlist-iphone.png" style={{ zIndex: 1, maxWidth: width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
+    //       <img src="/assets/images/coinslists/coinlist-iphone.png" style={{ zIndex: 1, maxWidth: width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
     //     </div>
     //     <div className="col-12 col-md-6 justify-content-center px-5 align-self-center">
     //       <div className="d-flex flex-row">
@@ -68,7 +68,7 @@ function HowCoinListsWorkSection() {
             <UICard>
               <div className="d-flex flex-row justify-content-between align-items-center">
                 <div>
-                  <img src="./assets/images/8.png" className="bg-cardImageBg border border-cardImageBorder rounded" style={{ "--bs-border-opacity": 0.2, width: "64px" }} />
+                  <img src="/assets/images/8.png" className="bg-cardImageBg border border-cardImageBorder rounded" style={{ "--bs-border-opacity": 0.2, width: "64px" }} />
                 </div>
                 <h1 className="text-lightBlueText fw-bolder">1</h1>
               </div>
@@ -80,7 +80,7 @@ function HowCoinListsWorkSection() {
             <UICard>
               <div className="d-flex flex-row justify-content-between align-items-center">
                 <div>
-                  <img src="./assets/images/9.png" className="bg-cardImageBg border border-cardImageBorder rounded" style={{ "--bs-border-opacity": 0.2, width: "64px" }} />
+                  <img src="/assets/images/9.png" className="bg-cardImageBg border border-cardImageBorder rounded" style={{ "--bs-border-opacity": 0.2, width: "64px" }} />
                 </div>
                 <h1 className="text-lightBlueText fw-bolder">2</h1>
               </div>
@@ -92,7 +92,7 @@ function HowCoinListsWorkSection() {
             <UICard>
               <div className="d-flex flex-row justify-content-between align-items-center">
                 <div>
-                  <img src="./assets/images/10.png" className="bg-cardImageBg border border-cardImageBorder rounded" style={{ "--bs-border-opacity": 0.2, width: "64px" }} />
+                  <img src="/assets/images/10.png" className="bg-cardImageBg border border-cardImageBorder rounded" style={{ "--bs-border-opacity": 0.2, width: "64px" }} />
                 </div>
                 <h1 className="text-lightBlueText fw-bolder">3</h1>
               </div>
@@ -100,7 +100,7 @@ function HowCoinListsWorkSection() {
               <p className="fs-6 text-primaryTextGray text-center text-md-start">After one-click CoinsList selection and funds allocation, our Web3 multi-protocol automation will buy and transfer cryptocurrencies to your wallet on the respective blockchain.</p>
             </UICard>
           </div>
-          {width > 768 && <img src="./assets/icons/4x5.svg" style={{ width: "60px", position: "absolute", bottom: "2rem", left: "1rem" }} />}
+          {width > 768 && <img src="/assets/icons/4x5.svg" style={{ width: "60px", position: "absolute", bottom: "2rem", left: "1rem" }} />}
         </div>
         <div className="d-flex align-items-center justify-content-center mt-2 mb-5">
           <UIButton type="primary">Get Started</UIButton>

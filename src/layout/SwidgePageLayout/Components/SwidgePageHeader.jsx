@@ -22,7 +22,7 @@ function SwidgePageHeader() {
               )}
             </div>
             <div className="col-12 col-md-6 d-flex justify-content-center">
-              <img src="./assets/images/Swidge_02.svg" style={{ zIndex: 1, maxWidth: width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
+              <img src="/assets/images/Swidge_02.svg" style={{ zIndex: 1, maxWidth: width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
             </div>
             {width < 768 && (
               <div className="d-flex justify-content-center mt-5">
@@ -33,7 +33,7 @@ function SwidgePageHeader() {
           </div>
         </div>
       </div>
-      {/* <img src="./assets/icons/3x4.svg" width="30px" className="ms-5 mt-3" /> */}
+      {/* <img src="/assets/icons/3x4.svg" width="30px" className="ms-5 mt-3" /> */}
     </div>
   );
 }

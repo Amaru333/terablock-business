@@ -109,35 +109,43 @@ function BuyCryptoTable() {
   const screenSize = useScreenSize();
   const tableData = [
     {
-      name: "BNB",
-      image: "./assets/images/bnb.png",
-      symbol: "BNB",
-      last_price: "$41,263.00",
-      change: "+35.74%",
-      market_cap: "$784,393M",
-    },
-    {
       name: "Bitcoin",
-      image: "./assets/images/bnb.png",
+      image: "/assets/icons/homepage/coins/15.png",
       symbol: "BTC",
-      last_price: "$41,263.00",
-      change: "+35.74%",
+      last_price: "$19,398.45",
+      change: "+4.68%",
       market_cap: "$784,393M",
     },
     {
       name: "Ethereum",
-      image: "./assets/images/bnb.png",
+      image: "/assets/icons/homepage/coins/10.png",
       symbol: "ETH",
-      last_price: "$41,263.00",
-      change: "+35.74%",
+      last_price: "$1,313.49",
+      change: "+0.08%",
       market_cap: "$784,393M",
     },
     {
-      name: "Terra",
-      image: "./assets/images/bnb.png",
-      symbol: "LUNA",
-      last_price: "$41,263.00",
-      change: "+35.74%",
+      name: "Cardano",
+      image: "/assets/icons/homepage/coins/1.png",
+      symbol: "ADA",
+      last_price: "$0.4302",
+      change: "+0.07%",
+      market_cap: "$784,393M",
+    },
+    {
+      name: "Polkadot",
+      image: "/assets/icons/homepage/coins/6.png",
+      symbol: "DOT",
+      last_price: "$6.28",
+      change: "-0.21%",
+      market_cap: "$784,393M",
+    },
+    {
+      name: "TeraBlock",
+      image: "/assets/icons/homepage/coins/14.png",
+      symbol: "TBC",
+      last_price: "$0.0064",
+      change: "+5.62%",
       market_cap: "$784,393M",
     },
   ];
@@ -164,7 +172,7 @@ function BuyCryptoTable() {
             <div className={`row mx-4 text-center align-items-center justify-content-center my-2 pb-2 ${index < tableData?.length - 1 && "border-bottom"}`} key={index}>
               <div className="col-3 col-md-5 d-flex flex-row align-items-center">
                 <div>
-                  <img src={data.image} />
+                  <img src={data.image} style={{ width: "32px" }} className="rounded me-2" />
                 </div>
                 <p className="mb-0 ms-2" style={{ fontWeight: 600, color: "#1b2b6b" }}>
                   {data.name}
@@ -177,8 +185,8 @@ function BuyCryptoTable() {
               <p className="col mb-0" style={{ fontWeight: 600, color: "#1b2b6b" }}>
                 {data.last_price}
               </p>
-              <p className="col mb-0 text-success d-flex justify-content-center" style={{ fontWeight: 600 }}>
-                {/* <img src="./assets/icons/up-square.svg" className="me-1" /> */}
+              <p className="col mb-0 d-flex justify-content-center" style={{ fontWeight: 600, color: data.change[0] == "+" ? "#6cc870" : "#e33536" }}>
+                {/* <img src="/assets/icons/up-square.svg" className="me-1" /> */}
                 {data.change}
               </p>
               <p className="col mb-0 text-tableDataColor d-flex justify-content-center" style={{ fontWeight: 500 }}>
@@ -188,7 +196,7 @@ function BuyCryptoTable() {
                 </div>
               </p>
               <div className="col d-flex justify-content-center">
-                <p className="text-white mb-0" style={{ padding: "5px 35px", borderRadius: "8px", fontWeight: 600, backgroundColor: "#0251ff" }}>
+                <p className="text-white mb-0" style={{ padding: "5px 35px", borderRadius: "8px", fontWeight: 600, backgroundColor: "#0251ff", cursor: "pointer" }}>
                   Buy
                 </p>
               </div>
@@ -217,7 +225,7 @@ function BuyCryptoTable() {
                   {data.last_price}
                 </p>
                 <p className="mb-0 text-success d-flex justify-content-end" style={{ fontSize: "10px", fontWeight: 600 }}>
-                  <img src="./assets/icons/up-square.svg" className="me-0" style={{ width: "10px" }} />
+                  <img src="/assets/icons/up-square.svg" className="me-0" style={{ width: "10px" }} />
                   {data.change}
                 </p>
               </div>

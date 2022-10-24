@@ -26,28 +26,28 @@ function WhatAreCoinlistsSection() {
           </div>
           <div className="col-12 col-md-6 d-flex justify-content-center">
             <div className="position-relative align-self-center">
-              <img src="./assets/images/gamers-header.png" className={`${width < 1120 && "w-100"}`} />
+              <img src="/assets/images/gamers-header.png" className={`${width < 1120 && "w-100"}`} />
               <div className={WhatAreCoinlistsStyle.circular_blur}></div>
             </div>
           </div>
         </div>
         <div className="row mx-4 mx-md-0 mx-xl-5 mt-5 position-relative">
           <div className="col-12 col-md-4">
-            <CardWithLogo image="./assets/images/coinslists/coinlists.svg" title="Simplified Investing">
+            <CardWithLogo image="/assets/images/coinslists/coinlists.svg" title="Simplified Investing">
               <div>Invest in multiple cryptocurrencies with just a few clicks. There is no prior knowledge required due to our learning-based approach of onboarding.</div>
             </CardWithLogo>
           </div>
           <div className="col-12 col-md-4">
-            <CardWithLogo image="./assets/images/coinslists/coinlists.svg" title="Be in Control">
+            <CardWithLogo image="/assets/images/coinslists/coinlists.svg" title="Be in Control">
               <div>CoinsList is fully decentralised and non-custodial so your funds are always in your control.</div>
             </CardWithLogo>
           </div>
           <div className="col-12 col-md-4">
-            <CardWithLogo image="./assets/images/coinslists/coinlists.svg" title="Don't just Buy; Invest!">
+            <CardWithLogo image="/assets/images/coinslists/coinlists.svg" title="Don't just Buy; Invest!">
               <div>CoinsList is a set and forget approach to investing in cryptocurrencies. CoinsList helps you Invest with a long-term view of building wealth.</div>
             </CardWithLogo>
           </div>
-          <img src="./assets/icons/4x5.svg" style={{ width: "70px", position: "absolute", bottom: "2rem", left: "0rem" }} />
+          <img src="/assets/icons/4x5.svg" style={{ width: "70px", position: "absolute", bottom: "2rem", left: "0rem" }} />
         </div>
       </div>
     </div>

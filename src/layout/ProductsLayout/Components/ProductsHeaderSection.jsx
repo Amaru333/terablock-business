@@ -15,12 +15,12 @@ function ProductsHeaderSection() {
           {width > 768 && (
             <>
               <UIButton type="primary">Get Started</UIButton>
-              <img src="./assets/icons/3x4.svg" style={{ width: "30px" }} className="mt-5" />
+              <img src="/assets/icons/3x4.svg" style={{ width: "30px" }} className="mt-5" />
             </>
           )}
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center">
-          <img src="./assets/images/product-header.png" style={{ maxWidth: width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
+          <img src="/assets/images/product-header.png" style={{ maxWidth: width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
         </div>
         {width < 768 && (
           <div className="d-flex justify-content-center mt-2">

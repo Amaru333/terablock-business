@@ -7,19 +7,19 @@ function JoinAmbassador() {
   const joinData = [
     {
       text: "Click Apply",
-      image: "./assets/icons/cursor-hand-click-line.svg",
+      image: "/assets/icons/cursor-hand-click-line.svg",
     },
     {
       text: "Fill Details",
-      image: "./assets/icons/form-regular.svg",
+      image: "/assets/icons/form-regular.svg",
     },
     {
       text: "Click Apply",
-      image: "./assets/icons/success.svg",
+      image: "/assets/icons/success.svg",
     },
     {
       text: "Click Apply",
-      image: "./assets/icons/circle-outlined.svg",
+      image: "/assets/icons/circle-outlined.svg",
     },
   ];
   const JoinCard = ({ text, index, image }) => {
@@ -53,7 +53,7 @@ function JoinAmbassador() {
             </div>
             {width > 768 && index + 1 != joinData.length && (
               <div className="col-1 d-flex align-items-center justify-content-center">
-                <img src="./assets/icons/arrow-next.svg" />
+                <img src="/assets/icons/arrow-next.svg" />
               </div>
             )}
           </>

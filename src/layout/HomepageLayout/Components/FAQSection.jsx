@@ -118,8 +118,8 @@ function FAQSection() {
         </div>
         {/* {width > 768 && (
           <>
-            <img src="./assets/icons/4x4-blue.svg" style={{ width: "40px", position: "absolute", top: "10rem", left: "0rem" }} />
-            <img src="./assets/icons/6x4-pink.svg" style={{ width: "40px", position: "absolute", bottom: "2rem", right: "0rem" }} />
+            <img src="/assets/icons/4x4-blue.svg" style={{ width: "40px", position: "absolute", top: "10rem", left: "0rem" }} />
+            <img src="/assets/icons/6x4-pink.svg" style={{ width: "40px", position: "absolute", bottom: "2rem", right: "0rem" }} />
           </>
         )} */}
       </div>

@@ -11,9 +11,9 @@ function AdvisorsInvestorsSection() {
         <img src={image} width={width > 918 ? "200px" : "160px"} />
         <p className="h5 fw-bold my-2">{name}</p>
         <div>
-          <img src="./assets/icons/twitter-ico-filled.svg" width="26px" />
+          <img src="/assets/icons/twitter-ico-filled.svg" width="26px" />
           &nbsp;&nbsp;
-          <img src="./assets/icons/linkedin-ico-filled.svg" width="26px" />
+          <img src="/assets/icons/linkedin-ico-filled.svg" width="26px" />
         </div>
       </div>
     );
@@ -21,36 +21,36 @@ function AdvisorsInvestorsSection() {
   const investors = [
     {
       name: "Steve Smith",
-      image: "./assets/images/investors/user-1.png",
+      image: "/assets/images/investors/user-1.png",
     },
     {
       name: "Hannah Baker",
-      image: "./assets/images/investors/user-2.png",
+      image: "/assets/images/investors/user-2.png",
     },
     {
       name: "Ryan Reynolds",
-      image: "./assets/images/investors/user-3.png",
+      image: "/assets/images/investors/user-3.png",
     },
     {
       name: "Elizabeth Q",
-      image: "./assets/images/investors/user-4.png",
+      image: "/assets/images/investors/user-4.png",
     },
     {
       name: "Edward Picard",
-      image: "./assets/images/investors/user-5.png",
+      image: "/assets/images/investors/user-5.png",
     },
     {
       name: "Kelly E. Mabry",
-      image: "./assets/images/investors/user-6.png",
+      image: "/assets/images/investors/user-6.png",
     },
     {
       name: "Benjamin Miller",
-      image: "./assets/images/investors/user-7.png",
+      image: "/assets/images/investors/user-7.png",
     },
     ,
     {
       name: "Carol Moore",
-      image: "./assets/images/investors/user-8.png",
+      image: "/assets/images/investors/user-8.png",
     },
   ];
   return (

@@ -20,7 +20,7 @@ function AboutUsHeaderSection() {
             )}
           </div>
           <div className="col-12 col-md-6 d-flex justify-content-center">
-            <img src="./assets/images/about-us-header.png" style={{ zIndex: 1, maxWidth: width > 768 ? "45vw" : "80vw", objectFit: "contain" }} />
+            <img src="/assets/images/about-us-header.png" style={{ zIndex: 1, maxWidth: width > 768 ? "45vw" : "80vw", objectFit: "contain" }} />
           </div>
           {width < 768 && (
             <div className="d-flex justify-content-center mt-5">
@@ -30,7 +30,7 @@ function AboutUsHeaderSection() {
         </div>
         <div className="bg-primaryBlue" style={width > 768 ? { width: "10vw", height: "25vh", position: "absolute", top: 0, right: 0, zIndex: 0 } : { width: "15vw", height: "10vh", position: "absolute", right: 0, bottom: "10%", zIndex: 0 }}></div>
       </div>
-      <img src="./assets/icons/3x4.svg" width="30px" className="ms-5 mt-3" />
+      <img src="/assets/icons/3x4.svg" width="30px" className="ms-5 mt-3" />
     </div>
   );
 }

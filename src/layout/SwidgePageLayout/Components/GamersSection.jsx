@@ -29,7 +29,7 @@ function GamersSection() {
           </div>
           <div className="col-12 col-md-6 d-flex justify-content-center">
             <div className="position-relative align-self-center">
-              <img src="./assets/images/gamers-header.png" className={`${width < 1120 && "w-100"}`} />
+              <img src="/assets/images/gamers-header.png" className={`${width < 1120 && "w-100"}`} />
               <div className={GamersSectionStyle.circular_blur}></div>
             </div>
           </div>

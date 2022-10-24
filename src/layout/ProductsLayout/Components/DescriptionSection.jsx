@@ -14,42 +14,42 @@ function DescriptionSection() {
     {
       title: "One stop solution",
       description: "A comprehensive crypto ecosystem that allows you to retain and optimize your crypto assets.",
-      image: "./assets/images/product_description/one-stop.png",
+      image: "/assets/images/product_description/one-stop.png",
     },
     {
       title: "Secure & Accountable",
       description: "Our smart contracts have been extensively audited by Hacken for system vulnerabilities and security problems.",
-      image: "./assets/images/product_description/secure.png",
+      image: "/assets/images/product_description/secure.png",
     },
     {
       title: "Simplified UI",
       description: "Simple, user-driven, and responsive interface that lets you access your crypto within seconds.",
-      image: "./assets/images/product_description/simplified.png",
+      image: "/assets/images/product_description/simplified.png",
     },
     {
       title: "Decentralized",
       description: "TeraBlock is a non-restrictive and radically decentralized ecosystem that helps you optimize your investments in a secure way.",
-      image: "./assets/images/product_description/decentralized.png",
+      image: "/assets/images/product_description/decentralized.png",
     },
     {
       title: "Robust & Scalable",
       description: "We employ the best talent and technology in the market to create sustainable and long-term products.",
-      image: "./assets/images/product_description/robust.png",
+      image: "/assets/images/product_description/robust.png",
     },
     {
       title: "Community Driven",
       description: "We strive to create an inclusive, transparent, and trustworthy ecosystem of stakeholders.",
-      image: "./assets/images/product_description/community.png",
+      image: "/assets/images/product_description/community.png",
     },
     {
       title: "Reward Driven",
       description: "We make sure our community gets rewarded in the most efficient manner. Our staking & farming protocols help our users earn juicy yields.",
-      image: "./assets/images/product_description/reward.png",
+      image: "/assets/images/product_description/reward.png",
     },
     {
       title: "UtilityDriven",
       description: "Featuring sophisticated & professional DeFi tools, TeraBlock ecosystem is designed to help novice traders optmize their investments.",
-      image: "./assets/images/product_description/utility.png",
+      image: "/assets/images/product_description/utility.png",
     },
   ];
   return (

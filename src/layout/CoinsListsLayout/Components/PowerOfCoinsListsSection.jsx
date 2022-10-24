@@ -14,42 +14,42 @@ function PowerOfCoinsListsSection() {
     {
       title: "Be in control",
       description: "Unlike most  platforms, CoinsLists are Non-Custodial and fully Decentralized.",
-      image: "./assets/icons/terablock-swidge/ease.svg",
+      image: "/assets/icons/terablock-swidge/ease.svg",
     },
     {
       title: "Set yourself free",
       description: "CoinsList is a set and forget approach to investing in Cryptocurrencies.",
-      image: "./assets/icons/terablock-swidge/cost.svg",
+      image: "/assets/icons/terablock-swidge/cost.svg",
     },
     {
       title: "Don't just buy - invest",
       description: "CoinsList lets you Invest in Cryptocurrencies with a long-term view of building wealth.",
-      image: "./assets/icons/terablock-swidge/ux.svg",
+      image: "/assets/icons/terablock-swidge/ux.svg",
     },
     {
       title: "Easy diversification",
       description: "We help you build a diversified portfolio by easily spreading your funds.",
-      image: "./assets/icons/terablock-swidge/fast.svg",
+      image: "/assets/icons/terablock-swidge/fast.svg",
     },
     {
       title: "Simplified investing",
       description: "Helps you get invested in multiple Cryptocurrencies with just a few clicks.",
-      image: "./assets/icons/terablock-swidge/one-stop.svg",
+      image: "/assets/icons/terablock-swidge/one-stop.svg",
     },
     {
       title: "Transparent",
       description: "No hidden fees of extra charges. We keep things simple with one simple transaction fees.",
-      image: "./assets/icons/terablock-swidge/interoperability.svg",
+      image: "/assets/icons/terablock-swidge/interoperability.svg",
     },
     {
       title: "At your fingertips",
       description: "Our easy to use platform empowers you and gives you the tools to track and manage your money at all times.",
-      image: "./assets/icons/terablock-swidge/secure.svg",
+      image: "/assets/icons/terablock-swidge/secure.svg",
     },
     {
       title: "Easy to use",
       description: "The tools and information you need to buy, sell, trade, invest, and manage cryptocurrencies.",
-      image: "./assets/icons/terablock-swidge/support.svg",
+      image: "/assets/icons/terablock-swidge/support.svg",
     },
   ];
 
@@ -57,7 +57,7 @@ function PowerOfCoinsListsSection() {
     return (
       <div className="d-flex mb-4">
         <div>
-          <img src={`./assets/images/${img}.png`} style={{ width: "64px" }} />
+          <img src={`/assets/images/${img}.png`} style={{ width: "64px" }} />
         </div>
         <div className="ps-4" style={{ maxWidth: "400px", color: "#1b2b6b" }}>
           <p className="mb-1" style={{ fontSize: "16px", fontWeight: "600" }}>
@@ -113,7 +113,7 @@ function PowerOfCoinsListsSection() {
         </div>
         <div className="row mx-5 justify-content-center">
           <div className="col-12 col-md-6 justify-content-center align-items-center d-flex">
-            <img src="./assets/images/iphone-full.png" />
+            <img src="/assets/images/iphone-full.png" />
           </div>
           <div className="col-12 col-md-6 justify-content-center align-items-center d-flex">
             <div className="d-flex flex-column">

@@ -19,23 +19,23 @@ function AboutSwidgeSection() {
   // };
   // const data = [
   //   {
-  //     image: "./assets/icons/about-swidge/download.svg",
+  //     image: "/assets/icons/about-swidge/download.svg",
   //     description: "Download & Activate web3 wallet",
   //   },
   //   {
-  //     image: "./assets/icons/about-swidge/select.svg",
+  //     image: "/assets/icons/about-swidge/select.svg",
   //     description: "Select the game, token & enter unique user id",
   //   },
   //   {
-  //     image: "./assets/icons/about-swidge/unique.svg",
+  //     image: "/assets/icons/about-swidge/unique.svg",
   //     description: "Unique web3 address is then created.",
   //   },
   //   {
-  //     image: "./assets/icons/about-swidge/purchase.svg",
+  //     image: "/assets/icons/about-swidge/purchase.svg",
   //     description: "Purchases crypto using a bank card directly.",
   //   },
   //   {
-  //     image: "./assets/icons/about-swidge/token.svg",
+  //     image: "/assets/icons/about-swidge/token.svg",
   //     description: "Tokens are swapped, bridged & transferred",
   //   },
   // ];
@@ -44,7 +44,7 @@ function AboutSwidgeSection() {
     return (
       <div className="col-6 col-md-4 pb-5">
         <div className="px-0 px-md-4">
-          <img src={`./assets/images/swidge/${img}.png`} style={{ width: "60px" }} />
+          <img src={`/assets/images/swidge/${img}.png`} style={{ width: "60px" }} />
           <p className="my-2 fw-bold" style={{ fontSize: "18px" }}>
             {title}
           </p>
@@ -121,8 +121,8 @@ function AboutSwidgeSection() {
     //         </div>
     //       ))}
     //     </div>
-    //     {width > 768 && <img src="./assets/icons/4x5.svg" className="position-absolute" style={{ bottom: "4rem", left: "4rem", zIndex: "0" }} />}
-    //     <img src="./assets/icons/4x5.svg" className="position-absolute" style={{ bottom: width > 768 ? "4rem" : "3rem", right: width > 768 ? "4rem" : "0.5rem", zIndex: "0" }} />
+    //     {width > 768 && <img src="/assets/icons/4x5.svg" className="position-absolute" style={{ bottom: "4rem", left: "4rem", zIndex: "0" }} />}
+    //     <img src="/assets/icons/4x5.svg" className="position-absolute" style={{ bottom: width > 768 ? "4rem" : "3rem", right: width > 768 ? "4rem" : "0.5rem", zIndex: "0" }} />
     //   </div>
     //   <StartCryptoJourneyCard />
     // </div>

@@ -16,8 +16,8 @@ function FounderMessageSection() {
       <div className="row mx-0 px-3 py-3">
         <div className="col-12 col-md-4 d-flex justify-content-center">
           <div className="position-relative">
-            <img src="./assets/images/founder-image.png" className="rounded shadow w-100" />
-            {width < 768 && <img src="./assets/icons/4x5.svg" className="position-absolute" style={{ bottom: "-1rem", left: "-1rem" }} />}
+            <img src="/assets/images/founder-image.png" className="rounded shadow w-100" />
+            {width < 768 && <img src="/assets/icons/4x5.svg" className="position-absolute" style={{ bottom: "-1rem", left: "-1rem" }} />}
           </div>
         </div>
         <div className="col-12 col-md-8 d-flex flex-column-reverse flex-md-column justify-content-center px-2 px-md-0 pe-md-5">
@@ -28,18 +28,18 @@ function FounderMessageSection() {
               </i>
             </p>
 
-            <img src="./assets/icons/block-double-quote-close.svg" className="position-absolute" style={{ top: width > 768 ? "-15px" : "-10px", right: width > 768 ? "15%" : "-1rem", width: width > 768 ? "54px" : "32px" }} />
+            <img src="/assets/icons/block-double-quote-close.svg" className="position-absolute" style={{ top: width > 768 ? "-15px" : "-10px", right: width > 768 ? "15%" : "-1rem", width: width > 768 ? "54px" : "32px" }} />
           </div>
           <div className="text-center text-md-start py-4 py-md-0">
             <p className="text-cardDescriptionColor">
               - <span className="fw-bolder">Shivam Tandon,</span> Founder
             </p>
             <div>
-              <img src="./assets/icons/twitter-ico-filled.svg" />
+              <img src="/assets/icons/twitter-ico-filled.svg" />
               &nbsp;&nbsp;
-              <img src="./assets/icons/linkedin-ico-filled.svg" />
+              <img src="/assets/icons/linkedin-ico-filled.svg" />
               &nbsp;&nbsp;
-              <img src="./assets/icons/mail-ico-filled.svg" />
+              <img src="/assets/icons/mail-ico-filled.svg" />
             </div>
           </div>
         </div>

@@ -23,19 +23,19 @@ function QuizSection() {
   };
   const quizCardData = [
     {
-      image: "./assets/icons/student.svg",
+      image: "/assets/icons/student.svg",
       title: "I'm a student",
     },
     {
-      image: "./assets/icons/worker.svg",
+      image: "/assets/icons/worker.svg",
       title: "I'm working",
     },
     {
-      image: "./assets/icons/search.svg",
+      image: "/assets/icons/search.svg",
       title: "I'm unemployed",
     },
     {
-      image: "./assets/icons/umbrella.svg",
+      image: "/assets/icons/umbrella.svg",
       title: "I'm retired",
     },
   ];

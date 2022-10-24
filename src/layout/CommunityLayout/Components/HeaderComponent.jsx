@@ -21,12 +21,12 @@ function HeaderComponent() {
               <div>
                 <UIButton type="secondary">Get Started</UIButton>
               </div>
-              <img src="./assets/icons/3x4-light.png" className="mt-1" style={{ width: "30px" }} />
+              <img src="/assets/icons/3x4-light.png" className="mt-1" style={{ width: "30px" }} />
             </>
           )}
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
-          <img src="./assets/images/community-header.png" className={`pe-0 mt-3 mt-md-0 pe-md-5`} style={{ maxWidth: screenSize.width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
+          <img src="/assets/images/community-header.png" className={`pe-0 mt-3 mt-md-0 pe-md-5`} style={{ maxWidth: screenSize.width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
         </div>
       </div>
     </div>

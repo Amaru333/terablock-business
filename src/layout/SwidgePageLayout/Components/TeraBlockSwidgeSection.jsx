@@ -19,42 +19,42 @@ function TeraBlockSwidgeSection() {
     {
       title: "Ease of use",
       description: "The tools and information you need to buy, sell, trade, invest, and manage cryptocurrencies.",
-      image: "./assets/icons/terablock-swidge/ease.svg",
+      image: "/assets/icons/terablock-swidge/ease.svg",
     },
     {
       title: "Cost effective",
       description: "The tools and information you need to buy, sell, trade, invest, and manage cryptocurrencies.",
-      image: "./assets/icons/terablock-swidge/cost.svg",
+      image: "/assets/icons/terablock-swidge/cost.svg",
     },
     {
       title: "Simplified UX",
       description: "The tools and information you need to buy, sell, trade, invest, and manage cryptocurrencies.",
-      image: "./assets/icons/terablock-swidge/ux.svg",
+      image: "/assets/icons/terablock-swidge/ux.svg",
     },
     {
       title: "Fast & Efficient",
       description: "The tools and information you need to buy, sell, trade, invest, and manage cryptocurrencies.",
-      image: "./assets/icons/terablock-swidge/fast.svg",
+      image: "/assets/icons/terablock-swidge/fast.svg",
     },
     {
       title: "One stop solution",
       description: "The tools and information you need to buy, sell, trade, invest, and manage cryptocurrencies..",
-      image: "./assets/icons/terablock-swidge/one-stop.svg",
+      image: "/assets/icons/terablock-swidge/one-stop.svg",
     },
     {
       title: "Interoperability",
       description: "The tools and information you need to buy, sell, trade, invest, and manage cryptocurrencies.",
-      image: "./assets/icons/terablock-swidge/interoperability.svg",
+      image: "/assets/icons/terablock-swidge/interoperability.svg",
     },
     {
       title: "Highly Secure",
       description: "The tools and information you need to buy, sell, trade, invest, and manage cryptocurrencies..",
-      image: "./assets/icons/terablock-swidge/secure.svg",
+      image: "/assets/icons/terablock-swidge/secure.svg",
     },
     {
       title: "Customer support",
       description: "The tools and information you need to buy, sell, trade, invest, and manage cryptocurrencies.",
-      image: "./assets/icons/terablock-swidge/support.svg",
+      image: "/assets/icons/terablock-swidge/support.svg",
     },
   ];
   return (
@@ -89,7 +89,7 @@ function TeraBlockSwidgeSection() {
             <UICard>
               <div className="d-flex flex-row justify-content-between align-items-center">
                 <div>
-                  <img src="./assets/images/swidge/1.png" className="bg-cardImageBg border border-cardImageBorder rounded" style={{ width: "60px", "--bs-border-opacity": 0.2 }} />
+                  <img src="/assets/images/swidge/1.png" className="bg-cardImageBg border border-cardImageBorder rounded" style={{ width: "60px", "--bs-border-opacity": 0.2 }} />
                 </div>
                 <h1 className="text-lightBlueText fw-bolder">1</h1>
               </div>
@@ -101,7 +101,7 @@ function TeraBlockSwidgeSection() {
             <UICard>
               <div className="d-flex flex-row justify-content-between align-items-center">
                 <div>
-                  <img src="./assets/images/swidge/2.png" className="bg-cardImageBg border border-cardImageBorder rounded" style={{ width: "60px", "--bs-border-opacity": 0.2 }} />
+                  <img src="/assets/images/swidge/2.png" className="bg-cardImageBg border border-cardImageBorder rounded" style={{ width: "60px", "--bs-border-opacity": 0.2 }} />
                 </div>
                 <h1 className="text-lightBlueText fw-bolder">2</h1>
               </div>
@@ -113,7 +113,7 @@ function TeraBlockSwidgeSection() {
             <UICard>
               <div className="d-flex flex-row justify-content-between align-items-center">
                 <div>
-                  <img src="./assets/images/swidge/3.png" className="bg-cardImageBg border border-cardImageBorder rounded" style={{ width: "60px", "--bs-border-opacity": 0.2 }} />
+                  <img src="/assets/images/swidge/3.png" className="bg-cardImageBg border border-cardImageBorder rounded" style={{ width: "60px", "--bs-border-opacity": 0.2 }} />
                 </div>
                 <h1 className="text-lightBlueText fw-bolder">3</h1>
               </div>
@@ -121,7 +121,7 @@ function TeraBlockSwidgeSection() {
               <p className="fs-6 text-primaryTextGray text-center text-md-start">One-click approval and your selected cryptocurrency is instantly converted and transferred to your in-game or Dapp wallet.</p>
             </UICard>
           </div>
-          {width > 768 && <img src="./assets/icons/4x5.svg" style={{ width: "60px", position: "absolute", bottom: "2rem", left: "1rem" }} />}
+          {width > 768 && <img src="/assets/icons/4x5.svg" style={{ width: "60px", position: "absolute", bottom: "2rem", left: "1rem" }} />}
         </div>
       </div>
       <div className="d-flex align-items-center justify-content-center mt-2 mb-5">

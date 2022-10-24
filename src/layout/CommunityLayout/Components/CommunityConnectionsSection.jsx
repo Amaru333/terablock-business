@@ -5,22 +5,22 @@ function CommunityConnectionsSection() {
   const social_data = [
     {
       title: "Twitter",
-      logo: "./assets/icons/twitter.png",
+      logo: "/assets/icons/twitter.png",
       message: "Stay updated",
     },
     {
       title: "Github",
-      logo: "./assets/icons/github.png",
+      logo: "/assets/icons/github.png",
       message: "Stay updated",
     },
     {
       title: "Telegram",
-      logo: "./assets/icons/telegram.png",
+      logo: "/assets/icons/telegram.png",
       message: "Stay updated",
     },
     {
       title: "Medium",
-      logo: "./assets/icons/medium.png",
+      logo: "/assets/icons/medium.png",
       message: "Stay updated",
     },
   ];
@@ -56,7 +56,7 @@ function CommunityConnectionsSection() {
           </div>
         ))}
       </div>
-      <img src="./assets/icons/4x3.svg" style={{ width: "50px" }} className="pb-3" />
+      <img src="/assets/icons/4x3.svg" style={{ width: "50px" }} className="pb-3" />
     </div>
   );
 }
