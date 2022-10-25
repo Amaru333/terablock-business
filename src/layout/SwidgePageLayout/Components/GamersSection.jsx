@@ -20,17 +20,18 @@ function GamersSection() {
         <div className="row mx-0 px-3 px-md-5 pt-3 d-flex flex-column-reverse flex-md-row">
           <div className="col-12 col-md-6 mt-4 mt-md-0 d-flex align-items-center">
             <div style={{ width: width < 768 ? "100%" : "80%" }}>
-              <p className="text-cardDescriptionColor fs-6">
+              <p className="text-cardDescriptionColor fs-6" style={{ textAlign: "justify", lineHeight: "30px" }}>
                 The principal challenges associated with Web3 adoption are a lack of awareness and a widespread lack of understanding of how it works. Users must go through a big learning curve to become acquainted with the different DeFi processes. This is hampering the mass adoption of users to decentralised applications (Dapps).
               </p>
-              <p className="text-cardDescriptionColor fs-6 mb-4">Swidge is a powerful Web3 multi-protocol automation that helps users buy, swap, bridge and transfer tokens from a multichain unified platform to a blockchain game (Play-to-earn) or a decentralised application (Dapp) in just a few clicks.</p>
+              <p className="text-cardDescriptionColor fs-6 mb-4" style={{ textAlign: "justify", lineHeight: "30px" }}>
+                Swidge is a powerful Web3 multi-protocol automation that helps users buy, swap, bridge and transfer tokens from a multichain unified platform to a blockchain game (Play-to-earn) or a decentralised application (Dapp) in just a few clicks.
+              </p>
               <UIButton type="primary">Get started</UIButton>
             </div>
           </div>
-          <div className="col-12 col-md-6 d-flex justify-content-center">
-            <div className="position-relative align-self-center">
-              <img src="/assets/images/gamers-header.png" className={`${width < 1120 && "w-100"}`} />
-              <div className={GamersSectionStyle.circular_blur}></div>
+          <div className="col-12 col-md-6 d-flex" style={{ justifyContent: width > 768 ? "end" : "center" }}>
+            <div className="">
+              <img src="/assets/images/Swidge_01.svg" style={{ width: width > 768 ? "500px" : "80vw" }} />
             </div>
           </div>
         </div>

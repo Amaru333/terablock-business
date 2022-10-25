@@ -1,6 +1,9 @@
 import React from "react";
+import UILottie from "../../../common/Lottie/UILottie";
 import { useScreenSize } from "../../../functions/useScreenSize";
 import UIButton from "../../../widgets/UIButtons/UIButton";
+
+import HeroAnimation1 from "../animations/coinslists_hero_3.json";
 
 function CoinsListsHeader() {
   const width = useScreenSize().width;
@@ -28,8 +31,10 @@ function CoinsListsHeader() {
                 </>
               )}
             </div>
-            <div className="col-12 col-md-6 d-flex justify-content-center">
-              <img src="/assets/images/coinslists/coinslists-header.svg" style={{ zIndex: 1, maxWidth: width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
+            <div className="col-12 col-md-6 d-flex justify-content-end">
+              <div style={{ maxWidth: "500px" }}>
+                <UILottie animation={HeroAnimation1} />
+              </div>
             </div>
             {width < 768 && (
               <>

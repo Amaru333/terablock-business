@@ -7,6 +7,12 @@ import InvestmentGraphStyle from "../Styles/InvestmentGraph.module.css";
 function InvestmentGraph() {
   const width = useScreenSize().width;
 
+  const formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  });
+
   const coinlist_data = [
     {
       image: "/assets/icons/homepage/4.png",
@@ -157,7 +163,7 @@ function InvestmentGraph() {
         <p className="text-center text-white mt-4 px-2">Slide the coin and see how your crypto could have grown over time with systematic and periodic investing</p>
         <div className={["m-auto rounded border-white px-4 py-2 my-5", InvestmentGraphStyle.half_container].join(" ")} style={{ "--bs-border-opacity": 0.2 }}>
           <div className="d-flex flex-row justify-content-between mt-2">
-            <p className="text-white">Monthly Deposit</p>
+            <p className="text-white">Monthly Deposit ({formatter.format(value * 100)})</p>
             <p className="text-white">$100,000</p>
           </div>
           <div className="d-flex align-items-center">

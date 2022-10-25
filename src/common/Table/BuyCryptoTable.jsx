@@ -214,7 +214,7 @@ function BuyCryptoTable() {
             <div className="row" key={index}>
               <div className="col d-flex flex-row align-items-center">
                 <div>
-                  <img src={data.image} />
+                  <img src={data.image} style={{ width: "32px" }} className="rounded me-2" />
                 </div>
                 <p className="mb-0 ms-0 text-tableDataColor ps-1" style={{ fontWeight: 600 }}>
                   {data.name}

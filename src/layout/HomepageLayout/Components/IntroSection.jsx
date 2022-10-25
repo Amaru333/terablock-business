@@ -6,10 +6,10 @@ import IntroSectionStyles from "../Styles/IntroSection.module.css";
 function IntroSection() {
   const width = useScreenSize().width;
   return (
-    <div className="bg-white text-center text-md-start position-relative pt-5">
-      <div className="px-xl-5">
+    <div className={`bg-white text-center text-md-start position-relative ${(width > 1400 || width < 800) && "pt-5"}`}>
+      <div className={`px-xl-5`}>
         <div style={{ maxWidth: "1500px", margin: "auto" }}>
-          <div className="row mx-0 px-4 pt-4">
+          <div className={`row mx-0 px-4 pt-4`}>
             <div className="col-12 col-md-8 align-self-center">
               <div className="d-flex flex-column mb-3" style={{ width: "fit-content" }}>
                 <div className="d-flex align-items-center">
@@ -25,7 +25,9 @@ function IntroSection() {
                 {/* <img src="/assets/images/underline.svg" style={{ width: "80px", alignSelf: "flex-end", marginRight: "10px" }} /> */}
               </div>
               <div className={IntroSectionStyles.intro_text_section}>
-                <p style={{ color: "#1b2b6b", fontSize: "40pt", fontWeight: "600" }}>The wiser way to invest in crypto assets</p>
+                <p className={`${(width < 1400 || width > 800) && "mb-0"}`} style={{ color: "#1b2b6b", fontSize: width > 1500 ? "40pt" : width > 767 ? "24pt" : "30px", fontWeight: "600" }}>
+                  The wiser way to invest in crypto assets
+                </p>
                 <p className="my-4" style={{ color: "#5a5b5b" }}>
                   TeraBlock is a truly decentralised platform that gives you the knowledge, tools and support to manage your crypto better.
                 </p>
@@ -35,14 +37,22 @@ function IntroSection() {
                 <UIButton type="secondary">Launch App</UIButton>
               </div>
               <div className={["d-flex justify-content-between justify-content-md-start", IntroSectionStyles.bottom_logos].join(" ")}>
-                <img src="/assets/images/coin-telegraph.png" className="px-md-4" style={{ width: width < 768 && "20%", height: width < 768 && "20%" }} />
-                <img src="/assets/images/yahoo-finance.png" className="px-md-4" style={{ width: width < 768 && "20%", height: width < 768 && "20%" }} />
-                <img src="/assets/images/news-btc.png" className="px-md-4" style={{ width: width < 768 && "20%", height: width < 768 && "20%" }} />
-                <img src="/assets/images/coin-quora.png" className="px-md-4" style={{ width: width < 768 && "20%", height: width < 768 && "20%" }} />
+                <a href="https://cointelegraph.com/press-releases/terablock-and-splinterlands-collaborate-take-defi-gaming-to-new-heights" target="_blank">
+                  <img src="/assets/images/coin-telegraph.png" className="px-md-4" style={{ width: width < 768 && "20%", height: width < 768 && "20%" }} />
+                </a>
+                <a href="https://finance.yahoo.com/news/ai-based-trade-automation-case-000000108.html" target="_blank">
+                  <img src="/assets/images/yahoo-finance.png" className="px-md-4" style={{ width: width < 768 && "20%", height: width < 768 && "20%" }} />
+                </a>
+                <a href="https://www.newsbtc.com/news/company/all-you-want-to-know-about-automated-crypto-trading/" target="_blank">
+                  <img src="/assets/images/news-btc.png" className="px-md-4" style={{ width: width < 768 && "20%", height: width < 768 && "20%" }} />
+                </a>
+                <a href="https://www.investing.com/news/cryptocurrency-news/terablock-raised-24m-in-funds-to-build-crypto-exchange-2478985" target="_blank">
+                  <img src="/assets/images/coin-quora.png" className="px-md-4" style={{ width: width < 768 && "20%", height: width < 768 && "20%" }} />
+                </a>
               </div>
             </div>
             <div className="col-12 col-md-4 d-flex justify-content-center justify-content-md start position-relative" style={{ alignItems: "end" }}>
-              <img src="/assets/images/iphone-12-black.png" style={{ zIndex: 2, objectFit: "contain" }} />
+              <img src="/assets/images/iphone-12-black.png" style={{ zIndex: 2, objectFit: "contain", width: width < 1400 || width > 800 ? "75%" : "90%" }} />
               {/* <img src="/assets/icons/ellipse-red.svg" className="position-absolute" style={{ width: "50px", top: "0rem", right: "1rem" }} />
             <img src="/assets/icons/ellipse-blue.svg" className="position-absolute" style={{ width: "25px", bottom: "0rem", left: "1rem" }} /> */}
             </div>
