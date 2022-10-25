@@ -5,7 +5,6 @@ import SearchResultStyle from "../Styles/SearchResult.module.css";
 
 function SearchResultSection() {
   const router = useRouter();
-  console.log(router.query);
   const ResultCard = ({ title, description, category, category_name }) => {
     return (
       <div className={SearchResultStyle.container}>

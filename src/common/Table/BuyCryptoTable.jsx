@@ -110,7 +110,7 @@ function BuyCryptoTable() {
   const tableData = [
     {
       name: "Bitcoin",
-      image: "/assets/icons/homepage/coins/15.png",
+      image: "/assets/icons/homepage/Coins/15.png",
       symbol: "BTC",
       last_price: "$19,398.45",
       change: "+4.68%",
@@ -118,7 +118,7 @@ function BuyCryptoTable() {
     },
     {
       name: "Ethereum",
-      image: "/assets/icons/homepage/coins/10.png",
+      image: "/assets/icons/homepage/Coins/10.png",
       symbol: "ETH",
       last_price: "$1,313.49",
       change: "+0.08%",
@@ -126,7 +126,7 @@ function BuyCryptoTable() {
     },
     {
       name: "Cardano",
-      image: "/assets/icons/homepage/coins/1.png",
+      image: "/assets/icons/homepage/Coins/1.png",
       symbol: "ADA",
       last_price: "$0.4302",
       change: "+0.07%",
@@ -134,7 +134,7 @@ function BuyCryptoTable() {
     },
     {
       name: "Polkadot",
-      image: "/assets/icons/homepage/coins/6.png",
+      image: "/assets/icons/homepage/Coins/6.png",
       symbol: "DOT",
       last_price: "$6.28",
       change: "-0.21%",
@@ -142,7 +142,7 @@ function BuyCryptoTable() {
     },
     {
       name: "TeraBlock",
-      image: "/assets/icons/homepage/coins/14.png",
+      image: "/assets/icons/homepage/Coins/14.png",
       symbol: "TBC",
       last_price: "$0.0064",
       change: "+5.62%",

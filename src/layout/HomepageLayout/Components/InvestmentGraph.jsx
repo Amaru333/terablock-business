@@ -18,7 +18,7 @@ function InvestmentGraph() {
       image: "/assets/icons/homepage/4.png",
       title: "High Capitalisation",
       description: "A portfolio of high capitalization cryptocurrencies.",
-      coin_images: ["/assets/icons/homepage/coins/15.png", "/assets/icons/homepage/coins/10.png", "/assets/icons/homepage/coins/1.png", "/assets/icons/homepage/coins/6.png"],
+      coin_images: ["/assets/icons/homepage/Coins/15.png", "/assets/icons/homepage/Coins/10.png", "/assets/icons/homepage/Coins/1.png", "/assets/icons/homepage/Coins/6.png"],
       cagr: "3,875%",
       min_amount: "$100",
       apr: "5",
@@ -28,7 +28,7 @@ function InvestmentGraph() {
       image: "/assets/icons/homepage/5.png",
       title: "Metaverse",
       description: "A portfolio of cryptocurrencies revolutionising Metaverse ecosystem.",
-      coin_images: ["/assets/icons/homepage/coins/12.png", "/assets/icons/homepage/coins/13.png", "/assets/icons/homepage/coins/7.png", "/assets/icons/homepage/coins/5.png"],
+      coin_images: ["/assets/icons/homepage/Coins/12.png", "/assets/icons/homepage/Coins/13.png", "/assets/icons/homepage/Coins/7.png", "/assets/icons/homepage/Coins/5.png"],
       cagr: "2,877%",
       min_amount: "$250",
       volatile: "High",
@@ -38,7 +38,7 @@ function InvestmentGraph() {
       image: "/assets/icons/homepage/6.png",
       title: "Play2Earn",
       description: "A portfolio of leading cryptocurrencies of Play-to-Earn games.",
-      coin_images: ["/assets/icons/homepage/coins/16.png", "/assets/icons/homepage/coins/14.png", "/assets/icons/homepage/coins/3.png", "/assets/icons/homepage/coins/8.png"],
+      coin_images: ["/assets/icons/homepage/Coins/16.png", "/assets/icons/homepage/Coins/14.png", "/assets/icons/homepage/Coins/3.png", "/assets/icons/homepage/Coins/8.png"],
       cagr: "2,861%",
       min_amount: "$250",
       volatile: "High",
@@ -48,7 +48,7 @@ function InvestmentGraph() {
       image: "/assets/icons/homepage/7.png",
       title: "DeFi",
       description: "A portfolio of innovative businesses in DeFi ecosystem.",
-      coin_images: ["/assets/icons/homepage/coins/4.png", "/assets/icons/homepage/coins/11.png", "/assets/icons/homepage/coins/2.png", "/assets/icons/homepage/coins/9.png"],
+      coin_images: ["/assets/icons/homepage/Coins/4.png", "/assets/icons/homepage/Coins/11.png", "/assets/icons/homepage/Coins/2.png", "/assets/icons/homepage/Coins/9.png"],
       cagr: "458.9%",
       min_amount: "$250",
       volatile: "Med",
@@ -153,8 +153,6 @@ function InvestmentGraph() {
       setValue(parseInt(value) - 5);
     }
   };
-
-  console.log(value);
 
   return (
     <div>
