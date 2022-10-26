@@ -54,24 +54,26 @@ function DescriptionSection() {
   ];
   return (
     <div className="primary-gradient px-0 px-md-2 px-xl-5">
-      <div className="flex flex-column justify-content-center align-items-center pb-4">
-        <h2 className="text-white text-center pt-5 px-1 d-flex flex-column flex-md-row justify-content-center">
-          <span>
-            <b>TeraBlock</b>,
-          </span>
-          <span>
-            {" "}
-            your crypto solution<span className="text-primaryViolet">.</span>
-          </span>
-        </h2>
-        <p className="text-center text-white mt-3 fs-6 fw-lighter">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-      </div>
-      <div className="row mx-0">
-        {descriptionData.map((data, index) => (
-          <div key={index} className="col-6 col-md-3 px-3 px-md-5 pb-3 pb-md-5 text-center text-md-start">
-            <DescriptionCard title={data.title} image={data.image} description={data.description} />
-          </div>
-        ))}
+      <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
+        <div className="flex flex-column justify-content-center align-items-center pb-4">
+          <h2 className="text-white text-center pt-5 px-1 d-flex flex-column flex-md-row justify-content-center">
+            <span>
+              <b>TeraBlock</b>,
+            </span>
+            <span>
+              {" "}
+              your crypto solution<span className="text-primaryViolet">.</span>
+            </span>
+          </h2>
+          <p className="text-center text-white mt-3 fs-6 fw-lighter">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+        </div>
+        <div className="row mx-0">
+          {descriptionData.map((data, index) => (
+            <div key={index} className="col-6 col-md-3 px-3 px-md-5 pb-3 pb-md-5 text-center text-md-start">
+              <DescriptionCard title={data.title} image={data.image} description={data.description} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

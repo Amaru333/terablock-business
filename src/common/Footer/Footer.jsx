@@ -250,11 +250,17 @@ function Footer() {
         </div>
         <div className="d-flex justify-content-between px-4 px-md-5 pt-0 pb-5 pt-md-4 pb-md-3">
           <div className="ps-md-4">
-            <img src="/assets/icons/twitter-ico-filled.svg" />
+            <a href="https://twitter.com/myterablock" target="_blank">
+              <img src="/assets/icons/twitter-ico-filled.svg" />
+            </a>
             &nbsp;&nbsp;
-            <img src="/assets/icons/linkedin-ico-filled.svg" />
+            <a href="https://www.linkedin.com/company/myTeraBlock/" target="_blank">
+              <img src="/assets/icons/linkedin-ico-filled.svg" />
+            </a>
             &nbsp;&nbsp;
-            <img src="/assets/icons/mail-ico-filled.svg" />
+            <a href="mailto:support@terablock.com">
+              <img src="/assets/icons/mail-ico-filled.svg" />
+            </a>
           </div>
           <div className="pe-md-4">
             <LanguageSelector />

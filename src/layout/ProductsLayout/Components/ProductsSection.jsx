@@ -10,37 +10,37 @@ function ProductsSection() {
   const [tab, setTab] = useState("Wallet Management");
   const ref = useRef({});
   const tab_list = [
-    // {
-    //   name: "Wallet Management",
-    //   icon: "/assets/icons/wallet-tab.svg",
-    // },
-    // {
-    //   name: "Bridge",
-    //   icon: "/assets/icons/bridge.svg",
-    // },
-    // {
-    //   name: "Coin List",
-    //   icon: "/assets/icons/coin-bag.svg",
-    // },
-    // {
-    //   name: "Buy",
-    //   icon: "/assets/icons/bag.svg",
-    // },
-    // {
-    //   name: "Swap",
-    //   icon: "/assets/icons/swap.svg",
-    // },
-    // {
-    //   name: "Swidge",
-    //   icon: "/assets/icons/swidge.svg",
-    // },
     {
-      name: "Tab 1",
-      icon: "/assets/icons/money-bag.svg",
+      name: "Wallet Management",
+      icon: "./assets/icons/wallet-tab.svg",
     },
     {
-      name: "Tab 2",
-      icon: "/assets/icons/learn.svg",
+      name: "Bridge",
+      icon: "./assets/icons/bridge.svg",
+    },
+    {
+      name: "Coin List",
+      icon: "./assets/icons/coin-bag.svg",
+    },
+    {
+      name: "Buy",
+      icon: "./assets/icons/bag.svg",
+    },
+    {
+      name: "Swap",
+      icon: "./assets/icons/swap.svg",
+    },
+    {
+      name: "Swidge",
+      icon: "./assets/icons/swidge.svg",
+    },
+    {
+      name: "Earn",
+      icon: "./assets/icons/money-bag.svg",
+    },
+    {
+      name: "Learn",
+      icon: "./assets/icons/learn.svg",
     },
   ];
   const WalletManagement = () => {
@@ -52,19 +52,19 @@ function ProductsSection() {
           </h2>
           <p className="text-primaryTextGray mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
           <div className="d-flex align-items-center mt-2">
-            <img src="/assets/icons/bullet.svg" />
+            <img src="./assets/icons/bullet.svg" />
             <p className="mb-0 text-primaryDark ms-2 fw-normal">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
           </div>
           <div className="d-flex align-items-center mt-2">
-            <img src="/assets/icons/bullet.svg" />
+            <img src="./assets/icons/bullet.svg" />
             <p className="mb-0 text-primaryDark ms-2 fw-normal">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
           </div>
           <div className="d-flex align-items-center mt-2">
-            <img src="/assets/icons/bullet.svg" />
+            <img src="./assets/icons/bullet.svg" />
             <p className="mb-0 text-primaryDark ms-2 fw-normal">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
           </div>
           <div className="d-flex align-items-center mt-2">
-            <img src="/assets/icons/bullet.svg" />
+            <img src="./assets/icons/bullet.svg" />
             <p className="mb-0 text-primaryDark ms-2 fw-normal">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
           </div>
           <div className="mt-3 d-flex justify-content-center justify-content-md-start">
@@ -72,7 +72,7 @@ function ProductsSection() {
           </div>
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center">
-          <img src="/assets/images/wallet-management.png" style={{ maxWidth: width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
+          <img src="./assets/images/wallet-management.png" style={{ maxWidth: width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
         </div>
       </div>
     );
@@ -86,19 +86,19 @@ function ProductsSection() {
           </h2>
           <p className="text-primaryTextGray mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
           <div className="d-flex align-items-center mt-2">
-            <img src="/assets/icons/bullet.svg" />
+            <img src="./assets/icons/bullet.svg" />
             <p className="mb-0 text-primaryDark ms-2 fw-normal">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
           </div>
           <div className="d-flex align-items-center mt-2">
-            <img src="/assets/icons/bullet.svg" />
+            <img src="./assets/icons/bullet.svg" />
             <p className="mb-0 text-primaryDark ms-2 fw-normal">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
           </div>
           <div className="d-flex align-items-center mt-2">
-            <img src="/assets/icons/bullet.svg" />
+            <img src="./assets/icons/bullet.svg" />
             <p className="mb-0 text-primaryDark ms-2 fw-normal">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
           </div>
           <div className="d-flex align-items-center mt-2">
-            <img src="/assets/icons/bullet.svg" />
+            <img src="./assets/icons/bullet.svg" />
             <p className="mb-0 text-primaryDark ms-2 fw-normal">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
           </div>
           <div className="mt-3 d-flex justify-content-center justify-content-md-start">
@@ -106,7 +106,7 @@ function ProductsSection() {
           </div>
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center">
-          <img src="/assets/images/bridge-tab.png" style={{ maxWidth: width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
+          <img src="./assets/images/bridge-tab.png" style={{ maxWidth: width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
         </div>
       </div>
     );
@@ -119,7 +119,7 @@ function ProductsSection() {
     };
     return (
       <div className="d-flex align-items-center">
-        {ref.current.scrollWidth > ref.current.offsetWidth && <img onClick={() => scroll(-offset)} src="/assets/icons/left-arrow-blue.svg" />}
+        {ref.current.scrollWidth > ref.current.offsetWidth && <img onClick={() => scroll(-offset)} src="./assets/icons/left-arrow-blue.svg" />}
         <div className={ProductStyle.tab_bar} ref={ref}>
           {tab_list.map((tabItem, index) => (
             <div key={index} onClick={() => setTab(tabItem.name)} className={[ProductStyle.tab_items, tabItem.name == tab ? ProductStyle.tab_active : ProductStyle.tab_inactive].join(" ")}>
@@ -128,29 +128,29 @@ function ProductsSection() {
             </div>
           ))}
         </div>
-        {ref.current.scrollWidth > ref.current.offsetWidth && <img onClick={() => scroll(+offset)} src="/assets/icons/right-arrow-blue.svg" />}
+        {ref.current.scrollWidth > ref.current.offsetWidth && <img onClick={() => scroll(+offset)} src="./assets/icons/right-arrow-blue.svg" />}
       </div>
     );
   };
 
   return (
     <div className="mt-5 pt-5 pb-5 bg-white">
-      <div className="text-center mb-2 px-4 px-md-5">
-        <h3 className="text-primaryTextDark fw-bolder">
-          <b>
-            Powerful, TeraBlock Products<span className="text-primaryViolet">.</span>
-          </b>
-        </h3>
-        <p className="text-primaryTextGray">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-      </div>
-      <div className="mb-5 px-2 px-md-5">
-        <TabBar />
-      </div>
-      <div className="px-4 px-md-5">
-        {/* {tab == "Wallet Management" && <WalletManagement />}
-        {tab == "Bridge" && <Bridge />} */}
-        {tab == "Tab 1" && <div>Contents of tab 1</div>}
-        {tab == "Tab 2" && <div>Contents of tab 2</div>}
+      <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
+        <div className="text-center mb-2 px-4 px-md-5">
+          <h3 className="text-primaryTextDark fw-bolder">
+            <b>
+              Powerful, TeraBlock Products<span className="text-primaryViolet">.</span>
+            </b>
+          </h3>
+          <p className="text-primaryTextGray">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+        </div>
+        <div className="mb-5 px-2 px-md-5">
+          <TabBar />
+        </div>
+        <div className="px-4 px-md-5">
+          {tab == "Wallet Management" && <WalletManagement />}
+          {tab == "Bridge" && <Bridge />}
+        </div>
       </div>
     </div>
   );

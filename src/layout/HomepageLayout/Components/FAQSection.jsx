@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
 import UIAccordion from "../../../widgets/UIAccordion/UIAccordion";
@@ -5,6 +6,7 @@ import UIButton from "../../../widgets/UIButtons/UIButton";
 
 function FAQSection() {
   const width = useScreenSize().width;
+  const router = useRouter();
   return (
     <div className="pb-5 position-relative" style={{ backgroundColor: "#0251ff" }}>
       <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
@@ -60,7 +62,7 @@ function FAQSection() {
             <br />
             <br />
             <div>
-              <UIButton>Get started</UIButton>
+              <UIButton onClick={() => router.push("/products")}>Get started</UIButton>
               <UIButton type="primary-light">Explore Products</UIButton>
             </div>
           </UIAccordion>

@@ -41,22 +41,24 @@ function CommunityConnectionsSection() {
   };
   return (
     <div className="bg-white">
-      <div className="text-center pt-5 px-4 px-md-5">
-        <h3 className="text-primaryTextDark fw-bold">
-          <b>
-            Connect with the global community<span className="text-primaryViolet">.</span>
-          </b>
-        </h3>
-        <p className="text-primaryTextGray mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
+        <div className="text-center pt-5 px-4 px-md-5">
+          <h3 className="text-primaryTextDark fw-bold">
+            <b>
+              Connect with the global community<span className="text-primaryViolet">.</span>
+            </b>
+          </h3>
+          <p className="text-primaryTextGray mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div className="row mx-2 mx-md-5 mt-5">
+          {social_data.map((data, index) => (
+            <div className="col-6 col-md" key={index}>
+              <SocialCards title={data.title} logo={data.logo} message={data.message} />
+            </div>
+          ))}
+        </div>
+        <img src="/assets/icons/4x3.svg" style={{ width: "50px" }} className="pb-3" />
       </div>
-      <div className="row mx-2 mx-md-5 mt-5">
-        {social_data.map((data, index) => (
-          <div className="col-6 col-md" key={index}>
-            <SocialCards title={data.title} logo={data.logo} message={data.message} />
-          </div>
-        ))}
-      </div>
-      <img src="/assets/icons/4x3.svg" style={{ width: "50px" }} className="pb-3" />
     </div>
   );
 }

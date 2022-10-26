@@ -41,27 +41,29 @@ function JoinAmbassador() {
   };
   return (
     <div className="bg-white pb-5">
-      <div className="text-center px-4 px-md-5">
-        <h4 className="text-primaryTextDark">Steps to join Ambassador Program</h4>
-        <p className="text-primaryTextGray">Lets look at the steps involved in joining the Ambassador Program</p>
-      </div>
-      <div className="row mx-0 px-4 px-md-5 pt-3 pt-md-5">
-        {joinData.map((data, index) => (
-          <>
-            <div className="col-12 col-md px-4 px-md-0">
-              <JoinCard text={data.text} index={index} image={data.image} />
-            </div>
-            {width > 768 && index + 1 != joinData.length && (
-              <div className="col-1 d-flex align-items-center justify-content-center">
-                <img src="/assets/icons/arrow-next.svg" />
+      <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
+        <div className="text-center px-4 px-md-5">
+          <h4 className="text-primaryTextDark">Steps to join Ambassador Program</h4>
+          <p className="text-primaryTextGray">Lets look at the steps involved in joining the Ambassador Program</p>
+        </div>
+        <div className="row mx-0 px-4 px-md-5 pt-3 pt-md-5">
+          {joinData.map((data, index) => (
+            <>
+              <div className="col-12 col-md px-4 px-md-0">
+                <JoinCard text={data.text} index={index} image={data.image} />
               </div>
-            )}
-          </>
-        ))}
-      </div>
-      <div className="d-flex flex-row justify-content-center pt-0 pt-md-5">
-        <UIButton type="primary">Apply Now</UIButton>
-        <UIButton type="secondary">View Guide</UIButton>
+              {width > 768 && index + 1 != joinData.length && (
+                <div className="col-1 d-flex align-items-center justify-content-center">
+                  <img src="/assets/icons/arrow-next.svg" />
+                </div>
+              )}
+            </>
+          ))}
+        </div>
+        <div className="d-flex flex-row justify-content-center pt-0 pt-md-5">
+          <UIButton type="primary">Apply Now</UIButton>
+          <UIButton type="secondary">View Guide</UIButton>
+        </div>
       </div>
     </div>
   );

@@ -32,12 +32,14 @@ function FeaturedInSection() {
           </b>
         </h3>
       </div>
-      <div className="row mx-3 mx-md-4">
-        {images.map((image, index) => (
-          <div className="col-6 col-md-3" key={index}>
-            <ImageCard image={image} />
-          </div>
-        ))}
+      <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
+        <div className="row mx-3 mx-md-4">
+          {images.map((image, index) => (
+            <div className="col-6 col-md-3" key={index}>
+              <ImageCard image={image} />
+            </div>
+          ))}
+        </div>
       </div>
       <div className="d-flex flex-row justify-content-center">
         <img src="/assets/icons/left-block-arrow.svg" />
