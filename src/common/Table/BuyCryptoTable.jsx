@@ -177,8 +177,7 @@ function BuyCryptoTable() {
     },
   ];
   if (screenSize.width > 768) {
-    return (
-      
+    return (   
       <div>
         {/* <div style={{ width: "100px" }}>
           <Line data={data} options={options} />
