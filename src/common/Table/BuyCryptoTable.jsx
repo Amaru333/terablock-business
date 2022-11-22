@@ -20,6 +20,10 @@ function BuyCryptoTable() {
   // }, [reducerValue]);
 
   useEffect(() => {
+    fetchData()
+  },[])
+
+  useEffect(() => {
     var timerID = setInterval(() => fetchData(),30000)
     return () => clearInterval(timerID)
   })
@@ -177,8 +181,7 @@ function BuyCryptoTable() {
     },
   ];
   if (screenSize.width > 768) {
-    return (
-      
+    return (   
       <div>
         {/* <div style={{ width: "100px" }}>
           <Line data={data} options={options} />
