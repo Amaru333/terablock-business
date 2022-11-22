@@ -20,13 +20,13 @@ function BuyCryptoTable() {
   // }, [reducerValue]);
 
   useEffect(() => {
-    var timerID = setInterval(() => fetchData(),30000)
+    var timerID = setInterval(() => fetchData(),4000)
     return () => clearInterval(timerID)
   })
 
   const fetchData = async () => {
     const result = await axios(
-      'https://geniuseado.terablock.com/api2/coinlist?vs_currency=USD&ids=dogecoin,bitcoin,ethereum,polkadot,terablock',
+      'https://geniuseado.terablock.com/api2/coinlist?vs_currency=USD&ids=cardano,bitcoin,ethereum,polkadot,terablock',
     );
 
     setData(result.data);
@@ -213,7 +213,7 @@ function BuyCryptoTable() {
               <p className="col mb-0" style={{ fontWeight: 600, color: "#1b2b6b" }}>
                 ${data.current_price > 0 ? data.current_price.toLocaleString(undefined, {
                   minimumFractionDigits: 0,
-                  maximumFractionDigits: 2
+                  maximumFractionDigits: 3
                 }) : data.current_price}
                 {/* ${data.current_price.toLocaleString(undefined, {
                   minimumFractionDigits: 0,
@@ -260,11 +260,11 @@ function BuyCryptoTable() {
               </div>
               <div className="col text-end align-self-center">
                 <p className="mb-0 text-tableDataColor" style={{ fontWeight: 500 }}>
-                  ${data.current_price}
+                  ${data.current_price.toFixed(3)}
                 </p>
                 <p className="mb-0 d-flex justify-content-end" style={{ fontWeight: 600, color: data.price_change_percentage_24h >= 0 ? "#6cc870" : "#e33536" }}>
                   <img src="/assets/icons/up-square.svg" className="me-0" style={{ width: "10px" }} />
-                  {data.price_change_percentage_24h >= 0 ? '+' : null}{data.price_change_percentage_24h.toLocaleString(undefined, {
+                  {data.price_change_percentage_24h >= 0 ? '+' : '-'}{data.price_change_percentage_24h.toLocaleString(undefined, {
                     minimumFractionDigits: 0,
                     maximumFractionDigits: 2
                   })}%
