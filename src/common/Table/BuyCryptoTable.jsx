@@ -67,7 +67,7 @@ function BuyCryptoTable() {
 
   const fetchData = async () => {
     const result = await axios(
-      'https://geniuseado.terablock.com/api2/coinlist?vs_currency=USD&ids=cardano,bitcoin,ethereum,polkadot,terablock',
+      'https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&ids=cardano,bitcoin,ethereum,polkadot,terablock',
     );
 
     setData(result.data);
