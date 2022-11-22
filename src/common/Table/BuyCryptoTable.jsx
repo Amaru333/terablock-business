@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useReducer } from "react";
 import axios from 'axios'
 import { useScreenSize } from "../../functions/useScreenSize";
 import UIButton from "../../widgets/UIButtons/UIButton";
@@ -8,24 +8,31 @@ import { Line } from "react-chartjs-2";
 
 function BuyCryptoTable() {
   const [data, setData] = useState()
+  const [reducerValue, forceUpdate] = useReducer(x => x + 1, 0);
+
+  // useEffect(() => {
+  //   fetchData();
+  //   // if (response) {
+  //   //   // setInterval(fetchData, 30000)
+  //   // }
+  //   let intervalID = setInterval(forceUpdate, 30000);
+  //   // clearInterval(intervalID)
+  // }, [reducerValue]);
+
   useEffect(() => {
-    let response = fetchData();
-    if (response) {
-      setInterval(fetchData, 30000)
-    }
-  }, []);
+    var timerID = setInterval(() => fetchData(),30000)
+    return () => clearInterval(timerID)
+  })
 
   const fetchData = async () => {
     const result = await axios(
-      'https://geniuseado.terablock.com/api2/coinlist?vs_currency=USD&ids=dogecoin,bitcoin,ethereum,polkadot',
+      'https://geniuseado.terablock.com/api2/coinlist?vs_currency=USD&ids=dogecoin,bitcoin,ethereum,polkadot,terablock',
     );
 
     setData(result.data);
-    return true;
+    // return true;
   };
-
-
-
+  
   const lineChart = ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler, {
     id: "uniqueid",
     afterDraw: function (chart, easing) {
@@ -171,6 +178,7 @@ function BuyCryptoTable() {
   ];
   if (screenSize.width > 768) {
     return (
+      
       <div>
         {/* <div style={{ width: "100px" }}>
           <Line data={data} options={options} />
@@ -212,9 +220,9 @@ function BuyCryptoTable() {
                   maximumFractionDigits: 2
                 })} */}
               </p>
-              <p className="col mb-0 d-flex justify-content-center" style={{ fontWeight: 600, color: data.price_change_percentage_24h[0] == "+" ? "#6cc870" : "#e33536" }}>
+              <p className="col mb-0 d-flex justify-content-center" style={{ fontWeight: 600, color: data.price_change_percentage_24h >= 0 ? "#6cc870" : "#e33536" }}>
                 {/* <img src="/assets/icons/up-square.svg" className="me-1" /> */}
-                {data.price_change_percentage_24h.toLocaleString(undefined, {
+                {data.price_change_percentage_24h >= 0 ? '+' : null}{data.price_change_percentage_24h.toLocaleString(undefined, {
                   minimumFractionDigits: 0,
                   maximumFractionDigits: 2
                 })}%
@@ -254,12 +262,12 @@ function BuyCryptoTable() {
                 <p className="mb-0 text-tableDataColor" style={{ fontWeight: 500 }}>
                   ${data.current_price}
                 </p>
-                <p className="mb-0 d-flex justify-content-end" style={{ fontWeight: 600, color: data.price_change_percentage_24h[0] == "+" ? "#6cc870" : "#e33536" }}>
+                <p className="mb-0 d-flex justify-content-end" style={{ fontWeight: 600, color: data.price_change_percentage_24h >= 0 ? "#6cc870" : "#e33536" }}>
                   <img src="/assets/icons/up-square.svg" className="me-0" style={{ width: "10px" }} />
-                  {data.price_change_percentage_24h.toLocaleString(undefined, {
-                  minimumFractionDigits: 0,
-                  maximumFractionDigits: 2
-                })}%                
+                  {data.price_change_percentage_24h >= 0 ? '+' : null}{data.price_change_percentage_24h.toLocaleString(undefined, {
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 2
+                  })}%
                 </p>
               </div>
               <div className="col d-flex justify-content-center">
