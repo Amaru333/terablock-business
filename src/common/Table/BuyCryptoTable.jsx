@@ -7,7 +7,48 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 import { Line } from "react-chartjs-2";
 
 function BuyCryptoTable() {
-  const [data, setData] = useState()
+  const [data, setData] = useState([
+    {
+      name: "Bitcoin",
+      image: "/assets/icons/homepage/Coins/15.png",
+      symbol: "BTC",
+      last_price: "-",
+      change: "-",
+      market_cap: "-",
+    },
+    {
+      name: "Ethereum",
+      image: "/assets/icons/homepage/Coins/10.png",
+      symbol: "ETH",
+      last_price: "-",
+      change: "-",
+      market_cap: "-",
+    },
+    {
+      name: "Cardano",
+      image: "/assets/icons/homepage/Coins/1.png",
+      symbol: "ADA",
+      last_price: "-",
+      change: "-",
+      market_cap: "-",
+    },
+    {
+      name: "Polkadot",
+      image: "/assets/icons/homepage/Coins/6.png",
+      symbol: "DOT",
+      last_price: "-",
+      change: "-",
+      market_cap: "-",
+    },
+    {
+      name: "TeraBlock",
+      image: "/assets/icons/homepage/Coins/14.png",
+      symbol: "TBC",
+      last_price: "-",
+      change: "-",
+      market_cap: "-",
+    },
+  ]);
   const [reducerValue, forceUpdate] = useReducer(x => x + 1, 0);
 
   // useEffect(() => {
@@ -134,7 +175,6 @@ function BuyCryptoTable() {
   };
 
   const screenSize = useScreenSize();
- 
   if (screenSize.width > 768) {
     return (   
       <div>
@@ -155,7 +195,7 @@ function BuyCryptoTable() {
             <p className="col mb-2">Trade</p>
           </div>
           {data?.map((data, index) => (
-            <div className={`row mx-4 text-center align-items-center justify-content-center my-2 pb-2 ${index < tableData?.length - 1 && "border-bottom"}`} key={index}>
+            <div className={`row mx-4 text-center align-items-center justify-content-center my-2 pb-2 ${index < data?.length - 1 && "border-bottom"}`} key={index}>
               <div className="col-3 col-md-5 d-flex flex-row align-items-center">
                 <div>
                   <img src={data.image} style={{ width: "32px" }} className="rounded me-2" />
@@ -169,10 +209,10 @@ function BuyCryptoTable() {
               </div>
               {/* <p className="col mb-0 text-primaryTextGray">{data.symbol}</p> */}
               <p className="col mb-0" style={{ fontWeight: 600, color: "#1b2b6b" }}>
-                ${data.current_price > 0 ? data.current_price.toLocaleString(undefined, {
+                ${data?.current_price > 0 ? data?.current_price.toLocaleString(undefined, {
                   minimumFractionDigits: 0,
                   maximumFractionDigits: 3
-                }) : data.current_price}
+                }) : data?.current_price}
                 {/* ${data.current_price.toLocaleString(undefined, {
                   minimumFractionDigits: 0,
                   maximumFractionDigits: 2
@@ -180,7 +220,7 @@ function BuyCryptoTable() {
               </p>
               <p className="col mb-0 d-flex justify-content-center" style={{ fontWeight: 600, color: data.price_change_percentage_24h >= 0 ? "#6cc870" : "#e33536" }}>
                 {/* <img src="/assets/icons/up-square.svg" className="me-1" /> */}
-                {data.price_change_percentage_24h >= 0 ? '+' : null}{data.price_change_percentage_24h.toLocaleString(undefined, {
+                {data.price_change_percentage_24h >= 0 ? '+' : null}{data.price_change_percentage_24h?.toLocaleString(undefined, {
                   minimumFractionDigits: 0,
                   maximumFractionDigits: 2
                 })}%
@@ -194,44 +234,6 @@ function BuyCryptoTable() {
               <div className="col d-flex justify-content-center">
                 <p className="text-white mb-0" style={{ padding: "5px 35px", borderRadius: "8px", fontWeight: 600, backgroundColor: "#0251ff", cursor: "pointer" }}>
                   Buy
-                </p>
-              </div>
-            </div>
-          ))}
-        </UICard>
-      </div>
-    );
-  } else {
-    return (
-      <div>
-        <UICard>
-          <p className="fs-4 fw-bolder border-bottom pb-2 mb-0">Trending Market</p>
-          {data?.map((data, index) => (
-            <div className="row" key={index}>
-              <div className="col d-flex flex-row align-items-center">
-                <div>
-                  <img src={data.image} style={{ width: "32px" }} className="rounded me-2" />
-                </div>
-                <p className="mb-0 ms-0 text-tableDataColor ps-1" style={{ fontWeight: 600 }}>
-                  {data.name}
-                </p>
-              </div>
-              <div className="col text-end align-self-center">
-                <p className="mb-0 text-tableDataColor" style={{ fontWeight: 500 }}>
-                  ${data.current_price.toFixed(3)}
-                </p>
-                <p className="mb-0 d-flex justify-content-end" style={{ fontWeight: 600, color: data.price_change_percentage_24h >= 0 ? "#6cc870" : "#e33536" }}>
-                  <img src="/assets/icons/up-square.svg" className="me-0" style={{ width: "10px" }} />
-                  {data.price_change_percentage_24h >= 0 ? '+' : '-'}{data.price_change_percentage_24h.toLocaleString(undefined, {
-                    minimumFractionDigits: 0,
-                    maximumFractionDigits: 2
-                  })}%
-                </p>
-              </div>
-              <div className="col d-flex justify-content-center">
-                <p className="bg-white rounded text-primaryBlue px-4 border border-primaryBlue mt-3 pb-1" style={{ fontWeight: 600 }}>
-                  {" "}
-                  Buy{" "}
                 </p>
               </div>
             </div>
