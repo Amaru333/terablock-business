@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from 'axios'
 import { useScreenSize } from "../../functions/useScreenSize";
 import UIButton from "../../widgets/UIButtons/UIButton";
 import UICard from "../../widgets/UICard/UICard";
@@ -6,6 +7,25 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 import { Line } from "react-chartjs-2";
 
 function BuyCryptoTable() {
+  const [data, setData] = useState()
+  useEffect(() => {
+    let response = fetchData();
+    if (response) {
+      setInterval(fetchData, 30000)
+    }
+  }, []);
+
+  const fetchData = async () => {
+    const result = await axios(
+      'https://geniuseado.terablock.com/api2/coinlist?vs_currency=USD&ids=dogecoin,bitcoin,ethereum,polkadot',
+    );
+
+    setData(result.data);
+    return true;
+  };
+
+
+
   const lineChart = ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler, {
     id: "uniqueid",
     afterDraw: function (chart, easing) {
@@ -168,7 +188,7 @@ function BuyCryptoTable() {
             <p className="col mb-2">Chart</p>
             <p className="col mb-2">Trade</p>
           </div>
-          {tableData.map((data, index) => (
+          {data?.map((data, index) => (
             <div className={`row mx-4 text-center align-items-center justify-content-center my-2 pb-2 ${index < tableData?.length - 1 && "border-bottom"}`} key={index}>
               <div className="col-3 col-md-5 d-flex flex-row align-items-center">
                 <div>
@@ -178,16 +198,26 @@ function BuyCryptoTable() {
                   {data.name}
                 </p>
                 <p className="mb-0 ms-2" style={{ fontWeight: 400, color: "#1b2b6b", fontSize: "14px" }}>
-                  {data.symbol}
+                  {data.symbol.toUpperCase()}
                 </p>
               </div>
               {/* <p className="col mb-0 text-primaryTextGray">{data.symbol}</p> */}
               <p className="col mb-0" style={{ fontWeight: 600, color: "#1b2b6b" }}>
-                {data.last_price}
+                ${data.current_price > 0 ? data.current_price.toLocaleString(undefined, {
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 2
+                }) : data.current_price}
+                {/* ${data.current_price.toLocaleString(undefined, {
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 2
+                })} */}
               </p>
-              <p className="col mb-0 d-flex justify-content-center" style={{ fontWeight: 600, color: data.change[0] == "+" ? "#6cc870" : "#e33536" }}>
+              <p className="col mb-0 d-flex justify-content-center" style={{ fontWeight: 600, color: data.price_change_percentage_24h[0] == "+" ? "#6cc870" : "#e33536" }}>
                 {/* <img src="/assets/icons/up-square.svg" className="me-1" /> */}
-                {data.change}
+                {data.price_change_percentage_24h.toLocaleString(undefined, {
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 2
+                })}%
               </p>
               <p className="col mb-0 text-tableDataColor d-flex justify-content-center" style={{ fontWeight: 500 }}>
                 {/* {data.market_cap} */}
@@ -210,7 +240,7 @@ function BuyCryptoTable() {
       <div>
         <UICard>
           <p className="fs-4 fw-bolder border-bottom pb-2 mb-0">Trending Market</p>
-          {tableData.map((data, index) => (
+          {data?.map((data, index) => (
             <div className="row" key={index}>
               <div className="col d-flex flex-row align-items-center">
                 <div>
@@ -222,11 +252,14 @@ function BuyCryptoTable() {
               </div>
               <div className="col text-end align-self-center">
                 <p className="mb-0 text-tableDataColor" style={{ fontWeight: 500 }}>
-                  {data.last_price}
+                  ${data.current_price}
                 </p>
-                <p className="mb-0 text-success d-flex justify-content-end" style={{ fontSize: "10px", fontWeight: 600 }}>
+                <p className="mb-0 d-flex justify-content-end" style={{ fontWeight: 600, color: data.price_change_percentage_24h[0] == "+" ? "#6cc870" : "#e33536" }}>
                   <img src="/assets/icons/up-square.svg" className="me-0" style={{ width: "10px" }} />
-                  {data.change}
+                  {data.price_change_percentage_24h.toLocaleString(undefined, {
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 2
+                })}%                
                 </p>
               </div>
               <div className="col d-flex justify-content-center">
