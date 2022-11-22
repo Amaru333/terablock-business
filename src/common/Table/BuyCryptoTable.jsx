@@ -134,48 +134,7 @@ function BuyCryptoTable() {
   };
 
   const screenSize = useScreenSize();
-  const tableData = [
-    {
-      name: "Bitcoin",
-      image: "/assets/icons/homepage/Coins/15.png",
-      symbol: "BTC",
-      last_price: "$19,398.45",
-      change: "+4.68%",
-      market_cap: "$784,393M",
-    },
-    {
-      name: "Ethereum",
-      image: "/assets/icons/homepage/Coins/10.png",
-      symbol: "ETH",
-      last_price: "$1,313.49",
-      change: "+0.08%",
-      market_cap: "$784,393M",
-    },
-    {
-      name: "Cardano",
-      image: "/assets/icons/homepage/Coins/1.png",
-      symbol: "ADA",
-      last_price: "$0.4302",
-      change: "+0.07%",
-      market_cap: "$784,393M",
-    },
-    {
-      name: "Polkadot",
-      image: "/assets/icons/homepage/Coins/6.png",
-      symbol: "DOT",
-      last_price: "$6.28",
-      change: "-0.21%",
-      market_cap: "$784,393M",
-    },
-    {
-      name: "TeraBlock",
-      image: "/assets/icons/homepage/Coins/14.png",
-      symbol: "TBC",
-      last_price: "$0.0064",
-      change: "+5.62%",
-      market_cap: "$784,393M",
-    },
-  ];
+ 
   if (screenSize.width > 768) {
     return (   
       <div>
