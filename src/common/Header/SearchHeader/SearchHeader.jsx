@@ -14,7 +14,7 @@ function SearchHeader({ breadcrumbs, breadcrumbsMobileVisible = true }) {
     <div className="px-2 px-md-5 py-5">
       <div className="px-0 px-md-2 px-xl-5">
         <div className="col-12 col-md-7 d-flex">
-          <UISearchBar search={search} setSearch={setSearch} />
+          <UISearchBar search={search} setSearch={setSearch} placeholder="Search your issue here" />
           {width > 767 && (
             <UIButton type="primary" onClick={() => router.push(`/help-center/search?query=${search}`)}>
               {" "}

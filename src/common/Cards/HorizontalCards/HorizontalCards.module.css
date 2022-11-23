@@ -1,0 +1,12 @@
+.horizontal_scroll {
+  overflow-x: scroll;
+}
+.horizontal_scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.horizontal_scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
