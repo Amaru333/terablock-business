@@ -76,6 +76,24 @@ function BuyCryptoTable() {
       },
     ],
   };
+  const graphImages = [
+    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/52.svg',
+    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/1.svg',
+    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/825.svg',
+    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/3408.svg',
+    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/5426.svg',
+    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/7129.svg',
+    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/3957.svg',
+    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/328.svg',
+    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/2416.svg',
+    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/1765.svg',
+    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/2099.svg',
+    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/7653.svg',
+  ]
+  const getRandomGraph = () => {
+    const rndInt = Math.floor(Math.random() * 10) + 1
+    return graphImages[rndInt]
+  }
   const options = {
     tooltips: {
       mode: "index",
@@ -232,9 +250,10 @@ function BuyCryptoTable() {
               </p>
               <p className="col mb-0 text-tableDataColor d-flex justify-content-center" style={{ fontWeight: 500 }}>
                 {/* {data.market_cap} */}
-                <div style={{ width: "100px" }}>
-                  <Line key={index} data={graph_data} options={options} />
-                </div>
+                {/* <div style={{ width: "100px" }}> */}
+                  {/* <Line key={index} data={graph_data} options={options} /> */}
+                  <img src={getRandomGraph()} width={150} height={60} alt='' />
+                {/* </div> */}
               </p>
               <div className="col d-flex justify-content-center">
                 <p className="text-white mb-0" style={{ padding: "5px 35px", borderRadius: "8px", fontWeight: 600, backgroundColor: "#0251ff", cursor: "pointer" }}>
