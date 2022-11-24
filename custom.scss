@@ -85,6 +85,16 @@ body {
 //   }
 // }
 
+@media (min-width: 1200px) {
+  .column20 {
+    // position: relative;
+    // min-height: 1px;
+    // padding-right: 15px;
+    // padding-left: 15px;
+    width: 20% !important;
+  }
+}
+
 @media (max-width: 1200px) {
   .bulletin-card-justify {
     justify-content: center;
