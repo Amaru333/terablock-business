@@ -7,11 +7,11 @@ import ProductStyle from "../Styles/ProductsSection.module.css";
 
 function ProductsSection() {
   const width = useScreenSize().width;
-  const [tab, setTab] = useState("Wallet Management");
+  const [tab, setTab] = useState("Wallet Manager");
   const ref = useRef({});
   const tab_list = [
     {
-      name: "Wallet Management",
+      name: "Wallet Manager",
       icon: "./assets/icons/wallet-tab.svg",
     },
     {
@@ -47,32 +47,27 @@ function ProductsSection() {
     return (
       <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-2 px-xl-5">
         <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-5">
-          <h2 className="text-primaryBlue fw-normal text-center text-md-start">
-            <b>Wallet</b> Management
+          <h2 className="fw-normal text-center text-md-start" style={{ color: "#1b2b6b" }}>
+            <b>Wallet Management</b>
           </h2>
-          <p className="text-primaryTextGray mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          <div className="d-flex align-items-center mt-2">
-            <img src="./assets/icons/bullet.svg" />
-            <p className="mb-0 text-primaryDark ms-2 fw-normal">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-          </div>
-          <div className="d-flex align-items-center mt-2">
-            <img src="./assets/icons/bullet.svg" />
-            <p className="mb-0 text-primaryDark ms-2 fw-normal">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-          </div>
-          <div className="d-flex align-items-center mt-2">
-            <img src="./assets/icons/bullet.svg" />
-            <p className="mb-0 text-primaryDark ms-2 fw-normal">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-          </div>
-          <div className="d-flex align-items-center mt-2">
-            <img src="./assets/icons/bullet.svg" />
-            <p className="mb-0 text-primaryDark ms-2 fw-normal">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-          </div>
+          <p className="text-primaryBlue fw-bold fst-italic m-0">Ultimate Defi asset management tool</p>
+          <p className="mt-2" style={{ color: "#5a5b5b" }}>
+            Track multiple wallets across blockchains and get a unified overview of your entire Web3 wealth with the wallet manager. It lets you build, track and manage your Web3 portfolio from one powerful non-custodial DeFi tool.
+          </p>
+          <ul style={{ color: "#5a5b5b" }}>
+            <li>Track multiple wallets across multiple blockchains.</li>
+            <li>Get an instant overview of your entire Web3 portfolio in real-time.</li>
+            <li>Keep track of your trades with detailed transaction history.</li>
+            <li>Get live price charts and information on your holdings.</li>
+            <li>Get access to analytics-backed market insights on your portfolio through Lunarcrush.</li>
+          </ul>
           <div className="mt-3 d-flex justify-content-center justify-content-md-start">
             <UIButton type="primary">Get started</UIButton>
+            <UIButton type="secondary">Discover Wallet Manager</UIButton>
           </div>
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center">
-          <img src="./assets/images/wallet-management.png" style={{ maxWidth: width > 768 ? "40vw" : "80vw", objectFit: "contain" }} />
+          <img src="./assets/images/product/wallet.png" style={{ width: "80%", objectFit: "contain" }} />
         </div>
       </div>
     );
@@ -112,23 +107,34 @@ function ProductsSection() {
     );
   };
 
+  // const TabBar = () => {
+  //   const offset = 250;
+  //   const scroll = (scrollOffset) => {
+  //     ref.current.scrollLeft += scrollOffset;
+  //   };
+  //   return (
+  //     <div className="d-flex align-items-center">
+  //       {ref.current.scrollWidth > ref.current.offsetWidth && <img onClick={() => scroll(-offset)} src="./assets/icons/left-arrow-blue.svg" />}
+  //       <div className={ProductStyle.tab_bar} ref={ref}>
+  //         {tab_list.map((tabItem, index) => (
+  //           <div key={index} onClick={() => setTab(tabItem.name)} className={[ProductStyle.tab_items, tabItem.name == tab ? ProductStyle.tab_active : ProductStyle.tab_inactive].join(" ")}>
+  //             <img className={[ProductStyle.tab_icon, tabItem.name == tab && ProductStyle.tab_icon_active].join(" ")} src={tabItem.icon} />
+  //             <p className={[ProductStyle.tab_name, tabItem.name == tab ? ProductStyle.tab_name_active : ProductStyle.tab_name_inactive].join(" ")}>{tabItem.name}</p>
+  //           </div>
+  //         ))}
+  //       </div>
+  //       {ref.current.scrollWidth > ref.current.offsetWidth && <img onClick={() => scroll(+offset)} src="./assets/icons/right-arrow-blue.svg" />}
+  //     </div>
+  //   );
+  // };
   const TabBar = () => {
-    const offset = 250;
-    const scroll = (scrollOffset) => {
-      ref.current.scrollLeft += scrollOffset;
-    };
     return (
-      <div className="d-flex align-items-center">
-        {ref.current.scrollWidth > ref.current.offsetWidth && <img onClick={() => scroll(-offset)} src="./assets/icons/left-arrow-blue.svg" />}
-        <div className={ProductStyle.tab_bar} ref={ref}>
-          {tab_list.map((tabItem, index) => (
-            <div key={index} onClick={() => setTab(tabItem.name)} className={[ProductStyle.tab_items, tabItem.name == tab ? ProductStyle.tab_active : ProductStyle.tab_inactive].join(" ")}>
-              <img className={[ProductStyle.tab_icon, tabItem.name == tab && ProductStyle.tab_icon_active].join(" ")} src={tabItem.icon} />
-              <p className={[ProductStyle.tab_name, tabItem.name == tab ? ProductStyle.tab_name_active : ProductStyle.tab_name_inactive].join(" ")}>{tabItem.name}</p>
-            </div>
-          ))}
-        </div>
-        {ref.current.scrollWidth > ref.current.offsetWidth && <img onClick={() => scroll(+offset)} src="./assets/icons/right-arrow-blue.svg" />}
+      <div className={ProductStyle.tab_container}>
+        {tab_list.map((tabItem, i) => (
+          <div style={{ display: "inline-block" }} className={tab == tabItem.name ? ProductStyle.active_tab : ProductStyle.inactive_tab} onClick={() => setTab(tabItem.name)}>
+            {tabItem.name}
+          </div>
+        ))}
       </div>
     );
   };
@@ -138,17 +144,15 @@ function ProductsSection() {
       <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
         <div className="text-center mb-2 px-4 px-md-5">
           <h3 className="text-primaryTextDark fw-bolder">
-            <b>
-              Powerful, TeraBlock Products<span className="text-primaryViolet">.</span>
-            </b>
+            <b>Powerful products for Web3</b>
           </h3>
-          <p className="text-primaryTextGray">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+          <p className="text-primaryTextGray">A suite of progressive and advanced tools to help you interact with Web3 on a unified platform</p>
         </div>
         <div className="mb-5 px-2 px-md-5">
           <TabBar />
         </div>
         <div className="px-4 px-md-5">
-          {tab == "Wallet Management" && <WalletManagement />}
+          {tab == "Wallet Manager" && <WalletManagement />}
           {tab == "Bridge" && <Bridge />}
         </div>
       </div>

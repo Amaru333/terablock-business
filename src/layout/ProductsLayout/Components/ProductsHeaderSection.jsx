@@ -13,14 +13,14 @@ function ProductsHeaderSection() {
         <div className="row mx-0 d-flex">
           <div className="my-5 px-4 px-md-5 col-12 col-md-6 pe-0 pe-md-5 d-flex flex-column justify-content-around text-center pe-4 text-md-start">
             <h1 className="text-primaryTextDark fw-bold" style={{ fontSize: width > 768 ? "50px" : "23px", width: width > 768 ? "75%" : "100%" }}>
-              TeraBlock products built for all<span className="text-primaryViolet">.</span>
+              Products
             </h1>
-            <p className="text-primaryTextGray mb-0 mb-md-5">Truly decentralised app that gives you the tools, inspiration, and support you need to become a better crypto investor.</p>
+            <p className="text-primaryTextGray mb-0 mb-md-5">Utilitarian products that help you interact with Defi on a unified platform. TeraBlock products are built for all and can be used by everyone regardless of knowledge and skill level.</p>
             {width > 768 && (
-              <>
+              <div className="d-flex">
                 <UIButton type="primary">Get Started</UIButton>
-                <img src="/assets/icons/3x4.svg" style={{ width: "30px" }} className="mt-5" />
-              </>
+                <UIButton type="secondary">Discover Products</UIButton>
+              </div>
             )}
           </div>
           <div className="col-12 col-md-6 d-flex  justify-content-center justify-content-md-end my-2">
