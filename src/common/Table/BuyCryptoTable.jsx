@@ -67,7 +67,7 @@ function BuyCryptoTable() {
 
   const fetchData = async () => {
     const result = await axios(
-      'https://geniuseado.terablock.com/api2/coinlist?vs_currency=USD&ids=dogecoin,bitcoin,ethereum,polkadot,terablock',
+      'https://geniuseado.terablock.com/api2/coinlist?vs_currency=USD&ids=cardano,bitcoin,ethereum,polkadot,terablock',
     );
 
     setData(result.data);
@@ -75,36 +75,30 @@ function BuyCryptoTable() {
   };
 
   const fetchGraphData = async () => {
-    const result = await axios('https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=USD&days=30',);
-    let graphData={
-      labels: [],
-      datasets: [
-        {
-          label: "First dataset",
-          data: [],
-          fill: true,
-          backgroundColor: (context) => {
-            const ctx = context.chart.ctx;
-            const gradient = ctx.createLinearGradient(0, 0, 0, 200);
-            gradient.addColorStop(0, "rgba(202,218,252,0)");
-            gradient.addColorStop(1, "rgba(239,246,253,0)");
-            return gradient;
+    const result = await axios('https://geniuseado.terablock.com/api2/get-coins');
+    Object.entries(result.data).forEach((value, index) =>{
+      let graphData={
+        labels: value[1].labels,
+        datasets: [
+          {
+            label: "First dataset",
+            data: value[1].prices,
+            fill: true,
+            backgroundColor: (context) => {
+              const ctx = context.chart.ctx;
+              const gradient = ctx.createLinearGradient(0, 0, 0, 200);
+              gradient.addColorStop(0, "rgba(202,218,252,0)");
+              gradient.addColorStop(1, "rgba(239,246,253,0)");
+              return gradient;
+            },
+            borderColor: "rgba(0,0,0,1)",
+            borderWidth: 1.5,
           },
-          borderColor: "rgba(0,0,0,1)",
-          borderWidth: 1.5,
-        },
-      ],
-    };
-    for(var i=0;i<30;i++)
-    {
-      graphData.labels.push(result.data.prices[i][0]);
-      graphData.datasets[0].data.push(result.data.prices[i][1]);
-    }
-    graph_data.push(graphData);
-    graph_data.push(graphData);
-    graph_data.push(graphData);
-    graph_data.push(graphData);
-    graph_data.push(graphData);
+        ],
+      };
+      graph_data[index] = graphData;
+    });
+    setGraphData(graph_data);
   };
   
   const lineChart = ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler, {
@@ -213,7 +207,6 @@ function BuyCryptoTable() {
 
   const screenSize = useScreenSize();
   if (screenSize.width > 768) {
-    console.log(graph_data);
     return (   
       <div>
         {/* <div style={{ width: "100px" }}>
