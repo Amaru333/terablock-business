@@ -9,17 +9,17 @@ function CommunityConnectionsSection() {
       message: "Stay updated",
     },
     {
-      title: "Github",
+      title: "Telegram",
       logo: "/assets/icons/github.png",
       message: "Stay updated",
     },
     {
-      title: "Telegram",
+      title: "LinkedIn",
       logo: "/assets/icons/telegram.png",
       message: "Stay updated",
     },
     {
-      title: "Medium",
+      title: "Instagram",
       logo: "/assets/icons/medium.png",
       message: "Stay updated",
     },
@@ -27,12 +27,12 @@ function CommunityConnectionsSection() {
   const SocialCards = ({ title, message, logo }) => {
     return (
       <UICard>
-        <div>
+        <div className="px-1">
           <div className="d-flex align-items-center">
             <div>
               <img src={logo} width="35px" />
             </div>
-            <p className="h3 fw-bolder ms-2 ms-md-3 mb-0">{title}</p>
+            <p className="h4 fw-bolder ms-2 ms-md-3 mb-0">{title}</p>
           </div>
           <p className="mb-0 mt-3 text-primaryBlue fw-bold">{message} →</p>
         </div>
@@ -40,15 +40,13 @@ function CommunityConnectionsSection() {
     );
   };
   return (
-    <div className="bg-white">
+    <div style={{ backgroundColor: "#214ff4" }}>
       <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
         <div className="text-center pt-5 px-4 px-md-5">
-          <h3 className="text-primaryTextDark fw-bold">
-            <b>
-              Connect with the global community<span className="text-primaryViolet">.</span>
-            </b>
+          <h3 className="text-white" style={{ fontWeight: "500" }}>
+            <b>Connect with the global community</b>
           </h3>
-          <p className="text-primaryTextGray mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p className="text-white mb-3">Getting in touch has never been easier! Contact us on any of our channels to start the conversation.</p>
         </div>
         <div className="row mx-2 mx-md-5 mt-5">
           {social_data.map((data, index) => (

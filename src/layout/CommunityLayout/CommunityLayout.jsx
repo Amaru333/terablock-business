@@ -1,4 +1,7 @@
 import React from "react";
+import StartCryptoJourneyCard from "../../common/Cards/StartCryptoJourneyCard/StartCryptoJourneyCard";
+import TopNotification from "../HomepageLayout/Components/TopNotification";
+import StartJourney from "../ProductsLayout/Components/StartJourney";
 import AmbassadorProgramSection from "./Components/AmbassadorProgramSection";
 import CommunityConnectionsSection from "./Components/CommunityConnectionsSection";
 import HeaderComponent from "./Components/HeaderComponent";
@@ -10,13 +13,15 @@ import StayConnectedSection from "./Components/StayConnectedSection";
 function CommunityLayout() {
   return (
     <div>
+      <TopNotification />
       <HeaderComponent />
       <StayConnectedSection />
       <RewardsProgramSection />
       <RewardsTypeSection />
       <AmbassadorProgramSection />
-      <JoinAmbassador />
+      {/* <JoinAmbassador /> */}
       <CommunityConnectionsSection />
+      <StartJourney />
     </div>
   );
 }
