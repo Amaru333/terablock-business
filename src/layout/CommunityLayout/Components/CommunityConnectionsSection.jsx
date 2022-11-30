@@ -5,36 +5,44 @@ function CommunityConnectionsSection() {
   const social_data = [
     {
       title: "Twitter",
-      logo: "/assets/icons/twitter.png",
+      logo: "/assets/icons/rewards/twitter.png",
       message: "Stay updated",
+      url: "https://twitter.com/MyTeraBlock",
     },
     {
       title: "Telegram",
-      logo: "/assets/icons/github.png",
+      logo: "/assets/icons/rewards/telegram.png",
       message: "Stay updated",
+      url: "https://t.me/TeraBlock",
     },
     {
       title: "LinkedIn",
-      logo: "/assets/icons/telegram.png",
+      logo: "/assets/icons/rewards/linkedin.png",
       message: "Stay updated",
+      url: "https://www.linkedin.com/company/myTeraBlock/",
     },
     {
       title: "Instagram",
-      logo: "/assets/icons/medium.png",
+      logo: "/assets/icons/rewards/instagram.png",
       message: "Stay updated",
+      url: "https://www.instagram.com/myterablock/",
     },
   ];
-  const SocialCards = ({ title, message, logo }) => {
+  const SocialCards = ({ title, message, logo, link }) => {
     return (
       <UICard>
         <div className="px-1">
           <div className="d-flex align-items-center">
             <div>
-              <img src={logo} width="35px" />
+              <img src={logo} width="56px" />
             </div>
             <p className="h4 fw-bolder ms-2 ms-md-3 mb-0">{title}</p>
           </div>
-          <p className="mb-0 mt-3 text-primaryBlue fw-bold">{message} →</p>
+          <p className="mb-0 mt-3 text-primaryBlue fw-bold">
+            <a href={link} target="_blank" style={{ textDecoration: "none", color: "inherit" }}>
+              {message} →
+            </a>
+          </p>
         </div>
       </UICard>
     );
@@ -51,7 +59,7 @@ function CommunityConnectionsSection() {
         <div className="row mx-2 mx-md-5 mt-5">
           {social_data.map((data, index) => (
             <div className="col-6 col-md" key={index}>
-              <SocialCards title={data.title} logo={data.logo} message={data.message} />
+              <SocialCards title={data.title} logo={data.logo} message={data.message} link={data.url} />
             </div>
           ))}
         </div>

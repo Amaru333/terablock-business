@@ -1,12 +1,12 @@
 import React from "react";
-import { useScreenSize } from "../../../functions/useScreenSize";
+import UIButton from "../../../widgets/UIButtons/UIButton";
 
 function AmbassadorProgramSection() {
   const DescCard = ({ title, desc, img }) => {
     return (
       <div className="d-flex mb-4">
         <div>
-          <img src={`/assets/images/${img}.png`} style={{ width: "64px" }} />
+          <img src={`/assets/icons/rewards/${img}.png`} style={{ width: "64px" }} />
         </div>
         <div className="ps-4" style={{ maxWidth: "400px", color: "#1b2b6b" }}>
           <p className="mb-1" style={{ fontSize: "16px", fontWeight: "600" }}>
@@ -24,31 +24,31 @@ function AmbassadorProgramSection() {
     {
       title: "Priority access to products",
       desc: "Assess and evalutate TeraBlock's products first-hand alongside the team.",
-      img: "9",
+      img: "7",
     },
     {
       title: "Giveaways",
       desc: "Earn TBC tokens through exclusive airdrops and contests.",
-      img: "12",
+      img: "8",
     },
     {
       title: "Result based bonuses",
       desc: "Meeting targets increases your earning potential being a TeraBlock Ambassador.",
-      img: "27",
+      img: "9",
     },
     {
       title: "Networking opportunities",
       desc: "Meet and work alongside the TeraBlock team, partnets and industry-leading influencers.",
-      img: "14",
+      img: "10",
     },
     {
       title: "Latest developments and updates",
       desc: "Be the first one to know about the latest company developments and updates.",
-      img: "15",
+      img: "11",
     },
   ];
   return (
-    <div className="bg-white px-0 px-md-2 px-xl-5">
+    <div className="bg-white px-0 px-md-2 px-xl-5 pb-5">
       <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
         <div className="flex flex-column justify-content-center align-items-center pb-4">
           <h2 className="text-center pt-5 px-1 d-flex flex-column flex-md-row justify-content-center" style={{ color: "#1b2b6b" }}>
@@ -79,6 +79,10 @@ function AmbassadorProgramSection() {
           </div>
         ))}
       </div> */}
+        <div className="d-flex flex-row justify-content-center mb-5 mt-2">
+          <UIButton type="primary">Apply Now</UIButton>
+          <UIButton type="secondary">Learn More</UIButton>
+        </div>
       </div>
     </div>
   );
