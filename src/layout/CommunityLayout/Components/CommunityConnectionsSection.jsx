@@ -1,7 +1,9 @@
 import React from "react";
+import { useScreenSize } from "../../../functions/useScreenSize";
 import UICard from "../../../widgets/UICard/UICard";
 
 function CommunityConnectionsSection() {
+  const width = useScreenSize().width;
   const social_data = [
     {
       title: "Twitter",
@@ -34,7 +36,7 @@ function CommunityConnectionsSection() {
         <div className="px-1">
           <div className="d-flex align-items-center">
             <div>
-              <img src={logo} width="56px" />
+              <img src={logo} width={width > 767 ? "56px" : "30px"} />
             </div>
             <p className="h4 fw-bolder ms-2 ms-md-3 mb-0">{title}</p>
           </div>
