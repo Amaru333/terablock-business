@@ -72,7 +72,7 @@ function HelpProductsSection() {
   ];
   const width = useScreenSize().width;
   return (
-    <div className={["bg-white py-5 px-2 px-md-5", HelpCenterProductsStyle.body_font].join(" ")}>
+    <div className={["bg-white px-md-5", HelpCenterProductsStyle.body_font].join(" ")}>
       <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
         <div className="px-0 px-md-2 px-xl-5">
           <p className="text-center text-md-start" style={{ color: width > 768 ? "#1B2D5B" : "black", fontSize: width > 768 ? "32px" : "16px", fontWeight: 600 }}>

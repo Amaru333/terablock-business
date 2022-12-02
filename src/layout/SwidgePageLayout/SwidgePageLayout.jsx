@@ -9,7 +9,6 @@ import TeraBlockSwidgeSection from "./Components/TeraBlockSwidgeSection";
 function SwidgePageLayout() {
   return (
     <div>
-      <TopNotification />
       <SwidgePageHeader />
       <GamersSection />
       <TeraBlockSwidgeSection />

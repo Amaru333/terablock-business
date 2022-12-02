@@ -1,6 +1,8 @@
 import React from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
+import UILottie from "../../../common/Lottie/UILottie";
 import UIButton from "../../../widgets/UIButtons/UIButton";
+import HeroAnimation1 from "../animations/swidge_01_hero.json";
 
 function SwidgePageHeader() {
   const width = useScreenSize().width;
@@ -14,17 +16,19 @@ function SwidgePageHeader() {
               <p className="mb-0 fs-6 mt-2" style={{ color: "#5a5b5b" }}>
                 <b>Powerful Web3 multi-protocol automation</b> that helps you onboard decentralised applications (Dapps) without the complexities of DeFi.
               </p>
-              {width > 768 && (
+              {width > 904 && (
                 <div className="mt-4">
                   <UIButton type="primary">Get Started</UIButton>
                   <UIButton>Discover Swidge</UIButton>
                 </div>
               )}
             </div>
-            <div className="col-12 col-md-6 d-flex" style={{ justifyContent: width > 768 ? "end" : "center" }}>
-              <img src="/assets/images/Swidge_02.svg" style={{ zIndex: 1, maxWidth: width > 768 ? "500px" : "80vw", objectFit: "contain" }} />
+            <div className={`col-12 col-md-6 d-flex ${width > 768 ? "justify-content-end" : "justify-content-center"}`}>
+              <div style={{ maxWidth: "80%" }}>
+                <UILottie animation={HeroAnimation1} />
+              </div>
             </div>
-            {width < 768 && (
+            {width < 904 && (
               <div className="d-flex justify-content-center mt-5">
                 <UIButton type="primary">Get Started</UIButton>
                 <UIButton>Discover Swidge</UIButton>

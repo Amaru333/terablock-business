@@ -12,38 +12,43 @@ function BuyCryptoTable() {
       name: "Bitcoin",
       image: "/assets/icons/homepage/Coins/15.png",
       symbol: "BTC",
-      price_change_percentage_24h: "4.68",
-      market_cap: "$784,393M",
+      last_price: "-",
+      change: "-",
+      market_cap: "-",
     },
     {
       name: "Ethereum",
       image: "/assets/icons/homepage/Coins/10.png",
       symbol: "ETH",
-      price_change_percentage_24h: "0.08",
-      market_cap: "$784,393M",
+      last_price: "-",
+      change: "-",
+      market_cap: "-",
     },
     {
       name: "Cardano",
       image: "/assets/icons/homepage/Coins/1.png",
       symbol: "ADA",
-      price_change_percentage_24h: "0.07",
-      market_cap: "$784,393M",
+      last_price: "-",
+      change: "-",
+      market_cap: "-",
     },
     {
       name: "Polkadot",
       image: "/assets/icons/homepage/Coins/6.png",
       symbol: "DOT",
-      price_change_percentage_24h: "-0.21",
-      market_cap: "$784,393M",
+      last_price: "-",
+      change: "-",
+      market_cap: "-",
     },
     {
       name: "TeraBlock",
       image: "/assets/icons/homepage/Coins/14.png",
       symbol: "TBC",
-      price_change_percentage_24h: "5.62",
-      market_cap: "$784,393M",
+      last_price: "-",
+      change: "-",
+      market_cap: "-",
     },
-  ])
+  ]);
   const [reducerValue, forceUpdate] = useReducer(x => x + 1, 0);
 
   // useEffect(() => {
@@ -57,11 +62,7 @@ function BuyCryptoTable() {
 
   useEffect(() => {
     fetchGraphData();
-    fetchData();
-  },[])
-
-  useEffect(() => {
-    var timerID = setInterval(() => fetchData(),5000)
+    var timerID = setInterval(() => fetchData(),4000)
     return () => clearInterval(timerID)
   })
 
@@ -240,10 +241,10 @@ function BuyCryptoTable() {
               </div>
               {/* <p className="col mb-0 text-primaryTextGray">{data.symbol}</p> */}
               <p className="col mb-0" style={{ fontWeight: 600, color: "#1b2b6b" }}>
-                ${data.current_price > 0 ? data.current_price.toLocaleString(undefined, {
+                ${data?.current_price > 0 ? data?.current_price.toLocaleString(undefined, {
                   minimumFractionDigits: 0,
                   maximumFractionDigits: 3
-                }) : data.current_price}
+                }) : data?.current_price}
                 {/* ${data.current_price.toLocaleString(undefined, {
                   minimumFractionDigits: 0,
                   maximumFractionDigits: 2
@@ -251,7 +252,7 @@ function BuyCryptoTable() {
               </p>
               <p className="col mb-0 d-flex justify-content-center" style={{ fontWeight: 600, color: data.price_change_percentage_24h >= 0 ? "#6cc870" : "#e33536" }}>
                 {/* <img src="/assets/icons/up-square.svg" className="me-1" /> */}
-                {data.price_change_percentage_24h >= 0 ? '+' : null}{data.price_change_percentage_24h.toLocaleString(undefined, {
+                {data.price_change_percentage_24h >= 0 ? '+' : null}{data.price_change_percentage_24h?.toLocaleString(undefined, {
                   minimumFractionDigits: 0,
                   maximumFractionDigits: 2
                 })}%
@@ -266,44 +267,6 @@ function BuyCryptoTable() {
               <div className="col d-flex justify-content-center">
                 <p className="text-white mb-0" style={{ padding: "5px 35px", borderRadius: "8px", fontWeight: 600, backgroundColor: "#0251ff", cursor: "pointer" }}>
                   Buy
-                </p>
-              </div>
-            </div>
-          ))}
-        </UICard>
-      </div>
-    );
-  } else {
-    return (
-      <div>
-        <UICard>
-          <p className="fs-4 fw-bolder border-bottom pb-2 mb-0">Trending Market</p>
-          {data?.map((data, index) => (
-            <div className="row" key={index}>
-              <div className="col d-flex flex-row align-items-center">
-                <div>
-                  <img src={data.image} style={{ width: "32px" }} className="rounded me-2" />
-                </div>
-                <p className="mb-0 ms-0 text-tableDataColor ps-1" style={{ fontWeight: 600 }}>
-                  {data.name}
-                </p>
-              </div>
-              <div className="col text-end align-self-center">
-                <p className="mb-0 text-tableDataColor" style={{ fontWeight: 500 }}>
-                  ${data.current_price}
-                </p>
-                <p className="mb-0 d-flex justify-content-end" style={{ fontWeight: 600, color: data.price_change_percentage_24h >= 0 ? "#6cc870" : "#e33536" }}>
-                  <img src="/assets/icons/up-square.svg" className="me-0" style={{ width: "10px" }} />
-                  {data.price_change_percentage_24h >= 0 ? '+' : null}{data.price_change_percentage_24h.toLocaleString(undefined, {
-                    minimumFractionDigits: 0,
-                    maximumFractionDigits: 2
-                  })}%
-                </p>
-              </div>
-              <div className="col d-flex justify-content-center">
-                <p className="bg-white rounded text-primaryBlue px-4 border border-primaryBlue mt-3 pb-1" style={{ fontWeight: 600 }}>
-                  {" "}
-                  Buy{" "}
                 </p>
               </div>
             </div>
