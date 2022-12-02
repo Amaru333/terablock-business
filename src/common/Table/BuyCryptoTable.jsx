@@ -198,7 +198,7 @@ function BuyCryptoTable() {
       market_cap: "$784,393M",
     },
   ];
-  if (screenSize.width > 768) {
+  if (screenSize.width > 960) {
     return (   
       <div>
         {/* <div style={{ width: "100px" }}>
