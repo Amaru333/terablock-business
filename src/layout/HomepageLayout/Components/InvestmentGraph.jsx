@@ -198,13 +198,13 @@ function InvestmentGraph() {
             </div>
           </div> */}
         <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
-          <div className="row mx-3 mx-md-4">
+          {/* <div className="row mx-3 mx-md-4">
             {coinlist_data.map((coins, index) => (
               <div className="col-12 col-md-3">
                 <CoinsCard data={coins} index={index} />
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* <div className="col-12 col-md-6 col-xl-4">
             <CoinsCard data={coinlist_data[0]} />
@@ -216,7 +216,7 @@ function InvestmentGraph() {
         {/* </div> */}
       </div>
       <div className={["p-0 p-sm-1 p-md-4", InvestmentGraphStyle.graph_background].join(" ")}>
-        <UIGraph />
+        <UIGraph multiplier = {value}/>
       </div>
       <div>
         <p className={["text-black m-auto text-center", InvestmentGraphStyle.half_container].join(" ")}>

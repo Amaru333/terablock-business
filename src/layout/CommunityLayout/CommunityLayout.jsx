@@ -13,7 +13,6 @@ import StayConnectedSection from "./Components/StayConnectedSection";
 function CommunityLayout() {
   return (
     <div>
-      <TopNotification />
       <HeaderComponent />
       <StayConnectedSection />
       <RewardsProgramSection />

@@ -10,7 +10,6 @@ import WhatAreCoinlistsSection from "./Components/WhatAreCoinlistsSection";
 function CoinsListsLayout() {
   return (
     <div>
-      <TopNotification />
       <CoinsListsHeader />
       <WhatAreCoinlistsSection />
       <CoinsListSection />

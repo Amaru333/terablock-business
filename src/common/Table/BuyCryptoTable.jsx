@@ -61,6 +61,7 @@ function BuyCryptoTable() {
   // }, [reducerValue]);
 
   useEffect(() => {
+    fetchGraphData();
     var timerID = setInterval(() => fetchData(),4000)
     return () => clearInterval(timerID)
   })

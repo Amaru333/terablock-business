@@ -1,6 +1,8 @@
 import React from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
+import UILottie from "../../../common/Lottie/UILottie";
 import UIButton from "../../../widgets/UIButtons/UIButton";
+import HeroAnimation1 from "../animations/swidge_01_hero.json";
 
 function SwidgePageHeader() {
   const width = useScreenSize().width;
@@ -21,8 +23,10 @@ function SwidgePageHeader() {
                 </div>
               )}
             </div>
-            <div className="col-12 col-md-6 d-flex" style={{ justifyContent: width > 904 ? "end" : "center" }}>
-              <img src="/assets/images/Swidge_02.svg" style={{ zIndex: 1, maxWidth: width > 904 ? "50%" : "80vw", objectFit: "contain" }} />
+            <div className={`col-12 col-md-6 d-flex ${width > 768 ? "justify-content-end" : "justify-content-center"}`}>
+              <div style={{ maxWidth: "80%" }}>
+                <UILottie animation={HeroAnimation1} />
+              </div>
             </div>
             {width < 904 && (
               <div className="d-flex justify-content-center mt-5">
