@@ -27,7 +27,7 @@ function Header() {
     },
     {
       name: "Learn",
-      link: "/",
+      link: "/learn",
     },
     {
       name: "Products",

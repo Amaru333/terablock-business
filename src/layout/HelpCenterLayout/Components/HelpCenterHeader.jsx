@@ -18,7 +18,7 @@ function HelpCenterHeader() {
               <h1 className="text-fontDark mb-4 mb-md-3 mt-4 mt-md-0" style={{ fontSize: width > 1199 ? "58px" : width > 767 ? "40px" : "24px" }}>
                 How can we help you ?
               </h1>
-              <UISearchBar maxWidth="580px" />
+              <UISearchBar placeholder="Search your issue here" maxWidth="580px" />
               {width < 769 && (
                 <>
                   <button className="bg-primaryBlue text-white py-3 mt-3 rounded" style={{ border: "none", width: "100%" }}>
@@ -28,7 +28,7 @@ function HelpCenterHeader() {
               )}
             </div>
             <div className="col-12 col-md-5 d-flex justify-content-center justify-content-md-end">
-              <div style={{ maxWidth: "500px" }}>
+              <div style={{ maxWidth: "50%" }}>
                 <UILottie animation={HeroAnimation1} />
               </div>
             </div>

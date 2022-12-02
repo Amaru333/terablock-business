@@ -19,24 +19,21 @@ function CoinsListsHeader() {
               <p className="mb-0 fs-6" style={{ color: "#5a5b5d" }}>
                 CoinsLists is our carefully selected portfolio of cryptocurrencies that reflects a theme, idea or goal.
               </p>
-              {width > 768 && (
+              {width > 904 && (
                 <>
                   <div className="mt-4">
                     <UIButton type="primary">Get Started</UIButton>
                     <UIButton type="secondary">Discover CoinsLists</UIButton>
                   </div>
-                  {/* <p className="text-primaryTextGray mt-3">
-                  Have any questions? <span className="text-primaryBlue fw-bold">Contact us</span>
-                </p> */}
                 </>
               )}
             </div>
-            <div className="col-12 col-md-6 d-flex justify-content-end">
-              <div style={{ maxWidth: "500px" }}>
+            <div className={`col-12 col-md-6 d-flex ${width > 768 ? "justify-content-end" : "justify-content-center"}`}>
+              <div style={{ maxWidth: "50%" }}>
                 <UILottie animation={HeroAnimation1} />
               </div>
             </div>
-            {width < 768 && (
+            {width < 904 && (
               <>
                 <div className="d-flex justify-content-center mt-5">
                   <UIButton type="primary">Get Started</UIButton>
