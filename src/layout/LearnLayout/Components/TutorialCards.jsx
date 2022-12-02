@@ -21,7 +21,7 @@ function TutorialCards() {
     return (
       <div className={TutorialCardStyle.data_card}>
         <div className={TutorialCardStyle.icon_container}>
-          <img src={`/assets/icons/learn/${icon}.svg`} style={{ width: "25px" }} />
+          <img src={`/assets/icons/learn/${icon}.svg`} style={{ width: "28px" }} />
         </div>
         <div className="d-flex flex-column">
           <p className={TutorialCardStyle.title}>{title}</p>

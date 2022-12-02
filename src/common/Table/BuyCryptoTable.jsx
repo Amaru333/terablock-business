@@ -67,11 +67,38 @@ function BuyCryptoTable() {
 
   const fetchData = async () => {
     const result = await axios(
-      'https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&ids=cardano,bitcoin,ethereum,polkadot,terablock',
+      'https://geniuseado.terablock.com/api2/coinlist?vs_currency=USD&ids=cardano,bitcoin,ethereum,polkadot,terablock',
     );
 
     setData(result.data);
     // return true;
+  };
+
+  const fetchGraphData = async () => {
+    const result = await axios('https://geniuseado.terablock.com/api2/get-coins');
+    Object.entries(result.data).forEach((value, index) =>{
+      let graphData={
+        labels: value[1].labels,
+        datasets: [
+          {
+            label: "First dataset",
+            data: value[1].prices,
+            fill: true,
+            backgroundColor: (context) => {
+              const ctx = context.chart.ctx;
+              const gradient = ctx.createLinearGradient(0, 0, 0, 200);
+              gradient.addColorStop(0, "rgba(202,218,252,0)");
+              gradient.addColorStop(1, "rgba(239,246,253,0)");
+              return gradient;
+            },
+            borderColor: "rgba(0,0,0,1)",
+            borderWidth: 1.5,
+          },
+        ],
+      };
+      graph_data[index] = graphData;
+    });
+    setGraphData(graph_data);
   };
   
   const lineChart = ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler, {
@@ -94,43 +121,29 @@ function BuyCryptoTable() {
       }
     },
   });
-  let graph_data = {
-    labels: ["8:00", "8:10", "8:20", "8:30", "8:40", "8:50", "9:00", "9:10", "9:20", "9:30", "9:40", "9:50", "10:00", "10:10", "10:20", "10:30", "10:40", "10:50", "11:00", "11:10", "11:20", "11:30", "11:40", "11:50", "12:00", "12:10", "12:20", "12:30", "12:40", "12:50", "13:00", "13:10", "13:20", "13:30", "13:40", "13:50"],
-    datasets: [
-      {
-        label: "First dataset",
-        data: [81002, 82117, 82119, 82365, 82311, 83175, 85242, 86442, 84235, 84764, 85112, 83321, 84221, 85223, 85231, 86701, 85213, 86989, 85002, 83117, 84119, 84365, 83311, 83175, 85242, 86442, 84235, 84764, 85112, 83321, 84221, 85223, 85231, 86701, 85213, 86989],
-        fill: true,
-        backgroundColor: (context) => {
-          const ctx = context.chart.ctx;
-          const gradient = ctx.createLinearGradient(0, 0, 0, 200);
-          gradient.addColorStop(0, "rgba(202,218,252,0)");
-          gradient.addColorStop(1, "rgba(239,246,253,0)");
-          return gradient;
+  
+  const [graph_data,setGraphData] = useState([
+    {
+      labels: ["8","9","10","11","12"],
+      datasets: [
+        {
+          label: "First dataset",
+          data: [100,101,98,96,103],
+          fill: true,
+          backgroundColor: (context) => {
+            const ctx = context.chart.ctx;
+            const gradient = ctx.createLinearGradient(0, 0, 0, 200);
+            gradient.addColorStop(0, "rgba(202,218,252,0)");
+            gradient.addColorStop(1, "rgba(239,246,253,0)");
+            return gradient;
+          },
+          borderColor: "rgba(0,0,0,1)",
+          borderWidth: 1.5,
         },
-        borderColor: "rgba(0,0,0,1)",
-        borderWidth: 1.5,
-      },
-    ],
-  };
-  const graphImages = [
-    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/52.svg',
-    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/1.svg',
-    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/825.svg',
-    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/3408.svg',
-    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/5426.svg',
-    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/7129.svg',
-    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/3957.svg',
-    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/328.svg',
-    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/2416.svg',
-    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/1765.svg',
-    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/2099.svg',
-    'https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/7653.svg',
-  ]
-  const getRandomGraph = () => {
-    const rndInt = Math.floor(Math.random() * 10) + 1
-    return graphImages[rndInt]
-  }
+      ],
+    }
+  ]);
+
   const options = {
     tooltips: {
       mode: "index",
@@ -193,49 +206,7 @@ function BuyCryptoTable() {
   };
 
   const screenSize = useScreenSize();
-  const tableData = [
-    {
-      name: "Bitcoin",
-      image: "/assets/icons/homepage/Coins/15.png",
-      symbol: "BTC",
-      last_price: "$19,398.45",
-      change: "+4.68%",
-      market_cap: "$784,393M",
-    },
-    {
-      name: "Ethereum",
-      image: "/assets/icons/homepage/Coins/10.png",
-      symbol: "ETH",
-      last_price: "$1,313.49",
-      change: "+0.08%",
-      market_cap: "$784,393M",
-    },
-    {
-      name: "Cardano",
-      image: "/assets/icons/homepage/Coins/1.png",
-      symbol: "ADA",
-      last_price: "$0.4302",
-      change: "+0.07%",
-      market_cap: "$784,393M",
-    },
-    {
-      name: "Polkadot",
-      image: "/assets/icons/homepage/Coins/6.png",
-      symbol: "DOT",
-      last_price: "$6.28",
-      change: "-0.21%",
-      market_cap: "$784,393M",
-    },
-    {
-      name: "TeraBlock",
-      image: "/assets/icons/homepage/Coins/14.png",
-      symbol: "TBC",
-      last_price: "$0.0064",
-      change: "+5.62%",
-      market_cap: "$784,393M",
-    },
-  ];
-  if (screenSize.width > 960) {
+  if (screenSize.width > 768) {
     return (   
       <div>
         {/* <div style={{ width: "100px" }}>
@@ -287,10 +258,10 @@ function BuyCryptoTable() {
               </p>
               <p className="col mb-0 text-tableDataColor d-flex justify-content-center" style={{ fontWeight: 500 }}>
                 {/* {data.market_cap} */}
-                {/* <div style={{ width: "100px" }}> */}
-                  {/* <Line key={index} data={graph_data} options={options} /> */}
-                  <img src={getRandomGraph()} width={150} height={60} alt='' />
-                {/* </div> */}
+                <div style={{ width: "100px" }}>
+                  <Line key={index} data={graph_data[index]?graph_data[index]:graph_data[0]} options={options} />
+                  {/* <img src="" width={150} height={60} alt='' /> */}
+                </div>
               </p>
               <div className="col d-flex justify-content-center">
                 <p className="text-white mb-0" style={{ padding: "5px 35px", borderRadius: "8px", fontWeight: 600, backgroundColor: "#0251ff", cursor: "pointer" }}>

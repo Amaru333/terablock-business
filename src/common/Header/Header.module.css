@@ -18,6 +18,18 @@
   animation-name: slidein;
   z-index: 9;
 }
+
+.button {
+  width: fit-content;
+  background-color: #0052ff;
+  border-radius: 5px;
+  border: none;
+}
+
+.button_primary {
+  border-radius: 8px;
+}
+
 @keyframes slidein {
   from {
     margin-left: 100%;
