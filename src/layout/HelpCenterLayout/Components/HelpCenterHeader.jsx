@@ -28,7 +28,7 @@ function HelpCenterHeader() {
               )}
             </div>
             <div className={`col-12 col-md-5 d-flex ${width > 768 ? "justify-content-end" : "justify-content-center"}`}>
-              <div style={{ maxWidth: "70%" }}>
+              <div style={{  maxWidth: (width > 768)? "70%":"70vw", maxHeight : (width > 768) ? "400px" : "250px"  }}>
                 <UILottie animation={HeroAnimation1} />
               </div>
             </div>
