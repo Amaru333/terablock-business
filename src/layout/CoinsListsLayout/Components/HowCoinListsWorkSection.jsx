@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
 import UIButton from "../../../widgets/UIButtons/UIButton";
 import UICard from "../../../widgets/UICard/UICard";
@@ -7,6 +7,7 @@ import HowCoinsWorkStyle from "../Styles/HowCoinsWork.module.css";
 
 function HowCoinListsWorkSection() {
   const width = useScreenSize().width;
+  const [buttonText, setButtonText] = useState("Get Started");
   return (
     // <div className="py-5 position-relative bg-white px-0 px-md-2 px-xl-5">
     //   <div className="text-center mt-5 px-4 px-md-5 mx-0 mx-md-5 pb-5">
@@ -103,7 +104,9 @@ function HowCoinListsWorkSection() {
           {width > 768 && <img src="/assets/icons/4x5.svg" style={{ width: "60px", position: "absolute", bottom: "2rem", left: "1rem" }} />}
         </div>
         <div className="d-flex align-items-center justify-content-center mt-2 mb-5">
-          <UIButton type="primary">Get Started</UIButton>
+          <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+            {buttonText}
+          </UIButton>
           <UIButton type="">Discover CoinsLists</UIButton>
         </div>
       </div>

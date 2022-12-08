@@ -9,6 +9,7 @@ function ProductsSection() {
   const width = useScreenSize().width;
   const [tab, setTab] = useState("Wallet Manager");
   const ref = useRef({});
+  const [buttonText, setButtonText] = useState("Get Started");
   const tab_list = [
     {
       name: "Wallet Manager",
@@ -66,7 +67,9 @@ function ProductsSection() {
             <li>Get access to analytics-backed market insights on your portfolio through Lunarcrush.</li>
           </ul>
           <div className="mt-3 d-flex justify-content-center justify-content-md-start">
-            <UIButton type="primary">Get started</UIButton>
+            <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+              {buttonText}
+            </UIButton>
             <UIButton type="secondary">Discover Wallet Manager</UIButton>
           </div>
         </div>
@@ -96,7 +99,9 @@ function ProductsSection() {
             <li>Keep more money in your portfolio with no advisory fee, only the fees associated with trading expenses.</li>
           </ul>
           <div className="mt-3 d-flex justify-content-center justify-content-md-start">
-            <UIButton type="primary">Get started</UIButton>
+            <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+              {buttonText}
+            </UIButton>
             <UIButton type="secondary">Discover CoinsLists</UIButton>
           </div>
         </div>
@@ -125,7 +130,9 @@ function ProductsSection() {
             <li>Fully transparent, all the transactions are publicly available on the blockchain explorers.</li>
           </ul>
           <div className="mt-3 d-flex justify-content-center justify-content-md-start">
-            <UIButton type="primary">Get started</UIButton>
+            <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+              {buttonText}
+            </UIButton>
             <UIButton type="secondary">Discover Swidge</UIButton>
           </div>
         </div>
@@ -158,7 +165,9 @@ function ProductsSection() {
             <li>Powered by Onramper, the #1 fiat-to-crypto onramp aggregator.</li>
           </ul>
           <div className="mt-3 d-flex justify-content-center justify-content-md-start">
-            <UIButton type="primary">Get started</UIButton>
+            <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+              {buttonText}
+            </UIButton>
             <UIButton type="secondary">Discover Buy</UIButton>
           </div>
         </div>
@@ -177,18 +186,25 @@ function ProductsSection() {
           </h2>
           <p className="text-primaryBlue fw-bold fst-italic m-0">Invest with a long-term view of building crypto wealth.</p>
           <p className="mt-2" style={{ color: "#5a5b5b" }}>
-            CoinsLists is our carefully selected portfolio of cryptocurrencies that reflects a theme, idea or goal. It exposes you to the most sought-after cryptocurrencies without requiring you to invest time and effort in learning about them.
+            TeraBlock Swap is an innovative multi-chain liquidity aggregator that allows users to easily exchange one cryptocurrency for another at the best rates in the market across multiple blockchains.
+          </p>
+          <p className="mt-2" style={{ color: "#5a5b5b" }}>
+            Swap identifies the most efficient swapping routes by aggregating and comparing the best rates in the market across all leading DEXs across multiple blockchains.
           </p>
           <ul style={{ color: "#5a5b5b" }}>
-            <li>Place orders for multiple cryptocurrencies in 1 click as CoinsList and save time.</li>
-            <li>Start small budget investment for $100.</li>
-            <li>CoinsList is non-custodial, so your funds are always in your control.</li>
-            <li>Track and manage seamlessly with a real-time value on a multi-protocol unified platform.</li>
-            <li>Invest in CoinsLists every week, month, or quarter with systematic investment plans (SIPs). </li>
-            <li>Keep more money in your portfolio with no advisory fee, only the fees associated with trading expenses.</li>
+            <li>Smart Multi-chain Aggregator.</li>
+            <li>Best prices across multichain DEXs.</li>
+            <li>Instant on-chain conversion.</li>
+            <li>Pay comparatively low fees along with low slippage.</li>
+            <li>Market Sentiments from LunarCrush.</li>
+            <li>TeraBlock Swap is non-custodial, so your funds are always in your control.</li>
+            <li>Fully transparent, all the transactions are publicly available on the blockchain explorers.</li>
+            <li>Swap content needs updating.</li>
           </ul>
           <div className="mt-3 d-flex justify-content-center justify-content-md-start">
-            <UIButton type="primary">Get started</UIButton>
+            <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+              {buttonText}
+            </UIButton>
             <UIButton type="secondary">Discover Swap</UIButton>
           </div>
         </div>
@@ -219,7 +235,9 @@ function ProductsSection() {
             <li>Multi-asset and multichain bridging.</li>
           </ul>
           <div className="mt-3 d-flex justify-content-center justify-content-md-start">
-            <UIButton type="primary">Get started</UIButton>
+            <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+              {buttonText}
+            </UIButton>
             <UIButton type="secondary">Discover Bridge</UIButton>
           </div>
         </div>
@@ -250,7 +268,9 @@ function ProductsSection() {
             <li>The Link is entirely free to use.</li>
           </ul>
           <div className="mt-3 d-flex justify-content-center justify-content-md-start">
-            <UIButton type="primary">Get started</UIButton>
+            <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+              {buttonText}
+            </UIButton>
             <UIButton type="secondary">Discover Link</UIButton>
           </div>
         </div>
@@ -282,7 +302,9 @@ function ProductsSection() {
             <li>Fully transparent, all the transactions are publicly available on the blockchain explorers.</li>
           </ul>
           <div className="mt-3 d-flex justify-content-center justify-content-md-start">
-            <UIButton type="primary">Get started</UIButton>
+            <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+              {buttonText}
+            </UIButton>
             <UIButton type="secondary">Discover Earn</UIButton>
           </div>
         </div>
@@ -310,7 +332,9 @@ function ProductsSection() {
             <li>Learn how to interact with TeraBlock's Defi utilities through step-by-step guided processes.</li>
           </ul>
           <div className="mt-3 d-flex justify-content-center justify-content-md-start">
-            <UIButton type="primary">Get started</UIButton>
+            <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+              {buttonText}
+            </UIButton>
             <UIButton type="secondary">Discover Learn</UIButton>
           </div>
         </div>

@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
 import UIButton from "../../../widgets/UIButtons/UIButton";
 import UICard from "../../../widgets/UICard/UICard";
 
 function GetStartedSection() {
   const width = useScreenSize().width;
+  const [buttonText, setButtonText] = useState("Get Started");
   return (
     <div>
-      <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
+      <div className="py-4" style={{ maxWidth: "1420px", margin: "auto" }}>
         <div className="text-center mt-5 px-4 px-md-5">
           <h3 className="text-primaryTextDark fw-bold">
             <b>Smart investing with CoinsLists</b>
@@ -62,7 +63,9 @@ function GetStartedSection() {
           {/* {width > 768 && <img src="/assets/icons/4x5.svg" style={{ width: "60px", position: "absolute", bottom: "2rem", left: "1rem" }} />} */}
         </div>
         <div className="d-flex align-items-center justify-content-center mt-2 mb-5">
-          <UIButton type="primary">Get Started</UIButton>
+          <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+            {buttonText}
+          </UIButton>
           <UIButton>Learn More</UIButton>
         </div>
       </div>

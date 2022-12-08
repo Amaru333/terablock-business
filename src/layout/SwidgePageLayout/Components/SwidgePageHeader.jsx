@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
 import UILottie from "../../../common/Lottie/UILottie";
 import UIButton from "../../../widgets/UIButtons/UIButton";
@@ -6,6 +6,7 @@ import HeroAnimation1 from "../animations/swidge_01_hero.json";
 
 function SwidgePageHeader() {
   const width = useScreenSize().width;
+  const [buttonText, setButtonText] = useState("Get Started");
   return (
     <div className="pb-5 px-0 px-md-2 px-xl-5">
       <div style={{ maxWidth: "1500px", margin: "auto" }}>
@@ -18,7 +19,9 @@ function SwidgePageHeader() {
               </p>
               {width > 904 && (
                 <div className="mt-4">
-                  <UIButton type="primary">Get Started</UIButton>
+                  <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+                    {buttonText}
+                  </UIButton>
                   <UIButton>Discover Swidge</UIButton>
                 </div>
               )}
@@ -30,7 +33,9 @@ function SwidgePageHeader() {
             </div>
             {width < 904 && (
               <div className="d-flex justify-content-center mt-5">
-                <UIButton type="primary">Get Started</UIButton>
+                <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+                  {buttonText}
+                </UIButton>
                 <UIButton>Discover Swidge</UIButton>
               </div>
             )}

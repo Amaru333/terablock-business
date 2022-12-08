@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
 import UIButton from "../../../widgets/UIButtons/UIButton";
 import UICard from "../../../widgets/UICard/UICard";
 
 function TeraBlockSwidgeSection() {
   const width = useScreenSize().width;
-
+  const [buttonText, setButtonText] = useState("Get Started");
   const DescriptionCard = ({ image, title, description }) => {
     return (
       <>
@@ -125,7 +125,9 @@ function TeraBlockSwidgeSection() {
         </div>
       </div>
       <div className="d-flex align-items-center justify-content-center mt-2 mb-5">
-        <UIButton>Get Started</UIButton>
+        <UIButton width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+          {buttonText}
+        </UIButton>
         <UIButton type="primary-light">Launch Swidge</UIButton>
       </div>
     </div>

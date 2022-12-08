@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
+import UIButton from "../../../widgets/UIButtons/UIButton";
 import UICard from "../../../widgets/UICard/UICard";
 import UIGraph from "../../../widgets/UIGraph/UIGraph";
 import InvestmentGraphStyle from "../Styles/InvestmentGraph.module.css";
@@ -154,12 +155,25 @@ function InvestmentGraph() {
     }
   };
 
+  const high_cap = {
+    image: "/assets/icons/homepage/4.png",
+    title: "High Capitalisation",
+    description: "A portfolio of high capitalization cryptocurrencies.",
+    coin_images: ["/assets/icons/homepage/Coins/15.png", "/assets/icons/homepage/Coins/10.png", "/assets/icons/homepage/Coins/1.png", "/assets/icons/homepage/Coins/6.png"],
+    cagr: "3,875%",
+    min_amount: "$100",
+    apr: "5",
+    volatile: "Low",
+  };
+
   return (
     <div>
-      <div className="flex flex-column justify-content-center align-items-center pb-4" style={{ backgroundColor: "#0251ff" }}>
-        <h3 className="text-white text-center pt-5 px-1">Long term investing is the key to sustainable crypto wealth</h3>
+      <div className="flex flex-column justify-content-center align-items-center pb-4 pt-5" style={{ backgroundColor: "#0251ff" }}>
+        <h3 className="text-white text-center pt-5 px-1">
+          <b>Long term investing is the key to sustainable crypto wealth</b>
+        </h3>
         <p className="text-center text-white mt-4 px-2">Slide the coin and see how your crypto could have grown over time with systematic and periodic investing</p>
-        <div className={["m-auto rounded border-white px-4 py-2 my-5", InvestmentGraphStyle.half_container].join(" ")} style={{ "--bs-border-opacity": 0.2 }}>
+        <div className={["m-auto rounded border-white px-4 pt-2 my-5", InvestmentGraphStyle.half_container].join(" ")} style={{ "--bs-border-opacity": 0.2 }}>
           <div className="d-flex flex-row justify-content-between mt-2">
             <p className="text-white">Monthly Deposit ({formatter.format(value * 100)})</p>
             <p className="text-white">$100,000</p>
@@ -197,7 +211,7 @@ function InvestmentGraph() {
               <p className="mb-0 fs-5">$58,000</p>
             </div>
           </div> */}
-        <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
+        <div className="pt-4" style={{ maxWidth: "1500px", margin: "auto" }}>
           {/* <div className="row mx-3 mx-md-4">
             {coinlist_data.map((coins, index) => (
               <div className="col-12 col-md-3">
@@ -205,6 +219,97 @@ function InvestmentGraph() {
               </div>
             ))}
           </div> */}
+          {width > 767 ? (
+            <div className="pt-4" style={{ maxWidth: "1300px", margin: "auto" }}>
+              <UICard>
+                <div className="d-flex align-items-center pb-3">
+                  <div style={{ width: "5%" }}>
+                    <img src={high_cap.image} style={{ width: "60px" }} />
+                  </div>
+                  <div className="ms-3" style={{ width: "40%" }}>
+                    <div>
+                      <div className="d-flex justify-content-between align-items-center">
+                        <p className="fw-bold text-primaryDark mb-0" style={{ fontSize: "18px" }}>
+                          {high_cap.title}
+                        </p>
+                      </div>
+                      <p className="text-cardDescriptionColor mb-0">{high_cap.description}</p>
+                    </div>
+                  </div>
+                  <div className="d-flex justify-content-center align-items-center" style={{ width: "20%" }}>
+                    {high_cap.coin_images.map((image, index) => (
+                      <div>
+                        <img src={image} className="me-2 me-md-3" key={index} style={{ width: "32px" }} />
+                      </div>
+                    ))}
+                  </div>
+                  <div style={{ width: "15%" }}>
+                    <div className="d-flex justify-content-evenly text-center align-items-center">
+                      <div>
+                        <p className="text-primaryTextGray mb-1" style={{ fontSize: "12px", fontWeight: "500" }}>
+                          Min. Amount
+                        </p>
+                        <p className="fw-bold text-primaryDark mb-0">{high_cap.min_amount}</p>
+                      </div>
+                      <div>
+                        <p className="text-primaryTextGray mb-1" style={{ fontSize: "12px", fontWeight: "500" }}>
+                          {high_cap.apr}Yr. APR
+                        </p>
+                        <p className="fw-bold text-success mb-0">{high_cap.cagr}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div style={{ width: "20%", margin: "auto", display: "flex", justifyContent: "center", alignItems: "center" }}>
+                    <UIButton>View CoinsList</UIButton>
+                  </div>
+                </div>
+              </UICard>
+            </div>
+          ) : (
+            <div className="mx-2">
+              <UICard>
+                <div className="d-flex">
+                  <div>
+                    <img src={high_cap.image} style={{ width: "60px" }} />
+                  </div>
+                  <div className="ms-2">
+                    <div className="d-flex justify-content-between align-items-center">
+                      <p className="fw-bold text-primaryDark mb-0" style={{ fontSize: "18px" }}>
+                        {high_cap.title}
+                      </p>
+                    </div>
+                    <p className="text-cardDescriptionColor mb-0" style={{ fontSize: "14px" }}>
+                      {high_cap.description}
+                    </p>
+                  </div>
+                </div>
+                <div className="py-3 d-flex justify-content-between">
+                  <div>
+                    <p className="text-primaryTextGray mb-1" style={{ fontSize: "12px", fontWeight: "500" }}>
+                      Min. Amount
+                    </p>
+                    <p className="fw-bold text-primaryDark mb-0">{high_cap.min_amount}</p>
+                  </div>
+                  <div>
+                    <p className="text-primaryTextGray mb-1" style={{ fontSize: "12px", fontWeight: "500" }}>
+                      {high_cap.apr}Yr. APR
+                    </p>
+                    <p className="fw-bold text-success mb-0">{high_cap.cagr}</p>
+                  </div>
+                  <div className="d-flex justify-content-start align-items-center">
+                    {high_cap.coin_images.map((image, index) => (
+                      <div>
+                        <img src={image} className="me-2 me-md-3" key={index} style={{ width: "32px" }} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div style={{ width: "70%", margin: "auto", display: "flex", justifyContent: "center", alignItems: "center", paddingBottom: "1rem" }}>
+                  <UIButton>View CoinsList</UIButton>
+                </div>
+              </UICard>
+            </div>
+          )}
 
           {/* <div className="col-12 col-md-6 col-xl-4">
             <CoinsCard data={coinlist_data[0]} />
@@ -215,11 +320,11 @@ function InvestmentGraph() {
         </div>
         {/* </div> */}
       </div>
-      <div className={["p-0 p-sm-1 p-md-4", InvestmentGraphStyle.graph_background].join(" ")}>
-        <UIGraph multiplier = {value}/>
+      <div className={["p-0 p-sm-1 p-md-4 pt-0", InvestmentGraphStyle.graph_background].join(" ")}>
+        <UIGraph multiplier={value} />
       </div>
       <div>
-        <p className={["text-black m-auto text-center", InvestmentGraphStyle.half_container].join(" ")}>
+        <p className={["text-black m-auto text-center", InvestmentGraphStyle.half_container].join(" ")} style={{ maxWidth: "1200px" }}>
           The chart compares the past five-year performance of <b>High Capitalisation CoinsList</b> and savings bank account with an interest rate of 0.07% yearly. Investing in cryptocurrencies involves the risk of loss, and performance is not guaranteed.
         </p>
       </div>

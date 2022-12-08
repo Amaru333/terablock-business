@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
 import UIButton from "../../../widgets/UIButtons/UIButton";
 import UICard from "../../../widgets/UICard/UICard";
 
 function RewardsTypeSection() {
   const width = useScreenSize().width;
+  const [buttonText, setButtonText] = useState("Get Started");
   const CardWithLogo = ({ children, title, image }) => {
     return (
       <UICard>
@@ -48,7 +49,9 @@ function RewardsTypeSection() {
           {/* {width > 768 && <img src="/assets/icons/4x5.svg" style={{ width: "50px", position: "absolute", bottom: "2rem", left: "0.5rem" }} />} */}
         </div>
         <div className="d-flex flex-row justify-content-center">
-          <UIButton type="primary">Get Started</UIButton>
+          <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+            {buttonText}
+          </UIButton>
           <UIButton type="secondary">Learn More</UIButton>
         </div>
       </div>

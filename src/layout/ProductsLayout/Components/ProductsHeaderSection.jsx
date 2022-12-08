@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import UIButton from "../../../widgets/UIButtons/UIButton";
 import { useScreenSize } from "../../../functions/useScreenSize";
 
@@ -7,6 +7,7 @@ import UILottie from "../../../common/Lottie/UILottie";
 
 function ProductsHeaderSection() {
   const width = useScreenSize().width;
+  const [buttonText, setButtonText] = useState("Get Started");
   return (
     <div className="px-0 px-md-2 px-xl-5">
       <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
@@ -18,7 +19,9 @@ function ProductsHeaderSection() {
             <p className="text-primaryTextGray mb-0 mb-md-5">Utilitarian products that help you interact with Defi on a unified platform. TeraBlock products are built for all and can be used by everyone regardless of knowledge and skill level.</p>
             {width > 768 && (
               <div className="d-flex">
-                <UIButton type="primary">Get Started</UIButton>
+                <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+                  {buttonText}
+                </UIButton>
                 <UIButton type="secondary">Discover Products</UIButton>
               </div>
             )}
@@ -31,7 +34,9 @@ function ProductsHeaderSection() {
           </div>
           {width < 768 && (
             <div className="d-flex justify-content-center mt-2">
-              <UIButton type="primary">Get Started</UIButton>
+              <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+                {buttonText}
+              </UIButton>
             </div>
           )}
         </div>

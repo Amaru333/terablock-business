@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
 import UIButton from "../../../widgets/UIButtons/UIButton";
 import IntroSectionStyles from "../Styles/IntroSection.module.css";
@@ -6,6 +6,7 @@ import CountUp from "react-countup";
 
 function IntroSection() {
   const width = useScreenSize().width;
+  const [buttonText, setButtonText] = useState("Get Started");
   return (
     <div className={`bg-white text-center text-md-start position-relative ${(width > 1400 || width < 800) && "pt-5"}`}>
       <div className={`px-xl-5`}>
@@ -15,7 +16,7 @@ function IntroSection() {
               <div className="d-flex flex-column mb-3" style={{ width: "fit-content" }}>
                 <div className="d-flex align-items-center">
                   <div>
-                    <img src="/assets/images/secure_logo.png" />
+                    <img src="/assets/icons/homepage/notif.png" style={{ width: "16px" }} />
                   </div>
                   <div>
                     <p className="mb-0 mx-2 fw-medium" style={{ color: "#0251ff" }}>
@@ -34,26 +35,28 @@ function IntroSection() {
                 </p>
               </div>
               <div className="d-flex my-2 justify-content-center justify-content-md-start">
-                <UIButton type="primary">Get Started</UIButton>
+                <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+                  {buttonText}
+                </UIButton>
                 <UIButton type="secondary">Launch App</UIButton>
               </div>
               <div className={["d-flex justify-content-between justify-content-md-start", IntroSectionStyles.bottom_logos].join(" ")}>
                 <a href="https://cointelegraph.com/press-releases/terablock-and-splinterlands-collaborate-take-defi-gaming-to-new-heights" target="_blank">
-                  <img src="/assets/images/coin-telegraph.png" className="px-md-4" style={{ width: width < 768 && "20%", height: width < 768 && "20%" }} />
+                  <img src="/assets/icons/homepage/CT.png" className="px-md-4" style={{ width: width < 768 ? "75px" : "170px" }} />
                 </a>
                 <a href="https://finance.yahoo.com/news/ai-based-trade-automation-case-000000108.html" target="_blank">
-                  <img src="/assets/images/yahoo-finance.png" className="px-md-4" style={{ width: width < 768 && "20%", height: width < 768 && "20%" }} />
+                  <img src="/assets/icons/homepage/YF.png" className="px-md-4" style={{ width: width < 768 ? "60px" : "140px" }} />
                 </a>
                 <a href="https://www.newsbtc.com/news/company/all-you-want-to-know-about-automated-crypto-trading/" target="_blank">
-                  <img src="/assets/images/news-btc.png" className="px-md-4" style={{ width: width < 768 && "20%", height: width < 768 && "20%" }} />
+                  <img src="/assets/icons/homepage/IC.png" className="px-md-4" style={{ width: width < 768 ? "60px" : "140px" }} />
                 </a>
                 <a href="https://www.investing.com/news/cryptocurrency-news/terablock-raised-24m-in-funds-to-build-crypto-exchange-2478985" target="_blank">
-                  <img src="/assets/images/coin-quora.png" className="px-md-4" style={{ width: width < 768 && "20%", height: width < 768 && "20%" }} />
+                  <img src="/assets/icons/homepage/NBTC.png" className="px-md-4" style={{ width: width < 768 ? "60px" : "140px" }} />
                 </a>
               </div>
             </div>
             <div className="col-12 col-md-4 d-flex justify-content-center justify-content-md start position-relative" style={{ alignItems: "end" }}>
-              <img src="/assets/images/iphone-12-black.png" style={{ zIndex: 2, objectFit: "contain", width: width < 1400 || width > 800 ? "75%" : "90%" }} />
+              <img src="/assets/icons/homepage/Hero_Trade2.png" style={{ zIndex: 2, objectFit: "contain", width: width < 1400 || width > 800 ? "75%" : "90%" }} />
               {/* <img src="/assets/icons/ellipse-red.svg" className="position-absolute" style={{ width: "50px", top: "0rem", right: "1rem" }} />
             <img src="/assets/icons/ellipse-blue.svg" className="position-absolute" style={{ width: "25px", bottom: "0rem", left: "1rem" }} /> */}
             </div>
@@ -68,7 +71,7 @@ function IntroSection() {
         <div className="py-4 row px-4 py-4 justify-content-center" style={{ maxWidth: "1500px", margin: "auto" }}>
           <div className="py-4 col col-md">
             <p className="mb-0 text-center text-white" style={{ fontSize: "20pt", fontWeight: "600" }}>
-              $<CountUp duration={2} end={20000} separator= ','/>
+              $<CountUp duration={2} end={20000} separator="," />
             </p>
             <p className="mb-0 text-center text-white" style={{ fontSize: "12pt" }}>
               Transaction Volume
@@ -76,7 +79,7 @@ function IntroSection() {
           </div>
           <div className="py-4 col col-md">
             <p className="mb-0 text-center text-white" style={{ fontSize: "20pt", fontWeight: "600" }}>
-              <CountUp duration={2} end={2234000000} separator= ','/>
+              <CountUp duration={2} end={2234000000} separator="," />
             </p>
             <p className="mb-0 text-center text-white" style={{ fontSize: "12pt" }}>
               Tokens Transacted
@@ -84,7 +87,7 @@ function IntroSection() {
           </div>
           <div className="py-4 col col-md">
             <p className="mb-0 text-center text-white" style={{ fontSize: "20pt", fontWeight: "600" }}>
-              <CountUp duration={2} end={25000} separator= ','/>
+              <CountUp duration={2} end={25000} separator="," />
             </p>
             <p className="mb-0 text-center text-white" style={{ fontSize: "12pt" }}>
               Secure Transactions
@@ -92,7 +95,7 @@ function IntroSection() {
           </div>
           <div className="py-4 col col-md">
             <p className="mb-0 text-center text-white" style={{ fontSize: "20pt", fontWeight: "600" }}>
-              <CountUp duration={2} end={8000} separator= ','/>
+              <CountUp duration={2} end={8000} separator="," />
             </p>
             <p className="mb-0 text-center text-white" style={{ fontSize: "12pt" }}>
               Happy Users

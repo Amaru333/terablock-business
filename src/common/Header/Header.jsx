@@ -9,6 +9,7 @@ function Header() {
   const router = useRouter();
   const width = useScreenSize().width;
   const [isOpen, setIsOpen] = useState(false);
+  const [buttonText, setButtonText] = useState("Get Started");
   const NavbarMenu = ({ name, link }) => {
     return (
       <p className="mb-0 px-3 fw-bold px-xxl-4" onClick={() => router.push(link)} style={{ fontSize: "14px", fontWeight: 500, cursor: "pointer", color: router.pathname == link ? "#0251ff" : "#212529" }}>
@@ -44,18 +45,22 @@ function Header() {
   ];
   if (width > 1000) {
     return (
-      <div className="d-flex justify-content-between px-5 py-2 bg-white" style={{ boxShadow: "0px 2px 20px 0px rgba(0, 0, 0, 0.15)" }}>
-        <div className="d-flex align-items-center">
-          <img src="/assets/icons/logo-blue.svg" className="pe-4" style={{ cursor: "pointer" }} onClick={() => router.push("/")} />
-          {menu_items.map((item, index) => (
-            <NavbarMenu key={index} name={item.name} link={item.link} />
-          ))}
-        </div>
-        <div className="d-flex align-items-center">
-          <p className="mb-0 me-3 pb-1" style={{ fontSize: "14px", fontWeight: 500, cursor: "pointer", borderBottom: "2px solid #E3297E" }}>
-            Launch App →
-          </p>
-          <button className={["bg-primaryBlue text-white px-4 py-2 mx-2", HeaderStyle.button, HeaderStyle.button_primary].join(" ")}>Get Started</button>
+      <div className="bg-white" style={{ boxShadow: "0px 2px 20px 0px rgba(0, 0, 0, 0.15)" }}>
+        <div className="px-5 py-3 d-flex justify-content-between" style={{ maxWidth: "1500px", margin: "auto" }}>
+          <div className="d-flex align-items-center">
+            <img src="/assets/icons/logo-blue.svg" className="pe-4" style={{ cursor: "pointer" }} onClick={() => router.push("/")} />
+            {menu_items.map((item, index) => (
+              <NavbarMenu key={index} name={item.name} link={item.link} />
+            ))}
+          </div>
+          <div className="d-flex align-items-center">
+            <p className="mb-0 me-3 pb-1" style={{ fontSize: "14px", fontWeight: 500, cursor: "pointer", borderBottom: "2px solid #E3297E" }}>
+              Launch App →
+            </p>
+            <button className={["bg-primaryBlue text-white px-4 py-2 mx-2", HeaderStyle.button, HeaderStyle.button_primary].join(" ")} onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+              {buttonText}
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -65,7 +70,9 @@ function Header() {
         <img src="/assets/icons/logo-blue.svg" className="pe-2" style={{ cursor: "pointer" }} onClick={() => router.push("/")} />
         <div className="d-flex align-items-center">
           <button className={["bg-primaryBlue text-white px-4 py-2 mx-2", HeaderStyle.button, HeaderStyle.button_primary].join(" ")}>
-            <p className="mb-0 fs-6">Get Started</p>
+            <p className="mb-0 fs-6" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+              {buttonText}
+            </p>
           </button>
           <img src="/assets/icons/hamburger-menu.svg" style={{ cursor: "pointer" }} className="ms-2" onClick={() => setIsOpen(true)} />
         </div>

@@ -3,8 +3,10 @@ import React from "react";
 function AboutTerablockSection() {
   return (
     <div className="py-5 px-2 px-md-5" style={{ backgroundColor: "#0251ff" }}>
-      <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
-        <h1 className="text-white text-center px-3 px-md-0 pt-md-5">What makes TeraBlock better?</h1>
+      <div className="py-4" style={{ maxWidth: "1320px", margin: "auto" }}>
+        <h3 className="text-white text-center px-3 px-md-0 pt-md-5">
+          <b>What makes TeraBlock better?</b>
+        </h3>
         <div className="row mx-0 pt-5">
           <div className="col-6 col-md-4 pb-5">
             <div className="px-0 px-md-4">
