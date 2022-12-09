@@ -46,7 +46,7 @@ function Header() {
   if (width > 1000) {
     return (
       <div className="bg-white" style={{ boxShadow: "0px 2px 20px 0px rgba(0, 0, 0, 0.15)" }}>
-        <div className="px-5 py-3 d-flex justify-content-between" style={{ maxWidth: "1500px", margin: "auto" }}>
+        <div className="px-5 px-md-2 px-xl-5 py-3 d-flex justify-content-between" style={{ width: width > 1499 ? "80%" : "96%", margin: "auto", maxWidth: "1700px" }}>
           <div className="d-flex align-items-center">
             <img src="/assets/icons/logo-blue.svg" className="pe-4" style={{ cursor: "pointer" }} onClick={() => router.push("/")} />
             {menu_items.map((item, index) => (

@@ -4,6 +4,7 @@ import { useScreenSize } from "../../../functions/useScreenSize";
 import UICard from "../../../widgets/UICard/UICard";
 
 function AboutSwidgeSection() {
+  const width = useScreenSize().width;
   // const DataCard = ({ index, description, image }) => {
   //   return (
   //     <UICard>
@@ -126,8 +127,8 @@ function AboutSwidgeSection() {
     //   </div>
     //   <StartCryptoJourneyCard />
     // </div>
-    <div className="py-5 px-2 px-md-5" style={{ color: "#1b2b6b" }}>
-      <div style={{ maxWidth: "1500px", margin: "auto" }}>
+    <div className="py-5 px-2 px-md-0" style={{ color: "#1b2b6b" }}>
+      <div style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "71%" : width > 940 ? "83%" : "98%" }}>
         <h3 className="text-center px-3 px-md-0 pt-md-5">
           <b>Swidge is the simplest way to onboard a Dapp</b>
         </h3>

@@ -1,8 +1,10 @@
 import React from "react";
+import { useScreenSize } from "../../../functions/useScreenSize";
 
 import TutorialCardStyle from "../Styles/TutorialCards.module.css";
 
 function TutorialCards() {
+  const width = useScreenSize().width;
   const data = [
     {
       title: "Crypto Basics",
@@ -31,7 +33,7 @@ function TutorialCards() {
     );
   };
   return (
-    <div className="py-5 px-5" style={{ maxWidth: "1500px", margin: "auto" }}>
+    <div className="py-5 px-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "83%" : "100%" }}>
       <div className={TutorialCardStyle.container}>
         {data.map((individual, i) => (
           <div key={i} className={TutorialCardStyle.card_container}>

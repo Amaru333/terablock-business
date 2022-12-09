@@ -10,17 +10,17 @@ function CoinLists() {
 
   const [buttonText, setButtonText] = useState("Get Started");
   return (
-    <div className="py-5 bg-white px-0 px-md-2 px-xl-5">
+    <div className="py-5 bg-white px-0">
       <div className="text-center mb-2 px-3">
-        <h3 className="text-primaryTextDark fw-bold pt-5">
+        <h3 className="text-primaryTextDark fw-bold pt-5" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "68%" : width > 940 ? "80%" : "95%" }}>
           <b>Build your long-term crypto portfolio with CoinsLists</b>
         </h3>
-        <p className="fs-6" style={{ color: "#5a5b5b" }}>
+        <p className="fs-6" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "60%" : "75%", color: "#5a5b5b" }}>
           CoinsList is a set and forget approach to investing in Cryptocurrencies. Set your financial goals and let your money work for you.
         </p>
       </div>
-      <div className="py-4 pb-5" style={{ maxWidth: "1370px", margin: "auto" }}>
-        <div className="row mx-0 px-3 px-md-5 pt-3 d-flex flex-column-reverse flex-md-row">
+      <div className="py-4 pb-5" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "68%" : width > 940 ? "78%" : "95%" }}>
+        <div className="row mx-0 px-3 px-md-0 pt-3 d-flex flex-column-reverse flex-md-row">
           <div className="col-12 col-md-6 mt-4 mt-md-0 d-flex align-items-center">
             <div style={{ width: width < 768 ? "100%" : "85%" }}>
               <p className="text-cardDescriptionColor fs-6" style={{ textAlign: "justify", lineHeight: "30px" }}>

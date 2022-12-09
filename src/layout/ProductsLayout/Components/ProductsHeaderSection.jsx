@@ -9,17 +9,17 @@ function ProductsHeaderSection() {
   const width = useScreenSize().width;
   const [buttonText, setButtonText] = useState("Get Started");
   return (
-    <div className="px-0 px-md-2 px-xl-5">
-      <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
+    <div className="px-0">
+      <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "82%" : "100%" }}>
         <div className="row mx-0 d-flex">
-          <div className="my-5 px-4 px-md-5 col-12 col-md-6 pe-0 pe-md-5 d-flex flex-column justify-content-around text-center pe-4 text-md-start">
+          <div className="my-5 px-4 px-md-4 col-12 col-md-6 pe-0 pe-md-5 d-flex flex-column justify-content-around text-center pe-4 text-md-start">
             <h1 className="text-primaryTextDark fw-bold" style={{ fontSize: width > 768 ? "50px" : "23px", width: width > 768 ? "75%" : "100%" }}>
               Products
             </h1>
             <p className="text-primaryTextGray mb-0 mb-md-5">Utilitarian products that help you interact with Defi on a unified platform. TeraBlock products are built for all and can be used by everyone regardless of knowledge and skill level.</p>
-            {width > 768 && (
+            {width > 940 && (
               <div className="d-flex">
-                <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+                <UIButton type="primary" ml0 style={{ marginRight: "10px" }} width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
                   {buttonText}
                 </UIButton>
                 <UIButton type="secondary">Discover Products</UIButton>
@@ -32,7 +32,7 @@ function ProductsHeaderSection() {
               <UILottie animation={HeroAnimation1} />
             </div>
           </div>
-          {width < 768 && (
+          {width < 941 && (
             <div className="d-flex justify-content-center mt-2">
               <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
                 {buttonText}

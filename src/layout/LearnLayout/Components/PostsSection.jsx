@@ -51,10 +51,10 @@ function PostsSection() {
     );
   };
   return (
-    <div className="py-5 px-0 px-md-2 px-xl-5 bg-white">
-      <div className="py-3" style={{ maxWidth: "1500px", margin: "auto" }}>
+    <div className="py-5 px-0 bg-white">
+      <div className="py-3" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "72%" : width > 940 ? "84%" : "98%" }}>
         <div className="row mx-0" style={{ zIndex: 1 }}>
-          <div className="my-5 px-4 px-md-5 col-12 col-md-7 pe-0 pe-md-5 d-flex flex-column justify-content-center text-center pe-4 text-md-start">
+          <div className="my-5 px-4 px-md-5 col-12 col-md-7 pe-0 pe-md-5 d-flex flex-column justify-content-start text-center pe-4 text-md-start">
             <h4 className="fw-bold mb-4" style={{ color: "#1b2b6b", fontSize: width > 767 ? "30px" : "22px" }}>
               Featured Posts
             </h4>

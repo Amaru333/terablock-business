@@ -9,9 +9,9 @@ function HeaderComponent() {
   const width = useScreenSize().width;
   const screenSize = useScreenSize();
   return (
-    <div className="px-0 px-md-2 px-xl-5" style={{ backgroundColor: "#f8f9fd" }}>
-      <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
-        <div className="row mx-0 px-3 px-md-5 py-5">
+    <div className="px-0" style={{ backgroundColor: "#f8f9fd" }}>
+      <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "83%" : "100%" }}>
+        <div className="row mx-0 px-3 px-md-4 py-5">
           <div className="col-12 col-md-7 text-center text-md-start d-flex flex-column justify-content-evenly">
             <div className={screenSize.width > 768 ? "w-75" : "w-100"}>
               <h1 className="fw-bold" style={{ color: "rgb(27, 43, 107)", color: "#1b2b6b", fontSize: width > 767 ? "40px" : "23px" }}>

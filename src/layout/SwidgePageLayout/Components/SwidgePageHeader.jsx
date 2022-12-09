@@ -8,8 +8,8 @@ function SwidgePageHeader() {
   const width = useScreenSize().width;
   const [buttonText, setButtonText] = useState("Get Started");
   return (
-    <div className="pb-5 px-0 px-md-2 px-xl-5">
-      <div style={{ maxWidth: "1500px", margin: "auto" }}>
+    <div className="pb-5 px-0">
+      <div style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "72%" : width > 940 ? "85%" : "100%" }}>
         <div className="pt-5 position-relative">
           <div className="row mx-0" style={{ zIndex: 1 }}>
             <div className="my-5 px-4 px-md-5 col-12 col-md-6 pe-0 pe-md-5 d-flex flex-column justify-content-center text-center pe-4 text-md-start">
@@ -19,7 +19,7 @@ function SwidgePageHeader() {
               </p>
               {width > 904 && (
                 <div className="mt-4">
-                  <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+                  <UIButton type="primary" ml0 style={{ marginRight: "10px" }} width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
                     {buttonText}
                   </UIButton>
                   <UIButton>Discover Swidge</UIButton>
@@ -27,7 +27,7 @@ function SwidgePageHeader() {
               )}
             </div>
             <div className={`col-12 col-md-6 d-flex ${width > 768 ? "justify-content-end" : "justify-content-center"}`}>
-              <div style={{ maxWidth: (width > 768)? "80%":"70vw", maxHeight : (width > 768) ? "400px" : "250px" }}>
+              <div style={{ maxWidth: width > 768 ? "80%" : "70vw", maxHeight: width > 768 ? "400px" : "250px" }}>
                 <UILottie animation={HeroAnimation1} />
               </div>
             </div>

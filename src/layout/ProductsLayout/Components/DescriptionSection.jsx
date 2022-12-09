@@ -54,7 +54,7 @@ function DescriptionSection() {
   ];
   return (
     <div className="primary-gradient px-0 px-md-2 px-xl-5">
-      <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
+      <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : "83%" }}>
         <div className="flex flex-column justify-content-center align-items-center pb-4">
           <h2 className="text-white text-center pt-5 px-1 d-flex flex-column flex-md-row justify-content-center">
             <span>

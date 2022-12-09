@@ -9,7 +9,7 @@ function FAQSection() {
   const router = useRouter();
   return (
     <div className="pb-5 position-relative" style={{ backgroundColor: "#0251ff" }}>
-      <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
+      <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "77%" : width > 940 ? "83%" : "95%" }}>
         <div className="text-center pt-5 px-4 px-md-5 mx-0 mx-md-5 pb-3">
           <h3 className="text-white fw-bold">
             <b>Frequently asked questions</b>

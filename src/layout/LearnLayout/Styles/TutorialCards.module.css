@@ -52,7 +52,7 @@
 }
 
 .card_container:nth-child(2) {
-  margin: 0 150px;
+  margin: 0 70px;
 }
 
 @media (max-width: 1250px) {

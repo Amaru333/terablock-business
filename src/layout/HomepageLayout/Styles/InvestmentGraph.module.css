@@ -10,10 +10,6 @@
   display: flex;
 }
 
-.half_container {
-  width: 70%;
-}
-
 .graph_background {
   width: 100%;
   background: linear-gradient(180deg, #0251ff 50%, #ffffff00 50%);

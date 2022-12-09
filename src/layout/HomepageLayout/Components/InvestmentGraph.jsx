@@ -173,7 +173,7 @@ function InvestmentGraph() {
           <b>Long term investing is the key to sustainable crypto wealth</b>
         </h3>
         <p className="text-center text-white mt-4 px-2">Slide the coin and see how your crypto could have grown over time with systematic and periodic investing</p>
-        <div className={["m-auto rounded border-white px-4 pt-2 my-5", InvestmentGraphStyle.half_container].join(" ")} style={{ "--bs-border-opacity": 0.2 }}>
+        <div className={["m-auto rounded border-white px-4 pt-2 my-5", InvestmentGraphStyle.half_container].join(" ")} style={{ "--bs-border-opacity": 0.2, maxWidth: "1700px", margin: "auto", width: width > 1499 ? "68%" : "83%" }}>
           <div className="d-flex flex-row justify-content-between mt-2">
             <p className="text-white">Monthly Deposit ({formatter.format(value * 100)})</p>
             <p className="text-white">$100,000</p>
@@ -211,7 +211,7 @@ function InvestmentGraph() {
               <p className="mb-0 fs-5">$58,000</p>
             </div>
           </div> */}
-        <div className="pt-4" style={{ maxWidth: "1500px", margin: "auto" }}>
+        <div className="pt-4">
           {/* <div className="row mx-3 mx-md-4">
             {coinlist_data.map((coins, index) => (
               <div className="col-12 col-md-3">
@@ -220,10 +220,10 @@ function InvestmentGraph() {
             ))}
           </div> */}
           {width > 767 ? (
-            <div className="pt-4" style={{ maxWidth: "1300px", margin: "auto" }}>
+            <div className="pt-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "68%" : width > 940 ? "77%" : "90%" }}>
               <UICard>
                 <div className="d-flex align-items-center pb-3">
-                  <div style={{ width: "5%" }}>
+                  <div>
                     <img src={high_cap.image} style={{ width: "60px" }} />
                   </div>
                   <div className="ms-3" style={{ width: "40%" }}>
@@ -324,7 +324,7 @@ function InvestmentGraph() {
         <UIGraph multiplier={value} />
       </div>
       <div>
-        <p className={["text-black m-auto text-center", InvestmentGraphStyle.half_container].join(" ")} style={{ maxWidth: "1200px" }}>
+        <p className={["text-black m-auto text-center px-3 px-xl-0", InvestmentGraphStyle.half_container].join(" ")} style={{ maxWidth: "1000px" }}>
           The chart compares the past five-year performance of <b>High Capitalisation CoinsList</b> and savings bank account with an interest rate of 0.07% yearly. Investing in cryptocurrencies involves the risk of loss, and performance is not guaranteed.
         </p>
       </div>

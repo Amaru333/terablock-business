@@ -8,9 +8,9 @@ function FeaturesSection() {
   const width = useScreenSize().width;
   return (
     <div className="py-5" style={{ backgroundColor: "#f5f6fa" }}>
-      <div className="py-4" style={{ maxWidth: "1320px", margin: "auto" }}>
-        <div className="text-center mt-5">
-          <h3 className="text-primaryTextDark fw-bold pt-5">
+      <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "80%" : "95%" }}>
+        <div className="text-center mt-3 mt-xl-5">
+          <h3 className="text-primaryTextDark fw-bold pt-0 pt-xl-5">
             <b>Wiser investments today for a better tomorrow</b>
           </h3>
           <p className="text-primaryTextGray">Start today on a simplified, optimised, decentralised platform; we're here to help you invest wisely in the crypto ecosystem.</p>

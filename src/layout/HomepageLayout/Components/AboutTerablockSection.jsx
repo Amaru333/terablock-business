@@ -1,9 +1,11 @@
 import React from "react";
+import { useScreenSize } from "../../../functions/useScreenSize";
 
 function AboutTerablockSection() {
+  const width = useScreenSize().width;
   return (
-    <div className="py-5 px-2 px-md-5" style={{ backgroundColor: "#0251ff" }}>
-      <div className="py-4" style={{ maxWidth: "1320px", margin: "auto" }}>
+    <div className="py-5 px-2 px-md-0" style={{ backgroundColor: "#0251ff" }}>
+      <div className="py-4 px-2 px-md-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "73%" : width > 940 ? "86%" : "100%" }}>
         <h3 className="text-white text-center px-3 px-md-0 pt-md-5">
           <b>What makes TeraBlock better?</b>
         </h3>

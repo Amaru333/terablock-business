@@ -8,7 +8,7 @@ function PopularArticlesSection() {
   const width = useScreenSize().width;
   return (
     <div className={"bg-white pt-0 pt-md-5 pb-5 px-2 px-md-5"}>
-      <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
+      <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : "83%" }}>
         <div className="px-0 px-md-2 px-xl-5">
           <p className="text-center text-md-start" style={{ color: width > 767 ? "#1B2D5B" : "black", fontSize: width > 767 ? "32px" : "16px", fontWeight: 600, fontFamily: "Poppins" }}>
             Popular articles

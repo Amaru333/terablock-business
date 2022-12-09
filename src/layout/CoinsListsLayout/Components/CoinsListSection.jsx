@@ -128,14 +128,14 @@ function CoinsListSection() {
   //   volatile: "Med",
   // },
   return (
-    <div className="py-5 position-relative px-0 px-md-2 px-xl-5 text-white" style={{ backgroundColor: "#0251ff" }}>
+    <div className="py-5 position-relative px-0 text-white" style={{ backgroundColor: "#0251ff" }}>
       <div className="text-center pt-5 px-4 px-md-5 mx-0 mx-md-5 pb-5">
         <h3 className="fw-bold">
           <b>Popular CoinsLists</b>
         </h3>
         <p className="fs-6">Looking to start with small investment? Bullish on Metaverse? Choose from diversified CoinsLists.</p>
       </div>
-      <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
+      <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "73%" : "86%" }}>
         <div className="row mx-3 mx-md-4">
           {coinlist_data.map((data, index) => (
             <div className="col-12" key={index}>

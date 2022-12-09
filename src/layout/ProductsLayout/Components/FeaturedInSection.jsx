@@ -53,7 +53,7 @@ function FeaturedInSection() {
         <h3 className="text-white fw-bold">Supporters</h3>
         <p className="text-white mb-0 mt-3">TeraBlock is supported by industry leading investors, partners, advisors and publications.</p>
       </div>
-      <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
+      <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : "83%" }}>
         <div className="row mx-3 mx-md-4">
           {images.map((image, index) => (
             <div className="col-6 col-sm-4 column20" key={index}>

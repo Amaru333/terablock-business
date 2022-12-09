@@ -15,7 +15,7 @@ export function useScreenSize() {
         });
       }
 
-      window.addEventListener("resize", handleResize);
+      // window.addEventListener("resize", handleResize);
 
       handleResize();
 

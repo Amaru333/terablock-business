@@ -50,8 +50,8 @@ function ProductsSection() {
   ];
   const WalletManagement = () => {
     return (
-      <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-2 px-xl-5">
-        <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-5">
+      <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-0 px-xl-2">
+        <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-4">
           <h2 className="fw-normal text-center text-md-start" style={{ color: "#1b2b6b" }}>
             <b>Wallet Management</b>
           </h2>
@@ -81,8 +81,8 @@ function ProductsSection() {
   };
   const CoinsLists = () => {
     return (
-      <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-2 px-xl-5">
-        <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-5">
+      <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-0 px-xl-2">
+        <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-4">
           <h2 className="fw-normal text-center text-md-start" style={{ color: "#1b2b6b" }}>
             <b>CoinsLists</b>
           </h2>
@@ -113,8 +113,8 @@ function ProductsSection() {
   };
   const Swidge = () => {
     return (
-      <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-2 px-xl-5">
-        <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-5">
+      <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-0 px-xl-2">
+        <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-4">
           <h2 className="fw-normal text-center text-md-start" style={{ color: "#1b2b6b" }}>
             <b>Swidge</b>
           </h2>
@@ -144,8 +144,8 @@ function ProductsSection() {
   };
   const Buy = () => {
     return (
-      <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-2 px-xl-5">
-        <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-5">
+      <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-0 px-xl-2">
+        <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-4">
           <h2 className="fw-normal text-center text-md-start" style={{ color: "#1b2b6b" }}>
             <b>Buy</b>
           </h2>
@@ -179,8 +179,8 @@ function ProductsSection() {
   };
   const Swap = () => {
     return (
-      <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-2 px-xl-5">
-        <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-5">
+      <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-0 px-xl-2">
+        <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-4">
           <h2 className="fw-normal text-center text-md-start" style={{ color: "#1b2b6b" }}>
             <b>Swap</b>
           </h2>
@@ -216,8 +216,8 @@ function ProductsSection() {
   };
   const Bridge = () => {
     return (
-      <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-2 px-xl-5">
-        <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-5">
+      <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-0 px-xl-2">
+        <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-4">
           <h2 className="fw-normal text-center text-md-start" style={{ color: "#1b2b6b" }}>
             <b>Bridge</b>
           </h2>
@@ -249,8 +249,8 @@ function ProductsSection() {
   };
   const Link = () => {
     return (
-      <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-2 px-xl-5">
-        <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-5">
+      <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-0 px-xl-2">
+        <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-4">
           <h2 className="fw-normal text-center text-md-start" style={{ color: "#1b2b6b" }}>
             <b>Link</b>
           </h2>
@@ -282,8 +282,8 @@ function ProductsSection() {
   };
   const Earn = () => {
     return (
-      <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-2 px-xl-5">
-        <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-5">
+      <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-0 px-xl-2">
+        <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-4">
           <h2 className="fw-normal text-center text-md-start" style={{ color: "#1b2b6b" }}>
             <b>Earn</b>
           </h2>
@@ -316,8 +316,8 @@ function ProductsSection() {
   };
   const Learn = () => {
     return (
-      <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-2 px-xl-5">
-        <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-5">
+      <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-0 px-xl-2">
+        <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-4">
           <h2 className="fw-normal text-center text-md-start" style={{ color: "#1b2b6b" }}>
             <b>Learn</b>
           </h2>
@@ -379,17 +379,17 @@ function ProductsSection() {
 
   return (
     <div className="mt-5 pt-5 pb-5 bg-white">
-      <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
-        <div className="text-center mb-2 px-4 px-md-5">
+      <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "83%" : "95%" }}>
+        <div className="text-center mb-2 px-4 px-md-2">
           <h3 className="text-primaryTextDark fw-bolder">
             <b>Powerful products for Web3</b>
           </h3>
           <p className="text-primaryTextGray">A suite of progressive and advanced tools to help you interact with Web3 on a unified platform</p>
         </div>
-        <div className="mb-5 px-2 px-md-5">
+        <div className="mb-5 px-2 px-md-0">
           <TabBar />
         </div>
-        <div className="px-4 px-md-5" style={{ minHeight: "800px" }}>
+        <div className="px-0 px-md-0" style={{ minHeight: "800px" }}>
           {tab == "Wallet Manager" && <WalletManagement />}
           {tab == "CoinsList" && <CoinsLists />}
           {tab == "Swidge" && <Swidge />}

@@ -57,15 +57,15 @@ function HowCoinListsWorkSection() {
     //   </div>
     // </div>
     <div>
-      <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
+      <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "83%" : "95%" }}>
         <div className="text-center mt-5 px-4 px-md-5">
           <h3 className="text-primaryTextDark fw-bold">
             <b>How does it work?</b>
           </h3>
           <p style={{ color: "#5a5b5b" }}>Follow a guided three steps process to build your diversified crypto portfolio in under 10mins!</p>
         </div>
-        <div className="row mx-5 mx-md-1 mx-xl-5 mt-5 position-relative">
-          <div className="col-12 col-md-4 px-3 px-md-0 px-xl-3">
+        <div className="row mx-0 mx-md-1 mx-xl-3 mt-5 position-relative">
+          <div className="col-12 col-md-4 px-3 px-md-0">
             <UICard>
               <div className="d-flex flex-row justify-content-between align-items-center">
                 <div>
@@ -77,7 +77,7 @@ function HowCoinListsWorkSection() {
               <p className="fs-6 text-primaryTextGray text-center text-md-start">Follow simple step-by-step guided process to create a new Web3 wallet or connect an existing wallet.</p>
             </UICard>
           </div>
-          <div className="col-12 col-md-4 px-3 px-md-0 px-xl-3">
+          <div className="col-12 col-md-4 px-3 px-md-0">
             <UICard>
               <div className="d-flex flex-row justify-content-between align-items-center">
                 <div>
@@ -89,7 +89,7 @@ function HowCoinListsWorkSection() {
               <p className="fs-6 text-primaryTextGray text-center text-md-start">Buy accepted cryptocurrencies through convenient payment methods or select from your existing funds.</p>
             </UICard>
           </div>
-          <div className="col-12 col-md-4 px-3 px-md-0 px-xl-3">
+          <div className="col-12 col-md-4 px-3 px-md-0">
             <UICard>
               <div className="d-flex flex-row justify-content-between align-items-center">
                 <div>

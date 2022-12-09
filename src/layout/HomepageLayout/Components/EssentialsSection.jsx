@@ -72,7 +72,7 @@ function EssentialsSection() {
   const [buttonText, setButtonText] = useState("Get Started");
   const NewsCard = ({ image, title, description, index, link }) => {
     return (
-      <div className="card shadow p-2" style={{ width: "18rem", zIndex: 2, marginLeft: index == 0 && width > 1700 && "280px" }}>
+      <div className="card shadow p-2" style={{ width: "18rem", zIndex: 2, marginLeft: index == 0 && width > 1700 && "280px", cursor: "pointer" }} onClick={() => window.open(link, "_blank")}>
         <img src={image} className="card-img" />
         <div className="pt-3">
           <h5 className="card-title fw-bold" style={{ height: "72px" }}>
@@ -85,10 +85,7 @@ function EssentialsSection() {
             <span style={{ color: "#5a5b5b" }}>18 mins</span>
           </div>
           <p className="card-text mt-3" style={{ color: "#5a5b5b", fontSize: "14px" }}>
-            {description} . . .{" "}
-            <span style={{ color: "#0251ff", fontWeight: "600", cursor: "pointer" }} onClick={() => window.open(link, "_blank")}>
-              read more
-            </span>
+            {description} . . . <span style={{ color: "#0251ff", fontWeight: "600" }}>read more</span>
           </p>
         </div>
       </div>

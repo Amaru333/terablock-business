@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useReducer } from "react";
-import axios from 'axios'
+import axios from "axios";
 import { useScreenSize } from "../../functions/useScreenSize";
 import UIButton from "../../widgets/UIButtons/UIButton";
 import UICard from "../../widgets/UICard/UICard";
@@ -49,7 +49,7 @@ function BuyCryptoTable() {
       market_cap: "-",
     },
   ]);
-  const [reducerValue, forceUpdate] = useReducer(x => x + 1, 0);
+  const [reducerValue, forceUpdate] = useReducer((x) => x + 1, 0);
 
   // useEffect(() => {
   //   fetchData();
@@ -62,23 +62,21 @@ function BuyCryptoTable() {
 
   useEffect(() => {
     fetchGraphData();
-    var timerID = setInterval(() => fetchData(),4000)
-    return () => clearInterval(timerID)
-  })
+    var timerID = setInterval(() => fetchData(), 4000);
+    return () => clearInterval(timerID);
+  });
 
   const fetchData = async () => {
-    const result = await axios(
-      'https://geniuseado.terablock.com/api2/coinlist?vs_currency=USD&ids=cardano,bitcoin,ethereum,polkadot,terablock',
-    );
+    const result = await axios("https://geniuseado.terablock.com/api2/coinlist?vs_currency=USD&ids=cardano,bitcoin,ethereum,polkadot,terablock");
 
     setData(result.data);
     // return true;
   };
 
   const fetchGraphData = async () => {
-    const result = await axios('https://geniuseado.terablock.com/api2/get-coins');
-    Object.entries(result.data).forEach((value, index) =>{
-      let graphData={
+    const result = await axios("https://geniuseado.terablock.com/api2/get-coins");
+    Object.entries(result.data).forEach((value, index) => {
+      let graphData = {
         labels: value[1].labels,
         datasets: [
           {
@@ -101,7 +99,7 @@ function BuyCryptoTable() {
     });
     setGraphData(graph_data);
   };
-  
+
   const lineChart = ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler, {
     id: "uniqueid",
     afterDraw: function (chart, easing) {
@@ -122,14 +120,14 @@ function BuyCryptoTable() {
       }
     },
   });
-  
-  const [graph_data,setGraphData] = useState([
+
+  const [graph_data, setGraphData] = useState([
     {
-      labels: ["8","9","10","11","12"],
+      labels: ["8", "9", "10", "11", "12"],
       datasets: [
         {
           label: "First dataset",
-          data: [100,101,98,96,103],
+          data: [100, 101, 98, 96, 103],
           fill: true,
           backgroundColor: (context) => {
             const ctx = context.chart.ctx;
@@ -142,7 +140,7 @@ function BuyCryptoTable() {
           borderWidth: 1.5,
         },
       ],
-    }
+    },
   ]);
 
   const options = {
@@ -208,7 +206,7 @@ function BuyCryptoTable() {
 
   const screenSize = useScreenSize();
   if (screenSize.width > 768) {
-    return (   
+    return (
       <div>
         {/* <div style={{ width: "100px" }}>
           <Line data={data} options={options} />
@@ -219,7 +217,7 @@ function BuyCryptoTable() {
         <UICard>
           {/* <p className="fw-bolder text-center fs-5 mt-3">Trending Market</p> */}
           <div className="row text-black border-bottom mt-3 text-center mx-4" style={{ fontWeight: "600", fontSize: "14px" }}>
-            <p className="col-3 col-md-5 mb-2 text-start">Name</p>
+            <p className="col-3 col-md-4 col-xl-5 mb-2 text-start">Name</p>
             {/* <p className="col mb-2">Symbol</p> */}
             <p className="col mb-2">Price</p>
             <p className="col mb-2">Change</p>
@@ -228,7 +226,7 @@ function BuyCryptoTable() {
           </div>
           {data?.map((data, index) => (
             <div className={`row mx-4 text-center align-items-center justify-content-center my-2 pb-2 ${index < data?.length - 1 && "border-bottom"}`} key={index}>
-              <div className="col-3 col-md-5 d-flex flex-row align-items-center">
+              <div className="col-3 col-md-4 col-xl-5 d-flex flex-row align-items-center">
                 <div>
                   <img src={data.image} style={{ width: "32px" }} className="rounded me-2" />
                 </div>
@@ -241,10 +239,13 @@ function BuyCryptoTable() {
               </div>
               {/* <p className="col mb-0 text-primaryTextGray">{data.symbol}</p> */}
               <p className="col mb-0" style={{ fontWeight: 600, color: "#1b2b6b" }}>
-                ${data?.current_price > 0 ? data?.current_price.toLocaleString(undefined, {
-                  minimumFractionDigits: 0,
-                  maximumFractionDigits: 3
-                }) : data?.current_price}
+                $
+                {data?.current_price > 0
+                  ? data?.current_price.toLocaleString(undefined, {
+                      minimumFractionDigits: 0,
+                      maximumFractionDigits: 3,
+                    })
+                  : data?.current_price}
                 {/* ${data.current_price.toLocaleString(undefined, {
                   minimumFractionDigits: 0,
                   maximumFractionDigits: 2
@@ -252,20 +253,72 @@ function BuyCryptoTable() {
               </p>
               <p className="col mb-0 d-flex justify-content-center" style={{ fontWeight: 600, color: data.price_change_percentage_24h >= 0 ? "#6cc870" : "#e33536" }}>
                 {/* <img src="/assets/icons/up-square.svg" className="me-1" /> */}
-                {data.price_change_percentage_24h >= 0 ? '+' : null}{data.price_change_percentage_24h?.toLocaleString(undefined, {
+                {data.price_change_percentage_24h >= 0 ? "+" : null}
+                {data.price_change_percentage_24h?.toLocaleString(undefined, {
                   minimumFractionDigits: 0,
-                  maximumFractionDigits: 2
-                })}%
+                  maximumFractionDigits: 2,
+                })}
+                %
               </p>
               <p className="col mb-0 text-tableDataColor d-flex justify-content-center" style={{ fontWeight: 500 }}>
                 {/* {data.market_cap} */}
                 <div style={{ width: "100px" }}>
-                  <Line key={index} data={graph_data[index]?graph_data[index]:graph_data[0]} options={options} />
+                  <Line key={index} data={graph_data[index] ? graph_data[index] : graph_data[0]} options={options} />
                   {/* <img src="" width={150} height={60} alt='' /> */}
                 </div>
               </p>
               <div className="col d-flex justify-content-center">
                 <p className="text-white mb-0" style={{ padding: "5px 35px", borderRadius: "8px", fontWeight: 600, backgroundColor: "#0251ff", cursor: "pointer" }}>
+                  Buy
+                </p>
+              </div>
+            </div>
+          ))}
+        </UICard>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <UICard>
+          <div className="row text-black border-bottom mt-3 text-center" style={{ fontWeight: "600", fontSize: "13px" }}>
+            <p className="col-2 mb-2">Name</p>
+            <p className="col mb-2">Price</p>
+            <p className="col mb-2">Change</p>
+            {/* <p className="col mb-2">Chart</p> */}
+            <p className="col mb-2">Trade</p>
+          </div>
+          {data?.map((data, index) => (
+            <div className={`row text-center align-items-center justify-content-center my-2 pb-2 ${index < data?.length - 1 && "border-bottom"}`} key={index}>
+              <div className="col-2 d-flex flex-row align-items-center">
+                <p className="mb-0" style={{ fontWeight: 400, color: "#1b2b6b", fontSize: "14px" }}>
+                  {data.symbol.toUpperCase()}
+                </p>
+              </div>
+              <p className="col mb-0" style={{ fontWeight: 600, color: "#1b2b6b" }}>
+                $
+                {data?.current_price > 0
+                  ? data?.current_price.toLocaleString(undefined, {
+                      minimumFractionDigits: 0,
+                      maximumFractionDigits: 3,
+                    })
+                  : data?.current_price}
+              </p>
+              <p className="col mb-0 d-flex justify-content-center" style={{ fontWeight: 600, color: data.price_change_percentage_24h >= 0 ? "#6cc870" : "#e33536" }}>
+                {data.price_change_percentage_24h >= 0 ? "+" : null}
+                {data.price_change_percentage_24h?.toLocaleString(undefined, {
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 2,
+                })}
+                %
+              </p>
+              {/* <p className="col mb-0 text-tableDataColor d-flex justify-content-center" style={{ fontWeight: 500 }}>
+                <div style={{ width: "100px" }}>
+                  <Line key={index} data={graph_data[index] ? graph_data[index] : graph_data[0]} options={options} />
+                </div>
+              </p> */}
+              <div className="col d-flex justify-content-center">
+                <p className="text-white mb-0" style={{ padding: "5px 20px", borderRadius: "8px", fontWeight: 600, backgroundColor: "#0251ff", cursor: "pointer", fontSize: "14px" }}>
                   Buy
                 </p>
               </div>

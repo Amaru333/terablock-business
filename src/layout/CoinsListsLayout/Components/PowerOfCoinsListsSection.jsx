@@ -1,6 +1,8 @@
 import React from "react";
+import { useScreenSize } from "../../../functions/useScreenSize";
 
 function PowerOfCoinsListsSection() {
+  const width = useScreenSize().width;
   const DescriptionCard = ({ image, title, description }) => {
     return (
       <>
@@ -100,7 +102,7 @@ function PowerOfCoinsListsSection() {
   ];
   return (
     <div className="bg-white px-0 px-md-2 px-xl-5">
-      <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
+      <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "83%" : "95%" }}>
         <div className="flex flex-column justify-content-center align-items-center pb-4">
           <h2 className="text-center pt-5 px-1 d-flex flex-column flex-md-row justify-content-center" style={{ color: "#1b2b6b" }}>
             <span>
@@ -111,8 +113,8 @@ function PowerOfCoinsListsSection() {
             Long-term investment portfolios designed by experts
           </p>
         </div>
-        <div className="row mx-5 justify-content-center">
-          <div className="col-12 col-md-6 justify-content-center align-items-center d-flex">
+        <div className="row mx-2 mx-xl-5 justify-content-center">
+          <div className="col-12 col-md-6 justify-content-center justify-content-md-start align-items-center d-flex">
             <img src="/assets/images/iphone-full.png" />
           </div>
           <div className="col-12 col-md-6 justify-content-center align-items-center d-flex">

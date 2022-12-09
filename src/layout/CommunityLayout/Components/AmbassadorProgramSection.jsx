@@ -1,7 +1,9 @@
 import React from "react";
+import { useScreenSize } from "../../../functions/useScreenSize";
 import UIButton from "../../../widgets/UIButtons/UIButton";
 
 function AmbassadorProgramSection() {
+  const width = useScreenSize().width;
   const DescCard = ({ title, desc, img }) => {
     return (
       <div className="d-flex mb-4">
@@ -48,8 +50,8 @@ function AmbassadorProgramSection() {
     },
   ];
   return (
-    <div className="bg-white px-0 px-md-2 px-xl-5 pb-5">
-      <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
+    <div className="bg-white px-0 px-md-2 px-xl-5 pb-3 pb-xl-5">
+      <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "83%" : "98%" }}>
         <div className="flex flex-column justify-content-center align-items-center pb-4">
           <h2 className="text-center pt-5 px-1 d-flex flex-column flex-md-row justify-content-center" style={{ color: "#1b2b6b" }}>
             <span>
@@ -60,7 +62,7 @@ function AmbassadorProgramSection() {
             Ambassador Program plays an essential role in making DeFi accessible to the masses. It comes with several perks and benefits.
           </p>
         </div>
-        <div className="row mx-5 justify-content-center">
+        <div className="row mx-2 justify-content-center">
           <div className="col-12 col-md-6 justify-content-center align-items-center d-flex">
             <img src="/assets/images/iphone-full.png" />
           </div>
@@ -107,7 +109,7 @@ export default AmbassadorProgramSection;
 //   };
 //   return (
 //     <div className="bg-white py-5">
-//       <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
+//       <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : "83%" }}>
 //         <div className="text-center mt-5 px-4 px-md-5">
 //           <h3 className="text-primaryTextDark fw-bold">
 //             <b>

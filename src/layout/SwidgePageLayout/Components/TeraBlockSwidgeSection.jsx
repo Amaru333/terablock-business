@@ -83,8 +83,8 @@ function TeraBlockSwidgeSection() {
         </h3>
         <p className="text-white">Follow a guided three steps process to onboard a Dapp in under 5 mins.</p>
       </div>
-      <div className="py-4" style={{ maxWidth: "1500px", margin: "auto" }}>
-        <div className="row mx-3 mx-md-1 mx-xl-5 mt-5 position-relative">
+      <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "71%" : width > 940 ? "84%" : "96%" }}>
+        <div className="row mx-3 mx-md-0 mt-5 position-relative">
           <div className="col-12 col-md-4 px-3 px-md-0 px-xl-3">
             <UICard>
               <div className="d-flex flex-row justify-content-between align-items-center">
