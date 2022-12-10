@@ -9,27 +9,27 @@ function RecentNewsSection() {
   const news_details = [
     {
       image: "/assets/images/learn-image-1.png",
-      title: "What is Bitcoin & Etherium?",
+      title: "What is Bitcoin & Ethereum?",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
     },
     {
       image: "/assets/images/learn-image-1.png",
-      title: "What is Bitcoin & Etherium?",
+      title: "What is Bitcoin & Ethereum?",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
     },
     {
       image: "/assets/images/learn-image-1.png",
-      title: "What is Bitcoin & Etherium?",
+      title: "What is Bitcoin & Ethereum?",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
     },
     {
       image: "/assets/images/learn-image-1.png",
-      title: "What is Bitcoin & Etherium?",
+      title: "What is Bitcoin & Ethereum?",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
     },
     {
       image: "/assets/images/learn-image-1.png",
-      title: "What is Bitcoin & Etherium?",
+      title: "What is Bitcoin & Ethereum?",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
     },
   ];

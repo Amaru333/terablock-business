@@ -199,7 +199,6 @@ function ProductsSection() {
             <li>Market Sentiments from LunarCrush.</li>
             <li>TeraBlock Swap is non-custodial, so your funds are always in your control.</li>
             <li>Fully transparent, all the transactions are publicly available on the blockchain explorers.</li>
-            <li>Swap content needs updating.</li>
           </ul>
           <div className="mt-3 d-flex justify-content-center justify-content-md-start">
             <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>

@@ -16,7 +16,7 @@ function EssentialsSection() {
     },
     {
       image: "/assets/images/learn-image-2.png",
-      title: "What is Etherium?",
+      title: "What is Ethereum?",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
       link: "https://blog.terablock.com/what-is-ethereum/",
     },
