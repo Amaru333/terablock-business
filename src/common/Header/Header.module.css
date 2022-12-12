@@ -26,6 +26,12 @@
   border: none;
 }
 
+.button_mobile {
+  background-color: #0052ff;
+  border-radius: 5px;
+  border: none;
+}
+
 .button_primary {
   border-radius: 8px;
 }

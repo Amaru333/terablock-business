@@ -69,8 +69,8 @@ function Header() {
       <div className="d-flex justify-content-between px-3 py-3 bg-white" style={{ boxShadow: "0px 2px 20px 0px rgba(0, 0, 0, 0.15)" }}>
         <img src="/assets/icons/logo-blue.svg" className="pe-2" style={{ cursor: "pointer" }} onClick={() => router.push("/")} />
         <div className="d-flex align-items-center">
-          <button className={["bg-primaryBlue text-white px-4 py-2 mx-2", HeaderStyle.button, HeaderStyle.button_primary].join(" ")}>
-            <p className="mb-0 fs-6" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+          <button className={["bg-primaryBlue text-white px-4 py-2 mx-2", HeaderStyle.button_mobile, HeaderStyle.button_primary].join(" ")}>
+            <p className="mb-0" style={{ fontSize: "14px" }} onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
               {buttonText}
             </p>
           </button>

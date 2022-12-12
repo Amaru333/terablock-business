@@ -207,7 +207,7 @@ function InvestmentGraph() {
               <div className={InvestmentGraphStyle.circle} style={{ backgroundColor: "rgba(37, 74, 199, 0.6)" }}></div>
             </div>
             <div className="ms-2 d-flex flex-column justify-content-between">
-              <p className="mb-0 fs-6 text-investmentGraphBg">Crypto Investing account after 5 years</p>
+              <p className="mb-0 fs-6 text-investmentGraphBg">CoinsList account after 5 years</p>
               <p className="mb-0 fs-5">$58,000</p>
             </div>
           </div> */}

@@ -12,9 +12,9 @@ function IntroSection() {
       <div className={`px-xl-5`}>
         {/* <div style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : "83%" }}> */}
         <div style={{ width: width > 1499 ? "81%" : "100%", margin: "auto", maxWidth: "1700px" }}>
-          <div className={`row mx-0 px-sm-4 px-md-2 pt-4`}>
+          <div className={`row mx-0 px-sm-4 px-md-2 pt-0 pt-md-4`}>
             <div className="col-12 col-md-8 align-self-center">
-              <div className="d-flex flex-column mb-3" style={{ width: "fit-content" }}>
+              <div className="d-flex flex-column mb-3 m-auto m-md-0" style={{ width: "fit-content" }}>
                 <div className="d-flex align-items-center">
                   <div>
                     <img src="/assets/icons/homepage/notif.png" style={{ width: "16px" }} />

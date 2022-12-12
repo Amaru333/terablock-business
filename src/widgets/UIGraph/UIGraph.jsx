@@ -291,6 +291,10 @@ function UIGraph(multiplier) {
       ],
     },
   ];
+  let max_five = graph_data.map((b) => Math.max(...b.price.map((o) => o.five_year)));
+  let max_saving = graph_data.map((b) => Math.max(...b.price.map((o) => o.saving)));
+  let max_num = Math.max(...max_five, ...max_saving);
+  let max_height_break = max_num / 200;
   const width = useScreenSize().width;
 
   const formatter = new Intl.NumberFormat("en-US", {
@@ -317,7 +321,7 @@ function UIGraph(multiplier) {
             <div className={UIGraphStyle.circle} style={{ backgroundColor: "rgba(37, 74, 199, 0.6)" }}></div>
           </div>
           <div className="ms-2 d-flex flex-column justify-content-between">
-            <p className="mb-0 fs-6 text-black fw-bold">Crypto Investing account after 5 years</p>
+            <p className="mb-0 fs-6 text-black fw-bold">CoinsList account after 5 years</p>
             <p className="mb-0 fs-5 fw-bold" style={{ color: "#0251ff" }}>
               {formatter.format((22139.9319 * multiplier.multiplier).toFixed(2))}
             </p>
@@ -332,23 +336,23 @@ function UIGraph(multiplier) {
                 {each_data.price.map((price, index) => (
                   <>
                     {width > 1280 && (
-                      <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / 400}px` }}>
-                        <div className={UIGraphStyle.savings} style={{ height: `${price.saving / 400}px` }}></div>
+                      <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
+                        <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
                       </div>
                     )}
                     {width < 1281 && width > 940 && index % 3 != 1 && (
-                      <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / 400}px` }}>
-                        <div className={UIGraphStyle.savings} style={{ height: `${price.saving / 400}px` }}></div>
+                      <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
+                        <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
                       </div>
                     )}
                     {width < 901 && width > 768 && index % 2 != 1 && (
-                      <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / 400}px` }}>
-                        <div className={UIGraphStyle.savings} style={{ height: `${price.saving / 400}px` }}></div>
+                      <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
+                        <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
                       </div>
                     )}
                     {width < 769 && index % 4 == 1 && (
-                      <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / 400}px` }}>
-                        <div className={UIGraphStyle.savings} style={{ height: `${price.saving / 400}px` }}></div>
+                      <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
+                        <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
                       </div>
                     )}
                   </>
