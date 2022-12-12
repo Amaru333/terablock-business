@@ -306,6 +306,17 @@ function UIGraph(multiplier) {
             <div className={UIGraphStyle.circle}></div>
           </div>
           <div className="ms-2 d-flex flex-column justify-content-between">
+            <p className="mb-0 fs-6 text-black fw-bold">Monthly Deposit</p>
+            <p className="mb-0 fs-5 fw-bold" style={{ color: "#0251ff" }}>
+              {formatter.format((0.00+ 100* multiplier.multiplier).toFixed(2))}
+            </p>
+          </div>
+        </div>
+        <div className={["bg-white me-3 px-2 py-3 rounded", UIGraphStyle.flex].join(" ")}>
+          <div>
+            <div className={UIGraphStyle.circle}></div>
+          </div>
+          <div className="ms-2 d-flex flex-column justify-content-between">
             <p className="mb-0 fs-6 text-black fw-bold">Savings account</p>
             <p className="mb-0 fs-5 fw-bold" style={{ color: "#0251ff" }}>
               {formatter.format((6648.7211 * multiplier.multiplier).toFixed(2))}
@@ -317,7 +328,7 @@ function UIGraph(multiplier) {
             <div className={UIGraphStyle.circle} style={{ backgroundColor: "rgba(37, 74, 199, 0.6)" }}></div>
           </div>
           <div className="ms-2 d-flex flex-column justify-content-between">
-            <p className="mb-0 fs-6 text-black fw-bold">Crypto Investing account after 5 years</p>
+            <p className="mb-0 fs-6 text-black fw-bold">CoinsList account after 5 years</p>
             <p className="mb-0 fs-5 fw-bold" style={{ color: "#0251ff" }}>
               {formatter.format((22139.9319 * multiplier.multiplier).toFixed(2))}
             </p>
