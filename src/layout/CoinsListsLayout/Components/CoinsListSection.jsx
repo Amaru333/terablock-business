@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import CoinsListCard from "../../../common/Cards/CoinsListCard";
 import { useScreenSize } from "../../../functions/useScreenSize";
 import UIButton from "../../../widgets/UIButtons/UIButton";
@@ -8,44 +8,47 @@ function CoinsListSection() {
   const width = useScreenSize().width;
 
   const CoinListCard = ({ data }) => {
+    const [cardButtonText, setCardButtonText] = useState("View CoinsLists");
     return (
-      <UICard>
-        <div className="d-flex align-items-center">
-          <div style={{ width: "5%" }}>
-            <img src={data.image} style={{ width: "60px" }} />
-          </div>
-          <div className="ms-3" style={{ width: "40%" }}>
-            <div>
-              <div className="d-flex justify-content-between align-items-center">
-                <p className="fw-bold text-primaryDark mb-0" style={{ fontSize: "18px" }}>
-                  {data.title}
-                </p>
+      <>
+        {width > 767 ? (
+          <UICard>
+            <div className="d-flex align-items-center">
+              <div style={{ width: "5%" }}>
+                <img src={data.image} style={{ width: "60px" }} />
               </div>
-              <p className="text-cardDescriptionColor mb-0">{data.description}</p>
-            </div>
-          </div>
-          <div className="d-flex justify-content-center align-items-center" style={{ width: "20%" }}>
-            {data.coin_images.map((image, index) => (
-              <div>
-                <img src={image} className="me-2 me-md-3" key={index} style={{ width: "32px" }} />
+              <div className="ms-3" style={{ width: "40%" }}>
+                <div>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <p className="fw-bold text-primaryDark mb-0" style={{ fontSize: "18px" }}>
+                      {data.title}
+                    </p>
+                  </div>
+                  <p className="text-cardDescriptionColor mb-0">{data.description}</p>
+                </div>
               </div>
-            ))}
-          </div>
-          <div style={{ width: "15%" }}>
-            <div className="d-flex justify-content-evenly text-center align-items-center">
-              <div>
-                <p className="text-primaryTextGray mb-1" style={{ fontSize: "12px", fontWeight: "500" }}>
-                  Min. Amount
-                </p>
-                <p className="fw-bold text-primaryDark mb-0">{data.min_amount}</p>
+              <div className="d-flex justify-content-center align-items-center" style={{ width: "20%" }}>
+                {data.coin_images.map((image, index) => (
+                  <div>
+                    <img src={image} className="me-2 me-md-3" key={index} style={{ width: "32px" }} />
+                  </div>
+                ))}
               </div>
-              <div>
-                <p className="text-primaryTextGray mb-1" style={{ fontSize: "12px", fontWeight: "500" }}>
-                  {data.apr}Yr. APR
-                </p>
-                <p className="fw-bold text-success mb-0">{data.cagr}</p>
-              </div>
-              {/* {width > 1000 ? (
+              <div style={{ width: "15%" }}>
+                <div className="d-flex justify-content-evenly text-center align-items-center">
+                  <div>
+                    <p className="text-primaryTextGray mb-1" style={{ fontSize: "12px", fontWeight: "500" }}>
+                      Min. Amount
+                    </p>
+                    <p className="fw-bold text-primaryDark mb-0">{data.min_amount}</p>
+                  </div>
+                  <div>
+                    <p className="text-primaryTextGray mb-1" style={{ fontSize: "12px", fontWeight: "500" }}>
+                      {data.apr}Yr. APR
+                    </p>
+                    <p className="fw-bold text-success mb-0">{data.cagr}</p>
+                  </div>
+                  {/* {width > 1000 ? (
               <div className="d-flex align-items-center">
                 <div style={{ display: "flex", padding: "10px", borderRadius: "4px", borderWidth: "1px", borderColor: data.volatile == "High" ? "rgba(255, 153, 153, 0.48)" : data.volatile == "Med" ? "rgba(224, 166, 16, 0.32)" : "rgba(0, 174, 38, 0.32)", borderStyle: "solid" }}>
                   <img src={`/assets/images/coinslists/${data.volatile}-volatile.svg`} style={{ width: "14px" }} />
@@ -57,13 +60,63 @@ function CoinsListSection() {
             ) : (
               <div style={{ width: "3rem" }}></div>
             )} */}
+                </div>
+              </div>
+              <div style={{ width: "20%", margin: "auto", display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <UIButton onMouseOver={() => setCardButtonText("Coming Soon")} onMouseOut={() => setCardButtonText("View CoinsLists")}>
+                  {cardButtonText}
+                </UIButton>
+              </div>
             </div>
+          </UICard>
+        ) : (
+          <div className="mx-2">
+            <UICard>
+              <div className="d-flex">
+                <div>
+                  <img src={data.image} style={{ width: "60px" }} />
+                </div>
+                <div className="ms-2">
+                  <div className="d-flex justify-content-between align-items-center">
+                    <p className="fw-bold text-primaryDark mb-0" style={{ fontSize: "18px" }}>
+                      {data.title}
+                    </p>
+                  </div>
+                  <p className="text-cardDescriptionColor mb-0" style={{ fontSize: "14px" }}>
+                    {data.description}
+                  </p>
+                </div>
+              </div>
+              <div className="py-3 d-flex justify-content-between">
+                <div>
+                  <p className="text-primaryTextGray mb-1" style={{ fontSize: "12px", fontWeight: "500" }}>
+                    Min. Amount
+                  </p>
+                  <p className="fw-bold text-primaryDark mb-0">{data.min_amount}</p>
+                </div>
+                <div>
+                  <p className="text-primaryTextGray mb-1" style={{ fontSize: "12px", fontWeight: "500" }}>
+                    {data.apr}Yr. APR
+                  </p>
+                  <p className="fw-bold text-success mb-0">{data.cagr}</p>
+                </div>
+                <div className="d-flex justify-content-start align-items-center">
+                  {data.coin_images.map((image, index) => (
+                    <div>
+                      <img src={image} className="me-2 me-md-3" key={index} style={{ width: "32px" }} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div style={{ width: "70%", margin: "auto", display: "flex", justifyContent: "center", alignItems: "center", paddingBottom: "1rem" }}>
+                <UIButton onMouseOver={() => setCardButtonText("Coming Soon")} onMouseOut={() => setCardButtonText("View CoinsLists")}>
+                  {cardButtonText}
+                </UIButton>
+              </div>
+            </UICard>
           </div>
-          <div style={{ width: "20%", margin: "auto", display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <UIButton>View CoinsList</UIButton>
-          </div>
-        </div>
-      </UICard>
+        )}
+      </>
     );
   };
 

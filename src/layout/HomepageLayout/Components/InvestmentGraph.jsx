@@ -166,6 +166,8 @@ function InvestmentGraph() {
     volatile: "Low",
   };
 
+  const [cardButtonText, setCardButtonText] = useState("View CoinsList");
+
   return (
     <div>
       <div className="flex flex-column justify-content-center align-items-center pb-4 pt-5" style={{ backgroundColor: "#0251ff" }}>
@@ -260,7 +262,9 @@ function InvestmentGraph() {
                     </div>
                   </div>
                   <div style={{ width: "20%", margin: "auto", display: "flex", justifyContent: "center", alignItems: "center" }}>
-                    <UIButton>View CoinsList</UIButton>
+                    <UIButton onMouseOver={() => setCardButtonText("Coming Soon")} onMouseOut={() => setCardButtonText("View CoinsLists")}>
+                      {cardButtonText}
+                    </UIButton>
                   </div>
                 </div>
               </UICard>
@@ -305,7 +309,9 @@ function InvestmentGraph() {
                   </div>
                 </div>
                 <div style={{ width: "70%", margin: "auto", display: "flex", justifyContent: "center", alignItems: "center", paddingBottom: "1rem" }}>
-                  <UIButton>View CoinsList</UIButton>
+                  <UIButton onMouseOver={() => setCardButtonText("Coming Soon")} onMouseOut={() => setCardButtonText("View CoinsLists")}>
+                    {cardButtonText}
+                  </UIButton>
                 </div>
               </UICard>
             </div>

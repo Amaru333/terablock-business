@@ -20,7 +20,7 @@ function IntroSection() {
                     <img src="/assets/icons/homepage/notif.png" style={{ width: "16px" }} />
                   </div>
                   <div>
-                    <p className="mb-0 mx-2 fw-medium" style={{ color: "#0251ff" }}>
+                    <p className="mb-0 mx-2 fw-medium text-center text-md-start" style={{ color: "#0251ff" }}>
                       Your crypto in your control
                     </p>
                   </div>
