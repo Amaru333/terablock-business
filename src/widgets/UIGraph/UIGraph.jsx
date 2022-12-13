@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { abbreviateNumber } from "../../functions/abbreviateNumber";
 import { useScreenSize } from "../../functions/useScreenSize";
 import UIGraphStyle from "./UIGraph.module.css";
+import UITooltip from "../UITooltip/UITooltip";
 
 function UIGraph(multiplier) {
   const graph_data = [
@@ -303,6 +304,11 @@ function UIGraph(multiplier) {
     currency: "USD",
     maximumFractionDigits: 0,
   });
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
   return (
     <div className="bg-white rounded px-3 px-sm-4 px-md-5 pt-3 pb-4 pb-md-5 justify-content-center shadow" style={{ width: "100%", margin: width > 767 ? "auto" : "auto" }}>
       <div className="d-flex pb-5">
@@ -343,34 +349,44 @@ function UIGraph(multiplier) {
       <div className="d-flex justify-content-center">
         <div className="d-flex flex-column">
           <div className="d-flex align-items-end w-full">
-            {graph_data.map((each_data) => (
+            {graph_data.map((each_data, gI) => (
               <>
                 {each_data.price.map((price, index) => (
                   <>
                     {width > 1800 && (
-                      <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
-                        <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
-                      </div>
+                      <UITooltip content={`<p>Savings: ${formatter.format(price.saving)}</p><p>Five years: ${formatter.format(price.five_year)}</p>`}>
+                        <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
+                          <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
+                        </div>
+                      </UITooltip>
                     )}
                     {width < 1801 && width > 1280 && index % 6 != 1 && (
-                      <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
-                        <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
-                      </div>
+                      <UITooltip content={`<p>Savings: ${formatter.format(price.saving)}</p><p>Five years: ${formatter.format(price.five_year)}</p>`} topRight={gI > graph_data.length / 2 ? true : false}>
+                        <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
+                          <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
+                        </div>
+                      </UITooltip>
                     )}
                     {width < 1281 && width > 940 && index % 3 != 1 && (
-                      <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
-                        <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
-                      </div>
+                      <UITooltip content={`<p>Savings: ${formatter.format(price.saving)}</p><p>Five years: ${formatter.format(price.five_year)}</p>`} topRight={gI > graph_data.length / 2 ? true : false}>
+                        <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
+                          <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
+                        </div>
+                      </UITooltip>
                     )}
                     {width < 941 && width > 767 && index % 2 != 1 && (
-                      <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
-                        <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
-                      </div>
+                      <UITooltip content={`<p>Savings: ${formatter.format(price.saving)}</p><p>Five years: ${formatter.format(price.five_year)}</p>`} topRight={gI > graph_data.length / 2 ? true : false}>
+                        <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
+                          <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
+                        </div>
+                      </UITooltip>
                     )}
                     {width < 768 && index % 4 == 1 && (
-                      <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
-                        <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
-                      </div>
+                      <UITooltip content={`<p>Savings: ${formatter.format(price.saving)}</p><p>Five years: ${formatter.format(price.five_year)}</p>`} topRight={gI > graph_data.length / 2 ? true : false}>
+                        <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
+                          <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
+                        </div>
+                      </UITooltip>
                     )}
                   </>
                 ))}
