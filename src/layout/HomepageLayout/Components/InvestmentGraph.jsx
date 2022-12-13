@@ -270,7 +270,7 @@ function InvestmentGraph() {
               </UICard>
             </div>
           ) : (
-            <div className="mx-2">
+            <div className="mx-3">
               <UICard>
                 <div className="d-flex">
                   <div>
