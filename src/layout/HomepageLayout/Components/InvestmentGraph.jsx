@@ -326,8 +326,10 @@ function InvestmentGraph() {
         </div>
         {/* </div> */}
       </div>
-      <div className={["p-0 p-sm-1 p-md-4 pt-0", InvestmentGraphStyle.graph_background].join(" ")}>
-        <UIGraph multiplier={value} />
+      <div className={["p-0 pt-0 mb-3", InvestmentGraphStyle.graph_background].join(" ")}>
+        <div style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "66%" : width > 940 ? "76%" : "90%" }}>
+          <UIGraph multiplier={value} />
+        </div>
       </div>
       <div>
         <p className={["text-black m-auto text-center px-3 px-xl-0", InvestmentGraphStyle.half_container].join(" ")} style={{ maxWidth: "1000px" }}>

@@ -1,4 +1,5 @@
 import React from "react";
+import { abbreviateNumber } from "../../functions/abbreviateNumber";
 import { useScreenSize } from "../../functions/useScreenSize";
 import UIGraphStyle from "./UIGraph.module.css";
 
@@ -303,7 +304,7 @@ function UIGraph(multiplier) {
     maximumFractionDigits: 0,
   });
   return (
-    <div className="bg-white rounded px-3 px-sm-4 px-md-5 pt-3 pb-4 pb-md-5 justify-content-center shadow" style={{ width: "fit-content", margin: width > 767 ? "auto" : "0 0.5rem 1rem 0.5rem" }}>
+    <div className="bg-white rounded px-3 px-sm-4 px-md-5 pt-3 pb-4 pb-md-5 justify-content-center shadow" style={{ width: "100%", margin: width > 767 ? "auto" : "auto" }}>
       <div className="d-flex pb-5">
         <div className={["bg-white me-3 px-2 py-3 rounded", UIGraphStyle.flex].join(" ")}>
           <div>
@@ -312,7 +313,7 @@ function UIGraph(multiplier) {
           <div className="ms-2 d-flex flex-column justify-content-between">
             <p className="mb-0 fs-6 text-black fw-bold">Monthly Deposit</p>
             <p className="mb-0 fs-5 fw-bold" style={{ color: "#0251ff" }}>
-              {formatter.format((0.00+ 100* multiplier.multiplier).toFixed(2))}
+              {width > 767 ? formatter.format((0.0 + 100 * multiplier.multiplier).toFixed(2)) : <>${abbreviateNumber(0.0 + 100 * multiplier.multiplier)}</>}
             </p>
           </div>
         </div>
@@ -323,7 +324,7 @@ function UIGraph(multiplier) {
           <div className="ms-2 d-flex flex-column justify-content-between">
             <p className="mb-0 fs-6 text-black fw-bold">Savings account</p>
             <p className="mb-0 fs-5 fw-bold" style={{ color: "#0251ff" }}>
-              {formatter.format((6648.7211 * multiplier.multiplier).toFixed(2))}
+              {width > 767 ? formatter.format((6648.7211 * multiplier.multiplier).toFixed(2)) : <>${abbreviateNumber(multiplier.multiplier * 6648)}</>}
             </p>
           </div>
         </div>
@@ -334,14 +335,14 @@ function UIGraph(multiplier) {
           <div className="ms-2 d-flex flex-column justify-content-between">
             <p className="mb-0 fs-6 text-black fw-bold">CoinsList account after 5 years</p>
             <p className="mb-0 fs-5 fw-bold" style={{ color: "#0251ff" }}>
-              {formatter.format((22139.9319 * multiplier.multiplier).toFixed(2))}
+              {width > 767 ? formatter.format((22139.9319 * multiplier.multiplier).toFixed(2)) : <>${abbreviateNumber(multiplier.multiplier * 22139)}</>}
             </p>
           </div>
         </div>
       </div>
       <div className="d-flex justify-content-center">
         <div className="d-flex flex-column">
-          <div className="d-flex align-items-end">
+          <div className="d-flex align-items-end w-full">
             {graph_data.map((each_data) => (
               <>
                 {each_data.price.map((price, index) => (
@@ -356,12 +357,12 @@ function UIGraph(multiplier) {
                         <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
                       </div>
                     )}
-                    {width < 901 && width > 768 && index % 2 != 1 && (
+                    {width < 941 && width > 767 && index % 2 != 1 && (
                       <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
                         <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
                       </div>
                     )}
-                    {width < 769 && index % 4 == 1 && (
+                    {width < 768 && index % 4 == 1 && (
                       <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
                         <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
                       </div>

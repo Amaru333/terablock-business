@@ -69,10 +69,11 @@ function EssentialsSection() {
       link: "https://blog.terablock.com/everything-you-need-to-know-about-gas/",
     },
   ];
+  // width: width > 1499 ? "71%" : width > 940 ? "83%" : "98%"
   const [buttonText, setButtonText] = useState("Get Started");
   const NewsCard = ({ image, title, description, index, link }) => {
     return (
-      <div className="card shadow p-2" style={{ width: "18rem", zIndex: 2, marginLeft: index == 0 && width > 1700 && "280px", cursor: "pointer" }} onClick={() => window.open(link, "_blank")}>
+      <div className="card shadow p-2" style={{ width: "18rem", zIndex: 2, marginLeft: index == 0 && width > 1499 ? `${(14 * width) / 100}px` : index == 0 && width > 940 ? `${(7 * width) / 100}px` : index == 0 && `0px`, cursor: "pointer" }} onClick={() => window.open(link, "_blank")}>
         <img src={image} className="card-img" />
         <div className="pt-3">
           <h5 className="card-title fw-bold" style={{ height: "72px" }}>

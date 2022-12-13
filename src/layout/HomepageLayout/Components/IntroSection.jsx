@@ -3,6 +3,7 @@ import { useScreenSize } from "../../../functions/useScreenSize";
 import UIButton from "../../../widgets/UIButtons/UIButton";
 import IntroSectionStyles from "../Styles/IntroSection.module.css";
 import CountUp from "react-countup";
+import { abbreviateNumber } from "../../../functions/abbreviateNumber";
 
 function IntroSection() {
   const width = useScreenSize().width;
@@ -72,7 +73,7 @@ function IntroSection() {
         <div className="py-4 row px-4 py-4 justify-content-center" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : "83%" }}>
           <div className="py-4 col col-md">
             <p className="mb-0 text-center text-white" style={{ fontSize: "20pt", fontWeight: "600" }}>
-              $<CountUp duration={2} end={20000} separator="," />
+              ${width > 767 ? <CountUp duration={2} end={20000} separator="," /> : abbreviateNumber(20000)}
             </p>
             <p className="mb-0 text-center text-white" style={{ fontSize: "12pt" }}>
               Transaction Volume
@@ -80,7 +81,7 @@ function IntroSection() {
           </div>
           <div className="py-4 col col-md">
             <p className="mb-0 text-center text-white" style={{ fontSize: "20pt", fontWeight: "600" }}>
-              <CountUp duration={2} end={2234000000} separator="," />
+              {width > 767 ? <CountUp duration={2} end={2234000000} separator="," /> : abbreviateNumber(2234000000)}
             </p>
             <p className="mb-0 text-center text-white" style={{ fontSize: "12pt" }}>
               Tokens Transacted
@@ -88,7 +89,7 @@ function IntroSection() {
           </div>
           <div className="py-4 col col-md">
             <p className="mb-0 text-center text-white" style={{ fontSize: "20pt", fontWeight: "600" }}>
-              <CountUp duration={2} end={25000} separator="," />
+              {width > 767 ? <CountUp duration={2} end={25000} separator="," /> : abbreviateNumber(25000)}
             </p>
             <p className="mb-0 text-center text-white" style={{ fontSize: "12pt" }}>
               Secure Transactions
@@ -96,7 +97,7 @@ function IntroSection() {
           </div>
           <div className="py-4 col col-md">
             <p className="mb-0 text-center text-white" style={{ fontSize: "20pt", fontWeight: "600" }}>
-              <CountUp duration={2} end={8000} separator="," />
+              {width > 767 ? <CountUp duration={2} end={8000} separator="," /> : abbreviateNumber(8000)}
             </p>
             <p className="mb-0 text-center text-white" style={{ fontSize: "12pt" }}>
               Happy Users

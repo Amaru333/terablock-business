@@ -188,8 +188,8 @@ function CoinsListSection() {
         </h3>
         <p className="fs-6">Looking to start with small investment? Bullish on Metaverse? Choose from diversified CoinsLists.</p>
       </div>
-      <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "73%" : "86%" }}>
-        <div className="row mx-3 mx-md-4">
+      <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "73%" : width > 940 ? "86%" : "96%" }}>
+        <div className="row mx-0 mx-md-4">
           {coinlist_data.map((data, index) => (
             <div className="col-12" key={index}>
               <CoinListCard data={data} />
