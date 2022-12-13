@@ -347,7 +347,12 @@ function UIGraph(multiplier) {
               <>
                 {each_data.price.map((price, index) => (
                   <>
-                    {width > 1280 && (
+                    {width > 1800 && (
+                      <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
+                        <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
+                      </div>
+                    )}
+                    {width < 1801 && width > 1280 && index % 6 != 1 && (
                       <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
                         <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
                       </div>
