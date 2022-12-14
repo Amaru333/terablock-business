@@ -56,11 +56,11 @@ function ImportantContactsSection() {
     <div className="pb-5 px-0 px-md-2 px-xl-5">
       <div className="position-relative py-5">
         <div className="text-center mb-2 px-3">
-          <h3 className="text-primaryTextDark fw-bold">
+          <h2 className="text-primaryTextDark fw-bold">
             <b>
               Important Contacts<span className="text-primaryViolet">.</span>
             </b>
-          </h3>
+          </h2>
           <p className="text-primaryTextGray">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
         <div className="row mx-2 mx-md-5 px-1 justify-content-center">

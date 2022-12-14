@@ -11,12 +11,12 @@ function FAQSection() {
     <div className="pb-5 position-relative" style={{ backgroundColor: "#0251ff" }}>
       <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "77%" : width > 940 ? "83%" : "95%" }}>
         <div className="text-center pt-5 px-4 px-md-5 mx-0 mx-md-5 pb-3">
-          <h3 className="text-white fw-bold">
+          <h2 className="text-white fw-bold">
             <b>Frequently asked questions</b>
-          </h3>
+          </h2>
         </div>
         <div className="mx-2 px-2 mx-md-5 px-md-5">
-          <UIAccordion index={1} expanded title="What is a Defi (Decentralized Finance)?" homepage>
+          <UIAccordion index={1} title="What is a Defi (Decentralized Finance)?" homepage>
             DeFi or Decentralised finance, manages financial transactions using cryptocurrencies and blockchain technology. By displacing centralised institutions with peer-to-peer networks that can offer the whole range of financial services, from standard banking, loans, and mortgages, to complex contractual arrangements and asset trading, DeFi
             seeks to democratise finance.
             <br />

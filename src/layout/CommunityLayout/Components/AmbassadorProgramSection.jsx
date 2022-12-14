@@ -53,10 +53,8 @@ function AmbassadorProgramSection() {
     <div className="bg-white px-0 px-md-2 px-xl-5 pb-3 pb-xl-5">
       <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "83%" : "98%" }}>
         <div className="flex flex-column justify-content-center align-items-center pb-4">
-          <h2 className="text-center pt-5 px-1 d-flex flex-column flex-md-row justify-content-center" style={{ color: "#1b2b6b" }}>
-            <span>
-              <b>Ambassador Program</b>
-            </span>
+          <h2 className="text-center pt-5 px-1 d-flex flex-column flex-md-row justify-content-center fw-bold" style={{ color: "#1b2b6b" }}>
+            <b>Ambassador Program</b>
           </h2>
           <p className="text-center" style={{ color: "#5a5b5b" }}>
             Ambassador Program plays an essential role in making DeFi accessible to the masses. It comes with several perks and benefits.
@@ -111,11 +109,11 @@ export default AmbassadorProgramSection;
 //     <div className="bg-white py-5">
 //       <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : "83%" }}>
 //         <div className="text-center mt-5 px-4 px-md-5">
-//           <h3 className="text-primaryTextDark fw-bold">
+//           <h2 className="text-primaryTextDark fw-bold">
 //             <b>
 //               Ambassador Program<span className="text-primaryViolet">.</span>
 //             </b>
-//           </h3>
+//           </h2>
 //           <p className="text-primaryTextGray mb-0">
 //             TeraBlock Ambassador Program comes with several perks and ways to get involved in the Community and contribute towards our goal of making DeFi easy for everyone! Our ambassadors would get priority access to our products, offerings, and giveaways, along with the opportunity to get deeply involved in our day-to-day operations.
 //           </p>

@@ -380,9 +380,9 @@ function ProductsSection() {
     <div className="mt-5 pt-5 pb-5 bg-white">
       <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "83%" : "95%" }}>
         <div className="text-center mb-2 px-4 px-md-2">
-          <h3 className="text-primaryTextDark fw-bolder">
+          <h2 className="text-primaryTextDark fw-bolder">
             <b>Powerful products for Web3</b>
-          </h3>
+          </h2>
           <p className="text-primaryTextGray">A suite of progressive and advanced tools to help you interact with Web3 on a unified platform</p>
         </div>
         <div className="mb-5 px-2 px-md-0">

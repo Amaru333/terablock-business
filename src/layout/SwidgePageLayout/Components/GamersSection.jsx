@@ -10,9 +10,9 @@ function GamersSection() {
   return (
     <div className="py-5 bg-white px-0">
       <div className="text-center mb-2 px-3">
-        <h3 className="text-primaryTextDark fw-bold pt-5">
+        <h2 className="text-primaryTextDark fw-bold pt-5">
           <b>Onboard a Dapp in less than 5 mins!</b>
-        </h3>
+        </h2>
         <p className="fs-6" style={{ color: "#5a5b5b" }}>
           Cutting-edge onboarding solution to eliminate the complexities while onboarding decentralised applications (Dapps).
         </p>

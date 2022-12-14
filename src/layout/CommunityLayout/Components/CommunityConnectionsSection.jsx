@@ -53,9 +53,9 @@ function CommunityConnectionsSection() {
     <div style={{ backgroundColor: "#214ff4" }}>
       <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "83%" : "96%" }}>
         <div className="text-center pt-5 px-4 px-md-0">
-          <h3 className="text-white" style={{ fontWeight: "500" }}>
+          <h2 className="text-white fw-bold" style={{ fontWeight: "500" }}>
             <b>Connect with the global community</b>
-          </h3>
+          </h2>
           <p className="text-white mb-3">Getting in touch has never been easier! Contact us on any of our channels to start the conversation.</p>
         </div>
         <div className="row mx-2 mx-md-2 mt-5">

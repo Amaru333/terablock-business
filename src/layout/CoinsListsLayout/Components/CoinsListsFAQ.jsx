@@ -11,12 +11,12 @@ function CoinsListsFAQ() {
     <div className="pb-5 position-relative px-0 px-md-2 px-xl-5" style={{ backgroundColor: "#0251ff" }}>
       <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "83%" : "95%" }}>
         <div className="text-center pt-5 px-4 px-md-5 mx-0 mx-md-5 pb-3">
-          <h3 className="text-white fw-bold">
+          <h2 className="text-white fw-bold">
             <b>Frequently asked questions</b>
-          </h3>
+          </h2>
         </div>
         <div className="mx-2 px-2 mx-md-5 px-md-5">
-          <UIAccordion index={1} expanded title="Can I buy CoinsList as Systematic Investment Plan (SIP)?" homepage>
+          <UIAccordion index={1} title="Can I buy CoinsList as Systematic Investment Plan (SIP)?" homepage>
             In a CoinsList, you can purchase and begin a SIP with only one click. While purchasing the CoinsList, you will notice a button to begin SIP. On the due date, we'll give you a platform-based notification and an email as a reminder; all you have to do is confirm your payment, and you're done. SIP prices begin at only $100!
           </UIAccordion>
           <UIAccordion index={2} title="What is rebalancing?" homepage>

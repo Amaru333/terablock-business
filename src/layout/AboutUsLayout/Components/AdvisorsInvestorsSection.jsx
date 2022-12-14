@@ -56,11 +56,11 @@ function AdvisorsInvestorsSection() {
   return (
     <div className={["py-5 px-0 px-md-2 px-xl-5", AdvisorsInvestorsStyle.background_image].join(" ")}>
       <div className="text-center mb-2 px-3">
-        <h3 className="text-primaryTextDark fw-bold">
+        <h2 className="text-primaryTextDark fw-bold">
           <b>
             Our Advisors & Investors<span className="text-primaryViolet">.</span>
           </b>
-        </h3>
+        </h2>
         <p className="text-primaryTextGray">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
       </div>
       <div className="row mx-2 mx-md-5 justify-content-center">

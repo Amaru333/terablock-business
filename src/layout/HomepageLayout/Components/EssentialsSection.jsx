@@ -95,10 +95,10 @@ function EssentialsSection() {
   return (
     <div className="pb-5" style={{ backgroundColor: "#f5f6fa" }}>
       <div className="py-4" style={{ marginLeft: "0px" }}>
-        <div className="text-center pt-5 px-4 px-md-5 pb-3">
-          <h3 className="pt-5" style={{ color: "#1b2b6b" }}>
+        <div className="text-center px-4 px-md-5 pb-3">
+          <h2 className="pt-5 fw-bold" style={{ color: "#1b2b6b" }}>
             <b>Learn the essentials</b>
-          </h3>
+          </h2>
           <p style={{ color: "#5a5b5b" }}>Learn crypto through simple explanations, guides, tutorials, and market updates</p>
         </div>
         <div className={["d-flex ps-5", EssentialsSectionStyle.horizontal_scroll].join(" ")}>

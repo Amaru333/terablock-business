@@ -10,9 +10,9 @@ function WhatAreCoinlistsSection() {
     <div className="py-5 bg-white px-0">
       <div className="pt-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "68%" : width > 940 ? "78%" : "98%" }}>
         <div className="text-center mb-2 px-3">
-          <h3 className="text-primaryTextDark fw-bold">
+          <h2 className="text-primaryTextDark fw-bold">
             <b>Redefining how you invest in Cryptocurrencies</b>
-          </h3>
+          </h2>
           <p className="fs-6" style={{ color: "#5a5b5d" }}>
             Build your diversified long-term crypto portfolio in under 10mins!
           </p>

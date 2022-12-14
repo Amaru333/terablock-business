@@ -170,12 +170,12 @@ function InvestmentGraph() {
 
   return (
     <div>
-      <div className="flex flex-column justify-content-center align-items-center pb-4 pt-5" style={{ backgroundColor: "#0251ff" }}>
-        <h3 className="text-white text-center pt-5 px-1">
+      <div className="flex flex-column justify-content-center align-items-center pt-5" style={{ backgroundColor: "#0251ff" }}>
+        <h2 className="text-white text-center pt-3 px-1">
           <b>Long term investing is the key to sustainable crypto wealth</b>
-        </h3>
-        <p className="text-center text-white mt-4 px-2">Slide the coin and see how your crypto could have grown over time with systematic and periodic investing</p>
-        <div className={["m-auto rounded border-white px-4 pt-2 my-5", InvestmentGraphStyle.half_container].join(" ")} style={{ "--bs-border-opacity": 0.2, maxWidth: "1700px", margin: "auto", width: width > 1499 ? "68%" : "83%" }}>
+        </h2>
+        <p className="text-center text-white px-2">Slide the coin and see how your crypto could have grown over time with systematic and periodic investing</p>
+        <div className={["m-auto rounded border-white px-4 pt-2 my-2", InvestmentGraphStyle.half_container].join(" ")} style={{ "--bs-border-opacity": 0.2, maxWidth: "1700px", margin: "auto", width: width > 1499 ? "68%" : width > 920 ? "78%" : "100%" }}>
           <div className="d-flex flex-row justify-content-between mt-2">
             <p className="text-white">Monthly Deposit ({formatter.format(value * 100)})</p>
             <p className="text-white">$100,000</p>
@@ -308,11 +308,11 @@ function InvestmentGraph() {
                     ))}
                   </div>
                 </div>
-                <div style={{ width: "70%", margin: "auto", display: "flex", justifyContent: "center", alignItems: "center", paddingBottom: "1rem" }}>
+                {/* <div style={{ width: "70%", margin: "auto", display: "flex", justifyContent: "center", alignItems: "center", paddingBottom: "1rem" }}>
                   <UIButton onMouseOver={() => setCardButtonText("Coming Soon")} onMouseOut={() => setCardButtonText("View CoinsLists")}>
                     {cardButtonText}
                   </UIButton>
-                </div>
+                </div> */}
               </UICard>
             </div>
           )}
@@ -332,7 +332,7 @@ function InvestmentGraph() {
         </div>
       </div>
       <div>
-        <p className={["text-black m-auto text-center px-3 px-xl-0", InvestmentGraphStyle.half_container].join(" ")} style={{ maxWidth: "1000px" }}>
+        <p className={["text-black m-auto text-center px-3 px-xl-0", InvestmentGraphStyle.half_container].join(" ")} style={{ maxWidth: "1000px", fontSize: "12px" }}>
           The chart compares the past five-year performance of <b>High Capitalisation CoinsList</b> and savings bank account with an interest rate of 0.07% yearly. Investing in cryptocurrencies involves the risk of loss, and performance is not guaranteed.
         </p>
       </div>

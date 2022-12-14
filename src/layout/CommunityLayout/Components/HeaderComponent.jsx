@@ -25,7 +25,7 @@ function HeaderComponent() {
             </div>
           </div>
           <div className={`col-12 col-md-5 d-flex ${width > 768 ? "justify-content-end" : "justify-content-center"}`}>
-            <div style={{ maxWidth: "90%" }}>
+            <div style={{ maxWidth: "300px" }}>
               <UILottie animation={HeroAnimation1} />
             </div>
           </div>

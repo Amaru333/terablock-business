@@ -12,19 +12,19 @@ function DescriptionSection() {
         </div>
         <div className="col-12 col-xl-3 px-5 pt-4">
           <div className="bg-white p-4 rounded h-100 text-center text-md-start">
-            <h3 className="fw-bolder">Non Custodial</h3>
+            <h2 className="fw-bolder">Non Custodial</h2>
             <p className="text-cardDescriptionColor fs-6">Nobody can suspend your wallet, freeze your money, or stop your transactions.</p>
           </div>
         </div>
         <div className="col-12 col-xl-3 px-5 pt-4">
           <div className="bg-white p-4 rounded text-center text-md-start">
-            <h3 className="fw-bolder">Completely de-Googled</h3>
+            <h2 className="fw-bolder">Completely de-Googled</h2>
             <p className="text-cardDescriptionColor fs-6">We don&apos;t cross-associate wallets and don&apos;t even ask for your email addresses.</p>
           </div>
         </div>
         <div className="col-12 col-xl-3 px-5 pt-4">
           <div className="bg-white p-4 rounded text-center text-md-start">
-            <h3 className="fw-bolder">Completely de-Googled</h3>
+            <h2 className="fw-bolder">Completely de-Googled</h2>
             <p className="text-cardDescriptionColor fs-6">We don&apos;t cross-associate wallets and don&apos;t even ask for your email addresses.</p>
           </div>
         </div>

@@ -5,11 +5,11 @@ function AboutTerablockSection() {
   const width = useScreenSize().width;
   return (
     <div className="py-5 px-2 px-md-0" style={{ backgroundColor: "#0251ff" }}>
-      <div className="py-4 px-2 px-md-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "73%" : width > 940 ? "86%" : "100%" }}>
-        <h3 className="text-white text-center px-3 px-md-0 pt-md-5">
+      <div className="pb-0 px-2 px-md-4 pt-4 pt-md-0" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "73%" : width > 940 ? "86%" : "100%" }}>
+        <h2 className="text-white text-center px-3 px-md-0 pt-md-4">
           <b>What makes TeraBlock better?</b>
-        </h3>
-        <div className="row mx-0 pt-5">
+        </h2>
+        <div className="row mx-0 pt-5 justify-content-center justify-content-md-start">
           <div className="col-6 col-md-4 pb-5">
             <div className="px-0 px-md-4">
               <img src="/assets/images/Investing.svg" />

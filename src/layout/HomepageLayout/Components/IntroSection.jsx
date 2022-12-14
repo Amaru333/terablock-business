@@ -29,7 +29,7 @@ function IntroSection() {
                 {/* <img src="/assets/images/underline.svg" style={{ width: "80px", alignSelf: "flex-end", marginRight: "10px" }} /> */}
               </div>
               <div className={IntroSectionStyles.intro_text_section}>
-                <p className={`${(width < 1400 || width > 800) && "mb-0"}`} style={{ color: "#1b2b6b", fontSize: width > 1500 ? "40pt" : width > 767 ? "24pt" : "30px", fontWeight: "600" }}>
+                <p className={`${(width < 1400 || width > 800) && "mb-0"} mt-3`} style={{ color: "#1b2b6b", fontSize: width > 1500 ? "40pt" : width > 767 ? "24pt" : "30px", fontWeight: "600", lineHeight: width > 1500 ? "65px" : "40px" }}>
                   The wiser way to invest in crypto assets
                 </p>
                 <p className="my-4" style={{ color: "#5a5b5b" }}>
@@ -70,36 +70,36 @@ function IntroSection() {
       {/* {width > 768 && <img src="/assets/icons/3x4.svg" className="position-absolute" style={{ width: "30px", bottom: "7rem", left: "5rem" }} />} */}
 
       <div className="" style={{ backgroundColor: "#0251ff" }}>
-        <div className="py-4 row px-4 py-4 justify-content-center" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : "83%" }}>
+        <div className="py-4 row px-0 px-sm-4 py-4 justify-content-center" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : "100%" }}>
           <div className="py-4 col col-md">
-            <p className="mb-0 text-center text-white" style={{ fontSize: "20pt", fontWeight: "600" }}>
+            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600" }}>
               ${width > 767 ? <CountUp duration={2} end={20000} separator="," /> : abbreviateNumber(20000)}
             </p>
-            <p className="mb-0 text-center text-white" style={{ fontSize: "12pt" }}>
+            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "16px" }}>
               Transaction Volume
             </p>
           </div>
           <div className="py-4 col col-md">
-            <p className="mb-0 text-center text-white" style={{ fontSize: "20pt", fontWeight: "600" }}>
+            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600" }}>
               {width > 767 ? <CountUp duration={2} end={2234000000} separator="," /> : abbreviateNumber(2234000000)}
             </p>
-            <p className="mb-0 text-center text-white" style={{ fontSize: "12pt" }}>
+            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "16px" }}>
               Tokens Transacted
             </p>
           </div>
           <div className="py-4 col col-md">
-            <p className="mb-0 text-center text-white" style={{ fontSize: "20pt", fontWeight: "600" }}>
+            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600" }}>
               {width > 767 ? <CountUp duration={2} end={25000} separator="," /> : abbreviateNumber(25000)}
             </p>
-            <p className="mb-0 text-center text-white" style={{ fontSize: "12pt" }}>
+            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "16px" }}>
               Secure Transactions
             </p>
           </div>
           <div className="py-4 col col-md">
-            <p className="mb-0 text-center text-white" style={{ fontSize: "20pt", fontWeight: "600" }}>
+            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600" }}>
               {width > 767 ? <CountUp duration={2} end={8000} separator="," /> : abbreviateNumber(8000)}
             </p>
-            <p className="mb-0 text-center text-white" style={{ fontSize: "12pt" }}>
+            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "16px" }}>
               Happy Users
             </p>
           </div>

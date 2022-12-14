@@ -108,11 +108,11 @@ function AboutSwidgeSection() {
     // <div className="pb-5 px-0 px-md-2 px-xl-5">
     //   <div className="position-relative">
     //     <div className="text-center mt-5 px-4 px-md-5">
-    //       <h3 className="text-primaryTextDark fw-bold">
+    //       <h2 className="text-primaryTextDark fw-bold">
     //         <b>
     //           Build your truly decentralised crypto portfolio<span className="text-primaryViolet">.</span>
     //         </b>
-    //       </h3>
+    //       </h2>
     //       <p className="text-primaryTextGray">Get started in a few minutes with these easy steps.</p>
     //     </div>
     //     <div className="row mx-4 mx-md-3 mx-xl-5 mt-5 justify-content-center">
@@ -129,9 +129,9 @@ function AboutSwidgeSection() {
     // </div>
     <div className="py-5 px-2 px-md-0" style={{ color: "#1b2b6b" }}>
       <div style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "71%" : width > 940 ? "83%" : "98%" }}>
-        <h3 className="text-center px-3 px-md-0 pt-md-5">
+        <h2 className="text-center px-3 px-md-0 pt-md-5">
           <b>Swidge is the simplest way to onboard a Dapp</b>
-        </h3>
+        </h2>
         <div className="row mx-0 pt-5">
           {data.map((a, i) => (
             <DataCard key={i} title={a.title} desc={a.desc} img={a.img} />

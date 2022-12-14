@@ -41,9 +41,9 @@ function HorizontalCards({ data, description_1, description_2, title }) {
   return (
     <div className="pb-5 bg-white border-bottom">
       <div className="text-center px-4 px-md-5 pb-3">
-        <h3 className="pt-5" style={{ color: "#1b2b6b" }}>
+        <h2 className="pt-5" style={{ color: "#1b2b6b" }}>
           <b>{title}</b>
-        </h3>
+        </h2>
         <p className="m-0" style={{ color: "#5a5b5b" }}>
           {description_1}
         </p>

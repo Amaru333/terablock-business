@@ -12,7 +12,7 @@ function Header() {
   const [buttonText, setButtonText] = useState("Get Started");
   const NavbarMenu = ({ name, link }) => {
     return (
-      <p className="mb-0 px-3 fw-bold px-xxl-4" onClick={() => router.push(link)} style={{ fontSize: "14px", fontWeight: 500, cursor: "pointer", color: router.pathname == link ? "#0251ff" : "#212529" }}>
+      <p className="mb-0 px-3 fw-bold px-xxl-4" onClick={() => router.push(link)} style={{ fontSize: "15px", fontWeight: 500, cursor: "pointer", color: router.pathname == link ? "#0251ff" : "#212529" }}>
         {name}
       </p>
     );
@@ -54,7 +54,7 @@ function Header() {
             ))}
           </div>
           <div className="d-flex align-items-center">
-            <p className="mb-0 me-3 pb-1" style={{ fontSize: "14px", fontWeight: 500, cursor: "pointer", borderBottom: "2px solid #E3297E" }}>
+            <p className="mb-0 me-3 pb-1" style={{ fontSize: "15px", fontWeight: 500, cursor: "pointer", borderBottom: "2px solid #E3297E" }}>
               Launch App →
             </p>
             <button className={["bg-primaryBlue text-white px-4 py-2 mx-2", HeaderStyle.button, HeaderStyle.button_primary].join(" ")} onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>

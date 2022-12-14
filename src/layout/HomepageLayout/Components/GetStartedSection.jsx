@@ -10,9 +10,9 @@ function GetStartedSection() {
     <div>
       <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "80%" : "95%" }}>
         <div className="text-center mt-5 px-4 px-md-5">
-          <h3 className="text-primaryTextDark fw-bold">
+          <h2 className="text-primaryTextDark fw-bold">
             <b>Smart investing with CoinsLists</b>
-          </h3>
+          </h2>
           <p style={{ color: "#5a5b5b" }}>
             Follow a guided step-by-step process to build your crypto portfolio with CoinsLists in under <b>15mins.</b>
           </p>

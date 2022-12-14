@@ -6,11 +6,11 @@ function AboutTeraBlockSection() {
   return (
     <div className="py-5 px-0 px-md-2 px-xl-5 bg-white">
       <div className="text-center mb-2 px-3">
-        <h3 className="text-primaryTextDark fw-bold">
+        <h2 className="text-primaryTextDark fw-bold">
           <b>
             About TeraBlock<span className="text-primaryViolet">.</span>
           </b>
-        </h3>
+        </h2>
         <p className="text-primaryTextGray fs-6">Get to know the people and communities pushing the crypto economy forward</p>
       </div>
       <div className="row mx-0 px-3 px-md-5 pt-3 d-flex flex-column-reverse flex-md-row">

@@ -78,9 +78,9 @@ function TeraBlockSwidgeSection() {
     // </div>
     <div className="py-5" style={{ backgroundColor: "#0251ff" }}>
       <div className="text-center pt-5 px-4 px-md-5">
-        <h3 className="text-white fw-bold">
+        <h2 className="text-white fw-bold">
           <b>How does it work?</b>
-        </h3>
+        </h2>
         <p className="text-white">Follow a guided three steps process to onboard a Dapp in under 5 mins.</p>
       </div>
       <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "71%" : width > 940 ? "84%" : "96%" }}>

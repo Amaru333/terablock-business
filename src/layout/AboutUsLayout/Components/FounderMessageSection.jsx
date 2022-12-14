@@ -6,11 +6,11 @@ function FounderMessageSection() {
   return (
     <div className="py-5 px-0 px-md-2 px-xl-5">
       <div className="text-center mb-2 px-3">
-        <h3 className="text-primaryTextDark fw-bold">
+        <h2 className="text-primaryTextDark fw-bold">
           <b>
             Message from founder<span className="text-primaryViolet">.</span>
           </b>
-        </h3>
+        </h2>
         <p className="text-primaryTextGray">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
       </div>
       <div className="row mx-0 px-3 py-3">

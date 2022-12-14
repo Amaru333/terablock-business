@@ -52,8 +52,8 @@ function FeaturedInSection() {
   return (
     <div className="py-5 position-relative px-0 px-md-2" style={{ backgroundColor: "#0251ff" }}>
       <div className="text-center px-4 px-md-5 mx-0 mx-md-5 pb-5">
-        <h3 className="text-white fw-bold">Supporters</h3>
-        <p className="text-white mb-0 mt-3">TeraBlock is supported by industry leading investors, partners, advisors and publications.</p>
+        <h2 className="text-white fw-bold">Supporters</h2>
+        <p className="text-white mb-0">TeraBlock is supported by industry leading investors, partners, advisors and publications.</p>
       </div>
       <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "83%" : "95%" }}>
         <div className="row mx-0 mx-md-4">

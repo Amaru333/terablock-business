@@ -11,11 +11,11 @@ function HowCoinListsWorkSection() {
   return (
     // <div className="py-5 position-relative bg-white px-0 px-md-2 px-xl-5">
     //   <div className="text-center mt-5 px-4 px-md-5 mx-0 mx-md-5 pb-5">
-    //     <h3 className="text-primaryTextDark fw-bold">
+    //     <h2 className="text-primaryTextDark fw-bold">
     //       <b>
     //         How CoinsLists work<span className="text-primaryViolet">.</span>
     //       </b>
-    //     </h3>
+    //     </h2>
     //     <p className="text-primaryTextGray fs-6">Get to know the people and communities pushing the crypto economy forward</p>
     //   </div>
     //   <div className="d-flex row mx-0">
@@ -59,9 +59,9 @@ function HowCoinListsWorkSection() {
     <div>
       <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "83%" : "95%" }}>
         <div className="text-center mt-5 px-4 px-md-5">
-          <h3 className="text-primaryTextDark fw-bold">
+          <h2 className="text-primaryTextDark fw-bold">
             <b>How does it work?</b>
-          </h3>
+          </h2>
           <p style={{ color: "#5a5b5b" }}>Follow a guided three steps process to build your diversified crypto portfolio in under 10mins!</p>
         </div>
         <div className="row mx-0 mx-md-1 mx-xl-3 mt-5 position-relative">
