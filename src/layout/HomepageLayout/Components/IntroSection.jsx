@@ -40,7 +40,9 @@ function IntroSection() {
                 <UIButton ml0 type="primary" width="150px" style={{ marginRight: "10px" }} onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
                   {buttonText}
                 </UIButton>
-                <UIButton type="secondary">Launch App</UIButton>
+                <UIButton type="secondary" onClick={()=>{
+                  window.open("https://bridge.terablock.com/bridge", "_blank");
+                }}>Launch App</UIButton>
               </div>
               <div className={["d-flex justify-content-between justify-content-md-start", IntroSectionStyles.bottom_logos].join(" ")}>
                 <a href="https://cointelegraph.com/press-releases/terablock-and-splinterlands-collaborate-take-defi-gaming-to-new-heights" target="_blank">
@@ -73,7 +75,7 @@ function IntroSection() {
         <div className="py-4 row px-0 px-sm-4 py-4 justify-content-center" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : "100%" }}>
           <div className="py-4 col col-md">
             <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600" }}>
-              ${width > 767 ? <CountUp duration={2} end={20000} separator="," /> : abbreviateNumber(20000)}
+              ${width > 767 ? <CountUp duration={2} end={38940995} separator="," /> : abbreviateNumber(38940995)}
             </p>
             <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "16px" }}>
               Transaction Volume
@@ -89,7 +91,7 @@ function IntroSection() {
           </div>
           <div className="py-4 col col-md">
             <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600" }}>
-              {width > 767 ? <CountUp duration={2} end={25000} separator="," /> : abbreviateNumber(25000)}
+              {width > 767 ? <CountUp duration={2} end={76495} separator="," /> : abbreviateNumber(76495)}
             </p>
             <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "16px" }}>
               Secure Transactions
@@ -97,7 +99,7 @@ function IntroSection() {
           </div>
           <div className="py-4 col col-md">
             <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600" }}>
-              {width > 767 ? <CountUp duration={2} end={8000} separator="," /> : abbreviateNumber(8000)}
+              {width > 767 ? <CountUp duration={2} end={13929} separator="," /> : abbreviateNumber(13929)}
             </p>
             <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "16px" }}>
               Happy Users
