@@ -83,7 +83,7 @@ function IntroSection() {
           </div>
           <div className="py-4 col col-md">
             <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600" }}>
-              {width > 767 ? <CountUp duration={2} end={2234000000} separator="," /> : abbreviateNumber(2234000000)}
+              {width > 767 ? <CountUp duration={2} end={13976181174} separator="," /> : abbreviateNumber(13976181174)}
             </p>
             <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "16px" }}>
               Tokens Transacted
