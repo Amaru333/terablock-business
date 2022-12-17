@@ -142,7 +142,7 @@ function InvestmentGraph() {
   const increment = () => {
     if (value < 10 && value >= 0) {
       setValue(parseInt(value) + 1);
-    } else if (value >= 10 && value < 996) {
+    } else if (value >= 10 && value < 96) {
       setValue(parseInt(value) + 5);
     }
   };
@@ -150,7 +150,7 @@ function InvestmentGraph() {
   const decrement = () => {
     if (value <= 10 && value >= 1) {
       setValue(parseInt(value) - 1);
-    } else if (value > 10 && value <= 1000) {
+    } else if (value > 10 && value <= 100) {
       setValue(parseInt(value) - 5);
     }
   };

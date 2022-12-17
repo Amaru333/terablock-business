@@ -10,24 +10,24 @@ function UIGraph(multiplier) {
       year: "2017",
       price: [
         {
-          five_year: 100,
-          saving: 100.1167,
+          five_year: multiplier?.multiplier * 100,
+          saving: multiplier?.multiplier * 100.1167,
         },
         {
-          five_year: 218.9176,
-          saving: 200.3501,
+          five_year: multiplier?.multiplier * 218.9176,
+          saving: multiplier?.multiplier * 200.3501,
         },
         {
-          five_year: 288.1381,
-          saving: 300.7005,
+          five_year: multiplier?.multiplier * 288.1381,
+          saving: multiplier?.multiplier * 300.7005,
         },
         {
-          five_year: 458.8671,
-          saving: 401.168,
+          five_year: multiplier?.multiplier * 458.8671,
+          saving: multiplier?.multiplier * 401.168,
         },
         {
-          five_year: 775.9402,
-          saving: 501.7527,
+          five_year: multiplier?.multiplier * 775.9402,
+          saving: multiplier?.multiplier * 501.7527,
         },
       ],
     },
@@ -35,52 +35,52 @@ function UIGraph(multiplier) {
       year: "2018",
       price: [
         {
-          five_year: 1257.3087,
-          saving: 602.4548,
+          five_year: multiplier?.multiplier * 1257.3087,
+          saving: multiplier?.multiplier * 602.4548,
         },
         {
-          five_year: 1475.8779,
-          saving: 703.2743,
+          five_year: multiplier?.multiplier * 1475.8779,
+          saving: multiplier?.multiplier * 703.2743,
         },
         {
-          five_year: 1336.9545,
-          saving: 804.2115,
+          five_year: multiplier?.multiplier * 1336.9545,
+          saving: multiplier?.multiplier * 804.2115,
         },
         {
-          five_year: 837.4656,
-          saving: 905.2664,
+          five_year: multiplier?.multiplier * 837.4656,
+          saving: multiplier?.multiplier * 905.2664,
         },
         {
-          five_year: 1408.3529,
-          saving: 1006.4392,
+          five_year: multiplier?.multiplier * 1408.3529,
+          saving: multiplier?.multiplier * 1006.4392,
         },
         {
-          five_year: 1247.3722,
-          saving: 1107.73,
+          five_year: multiplier?.multiplier * 1247.3722,
+          saving: multiplier?.multiplier * 1107.73,
         },
         {
-          five_year: 1090.4119,
-          saving: 1209.139,
+          five_year: multiplier?.multiplier * 1090.4119,
+          saving: multiplier?.multiplier * 1209.139,
         },
         {
-          five_year: 1269.6478,
-          saving: 1310.6664,
+          five_year: multiplier?.multiplier * 1269.6478,
+          saving: multiplier?.multiplier * 1310.6664,
         },
         {
-          five_year: 1090.5099,
-          saving: 1412.3121,
+          five_year: multiplier?.multiplier * 1090.5099,
+          saving: multiplier?.multiplier * 1412.3121,
         },
         {
-          five_year: 1071.7178,
-          saving: 1514.0765,
+          five_year: multiplier?.multiplier * 1071.7178,
+          saving: multiplier?.multiplier * 1514.0765,
         },
         {
-          five_year: 1073.6022,
-          saving: 1615.9596,
+          five_year: multiplier?.multiplier * 1073.6022,
+          saving: multiplier?.multiplier * 1615.9596,
         },
         {
-          five_year: 748.8567,
-          saving: 1717.9616,
+          five_year: multiplier?.multiplier * 748.8567,
+          saving: multiplier?.multiplier * 1717.9616,
         },
       ],
     },
@@ -88,52 +88,52 @@ function UIGraph(multiplier) {
       year: "2019",
       price: [
         {
-          five_year: 852.4039,
-          saving: 1820.0825,
+          five_year: multiplier?.multiplier * 852.4039,
+          saving: multiplier?.multiplier * 1820.0825,
         },
         {
-          five_year: 859.6022,
-          saving: 1922.3226,
+          five_year: multiplier?.multiplier * 859.6022,
+          saving: multiplier?.multiplier * 1922.3226,
         },
         {
-          five_year: 1098.8315,
-          saving: 2024.682,
+          five_year: multiplier?.multiplier * 1098.8315,
+          saving: multiplier?.multiplier * 2024.682,
         },
         {
-          five_year: 1394.6423,
-          saving: 2127.1608,
+          five_year: multiplier?.multiplier * 1394.6423,
+          saving: multiplier?.multiplier * 2127.1608,
         },
         {
-          five_year: 1727.234,
-          saving: 2229.7591,
+          five_year: multiplier?.multiplier * 1727.234,
+          saving: multiplier?.multiplier * 2229.7591,
         },
         {
-          five_year: 2760.2551,
-          saving: 2332.4772,
+          five_year: multiplier?.multiplier * 2760.2551,
+          saving: multiplier?.multiplier * 2332.4772,
         },
         {
-          five_year: 3247.9037,
-          saving: 2435.3151,
+          five_year: multiplier?.multiplier * 3247.9037,
+          saving: multiplier?.multiplier * 2435.3151,
         },
         {
-          five_year: 2819.7189,
-          saving: 2538.2729,
+          five_year: multiplier?.multiplier * 2819.7189,
+          saving: multiplier?.multiplier * 2538.2729,
         },
         {
-          five_year: 2559.8724,
-          saving: 2641.3509,
+          five_year: multiplier?.multiplier * 2559.8724,
+          saving: multiplier?.multiplier * 2641.3509,
         },
         {
-          five_year: 2438.7206,
-          saving: 2744.5492,
+          five_year: multiplier?.multiplier * 2438.7206,
+          saving: multiplier?.multiplier * 2744.5492,
         },
         {
-          five_year: 2713.0943,
-          saving: 2847.8678,
+          five_year: multiplier?.multiplier * 2713.0943,
+          saving: multiplier?.multiplier * 2847.8678,
         },
         {
-          five_year: 2396.4726,
-          saving: 2951.307,
+          five_year: multiplier?.multiplier * 2396.4726,
+          saving: multiplier?.multiplier * 2951.307,
         },
       ],
     },
@@ -141,52 +141,52 @@ function UIGraph(multiplier) {
       year: "2020",
       price: [
         {
-          five_year: 2260.2801,
-          saving: 3054.8668,
+          five_year: multiplier?.multiplier * 2260.2801,
+          saving: multiplier?.multiplier * 3054.8668,
         },
         {
-          five_year: 3224.7208,
-          saving: 3158.5475,
+          five_year: multiplier?.multiplier * 3224.7208,
+          saving: multiplier?.multiplier * 3158.5475,
         },
         {
-          five_year: 3276.8983,
-          saving: 3262.3492,
+          five_year: multiplier?.multiplier * 3276.8983,
+          saving: multiplier?.multiplier * 3262.3492,
         },
         {
-          five_year: 2343.2447,
-          saving: 3366.2719,
+          five_year: multiplier?.multiplier * 2343.2447,
+          saving: multiplier?.multiplier * 3366.2719,
         },
         {
-          five_year: 3483.8203,
-          saving: 3470.3159,
+          five_year: multiplier?.multiplier * 3483.8203,
+          saving: multiplier?.multiplier * 3470.3159,
         },
         {
-          five_year: 4271.9525,
-          saving: 3574.4813,
+          five_year: multiplier?.multiplier * 4271.9525,
+          saving: multiplier?.multiplier * 3574.4813,
         },
         {
-          five_year: 4395.098,
-          saving: 3678.7682,
+          five_year: multiplier?.multiplier * 4395.098,
+          saving: multiplier?.multiplier * 3678.7682,
         },
         {
-          five_year: 6462.9219,
-          saving: 3783.1767,
+          five_year: multiplier?.multiplier * 6462.9219,
+          saving: multiplier?.multiplier * 3783.1767,
         },
         {
-          five_year: 6927.3045,
-          saving: 3887.7071,
+          five_year: multiplier?.multiplier * 6927.3045,
+          saving: multiplier?.multiplier * 3887.7071,
         },
         {
-          five_year: 6063.3544,
-          saving: 3992.3594,
+          five_year: multiplier?.multiplier * 6063.3544,
+          saving: multiplier?.multiplier * 3992.3594,
         },
         {
-          five_year: 6842.7489,
-          saving: 4097.1338,
+          five_year: multiplier?.multiplier * 6842.7489,
+          saving: multiplier?.multiplier * 4097.1338,
         },
         {
-          five_year: 10876.131,
-          saving: 4202.0305,
+          five_year: multiplier?.multiplier * 10876.131,
+          saving: multiplier?.multiplier * 4202.0305,
         },
       ],
     },
@@ -194,52 +194,52 @@ function UIGraph(multiplier) {
       year: "2021",
       price: [
         {
-          five_year: 13918.4681,
-          saving: 4307.0495,
+          five_year: multiplier?.multiplier * 13918.4681,
+          saving: multiplier?.multiplier * 4307.0495,
         },
         {
-          five_year: 21219.3244,
-          saving: 4412.1911,
+          five_year: multiplier?.multiplier * 21219.3244,
+          saving: multiplier?.multiplier * 4412.1911,
         },
         {
-          five_year: 40056.0451,
-          saving: 4517.4553,
+          five_year: multiplier?.multiplier * 40056.0451,
+          saving: multiplier?.multiplier * 4517.4553,
         },
         {
-          five_year: 44396.5175,
-          saving: 4622.8423,
+          five_year: multiplier?.multiplier * 44396.5175,
+          saving: multiplier?.multiplier * 4622.8423,
         },
         {
-          five_year: 52261.7328,
-          saving: 4728.3523,
+          five_year: multiplier?.multiplier * 52261.7328,
+          saving: multiplier?.multiplier * 4728.3523,
         },
         {
-          five_year: 53258.5365,
-          saving: 4833.9854,
+          five_year: multiplier?.multiplier * 53258.5365,
+          saving: multiplier?.multiplier * 4833.9854,
         },
         {
-          five_year: 44465.0973,
-          saving: 4939.7417,
+          five_year: multiplier?.multiplier * 44465.0973,
+          saving: multiplier?.multiplier * 4939.7417,
         },
         {
-          five_year: 46617.5197,
-          saving: 5045.6214,
+          five_year: multiplier?.multiplier * 46617.5197,
+          saving: multiplier?.multiplier * 5045.6214,
         },
         {
-          five_year: 76709.6331,
-          saving: 5151.6246,
+          five_year: multiplier?.multiplier * 76709.6331,
+          saving: multiplier?.multiplier * 5151.6246,
         },
         {
-          five_year: 63059.4437,
-          saving: 5257.7515,
+          five_year: multiplier?.multiplier * 63059.4437,
+          saving: multiplier?.multiplier * 5257.7515,
         },
         {
-          five_year: 73277.7599,
-          saving: 5364.0022,
+          five_year: multiplier?.multiplier * 73277.7599,
+          saving: multiplier?.multiplier * 5364.0022,
         },
         {
-          five_year: 68086.8167,
-          saving: 5470.3769,
+          five_year: multiplier?.multiplier * 68086.8167,
+          saving: multiplier?.multiplier * 5470.3769,
         },
       ],
     },
@@ -247,56 +247,77 @@ function UIGraph(multiplier) {
       year: "Today",
       price: [
         {
-          five_year: 55517.6129,
-          saving: 5576.8757,
+          five_year: multiplier?.multiplier * 55517.6129,
+          saving: multiplier?.multiplier * 5576.8757,
         },
         {
-          five_year: 43223.1771,
-          saving: 5683.4987,
+          five_year: multiplier?.multiplier * 43223.1771,
+          saving: multiplier?.multiplier * 5683.4987,
         },
         {
-          five_year: 44506.5114,
-          saving: 5790.2461,
+          five_year: multiplier?.multiplier * 44506.5114,
+          saving: multiplier?.multiplier * 5790.2461,
         },
         {
-          five_year: 50359.8947,
-          saving: 5897.1181,
+          five_year: multiplier?.multiplier * 50359.8947,
+          saving: multiplier?.multiplier * 5897.1181,
         },
         {
-          five_year: 38816.3914,
-          saving: 6004.1147,
+          five_year: multiplier?.multiplier * 38816.3914,
+          saving: multiplier?.multiplier * 6004.1147,
         },
         {
-          five_year: 30277.3685,
-          saving: 6111.2362,
+          five_year: multiplier?.multiplier * 30277.3685,
+          saving: multiplier?.multiplier * 6111.2362,
         },
         {
-          five_year: 19193.7581,
-          saving: 6218.4826,
+          five_year: multiplier?.multiplier * 19193.7581,
+          saving: multiplier?.multiplier * 6218.4826,
         },
         {
-          five_year: 25017.9424,
-          saving: 6325.8542,
+          five_year: multiplier?.multiplier * 25017.9424,
+          saving: multiplier?.multiplier * 6325.8542,
         },
         {
-          five_year: 22378.8375,
-          saving: 6433.351,
+          five_year: multiplier?.multiplier * 22378.8375,
+          saving: multiplier?.multiplier * 6433.351,
         },
         {
-          five_year: 20678.2756,
-          saving: 6540.9733,
+          five_year: multiplier?.multiplier * 20678.2756,
+          saving: multiplier?.multiplier * 6540.9733,
         },
         {
-          five_year: 22139.9319,
-          saving: 6648.7211,
+          five_year: multiplier?.multiplier * 22139.9319,
+          saving: multiplier?.multiplier * 6648.7211,
         },
       ],
     },
   ];
-  let max_five = graph_data.map((b) => Math.max(...b.price.map((o) => o.five_year)));
-  let max_saving = graph_data.map((b) => Math.max(...b.price.map((o) => o.saving)));
-  let max_num = Math.max(...max_five, ...max_saving);
-  let max_height_break = max_num / 200;
+
+  let maxIndex = 0;
+  let maxGi = 0;
+  let maxValue = 0.1;
+
+  let max = graph_data.map((d, i) =>
+    d.price.map((p, j) => {
+      if (p.five_year > maxValue) {
+        maxIndex = j;
+        maxGi = i;
+        maxValue = p.five_year;
+      }
+      if (p.saving > maxValue) {
+        maxIndex = j;
+        maxGi = i;
+        maxValue = p.saving;
+      }
+    })
+  );
+
+  let graphHeight = 300;
+  let graphMultiplierSize = (multiplier.multiplier / (1 / 0.75) + 25) / 100;
+
+  let max_height_break = maxValue / graphHeight;
+
   const width = useScreenSize().width;
 
   const formatter = new Intl.NumberFormat("en-US", {
@@ -304,11 +325,7 @@ function UIGraph(multiplier) {
     currency: "USD",
     maximumFractionDigits: 0,
   });
-  const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
   return (
     <div className="bg-white rounded px-3 px-sm-4 px-md-5 pt-3 pb-4 pb-md-5 justify-content-center shadow" style={{ width: "100%", margin: width > 767 ? "auto" : "auto" }}>
       <div className="d-flex pb-5">
@@ -382,43 +399,43 @@ function UIGraph(multiplier) {
       </div>
       <div className="d-flex justify-content-center">
         <div className="d-flex flex-column">
-          <div className="d-flex align-items-end w-full">
+          <div className="d-flex align-items-end w-full" style={{ minHeight: `${graphHeight}px` }}>
             {graph_data.map((each_data, gI) => (
               <>
                 {each_data.price.map((price, index) => (
                   <>
                     {width > 1800 && (
                       <UITooltip content={`<p>Savings: ${formatter.format(price.saving)}</p><p>Five years: ${formatter.format(price.five_year)}</p>`}>
-                        <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
-                          <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
+                        <div className={UIGraphStyle.five_years} style={{ height: `${(price.five_year / max_height_break) * graphMultiplierSize}px` }}>
+                          <div className={UIGraphStyle.savings} style={{ height: `${(price.saving / max_height_break) * graphMultiplierSize}px` }}></div>
                         </div>
                       </UITooltip>
                     )}
-                    {width < 1801 && width > 1280 && index % 6 != 1 && (
+                    {width < 1801 && width > 1280 && (index % 6 != 1 || (gI == maxGi && index == maxIndex)) && (
                       <UITooltip content={`<p>Savings: ${formatter.format(price.saving)}</p><p>Five years: ${formatter.format(price.five_year)}</p>`} topRight={gI > graph_data.length / 2 ? true : false}>
-                        <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
-                          <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
+                        <div className={UIGraphStyle.five_years} style={{ height: `${(price.five_year / max_height_break) * graphMultiplierSize}px` }}>
+                          <div className={UIGraphStyle.savings} style={{ height: `${(price.saving / max_height_break) * graphMultiplierSize}px` }}></div>
                         </div>
                       </UITooltip>
                     )}
-                    {width < 1281 && width > 940 && index % 3 != 1 && (
+                    {width < 1281 && width > 940 && (index % 3 != 1 || (gI == maxGi && index == maxIndex)) && (
                       <UITooltip content={`<p>Savings: ${formatter.format(price.saving)}</p><p>Five years: ${formatter.format(price.five_year)}</p>`} topRight={gI > graph_data.length / 2 ? true : false}>
-                        <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
-                          <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
+                        <div className={UIGraphStyle.five_years} style={{ height: `${(price.five_year / max_height_break) * graphMultiplierSize}px` }}>
+                          <div className={UIGraphStyle.savings} style={{ height: `${(price.saving / max_height_break) * graphMultiplierSize}px` }}></div>
                         </div>
                       </UITooltip>
                     )}
-                    {width < 941 && width > 767 && index % 2 != 1 && (
+                    {width < 941 && width > 767 && (index % 2 != 1 || (gI == maxGi && index == maxIndex)) && (
                       <UITooltip content={`<p>Savings: ${formatter.format(price.saving)}</p><p>Five years: ${formatter.format(price.five_year)}</p>`} topRight={gI > graph_data.length / 2 ? true : false}>
-                        <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
-                          <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
+                        <div className={UIGraphStyle.five_years} style={{ height: `${(price.five_year / max_height_break) * graphMultiplierSize}px` }}>
+                          <div className={UIGraphStyle.savings} style={{ height: `${(price.saving / max_height_break) * graphMultiplierSize}px` }}></div>
                         </div>
                       </UITooltip>
                     )}
-                    {width < 768 && index % 4 == 1 && (
+                    {width < 768 && (index % 4 == 1 || (gI == maxGi && index == maxIndex)) && (
                       <UITooltip content={`<p>Savings: ${formatter.format(price.saving)}</p><p>Five years: ${formatter.format(price.five_year)}</p>`} topRight={gI > graph_data.length / 2 ? true : false}>
-                        <div className={UIGraphStyle.five_years} style={{ height: `${price.five_year / max_height_break}px` }}>
-                          <div className={UIGraphStyle.savings} style={{ height: `${price.saving / max_height_break}px` }}></div>
+                        <div className={UIGraphStyle.five_years} style={{ height: `${(price.five_year / max_height_break) * graphMultiplierSize}px` }}>
+                          <div className={UIGraphStyle.savings} style={{ height: `${(price.saving / max_height_break) * graphMultiplierSize}px` }}></div>
                         </div>
                       </UITooltip>
                     )}
