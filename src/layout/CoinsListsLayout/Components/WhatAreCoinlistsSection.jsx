@@ -30,7 +30,7 @@ function WhatAreCoinlistsSection() {
           </div>
           <div className="col-12 col-md-6 d-flex" style={{ justifyContent: width > 768 ? "end" : "center" }}>
             <div className="">
-              <img src="/assets/images/coinslist_01.png" style={{ width: width > 768 ? "300px" : "80vw" }} />
+              <img src="/assets/images/coinslist_hero.png" style={{ width: width > 768 ? "300px" : "80vw" }} />
             </div>
           </div>
         </div>
