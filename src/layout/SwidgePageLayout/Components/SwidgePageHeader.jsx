@@ -13,32 +13,34 @@ function SwidgePageHeader() {
         <div className="pt-5 position-relative">
           <div className="row mx-0" style={{ zIndex: 1 }}>
             <div className="my-5 px-4 px-md-5 col-12 col-md-6 pe-0 pe-md-5 d-flex flex-column justify-content-center text-center pe-4 text-md-start">
-              <h1 className="text-primaryTextDark fw-bold">Swidge</h1>
+              <h1 className="text-primaryTextDark fw-bold" style={{ color: "#5a5b5b", fontSize: width > 768 ? "50px" : "23px", width: width > 768 ? "75%" : "100%" }}>
+                Swidge
+              </h1>
               <p className="mb-0 fs-6 mt-2" style={{ color: "#5a5b5b" }}>
                 <b>Powerful Web3 multi-protocol automation</b> that helps you onboard decentralised applications (Dapps) without the complexities of DeFi.
               </p>
-              {width > 904 && (
+              {/* {width > 904 && (
                 <div className="mt-4">
                   <UIButton type="primary" ml0 style={{ marginRight: "10px" }} width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
                     {buttonText}
                   </UIButton>
                   <UIButton>Discover Swidge</UIButton>
                 </div>
-              )}
+              )} */}
             </div>
             <div className={`col-12 col-md-6 d-flex ${width > 768 ? "justify-content-end" : "justify-content-center"}`}>
-              <div style={{ maxWidth: width > 768 ? "80%" : "70vw", maxHeight: width > 768 ? "300px" : "250px" }}>
+              <div style={{ maxWidth: width > 767 ? "80%" : "70vw", maxHeight: width > 767 ? "350px" : "300px", padding: width > 767 ? "50px" : "0px" }}>
                 <UILottie animation={HeroAnimation1} />
               </div>
             </div>
-            {width < 904 && (
+            {/* {width < 904 && (
               <div className="d-flex justify-content-center mt-5">
                 <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
                   {buttonText}
                 </UIButton>
                 <UIButton>Discover Swidge</UIButton>
               </div>
-            )}
+            )} */}
           </div>
         </div>
       </div>

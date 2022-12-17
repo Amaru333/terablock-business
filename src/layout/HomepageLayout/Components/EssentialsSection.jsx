@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
 import UIButton from "../../../widgets/UIButtons/UIButton";
@@ -7,6 +8,8 @@ import EssentialsSectionStyle from "../Styles/EssentialsSection.module.css";
 
 function EssentialsSection() {
   const width = useScreenSize().width;
+  const router = useRouter();
+
   const essential_details = [
     {
       image: "/assets/images/learn-image-1.png",
@@ -112,7 +115,7 @@ function EssentialsSection() {
           <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
             {buttonText}
           </UIButton>
-          <UIButton>Learn More</UIButton>
+          <UIButton onClick={() => router.push("/learn")}>Learn More</UIButton>
         </div>
       </div>
     </div>

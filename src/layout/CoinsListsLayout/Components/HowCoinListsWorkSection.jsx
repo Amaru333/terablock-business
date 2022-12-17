@@ -68,37 +68,64 @@ function HowCoinListsWorkSection() {
           <div className="col-12 col-md-4 px-3 px-md-0">
             <UICard>
               <div className="d-flex flex-row justify-content-between align-items-center">
+                {width < 769 && (
+                  <div>
+                    <h1 className="text-lightBlueText fw-bolder" style={{ visibility: "hidden" }}>
+                      3
+                    </h1>
+                  </div>
+                )}
                 <div>
                   <img src="/assets/images/8.png" className="bg-cardImageBg border border-cardImageBorder rounded" style={{ "--bs-border-opacity": 0.2, width: "64px" }} />
                 </div>
                 <h1 className="text-lightBlueText fw-bolder">1</h1>
               </div>
               <p className="fs-4 fw-bolder text-primaryBlue mt-2 text-center text-md-start">Create Web3 wallet</p>
-              <p className="fs-6 text-primaryTextGray text-center text-md-start">Follow simple step-by-step guided process to create a new Web3 wallet or connect an existing wallet.</p>
+              <p className="fs-6 text-primaryTextGray" style={{ textAlign: "justify" }}>
+                Follow simple step-by-step guided process to create a new Web3 wallet or connect an existing wallet.
+              </p>
             </UICard>
           </div>
           <div className="col-12 col-md-4 px-3 px-md-0">
             <UICard>
               <div className="d-flex flex-row justify-content-between align-items-center">
+                {width < 769 && (
+                  <div>
+                    <h1 className="text-lightBlueText fw-bolder" style={{ visibility: "hidden" }}>
+                      3
+                    </h1>
+                  </div>
+                )}
                 <div>
                   <img src="/assets/images/9.png" className="bg-cardImageBg border border-cardImageBorder rounded" style={{ "--bs-border-opacity": 0.2, width: "64px" }} />
                 </div>
                 <h1 className="text-lightBlueText fw-bolder">2</h1>
               </div>
               <p className="fs-4 fw-bolder text-primaryBlue mt-2 text-center text-md-start">Buy</p>
-              <p className="fs-6 text-primaryTextGray text-center text-md-start">Buy accepted cryptocurrencies through convenient payment methods or select from your existing funds.</p>
+              <p className="fs-6 text-primaryTextGray" style={{ textAlign: "justify" }}>
+                Buy accepted cryptocurrencies through convenient payment methods or select from your existing funds.
+              </p>
             </UICard>
           </div>
           <div className="col-12 col-md-4 px-3 px-md-0">
             <UICard>
               <div className="d-flex flex-row justify-content-between align-items-center">
+                {width < 769 && (
+                  <div>
+                    <h1 className="text-lightBlueText fw-bolder" style={{ visibility: "hidden" }}>
+                      3
+                    </h1>
+                  </div>
+                )}
                 <div>
                   <img src="/assets/images/10.png" className="bg-cardImageBg border border-cardImageBorder rounded" style={{ "--bs-border-opacity": 0.2, width: "64px" }} />
                 </div>
                 <h1 className="text-lightBlueText fw-bolder">3</h1>
               </div>
               <p className="fs-4 fw-bolder text-primaryBlue mt-2 text-center text-md-start">CoinsList Selection</p>
-              <p className="fs-6 text-primaryTextGray text-center text-md-start">After one-click CoinsList selection and funds allocation, our Web3 multi-protocol automation will buy and transfer cryptocurrencies to your wallet on the respective blockchain.</p>
+              <p className="fs-6 text-primaryTextGray" style={{ textAlign: "justify" }}>
+                After one-click CoinsList selection and funds allocation, our Web3 multi-protocol automation will buy and transfer cryptocurrencies to your wallet on the respective blockchain.
+              </p>
             </UICard>
           </div>
           {width > 768 && <img src="/assets/icons/4x5.svg" style={{ width: "60px", position: "absolute", bottom: "2rem", left: "1rem" }} />}

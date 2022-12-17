@@ -56,7 +56,7 @@ function AmbassadorProgramSection() {
           <h2 className="text-center pt-5 px-1 d-flex flex-column flex-md-row justify-content-center fw-bold" style={{ color: "#1b2b6b" }}>
             <b>Ambassador Program</b>
           </h2>
-          <p className="text-center" style={{ color: "#5a5b5b" }}>
+          <p className="text-center px-3" style={{ color: "#5a5b5b" }}>
             Ambassador Program plays an essential role in making DeFi accessible to the masses. It comes with several perks and benefits.
           </p>
         </div>

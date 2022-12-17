@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import UILottie from "../../../common/Lottie/UILottie";
 import { useScreenSize } from "../../../functions/useScreenSize";
@@ -7,6 +8,7 @@ import CoinslistsAnimation1 from "../animations/coinslists_hero_2.json";
 
 function CoinLists() {
   const width = useScreenSize().width;
+  const router = useRouter();
 
   const [buttonText, setButtonText] = useState("Get Started");
   return (
@@ -33,7 +35,9 @@ function CoinLists() {
                 <UIButton type="primary" style={{ marginRight: "10px" }} ml0 width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
                   {buttonText}
                 </UIButton>
-                <UIButton style={{ marginLeft: "20px !important" }}>Learn More</UIButton>
+                <UIButton style={{ marginLeft: "20px !important" }} onClick={() => router.push("/coinslists")}>
+                  Learn More
+                </UIButton>
               </div>
             </div>
           </div>

@@ -5,8 +5,8 @@ import UIButton from "../../widgets/UIButtons/UIButton";
 function StayUpdated() {
   const width = useScreenSize().width;
   return (
-    <div style={{ padding: "100px 0" }}>
-      <p className="h4 my-3 text-center" style={{ color: "#1b2b6b" }}>
+    <div style={{ padding: "75px 0" }}>
+      <p className="h4 mb-3 px-4 text-center" style={{ color: "#1b2b6b" }}>
         <b>Stay updated on the latest TeraBlock news</b>
       </p>
       <div className="d-flex align-items-center justify-content-center">

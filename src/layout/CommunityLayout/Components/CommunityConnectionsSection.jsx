@@ -1,6 +1,5 @@
 import React from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
-import UICard from "../../../widgets/UICard/UICard";
 
 function CommunityConnectionsSection() {
   const width = useScreenSize().width;
@@ -32,21 +31,23 @@ function CommunityConnectionsSection() {
   ];
   const SocialCards = ({ title, message, logo, link }) => {
     return (
-      <UICard>
-        <div className="px-1">
-          <div className="d-flex align-items-center">
-            <div>
-              <img src={logo} width={width > 767 ? "56px" : "30px"} />
+      <div className="pb-4 h-100">
+        <div className="card shadow px-2 px-md-3 mb-3 pt-3 bg-white rounded mx-0 mx-md-2 mx-xl-2 mx-xxl-4 border-primaryText h-100" style={{ "--bs-border-opacity": 0.25, zIndex: 1 }}>
+          <div className="px-1">
+            <div className="d-flex align-items-center">
+              <div>
+                <img src={logo} width={width > 767 ? "56px" : "30px"} />
+              </div>
+              <p className={`${width > 767 ? "h4" : "h5"} fw-bolder ms-2 ms-md-3 mb-0`}>{title}</p>
             </div>
-            <p className="h4 fw-bolder ms-2 ms-md-3 mb-0">{title}</p>
+            <p className="mb-0 mt-3 text-primaryBlue fw-bold">
+              <a href={link} target="_blank" style={{ textDecoration: "none", color: "inherit" }}>
+                {message} →
+              </a>
+            </p>
           </div>
-          <p className="mb-0 mt-3 text-primaryBlue fw-bold">
-            <a href={link} target="_blank" style={{ textDecoration: "none", color: "inherit" }}>
-              {message} →
-            </a>
-          </p>
         </div>
-      </UICard>
+      </div>
     );
   };
   return (
@@ -60,7 +61,7 @@ function CommunityConnectionsSection() {
         </div>
         <div className="row mx-2 mx-md-2 mt-5">
           {social_data.map((data, index) => (
-            <div className="col-12 col-md-6 col-xl-3" key={index}>
+            <div className="col-6 col-md-6 col-xl-3" key={index}>
               <SocialCards title={data.title} logo={data.logo} message={data.message} link={data.url} />
             </div>
           ))}

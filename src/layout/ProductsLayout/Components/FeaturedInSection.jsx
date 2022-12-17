@@ -1,7 +1,9 @@
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import StartCryptoJourneyCard from "../../../common/Cards/StartCryptoJourneyCard/StartCryptoJourneyCard";
 import { useScreenSize } from "../../../functions/useScreenSize";
+
+import FeaturedInStyle from "../Styles/FeaturedIn.module.css";
 
 function FeaturedInSection() {
   const width = useScreenSize().width;
@@ -33,37 +35,68 @@ function FeaturedInSection() {
     { src: "/assets/images/product/supporters/HN.png", link: "https://hackernoon.com/" },
   ];
   const images2 = [
-    "/assets/images/product/supporters/YF.png",
-    "/assets/images/product/supporters/DH.png",
-    "/assets/images/product/supporters/CC.png",
-    "/assets/images/product/supporters/X21.png",
-    "/assets/images/product/supporters/PRC.png",
-    "/assets/images/product/supporters/MV.png",
-    "/assets/images/product/supporters/BSV.png",
-    "/assets/images/product/supporters/BV.png",
-    "/assets/images/product/supporters/DC.png",
-    "/assets/images/product/supporters/MC.png",
-    "/assets/images/product/supporters/OP.png",
-    "/assets/images/product/supporters/MC-1.png",
-    "/assets/images/product/supporters/LC.png",
-    "/assets/images/product/supporters/AU21.png",
-    "/assets/images/product/supporters/BTX.png",
+    { src: "/assets/images/product/supporters/YF.png", link: "https://finance.yahoo.com/news/ai-based-trade-automation-case-000000108.html" },
+    { src: "/assets/images/product/supporters/DH.png", link: "https://dailyhodl.com/2021/05/24/terablock-raises-2-94-million-from-its-tbc-token-ido-on-bscpad/" },
+    { src: "/assets/images/product/supporters/CC.png", link: "https://www.cryptocompare.com/coins/guides/terablock-is-gearing-up-for-it-s-ido-launch-on-bscpad/" },
+    { src: "/assets/images/product/supporters/X21.png", link: "https://x21digital.com/" },
+    { src: "/assets/images/product/supporters/PRC.png", link: "https://www.petrock.capital/" },
+    { src: "/assets/images/product/supporters/MV.png", link: "https://master.ventures/" },
+    { src: "/assets/images/product/supporters/BSV.png", link: "http://blocksync.com/" },
+    { src: "/assets/images/product/supporters/BV.png", link: "https://www.brillianceventures.com/" },
+    { src: "/assets/images/product/supporters/DC.png", link: "https://www.designated.capital/" },
+    { src: "/assets/images/product/supporters/MC.png", link: "https://magnusdigitalassets.com/" },
+    { src: "/assets/images/product/supporters/OP.png", link: "https://oropocket.com/" },
+    { src: "/assets/images/product/supporters/MC-1.png", link: "https://manticore.vc/" },
+    { src: "/assets/images/product/supporters/LC.png", link: "https://www.lotuscapital.me/" },
+    { src: "/assets/images/product/supporters/AU21.png", link: "https://au21.capital/" },
+    { src: "/assets/images/product/supporters/BTX.png", link: "https://www.btx.capital/" },
   ];
+
+  const ref = useRef(null);
+  const scroll = (scrollOffset) => {
+    ref.current.scrollLeft += scrollOffset;
+  };
+
+  useEffect(() => {
+    let init = 0;
+    const timer = setInterval(() => {
+      if (init == 0) {
+        scroll(2000);
+        init++;
+      } else {
+        scroll(-2000);
+        init--;
+      }
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="py-5 position-relative px-0 px-md-2" style={{ backgroundColor: "#0251ff" }}>
-      <div className="text-center px-4 px-md-5 mx-0 mx-md-5 pb-5">
+      <div className="text-center px-4 px-md-5 mx-0 mx-md-5 pb-0 pb-sm-3 pb-md-4">
         <h2 className="text-white fw-bold">Supporters</h2>
         <p className="text-white mb-0">TeraBlock is supported by industry leading investors, partners, advisors and publications.</p>
       </div>
-      <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "83%" : "95%" }}>
-        <div className="row mx-0 mx-md-4">
-          {images.map((image, index) => (
-            <div className="col-6 col-sm-4 column20" key={index}>
-              <div>
-                <ImageCard image={image} />
+      <div ref={ref} className={["py-4", FeaturedInStyle.scroll].join(" ")} style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "83%" : "95%" }}>
+        <div style={{ display: "flex", width: "200%", overflow: "hidden" }}>
+          <div className="row mx-0 mx-md-4" style={{ width: "100%", overflow: "hidden" }}>
+            {images.map((image, index) => (
+              <div className="col-6 col-sm-4 column20" key={index}>
+                <div>
+                  <ImageCard image={image} />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="row mx-0 mx-md-4" style={{ width: "100%", overflow: "hidden" }}>
+            {images2.map((image, index) => (
+              <div className="col-6 col-sm-4 column20" key={index}>
+                <div>
+                  <ImageCard image={image} />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
         {/* <div className="row mx-3 mx-md-4">
           {images2.map((image, index) => (

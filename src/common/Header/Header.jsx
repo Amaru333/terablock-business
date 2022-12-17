@@ -19,7 +19,7 @@ function Header() {
   };
   const menu_items = [
     {
-      name: "Coinslists",
+      name: "CoinsLists",
       link: "/coinslists",
     },
     {
@@ -34,10 +34,10 @@ function Header() {
       name: "Products",
       link: "/products",
     },
-    {
-      name: "Help Center",
-      link: "/help-center",
-    },
+    // {
+    //   name: "Help Center",
+    //   link: "/help-center",
+    // },
     {
       name: "Community",
       link: "/community",
