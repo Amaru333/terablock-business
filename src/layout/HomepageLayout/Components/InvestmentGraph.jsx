@@ -178,13 +178,13 @@ function InvestmentGraph() {
         <div className={["m-auto rounded border-white px-4 pt-2 my-2", InvestmentGraphStyle.half_container].join(" ")} style={{ "--bs-border-opacity": 0.2, maxWidth: "1700px", margin: "auto", width: width > 1499 ? "68%" : width > 920 ? "78%" : "100%" }}>
           <div className="d-flex flex-row justify-content-between mt-2">
             <p className="text-white">Monthly Deposit ({formatter.format(value * 100)})</p>
-            <p className="text-white">$100,000</p>
+            <p className="text-white">$10,000</p>
           </div>
           <div className="d-flex align-items-center">
             <span className="text-white border border-white rounded-circle px-2 fw-bold me-2" style={{ height: "23px", lineHeight: "20px", cursor: "pointer" }} onClick={decrement}>
               -
             </span>
-            <input type="range" min="0" max="1000" className={InvestmentGraphStyle.slider} value={value} onChange={(e) => setValue(e.target.value)} />
+            <input type="range" min="0" max="100" className={InvestmentGraphStyle.slider} value={value} onChange={(e) => setValue(e.target.value)} />
             <span className="text-white border border-white rounded-circle fw-bold ms-2" style={{ height: "24px", lineHeight: "20px", padding: "0 7px", cursor: "pointer" }} onClick={increment}>
               +
             </span>

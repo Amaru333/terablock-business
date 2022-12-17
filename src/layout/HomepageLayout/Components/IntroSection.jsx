@@ -44,12 +44,12 @@ function IntroSection() {
                   window.open("https://bridge.terablock.com/bridge", "_blank");
                 }}>Launch App</UIButton>
               </div>
-              <div className={["d-flex justify-content-between justify-content-md-start", IntroSectionStyles.bottom_logos].join(" ")}>
+              <div className={["d-flex justify-content-around justify-content-md-start", IntroSectionStyles.bottom_logos].join(" ")}>
                 <a href="https://cointelegraph.com/press-releases/terablock-and-splinterlands-collaborate-take-defi-gaming-to-new-heights" target="_blank">
-                  <img src="/assets/icons/homepage/CT.png" className="pe-md-4" style={{ width: width < 768 ? "75px" : "170px" }} />
+                  <img src="/assets/icons/homepage/CT.png" className="pe-md-4" style={{ width: width < 768 ? "100px" : "170px" }} />
                 </a>
                 <a href="https://finance.yahoo.com/news/ai-based-trade-automation-case-000000108.html" target="_blank">
-                  <img src="/assets/icons/homepage/YF.png" className="px-md-4" style={{ width: width < 768 ? "60px" : "120px" }} />
+                  <img src="/assets/icons/homepage/YF.png" className="px-md-4" style={{ width: width < 768 ? "50px" : "100px" }} />
                 </a>
                 <a href="https://www.investing.com/news/cryptocurrency-news/terablock-raised-24m-in-funds-to-build-crypto-exchange-2478985" target="_blank">
                   <img src="/assets/icons/homepage/IC.png" className="px-md-4" style={{ width: width < 768 ? "60px" : "140px" }} />
@@ -73,35 +73,35 @@ function IntroSection() {
 
       <div className="" style={{ backgroundColor: "#0251ff" }}>
         <div className="py-4 row px-0 px-sm-4 py-4 justify-content-center" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : "100%" }}>
-          <div className="py-4 col col-md">
+          <div className="py-4 col col-md px-2">
             <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600" }}>
               ${width > 767 ? <CountUp duration={2} end={38940995} separator="," /> : abbreviateNumber(38940995)}
             </p>
-            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "16px" }}>
+            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "14px" }}>
               Transaction Volume
             </p>
           </div>
-          <div className="py-4 col col-md">
-            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600" }}>
+          <div className="py-4 col col-md px-2">
+            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "14pt", fontWeight: "600" }}>
               {width > 767 ? <CountUp duration={2} end={13976181174} separator="," /> : abbreviateNumber(13976181174)}
             </p>
-            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "16px" }}>
+            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "14px" }}>
               Tokens Transacted
             </p>
           </div>
-          <div className="py-4 col col-md">
-            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600" }}>
+          <div className="py-4 col col-md px-2">
+            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "14pt", fontWeight: "600" }}>
               {width > 767 ? <CountUp duration={2} end={76495} separator="," /> : abbreviateNumber(76495)}
             </p>
-            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "16px" }}>
+            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "14px" }}>
               Secure Transactions
             </p>
           </div>
-          <div className="py-4 col col-md">
-            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600" }}>
+          <div className="py-4 col col-md px-2">
+            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "14pt", fontWeight: "600" }}>
               {width > 767 ? <CountUp duration={2} end={13929} separator="," /> : abbreviateNumber(13929)}
             </p>
-            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "16px" }}>
+            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "14px" }}>
               Happy Users
             </p>
           </div>

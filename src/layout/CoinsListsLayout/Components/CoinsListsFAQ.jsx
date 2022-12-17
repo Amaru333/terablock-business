@@ -6,7 +6,6 @@ import UIButton from "../../../widgets/UIButtons/UIButton";
 
 function CoinsListsFAQ() {
   const width = useScreenSize().width;
-  console.log(width);
   return (
     <div className="pb-5 position-relative px-0 px-md-2 px-xl-5" style={{ backgroundColor: "#0251ff" }}>
       <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "83%" : "95%" }}>

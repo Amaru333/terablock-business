@@ -9,7 +9,7 @@ function AboutTerablockSection() {
         <h2 className="text-white text-center px-3 px-md-0 pt-md-4">
           <b>What makes TeraBlock better?</b>
         </h2>
-        <div className="row mx-0 pt-5 justify-content-center justify-content-md-start">
+        <div className="row mx-0 pt-5 justify-content-start">
           <div className="col-6 col-md-4 pb-5">
             <div className="px-0 px-md-4">
               <img src="/assets/images/Investing.svg" />

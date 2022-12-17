@@ -102,7 +102,7 @@ function PowerOfCoinsListsSection() {
   ];
   return (
     <div className="bg-white px-0 px-md-2 px-xl-5">
-      <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "83%" : "95%" }}>
+      <div className="py-4 pb-5" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "83%" : "95%" }}>
         <div className="flex flex-column justify-content-center align-items-center pb-4">
           <h2 className="text-center pt-5 px-1 d-flex flex-column flex-md-row justify-content-center" style={{ color: "#1b2b6b" }}>
             <span>
@@ -115,10 +115,10 @@ function PowerOfCoinsListsSection() {
         </div>
         <div className="row mx-2 mx-xl-5 justify-content-center">
           <div className="col-12 col-md-6 justify-content-center justify-content-md-start align-items-center d-flex">
-            <img src="/assets/images/iphone-full.png" />
+            <img src="/assets/images/coinsLists_feature.png" style={{ maxWidth: "250px" }} />
           </div>
           <div className="col-12 col-md-6 justify-content-center align-items-center d-flex">
-            <div className="d-flex flex-column">
+            <div className="d-flex flex-column pt-4 pt-md-0">
               {desc_data.map((data) => (
                 <DescCard title={data.title} img={data.img} desc={data.desc} />
               ))}

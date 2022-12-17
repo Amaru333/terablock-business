@@ -282,20 +282,24 @@ function BuyCryptoTable() {
       <div>
         <UICard>
           <div className="row text-black border-bottom mt-3 text-center" style={{ fontWeight: "600", fontSize: "13px" }}>
-            <p className="col-2 mb-2">Name</p>
-            <p className="col mb-2">Price</p>
-            <p className="col mb-2">Change</p>
-            {/* <p className="col mb-2">Chart</p> */}
-            <p className="col mb-2">Trade</p>
+            <p className="col-3 p-0 mb-2">Name</p>
+            <p className="col p-0 mb-2">Price</p>
+            <p className="col p-0 mb-2">Change</p>
+            {/* <p className="col p-0 mb-2">Chart</p> */}
+            <p className="col p-0 mb-2">Trade</p>
           </div>
           {data?.map((data, index) => (
             <div className={`row text-center align-items-center justify-content-center my-2 pb-2 ${index < data?.length - 1 && "border-bottom"}`} key={index}>
-              <div className="col-2 d-flex flex-row align-items-center">
+              {/* <div className="col-1">
+                <img src={data.image} style={{ width: "24px" }} className="rounded me-2" />
+              </div> */}
+              <div className="col-3 p-0 d-flex flex-row align-items-center justify-content-center">
+                <img src={data.image} style={{ width: "24px" }} className="rounded me-2" />
                 <p className="mb-0" style={{ fontWeight: 400, color: "#1b2b6b", fontSize: "14px" }}>
                   {data.symbol.toUpperCase()}
                 </p>
               </div>
-              <p className="col mb-0" style={{ fontWeight: 600, color: "#1b2b6b" }}>
+              <p className="col p-0 mb-0" style={{ fontWeight: 600, color: "#1b2b6b" }}>
                 $
                 {data?.current_price > 0
                   ? data?.current_price.toLocaleString(undefined, {
@@ -304,7 +308,7 @@ function BuyCryptoTable() {
                     })
                   : data?.current_price}
               </p>
-              <p className="col mb-0 d-flex justify-content-center" style={{ fontWeight: 600, color: data.price_change_percentage_24h >= 0 ? "#6cc870" : "#e33536" }}>
+              <p className="col p-0 mb-0 d-flex justify-content-center" style={{ fontWeight: 600, color: data.price_change_percentage_24h >= 0 ? "#6cc870" : "#e33536" }}>
                 {data.price_change_percentage_24h >= 0 ? "+" : null}
                 {data.price_change_percentage_24h?.toLocaleString(undefined, {
                   minimumFractionDigits: 0,
@@ -317,7 +321,7 @@ function BuyCryptoTable() {
                   <Line key={index} data={graph_data[index] ? graph_data[index] : graph_data[0]} options={options} />
                 </div>
               </p> */}
-              <div className="col d-flex justify-content-center">
+              <div className="col p-0 d-flex justify-content-center">
                 <p className="text-white mb-0" style={{ padding: "5px 20px", borderRadius: "8px", fontWeight: 600, backgroundColor: "#0251ff", cursor: "pointer", fontSize: "14px" }}>
                   Buy
                 </p>

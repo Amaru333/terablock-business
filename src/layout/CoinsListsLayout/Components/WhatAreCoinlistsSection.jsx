@@ -30,7 +30,7 @@ function WhatAreCoinlistsSection() {
           </div>
           <div className="col-12 col-md-6 d-flex" style={{ justifyContent: width > 768 ? "end" : "center" }}>
             <div className="">
-              <img src="/assets/images/coinslist_02.svg" style={{ width: width > 768 ? "300px" : "80vw" }} />
+              <img src="/assets/images/coinslist_01.png" style={{ width: width > 768 ? "300px" : "80vw" }} />
             </div>
           </div>
         </div>
@@ -39,17 +39,17 @@ function WhatAreCoinlistsSection() {
         <div className="row mx-2 mx-md-0 mt-5 position-relative">
           <div className="col-12 col-md-4">
             <CardWithLogo image="/assets/images/coinslists/coinlists.svg" title="Simplified Investing">
-              <div>Invest in multiple cryptocurrencies with just a few clicks. There is no prior knowledge required due to our learning-based approach of onboarding.</div>
+              <div style={{ textAlign: "justify" }}>Invest in multiple cryptocurrencies with just a few clicks. There is no prior knowledge required due to our learning-based approach of onboarding.</div>
             </CardWithLogo>
           </div>
           <div className="col-12 col-md-4">
             <CardWithLogo image="/assets/images/coinslists/coinlists.svg" title="Be in Control">
-              <div>CoinsList is fully decentralised and non-custodial so your funds are always in your control.</div>
+              <div style={{ textAlign: "justify" }}>CoinsList is fully decentralised and non-custodial so your funds are always in your control.</div>
             </CardWithLogo>
           </div>
           <div className="col-12 col-md-4">
             <CardWithLogo image="/assets/images/coinslists/coinlists.svg" title="Don't just Buy; Invest!">
-              <div>CoinsList is a set and forget approach to investing in cryptocurrencies. CoinsList helps you Invest with a long-term view of building wealth.</div>
+              <div style={{ textAlign: "justify" }}>CoinsList is a set and forget approach to investing in cryptocurrencies. CoinsList helps you Invest with a long-term view of building wealth.</div>
             </CardWithLogo>
           </div>
         </div>

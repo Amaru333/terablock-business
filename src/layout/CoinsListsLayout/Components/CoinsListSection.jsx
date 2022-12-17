@@ -14,7 +14,7 @@ function CoinsListSection() {
         {width > 767 ? (
           <UICard>
             <div className="d-flex align-items-center">
-              <div style={{ width: "5%" }}>
+              <div style={{ width: width > 1650 || width < 769 ? "5%" : "8%" }}>
                 <img src={data.image} style={{ width: "60px" }} />
               </div>
               <div className="ms-3" style={{ width: "40%" }}>
@@ -136,7 +136,7 @@ function CoinsListSection() {
       title: "Metaverse",
       description: "A portfolio of cryptocurrencies revolutionising Metaverse ecosystem.",
       coin_images: ["/assets/icons/homepage/Coins/12.png", "/assets/icons/homepage/Coins/13.png", "/assets/icons/homepage/Coins/7.png", "/assets/icons/homepage/Coins/5.png"],
-      cagr: "2,877%",
+      cagr: "-",
       min_amount: "$250",
       volatile: "High",
       apr: "2",
@@ -146,7 +146,7 @@ function CoinsListSection() {
       title: "Play2Earn",
       description: "A portfolio of leading cryptocurrencies of Play-to-Earn games.",
       coin_images: ["/assets/icons/homepage/Coins/16.png", "/assets/icons/homepage/Coins/14.png", "/assets/icons/homepage/Coins/3.png", "/assets/icons/homepage/Coins/8.png"],
-      cagr: "2,861%",
+      cagr: "-",
       min_amount: "$250",
       volatile: "High",
       apr: "2",
@@ -156,7 +156,7 @@ function CoinsListSection() {
       title: "DeFi",
       description: "A portfolio of innovative businesses in DeFi ecosystem.",
       coin_images: ["/assets/icons/homepage/Coins/4.png", "/assets/icons/homepage/Coins/11.png", "/assets/icons/homepage/Coins/2.png", "/assets/icons/homepage/Coins/9.png"],
-      cagr: "458.9%",
+      cagr: "-",
       min_amount: "$250",
       volatile: "Med",
       apr: "2",
@@ -182,13 +182,13 @@ function CoinsListSection() {
   // },
   return (
     <div className="py-5 position-relative px-0 text-white" style={{ backgroundColor: "#0251ff" }}>
-      <div className="text-center pt-4 px-4 px-md-5 mx-0 mx-md-5 pb-5">
+      <div className="text-center pt-4 px-4 px-md-5 mx-0 mx-md-5 pb-4">
         <h2 className="fw-bold">
           <b>Popular CoinsLists</b>
         </h2>
         <p className="fs-6">Looking to start with small investment? Bullish on Metaverse? Choose from diversified CoinsLists.</p>
       </div>
-      <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "73%" : width > 940 ? "86%" : "96%" }}>
+      <div className="pb-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "73%" : width > 940 ? "86%" : "96%" }}>
         <div className="row mx-0 mx-md-4">
           {coinlist_data.map((data, index) => (
             <div className="col-12" key={index}>

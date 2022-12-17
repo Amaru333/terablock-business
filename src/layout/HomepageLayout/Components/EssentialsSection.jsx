@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
 import UIButton from "../../../widgets/UIButtons/UIButton";
@@ -7,6 +8,8 @@ import EssentialsSectionStyle from "../Styles/EssentialsSection.module.css";
 
 function EssentialsSection() {
   const width = useScreenSize().width;
+  const router = useRouter();
+
   const essential_details = [
     {
       image: "/assets/images/learn-image-1.png",
@@ -28,7 +31,7 @@ function EssentialsSection() {
     },
     {
       image: "/assets/images/learn-image-4.png",
-      title: "Understanding Web3: The gateway to a decentralized world",
+      title: "Understanding Web3: The gateway to a decentralized...",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
       link: "https://blog.terablock.com/understand-web3/",
     },
@@ -76,7 +79,7 @@ function EssentialsSection() {
       <div className="card shadow p-2" style={{ width: "18rem", zIndex: 2, marginLeft: index == 0 && width > 1499 ? `${(14 * width) / 100}px` : index == 0 && width > 940 ? `${(7 * width) / 100}px` : index == 0 && `0px`, cursor: "pointer" }} onClick={() => window.open(link, "_blank")}>
         <img src={image} className="card-img" />
         <div className="pt-3">
-          <h5 className="card-title fw-bold" style={{ height: "72px" }}>
+          <h5 className="card-title fw-bold" style={{ height: "48px" }}>
             {title}
           </h5>
           <div className="d-flex justify-content-between mb-2" style={{ fontSize: "14px" }}>
@@ -112,7 +115,7 @@ function EssentialsSection() {
           <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
             {buttonText}
           </UIButton>
-          <UIButton>Learn More</UIButton>
+          <UIButton onClick={() => router.push("/learn")}>Learn More</UIButton>
         </div>
       </div>
     </div>
