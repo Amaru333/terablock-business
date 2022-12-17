@@ -1,7 +1,7 @@
 export function abbreviateNumber(value) {
   var newValue = value;
   if (value >= 1000) {
-    var suffixes = ["", "k", "m", "b", "t"];
+    var suffixes = ["", "K", "M", "B", "T"];
     var suffixNum = Math.floor(("" + value).length / 3);
     var shortValue = "";
     for (var precision = 2; precision >= 1; precision--) {
@@ -11,7 +11,8 @@ export function abbreviateNumber(value) {
         break;
       }
     }
-    if (shortValue % 1 != 0) shortValue = shortValue.toFixed(1);
+    // if (shortValue % 1 != 0) shortValue = shortValue.toFixed(1);
+    shortValue = shortValue.toFixed(2);
     newValue = shortValue + suffixes[suffixNum];
   }
   return newValue;

@@ -27,9 +27,11 @@ function GamersSection() {
               <p className="text-cardDescriptionColor fs-6 mb-4" style={{ textAlign: "justify", lineHeight: "30px" }}>
                 Swidge is a powerful Web3 multi-protocol automation that helps users buy, swap, bridge and transfer tokens from a multichain unified platform to a blockchain game (Play-to-earn) or a decentralised application (Dapp) in just a few clicks.
               </p>
-              <UIButton ml0 type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
-                {buttonText}
-              </UIButton>
+              <div className="d-flex justify-content-center justify-content-md-start">
+                <UIButton ml0 type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+                  {buttonText}
+                </UIButton>
+              </div>
             </div>
           </div>
           <div className="col-12 col-md-6 d-flex" style={{ justifyContent: width > 768 ? "end" : "center" }}>

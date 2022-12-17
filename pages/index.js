@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Terablock</title>
+        <title>TeraBlock</title>
         <meta name="description" content="Crypto Products Aggregator" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

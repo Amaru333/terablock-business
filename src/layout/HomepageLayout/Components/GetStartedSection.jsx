@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
 import UIButton from "../../../widgets/UIButtons/UIButton";
@@ -5,6 +6,8 @@ import UICard from "../../../widgets/UICard/UICard";
 
 function GetStartedSection() {
   const width = useScreenSize().width;
+  const router = useRouter();
+
   const [buttonText, setButtonText] = useState("Get Started");
   return (
     <div>
@@ -27,7 +30,7 @@ function GetStartedSection() {
                 <h1 className="text-lightBlueText fw-bolder">1</h1>
               </div>
               <p className="fs-4 fw-bolder text-primaryBlue mt-2 text-center text-md-start">Create Web3 wallet</p>
-              <p style={{ color: "#5a5b5b" }} className="fs-6 text-center text-md-start">
+              <p style={{ color: "#5a5b5b", textAlign: "justify" }} className="fs-6">
                 Follow simple step-by-step guided process to create a new Web3 wallet or connect an existing wallet.
               </p>
             </UICard>
@@ -41,7 +44,7 @@ function GetStartedSection() {
                 <h1 className="text-lightBlueText fw-bolder">2</h1>
               </div>
               <p className="fs-4 fw-bolder text-primaryBlue mt-2 text-center text-md-start">Select CoinsLists</p>
-              <p style={{ color: "#5a5b5b" }} className="fs-6 text-center text-md-start">
+              <p style={{ color: "#5a5b5b", textAlign: "justify" }} className="fs-6">
                 We curate and optimise the most sought after crypto assets as CoinLists, so you can wisely invest in a range of crypto with ease.
               </p>
             </UICard>
@@ -55,7 +58,7 @@ function GetStartedSection() {
                 <h1 className="text-lightBlueText fw-bolder">3</h1>
               </div>
               <p className="fs-4 fw-bolder text-primaryBlue mt-2 text-center text-md-start">Buy with a bank card</p>
-              <p style={{ color: "#5a5b5b" }} className="fs-6 text-center text-md-start">
+              <p style={{ color: "#5a5b5b", textAlign: "justify" }} className="fs-6">
                 Buy directly to your Web3 wallet through more than 16 payment accepted methods in 180 countries.
               </p>
             </UICard>
@@ -66,7 +69,7 @@ function GetStartedSection() {
           <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
             {buttonText}
           </UIButton>
-          <UIButton>Learn More</UIButton>
+          <UIButton onClick={() => router.push("/coinslists")}>Learn More</UIButton>
         </div>
       </div>
     </div>

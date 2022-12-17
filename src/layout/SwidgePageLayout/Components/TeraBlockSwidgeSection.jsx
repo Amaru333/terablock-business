@@ -88,37 +88,64 @@ function TeraBlockSwidgeSection() {
           <div className="col-12 col-md-4 px-3 px-md-0 px-xl-3">
             <UICard>
               <div className="d-flex flex-row justify-content-between align-items-center">
+                {width < 769 && (
+                  <div>
+                    <h1 className="text-lightBlueText fw-bolder" style={{ visibility: "hidden" }}>
+                      3
+                    </h1>
+                  </div>
+                )}
                 <div>
                   <img src="/assets/images/swidge/1.png" className="bg-cardImageBg border border-cardImageBorder rounded" style={{ width: "60px", "--bs-border-opacity": 0.2 }} />
                 </div>
                 <h1 className="text-lightBlueText fw-bolder">1</h1>
               </div>
               <p className="fs-4 fw-bolder text-primaryBlue mt-2 text-center text-md-start">Create Web3 wallet</p>
-              <p className="fs-6 text-primaryTextGray text-center text-md-start">Follow simple step-by-step guided process to create a new Web3 wallet or connect an existing wallet.</p>
+              <p className="fs-6 text-primaryTextGray" style={{ textAlign: "justify" }}>
+                Follow simple step-by-step guided process to create a new Web3 wallet or connect an existing wallet.
+              </p>
             </UICard>
           </div>
           <div className="col-12 col-md-4 px-3 px-md-0 px-xl-3">
             <UICard>
               <div className="d-flex flex-row justify-content-between align-items-center">
+                {width < 769 && (
+                  <div>
+                    <h1 className="text-lightBlueText fw-bolder" style={{ visibility: "hidden" }}>
+                      3
+                    </h1>
+                  </div>
+                )}
                 <div>
                   <img src="/assets/images/swidge/2.png" className="bg-cardImageBg border border-cardImageBorder rounded" style={{ width: "60px", "--bs-border-opacity": 0.2 }} />
                 </div>
                 <h1 className="text-lightBlueText fw-bolder">2</h1>
               </div>
               <p className="fs-4 fw-bolder text-primaryBlue mt-2 text-center text-md-start">Buy</p>
-              <p className="fs-6 text-primaryTextGray text-center text-md-start">Buy accepted cryptocurrencies through convenient payment methods or select from your existing funds.</p>
+              <p className="fs-6 text-primaryTextGray" style={{ textAlign: "justify" }}>
+                Buy accepted cryptocurrencies through convenient payment methods or select from your existing funds.
+              </p>
             </UICard>
           </div>
           <div className="col-12 col-md-4 px-3 px-md-0 px-xl-3">
             <UICard>
               <div className="d-flex flex-row justify-content-between align-items-center">
+                {width < 769 && (
+                  <div>
+                    <h1 className="text-lightBlueText fw-bolder" style={{ visibility: "hidden" }}>
+                      3
+                    </h1>
+                  </div>
+                )}
                 <div>
                   <img src="/assets/images/swidge/3.png" className="bg-cardImageBg border border-cardImageBorder rounded" style={{ width: "60px", "--bs-border-opacity": 0.2 }} />
                 </div>
                 <h1 className="text-lightBlueText fw-bolder">3</h1>
               </div>
               <p className="fs-4 fw-bolder text-primaryBlue mt-2 text-center text-md-start">Swap + Bridge</p>
-              <p className="fs-6 text-primaryTextGray text-center text-md-start">One-click approval and your selected cryptocurrency is instantly converted and transferred to your in-game or Dapp wallet.</p>
+              <p className="fs-6 text-primaryTextGray" style={{ textAlign: "justify" }}>
+                One-click approval and your selected cryptocurrency is instantly converted and transferred to your in-game or Dapp wallet.
+              </p>
             </UICard>
           </div>
           {width > 768 && <img src="/assets/icons/4x5.svg" style={{ width: "60px", position: "absolute", bottom: "2rem", left: "1rem" }} />}

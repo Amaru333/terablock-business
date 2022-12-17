@@ -16,7 +16,7 @@ function RewardsTypeSection() {
               {title}
             </h4>
           </div>
-          <div className="text-cardDescriptionColor d-flex" style={{ color: "#5a5b5b" }}>
+          <div className="text-cardDescriptionColor d-flex" style={{ color: "#5a5b5b", textAlign: "justify" }}>
             {children}
           </div>
         </div>
