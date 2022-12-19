@@ -51,7 +51,7 @@ function Footer() {
       title: "Company",
       pages: [
         {
-          link: "/about-us",
+          link: "/",
           name: "About",
         },
         {
