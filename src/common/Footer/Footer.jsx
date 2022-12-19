@@ -14,45 +14,37 @@ function Footer() {
       title: "TBC Token",
       pages: [
         {
-          link: "/",
+          link: "https://stake.terablock.com/pools",
           name: "Stake TBC",
         },
         {
-          link: "/",
+          link: "https://pancakeswap.finance/swap?inputCurrency=0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c&outputCurrency=0x9798dF2f5d213a872c787bD03b2b91F54D0D04A1",
           name: "Buy TBC on PancakeSwap",
         },
         {
-          link: "/",
+          link: "https://click.mlsend2.com/link/c/YT0yMTA1NzI2MjgzMTg1OTIxMDIyJmM9ejR1MyZlPTAmYj0xMDU0MzAzMTk4JmQ9ZjNmOGk3ZQ==.7sb6hIFO4lsz41ni_5mC5Jc4xnyVNLgfPJn2SZyd9AI",
           name: "Buy TBC on HitBTC",
         },
         {
-          link: "/",
+          link: "https://fmfw.io/tbc-to-usdt",
           name: "Buy TBC on FMFW.io",
         },
         {
-          link: "/",
+          link: "https://bscscan.com/token/0x9798dF2f5d213a872c787bD03b2b91F54D0D04A1",
           name: "TBC on BSC",
         },
         {
-          link: "/",
+          link: "https://etherscan.io/token/0x9798dF2f5d213a872c787bD03b2b91F54D0D04A1",
           name: "TBC on Etherscan",
         },
         {
-          link: "/",
+          link: "https://coinmarketcap.com/currencies/terablock/",
           name: "TBC on CoinMarketCap",
         },
         {
-          link: "/",
+          link: "https://www.coingecko.com/en/coins/terablock",
           name: "TBC on CoinGecko",
-        },
-        {
-          link: "/",
-          name: "Tokenomics",
-        },
-        {
-          link: "/",
-          name: "Utility",
-        },
+        }
       ],
     },
     {
@@ -63,7 +55,7 @@ function Footer() {
           name: "About",
         },
         {
-          link: "/",
+          link: "https://angel.co/company/myterablock/jobs",
           name: "Careers",
         },
         {
@@ -75,7 +67,7 @@ function Footer() {
           name: "Press",
         },
         {
-          link: "/",
+          link: "https://hacken.io/audits/#terablock",
           name: "Security",
         },
         {
@@ -83,8 +75,8 @@ function Footer() {
           name: "Token Listing",
         },
         {
-          link: "/",
-          name: "Partners & Investors",
+          link: "/products#supporters",
+          name: "Supporters",
         },
         {
           link: "/",
@@ -104,20 +96,28 @@ function Footer() {
           name: "Buy",
         },
         {
+          link: "/coinslists",
+          name: "CoinsList",
+        },
+        {
+          link: "/swidge",
+          name: "Swidge",
+        },
+        {
           link: "/",
-          name: "Coins List",
+          name: "Swap",
+        },
+        {
+          link: "http://bridge.terablock.com",
+          name: "Bridge",
+        },
+        {
+          link: "/",
+          name: "Link",
         },
         {
           link: "/",
           name: "Earn",
-        },
-        {
-          link: "/",
-          name: "Convert",
-        },
-        {
-          link: "/",
-          name: "Bridge",
         },
         {
           link: "/",
