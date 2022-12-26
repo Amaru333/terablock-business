@@ -1,5 +1,5 @@
 import axios from "axios";
-import React from "react";
+import React, { useEffect } from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
 
 function PostsSection() {
@@ -13,10 +13,12 @@ function PostsSection() {
   };
 
   // fetch using axios from ghost api url (https://blogv2.terablock.com/ghost/api/content/posts) and store in popular_posts
-  const [popular_posts,setPosts] = React.useState([]);
-  axios.get("https://blogv2.terablock.com/ghost/api/content/posts?key=0489294cc94510ae9335da2c7f&limit=5&&filter=tag:learn").then((res) => {
-    setPosts(res.data.posts);
-  });
+  const [popular_posts, setPosts] = React.useState([]);
+  useEffect(() => {
+    axios.get("https://blogv2.terablock.com/ghost/api/content/posts?key=0489294cc94510ae9335da2c7f&limit=5&&filter=tag:learn").then((res) => {
+      setPosts(res.data.posts);
+    });
+  }, []);
 
   const DifficultyTag = ({ level }) => {
     const color = {
