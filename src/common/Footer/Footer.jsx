@@ -19,7 +19,7 @@ function Footer() {
         },
         {
           link: "https://pancakeswap.finance/swap?inputCurrency=0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c&outputCurrency=0x9798dF2f5d213a872c787bD03b2b91F54D0D04A1",
-          name: "Buy TBC on PancakeSwap",
+          name: "Buy TBC on PCS",
         },
         {
           link: "https://click.mlsend2.com/link/c/YT0yMTA1NzI2MjgzMTg1OTIxMDIyJmM9ejR1MyZlPTAmYj0xMDU0MzAzMTk4JmQ9ZjNmOGk3ZQ==.7sb6hIFO4lsz41ni_5mC5Jc4xnyVNLgfPJn2SZyd9AI",
@@ -39,7 +39,7 @@ function Footer() {
         },
         {
           link: "https://coinmarketcap.com/currencies/terablock/",
-          name: "TBC on CoinMarketCap",
+          name: "TBC on CMC",
         },
         {
           link: "https://www.coingecko.com/en/coins/terablock",
@@ -50,10 +50,6 @@ function Footer() {
     {
       title: "Company",
       pages: [
-        {
-          link: "/about-us",
-          name: "About",
-        },
         {
           link: "https://angel.co/company/myterablock/jobs",
           name: "Careers",
