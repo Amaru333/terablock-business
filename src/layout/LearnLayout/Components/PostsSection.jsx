@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
 
@@ -11,32 +12,11 @@ function PostsSection() {
     description: "While the current version of the Internet, Web2, is used by millions, it is not without",
   };
 
-  const popular_posts = [
-    {
-      title: "Beginner's guide to dapps",
-      difficulty: "Beginner",
-    },
-    {
-      title: "Can crypto really replace your bank account? ",
-      difficulty: "Beginner",
-    },
-    {
-      title: "The crypto market downturn explained",
-      difficulty: "Beginner",
-    },
-    {
-      title: "Beginner's guide to dapps",
-      difficulty: "Beginner",
-    },
-    {
-      title: "Can crypto really replace your bank account? ",
-      difficulty: "Beginner",
-    },
-    {
-      title: "The crypto market downturn explained",
-      difficulty: "Beginner",
-    },
-  ];
+  // fetch using axios from ghost api url (https://blogv2.terablock.com/ghost/api/content/posts) and store in popular_posts
+  const [popular_posts,setPosts] = React.useState([]);
+  axios.get("https://blogv2.terablock.com/ghost/api/content/posts?key=0489294cc94510ae9335da2c7f&limit=5&&filter=tag:learn").then((res) => {
+    setPosts(res.data.posts);
+  });
 
   const DifficultyTag = ({ level }) => {
     const color = {
