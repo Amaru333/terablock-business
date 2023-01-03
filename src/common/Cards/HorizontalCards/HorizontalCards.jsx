@@ -62,7 +62,7 @@ function HorizontalCards({ data, description_1, description_2, title  }) {
       <div className={["d-flex ps-3 ps-md-5 ms-0 ms-md-5", HorizontalCardsStyle.horizontal_scroll].join(" ")}>
         {data?.map((item, index) => (
           <div className="pe-3 pe-md-5 mb-3" key={index}>
-            <NewsCard title={item.title} image={item.feature_image} description={item.excerpt} time={item.time} difficulty={item.tags[0]?.name} slug={item.slug}/>
+            <NewsCard title={item.title} image={item.feature_image} description={item.excerpt} time={item.reading_time} difficulty={item.id == "63abe3754dba2f1ec0e19f41" ? item.tags[1]?.name : item.tags[0]?.name ? item.id == "63abe3754dba2f1ec0e19f48" ? item.tags[4]?.name : item.tags[0]?.name : item.tags[1]?.name} slug={item.slug}/>
           </div>
         ))}
       </div>
