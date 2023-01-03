@@ -35,7 +35,7 @@ function HorizontalCards({ data, description_1, description_2, title  }) {
           <p className={"card-text mt-3 test relative"} style={{ color: "#707070", fontSize: "14px", width:'250px'}}>
             {description}
           </p>
-          <Link href={`/${slug}`}>
+          <Link href={`learn/${slug}`}>
           <span style={{ color: "#0052FF", fontWeight: "700" }}>Read More →</span>
           </Link>
         </div>
