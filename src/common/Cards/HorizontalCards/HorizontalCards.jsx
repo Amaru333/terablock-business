@@ -17,7 +17,7 @@ function HorizontalCards({ data, description_1, description_2, title  }) {
       </span>
     );
   };
-  const NewsCard = ({ image, title, description, difficulty, time, slug }) => {
+  const NewsCard = ({ image, title, description, difficulty, time, slug, id }) => {
     return (
       <div className="card" style={{ width: "18rem", zIndex: 2, borderRadius: "16px", padding: "12px", boxShadow: "2px 2px 24px rgba(0, 0, 0, 0.06)" , minHeight:'420px'  , cursor:'pointer'}}>
         <img src={image} className="card-img" />
@@ -36,7 +36,7 @@ function HorizontalCards({ data, description_1, description_2, title  }) {
             {description}
           </p>
           <Link href={`learn/${slug}`}>
-          <span style={{ color: "#0052FF", fontWeight: "700" }}>Read More →</span>
+            <span style={{ color: "#0052FF", fontWeight: "700" }}>Read More →</span>
           </Link>
         </div>
       </div>
@@ -62,7 +62,7 @@ function HorizontalCards({ data, description_1, description_2, title  }) {
       <div className={["d-flex ps-3 ps-md-5 ms-0 ms-md-5", HorizontalCardsStyle.horizontal_scroll].join(" ")}>
         {data?.map((item, index) => (
           <div className="pe-3 pe-md-5 mb-3" key={index}>
-            <NewsCard title={item.title} image={item.feature_image} description={item.excerpt} time={item.reading_time} difficulty={item.id == "63abe3754dba2f1ec0e19f41" ? item.tags[1]?.name : item.tags[0]?.name ? item.id == "63abe3754dba2f1ec0e19f48" ? item.tags[4]?.name : item.tags[0]?.name : item.tags[1]?.name} slug={item.slug}/>
+            <NewsCard title={item.title} image={item.feature_image} description={item.excerpt} time={item.reading_time} difficulty={item.tags[1]?.name} slug={item.slug} id={item.id}/>
           </div>
         ))}
       </div>
