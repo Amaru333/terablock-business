@@ -31,7 +31,7 @@ function HorizontalCards({ data, description_1, description_2, title }) {
               <span style={{ color: "#797979", marginLeft: "5px", fontWeight: "600" }}>{time} mins</span>
             </div>
           </div>
-          <p className="card-text mt-3" style={{ color: "#707070", fontSize: "14px", paddingBottom: "9px" }}>
+          <p className="card-text mt-3 col-2 text-truncate" style={{ color: "#707070", fontSize: "14px", paddingBottom: "9px", width:'250px'}}>
             {description} . . . <span style={{ color: "#0052FF", fontWeight: "700" }}>read more</span>
           </p>
         </div>
