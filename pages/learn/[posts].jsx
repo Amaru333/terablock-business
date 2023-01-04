@@ -14,23 +14,25 @@ const Posts = () => {
     const [slugData, setSlugData] = useState([])
     // DOMPurify.sanitize('<img src=x onerror=alert(1)//>');
     const url = `https://blogv2.terablock.com/ghost/api/content/posts/slug/${slug}/?key=0489294cc94510ae9335da2c7f`
+    console.log(url,'++++')
     useEffect(() => {
+        if(slug !== undefined){
         axios.get(url).then((res) => {
             setSlugData(res.data.posts);
             console.log(slugData, 'cryptoBasis from api....')
         });
-    }, []);
-
+    }
+    }, [slug]);
     return (
         <div>
             {slugData.map((el) => (
                 <>
                     <div className="d-flex flex-column justify-content-center align-items-center">
-                        <div className="d-flex justify-content-center" style={{ backgroundImage: `url(${el.feature_image})`, maxHeight:'400px', width:'100%',backgroundPosition:'center', height:'50vh',overflow:'hidden', backgroundSize : "cover" }}>
+                        <div className="d-flex justify-content-center" style={{ backgroundImage: `url(${el.feature_image})`, maxHeight:'50vh', width:'99vw',backgroundPosition:'center', height:'400px',overflow:'hidden' }}>
                         </div>
                         <h1 className="text-center pb-4 pt-4 font-weight-bold d-flex justify-content-center" style={{fontWeight : 900}}>{el.title}</h1>
                         <div className="d-flex justify-content-center">
-                            <div dangerouslySetInnerHTML={{ __html: sanitize(el.html ?? {}) }} style={{ maxWidth: '90%', justifyContent: 'center', }} className='d-flex flex-column justify-content-center' />
+                            <div dangerouslySetInnerHTML={{ __html: sanitize(el.html ?? {}) }} style={{ maxWidth: '90%', justifyContent: 'center'}} className='d-flex flex-column justify-content-center' />
                         </div>
                     </div>
                 </>
