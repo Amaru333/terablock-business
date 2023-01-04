@@ -151,10 +151,10 @@ img, video {
   max-width: 100%;
   height: auto;
 }
-img, svg, video, canvas, audio, iframe, embed, object {
-  display: block;
-  vertical-align: middle;
-}
+// img, svg, video, canvas, audio, iframe, embed, object {
+//   display: block;
+//   vertical-align: middle;
+// }
 .post-body {
   font-size: 1.25rem;
   line-height: 1.625;
