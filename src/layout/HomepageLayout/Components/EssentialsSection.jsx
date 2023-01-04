@@ -3,8 +3,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import UIButton from "../../../widgets/UIButtons/UIButton";
 import Link from 'next/link'
-
-
 import EssentialsSectionStyle from "../Styles/EssentialsSection.module.css";
 
 function EssentialsSection() {
