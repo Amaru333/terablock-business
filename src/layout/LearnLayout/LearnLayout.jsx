@@ -29,7 +29,7 @@ function LearnLayout() {
       {/* {cryptoBasis.map((title,index) => ( */}
       <HorizontalCards data={cryptoBasis} title="Crypto Basics" description_1="Cryptography is something you're new to." description_2="Not for long; begin with these instructions and explanations. " />
       {/* ))} */}
-      <HorizontalCards tips={cryptotips} title="Tips & Tutorials" description_1="Cryptography is something you're new to." description_2="Not for long; begin with these instructions and explanations. " />
+      <HorizontalCards data={cryptotips} title="Tips & Tutorials" description_1="Cryptography is something you're new to." description_2="Not for long; begin with these instructions and explanations. " />
       {/* <HorizontalCards data={tips} title="Market Updates" description_1="Cryptography is something you're new to." description_2="Not for long; begin with these instructions and explanations. " /> */}
       <StartJourneyCard />
     </div>

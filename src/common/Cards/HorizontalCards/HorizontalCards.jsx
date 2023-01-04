@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import HorizontalCardsStyle from "./HorizontalCards.module.css";
 
-function HorizontalCards({ data, description_1, description_2, title, tips }) {
+function HorizontalCards({ data, description_1, description_2, title}) {
   const DifficultyTag = ({ level }) => {
     const color = {
       Beginner: "#00C077",
@@ -60,11 +60,6 @@ function HorizontalCards({ data, description_1, description_2, title, tips }) {
         {data?.map((item, index) => (
           <div className="pe-3 pe-md-5 mb-3" key={index}>
             <NewsCard title={item.title} image={item.feature_image} description={item.excerpt} difficulty={item.tags[1].name} time={item.reading_time} slug={item.slug} />
-          </div>
-        ))}
-        {tips?.map((item, index) => (
-          <div className="pe-3 pe-md-5 mb-3" key={index}>
-            <NewsCard title={item.title} image={item.feature_image} description={item.excerpt} difficulty={item.tags[4].name} time={item.reading_time} slug={item.slug} />
           </div>
         ))}
       </div>
