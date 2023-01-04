@@ -29,15 +29,26 @@ const Posts = () => {
         <div>
             {slugData?.map((el) => (
                 <>
-                    <div style={width > 1600 ? { paddingInline: '30%' } : width > 630 ? { paddingInline: '20%' } : { paddingInline: '0' }}>
-                        {/* <span className="font-content-bold" style={{paddingLeft:'2%'}}>{el.tags[0].name.toUpperCase()}</span> */}
+                    {/* <div style={width > 1600 ? { paddingInline: '30%' } : width > 630 ? { paddingInline: '20%' } : { paddingInline: '0' }}>
                         <h1 className="text-start pb-4 pt-4 font-weight-bold px-3" style={{ fontWeight: 1000 }}>{el.title}</h1>
                         <div className="d-flex justify-content-center px-3">
-                            <img src={el.feature_image} alt="" style={{width: '90%', overflow: 'hidden' }} />
+                            <img src={el.feature_image} alt="" style={{width: '90%', overflow: 'hidden'  }} />
                         </div>
                         <div className="d-flex justify-content-center">
                             <div dangerouslySetInnerHTML={{ __html: sanitize(el.html ?? {}) }} style={{ maxWidth: '90%', justifyContent: 'center', fontWeight: 500 }} className='d-flex flex-column justify-content-center' />
                         </div>
+                    </div> */}
+                    <div class="post py-vmin8 relative">
+                        <header class="post-header godo-canvas">
+                            <h1 class="post-title text-32 md:text-4xl lg:text-44 text-title leading-tight">{el.title}</h1>
+                            <figure class="post-image block" style={{ paddingTop: '40px' }}>
+                                <img class="mx-auto simply-zoom medium-zoom-image" sizes="(max-width: 400px) 300px,(max-width: 730px) 600px, (max-width: 1600px) 100vw" src={el.feature_image} alt="Understand Ethereum, its Features, and its Working Mechanism" width="1200" height="628" />
+                                {/* <figcaption class="post-figcaption">Ethereum was founded by Vitalik Buterin and Gavin Wood in 2015.&nbsp;</figcaption> */}
+                            </figure>
+                        </header>
+                        <section id="post-body" class="post-body godo-canvas mx-auto relative font-serif">
+                            <div dangerouslySetInnerHTML={{ __html: sanitize(el.html ?? {}) }} style={{ maxWidth: '90%', justifyContent: 'center', fontWeight: 500 }} className='d-flex flex-column justify-content-center' />
+                        </section>
                     </div>
                 </>
             ))}

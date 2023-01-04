@@ -122,3 +122,41 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+.py-vmin8 {
+  padding-top: 8vmin;
+  padding-bottom: 8vmin;
+}
+.godo-canvas {
+  display: grid;
+  grid-template-columns: [full-start] minmax(4vmin,auto) [wide-start] minmax(auto,240px) [main-start] min(680px,calc(100% - 8vw)) [main-end] minmax(auto,240px) [wide-end] minmax(4vmin,auto) [full-end];
+}
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+.godo-canvas > * {
+  grid-column: main-start/main-end;
+  grid-column-start: main-start;
+  grid-column-end: main-end;
+}
+.medium-zoom-image {
+  cursor: pointer;
+  cursor: zoom-in;
+  transition: transform .3s cubic-bezier(.2,0,.2,1)!important;
+}
+img {
+  vertical-align: middle;
+  width: auto;
+}
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  vertical-align: middle;
+}
+.post-body {
+  font-size: 1.25rem;
+  line-height: 1.625;
+  padding-top: 6vmin /* stylelint-disable-next-line */;
+}
