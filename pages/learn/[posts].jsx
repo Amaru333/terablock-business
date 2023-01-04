@@ -16,7 +16,6 @@ const Posts = () => {
     };
     const [slugData, setSlugData] = useState([])
     const url = `https://blogv2.terablock.com/ghost/api/content/posts/slug/${slug}/?key=0489294cc94510ae9335da2c7f&&include=tags`
-    console.log(url, '++++')
     useEffect(() => {
         if (slug !== undefined) {
             axios.get(url).then((res) => {
