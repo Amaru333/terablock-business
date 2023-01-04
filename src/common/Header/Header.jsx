@@ -70,7 +70,7 @@ function Header() {
         <img src="/assets/icons/logo-blue.svg" className="pe-2" style={{ cursor: "pointer" }} onClick={() => router.push("/")} />
         <div className="d-flex align-items-center">
           <button className={["bg-primaryBlue text-white px-4 py-2 mx-2", HeaderStyle.button_mobile, HeaderStyle.button_primary].join(" ")}>
-            <p className="mb-0" style={{ fontSize: "14px" }} onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+            <p className="mb-0 text-nowrap" style={{ fontSize: "14px" }} onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
               {buttonText}
             </p>
           </button>
