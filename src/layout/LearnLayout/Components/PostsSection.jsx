@@ -15,7 +15,7 @@ function PostsSection() {
   // fetch using axios from ghost api url (https://blogv2.terablock.com/ghost/api/content/posts) and store in popular_posts
   const [popular_posts, setPosts] = React.useState([]);
   useEffect(() => {
-    axios.get("https://blogv2.terablock.com/ghost/api/content/posts/?key=0489294cc94510ae9335da2c7f&filter=featured:true&limit=1").then((res) => {
+    axios.get("https://blogv2.terablock.com/ghost/api/content/posts/?key=0489294cc94510ae9335da2c7f&limit=5&filter=tag:popular&include=tags").then((res) => {
       setPosts(res.data.posts);
     });
   }, []);
