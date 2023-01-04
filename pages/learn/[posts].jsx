@@ -16,6 +16,7 @@ const Posts = () => {
     };
     const [slugData, setSlugData] = useState([])
     const url = `https://blogv2.terablock.com/ghost/api/content/posts/slug/${slug}/?key=0489294cc94510ae9335da2c7f&&include=tags`
+    console.log(url, '++++')
     useEffect(() => {
         if (slug !== undefined) {
             axios.get(url).then((res) => {
@@ -28,10 +29,12 @@ const Posts = () => {
         <div>
             {slugData?.map((el) => (
                 <>
-                    <div className="d-flex flex-column justify-content-center align-items-center">
-                        <div className="d-flex justify-content-center" style={{ backgroundImage: `url(${el.feature_image})`, maxHeight:'400px', width:'100%',backgroundPosition:'center', height:'50vh',overflow:'hidden', backgroundSize : "cover" }}>
+                    <div style={width > 1000 ? { paddingInline: '30%' } : width > 630 ? { paddingInline: '20%' } : { paddingInline: '0' }}>
+                        {/* <span className="font-content-bold" style={{paddingLeft:'2%'}}>{el.tags[0].name.toUpperCase()}</span> */}
+                        <h1 className="text-start pb-4 pt-4 font-weight-bold px-3" style={{ fontWeight: 1000 }}>{el.title}</h1>
+                        <div className="d-flex justify-content-center px-3">
+                            <img src={el.feature_image} alt="" style={{ maxHeight: '50vh', width: '100%', backgroundPosition: 'center', height: '400px', overflow: 'hidden' }} />
                         </div>
-                        <h1 className="text-center pb-4 pt-4 font-weight-bold d-flex justify-content-center" style={{fontWeight : 900}}>{el.title}</h1>
                         <div className="d-flex justify-content-center">
                             <div dangerouslySetInnerHTML={{ __html: sanitize(el.html ?? {}) }} style={{ maxWidth: '90%', justifyContent: 'center', fontWeight: 500 }} className='d-flex flex-column justify-content-center' />
                         </div>
