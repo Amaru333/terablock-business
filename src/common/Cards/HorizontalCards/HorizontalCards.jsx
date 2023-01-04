@@ -42,7 +42,6 @@ function HorizontalCards({ data, description_1, description_2, title }) {
       </Link>
     );
   };
-  // difficulty={item.id == "63abe3754dba2f1ec0e19f41" ? item.tags[1]?.name : item.tags[0]?.name ? item.id == "63abe3754dba2f1ec0e19f48" ? item.tags[4]?.name : item.tags[0]?.name : item.tags[1]?.name}
   return (
     <div className="pb-5 bg-white border-bottom">
       <div className="text-center px-4 px-md-5 pb-3">
