@@ -47,7 +47,7 @@ const Posts = () => {
                             </figure>
                         </header>
                         <section id="post-body" class="post-body godo-canvas mx-auto relative font-serif">
-                            <div dangerouslySetInnerHTML={{ __html: sanitize(el.html ?? {}) }} style={{ maxWidth: '90%', justifyContent: 'center', fontWeight: 500 }} />
+                            <div dangerouslySetInnerHTML={{ __html: sanitize(el.html ?? {}) }} style={{ justifyContent: 'center', fontWeight: 500 }} />
                         </section>
                     </div>
                 </>
