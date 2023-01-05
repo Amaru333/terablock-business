@@ -44,20 +44,22 @@ function PostsSection() {
               <div>
                 {featured_post.map((el, index) => (
                   <>
-                    <img src={el.feature_image} className="rounded w-100" />
-                    <div className="my-4 d-flex align-items-center justify-content-between">
-                      <DifficultyTag level={el.tags[1].name} />
-                      <div className="d-flex align-items-center">
-                        <img src="/assets/icons/time.svg" />
-                        <span style={{ color: "#797979", fontSize: "14px", marginLeft: "5px", fontWeight: "600" }}>{el.reading_time} mins</span>
+                    <div key={index}>
+                      <img src={el.feature_image} className="rounded w-100" />
+                      <div className="my-4 d-flex align-items-center justify-content-between">
+                        <DifficultyTag level={el.tags[1].name} />
+                        <div className="d-flex align-items-center">
+                          <img src="/assets/icons/time.svg" />
+                          <span style={{ color: "#797979", fontSize: "14px", marginLeft: "5px", fontWeight: "600" }}>{el.reading_time} mins</span>
+                        </div>
                       </div>
+                      <h4 className="fw-bold">{featured_post.title}</h4>
+                      <Link href={`learn/${el.slug}`}>
+                        <p className="my-2 fs-6" style={{ color: "#5a5b5d", cursor: 'pointer' }}>
+                          {el.excerpt} . . .<span style={{ color: "#0052FF", fontWeight: "700" }}> read more</span>
+                        </p>
+                      </Link>
                     </div>
-                    <h4 className="fw-bold">{featured_post.title}</h4>
-                    <Link href={`learn/${el.slug}`}>
-                      <p className="my-2 fs-6" style={{ color: "#5a5b5d", cursor: 'pointer' }}>
-                        {el.excerpt} . . .<span style={{ color: "#0052FF", fontWeight: "700" }}> read more</span>
-                      </p>
-                    </Link>
                   </>
                 ))}
               </div>

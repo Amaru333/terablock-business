@@ -17,7 +17,7 @@ function HorizontalCards({ data, description_1, description_2, title }) {
       </span>
     );
   };
-  const NewsCard = ({ image, title, description, difficulty, time, slug, id }) => {
+  const NewsCard = ({ image, title, description, difficulty, time, slug }) => {
     return (
       <Link href={`learn/${slug}`}>
         <div className="card position-relative" style={{ width: "18rem", zIndex: 2, borderRadius: "16px", padding: "12px", boxShadow: "2px 2px 24px rgba(0, 0, 0, 0.06)", minHeight: '420px', cursor: 'pointer' }}>
