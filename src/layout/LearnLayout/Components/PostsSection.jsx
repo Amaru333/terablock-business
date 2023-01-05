@@ -17,7 +17,7 @@ function PostsSection() {
   useEffect(() => {
     axios.get("https://blogv2.terablock.com/ghost/api/content/posts/?key=0489294cc94510ae9335da2c7f&filter=featured:true&limit=1&include=tags").then((res) => {
       setFeaturePost(res.data.posts);
-      console.log(res.data.posts, 'featurepost data')
+      console.log(featured_post, 'featurepost data')
     });
   }, []);
   const DifficultyTag = ({ level }) => {
@@ -54,7 +54,7 @@ function PostsSection() {
                     </div>
                     <h4 className="fw-bold">{featured_post.title}</h4>
                     <Link href={`learn/${el.slug}`}>
-                      <p className="my-2 fs-6" style={{ color: "#5a5b5d" , cursor:'pointer'}}>
+                      <p className="my-2 fs-6" style={{ color: "#5a5b5d", cursor: 'pointer' }}>
                         {el.excerpt} . . .<span style={{ color: "#0052FF", fontWeight: "700" }}> read more</span>
                       </p>
                     </Link>
