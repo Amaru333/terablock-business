@@ -327,8 +327,8 @@ function UIGraph(multiplier) {
   });
 
   return (
-    <div className="bg-white rounded px-3 px-sm-4 px-md-5 pt-3 pb-4 pb-md-5 justify-content-center shadow" style={{ width: "100%", margin: width > 767 ? "auto" : "auto" }}>
-      <div className="d-flex pb-5">
+    <div className="rounded px-3 px-sm-4 px-md-5 pt-3 justify-content-center shadow" style={{ width: "100%", margin: width > 767 ? "auto" : "auto",backgroundColor:'white', paddingBottom:'16px'}}>
+      <div className="d-flex" >
         {width > 767 ? (
           <>
             <div className={["bg-white me-3 px-2 py-3 rounded", UIGraphStyle.flex].join(" ")}>
@@ -366,7 +366,7 @@ function UIGraph(multiplier) {
             </div>
           </>
         ) : (
-          <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>
+          <div style={{ display: "flex", flexDirection: "column", width: "100%"}}>
             <div className="d-flex align-items-center justify-content-between">
               <div className="d-flex">
                 <div className={UIGraphStyle.circle}></div>
