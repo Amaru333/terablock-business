@@ -164,3 +164,9 @@ img, video {
   transition-delay: 0s;
   transition-property: transform;
 }
+.font-serif {
+  font-family: PT Serif, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+.postHover:hover {
+  font-style: italic;
+}
