@@ -62,7 +62,7 @@ function BuyCryptoTable() {
 
   useEffect(() => {
     fetchGraphData();
-    var timerID = setInterval(() => fetchData(), 9000);
+    var timerID = setInterval(() => fetchData(), 30000);
     return () => clearInterval(timerID);
   });
 
