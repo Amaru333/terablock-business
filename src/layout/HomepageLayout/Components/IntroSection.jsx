@@ -108,7 +108,7 @@ function IntroSection() {
               <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600" }}>
                 {index == 0 ? '$' : ''} {width > 767 ? <CountUp duration={2} end={el.value} separator="," /> : abbreviateNumber(Math.round(el.value))}
               </p>
-              <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "14px" , whiteSpace:'nowrap'}}>
+              <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "14px", whiteSpace: 'nowrap' }}>
                 {el.title}
               </p>
             </div>
