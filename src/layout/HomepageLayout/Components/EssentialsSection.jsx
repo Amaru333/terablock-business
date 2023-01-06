@@ -9,13 +9,11 @@ function EssentialsSection() {
   const router = useRouter();
   const [essential_details, setEssentialDetails] = useState([])
   useEffect(() => {
-    if(essential_details!==undefined){
       axios.get("https://blogv2.terablock.com/ghost/api/content/posts/?key=0489294cc94510ae9335da2c7f&&filter=tag:learn&include=tags").then((res) => {
         setEssentialDetails(res.data.posts);
         console.log(res, 'cryptoBasis from api....')
       });
-    }
-  }, []);
+  }, [router]);
   const DifficultyTag = ({ level }) => {
     const color = {
       Beginner: "#00C077",
