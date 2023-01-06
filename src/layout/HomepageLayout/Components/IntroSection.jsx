@@ -98,9 +98,7 @@ function IntroSection() {
         </div>
       </div>
       {/* {width < 768 && <img src="/assets/icons/3x4.svg" className="position-absolute" style={{ width: "30px", bottom: "20rem", right: "0rem" }} />} */}
-
       {/* {width > 768 && <img src="/assets/icons/3x4.svg" className="position-absolute" style={{ width: "30px", bottom: "7rem", left: "5rem" }} />} */}
-
       <div className="" style={{ backgroundColor: "#0251ff" }}>
         <div className="py-4 row px-0 px-sm-4 py-4 justify-content-center" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : "100%" }}>
           {dictionary?.map((el, index) => (
