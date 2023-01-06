@@ -106,7 +106,7 @@ function IntroSection() {
           {dictionary?.map((el, index) => (
             <div className="py-4 col col-md px-2">
               <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600" }}>
-                {index==0?'$':''} {width > 767 ? <CountUp duration={2} end={el.value} separator="," /> : abbreviateNumber(el.value)}
+                {index==0?'$':''} {<CountUp duration={2} end={el.value} separator="," />}
               </p>
               <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "14px" }}>
                 {el.title}
