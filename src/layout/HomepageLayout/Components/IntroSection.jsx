@@ -103,10 +103,10 @@ function IntroSection() {
         <div className="py-4 row px-0 px-sm-4 py-4 justify-content-center" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : "100%" }}>
           {dictionary?.map((el, index) => (
             <div className="py-4 col col-md px-2">
-              <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600" }}>
+              <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600" , whiteSpace:'nowrap'}}>
                 {index == 0 ? '$' : ''} {width > 767 ? <CountUp duration={2} end={el.value} separator="," /> : abbreviateNumber(Math.round(el.value))}
               </p>
-              <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "14px", whiteSpace: 'nowrap' }}>
+              <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "14px"}}>
                 {el.title}
               </p>
             </div>
