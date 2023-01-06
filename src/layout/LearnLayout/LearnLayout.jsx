@@ -10,13 +10,13 @@ function LearnLayout() {
   const [cryptoBasis, setCryptoBasis] = useState([])
   const [cryptotips, setCryptotips] = useState([])
   useEffect(() => {
-    axios.get("https://blogv2.terablock.com/ghost/api/content/posts?key=0489294cc94510ae9335da2c7f&limit=5&&filter=tag:cryptobasics&include=tags").then((res) => {
+    axios.get("https://blogv2.terablock.com/ghost/api/content/posts?key=0489294cc94510ae9335da2c7f&&filter=tag:cryptobasics&include=tags").then((res) => {
       setCryptoBasis(res.data.posts);
       console.log(res,'cryptoBasis from api....')
     });
   }, []);
   useEffect(() => {
-    axios.get("https://blogv2.terablock.com/ghost/api/content/posts?key=0489294cc94510ae9335da2c7f&limit=5&&filter=tag:tips&include=tags").then((res) => {
+    axios.get("https://blogv2.terablock.com/ghost/api/content/posts?key=0489294cc94510ae9335da2c7f&&filter=tag:tips&include=tags").then((res) => {
       setCryptotips(res.data.posts);
       console.log(res,'cryptoBasis from api....')
     });
