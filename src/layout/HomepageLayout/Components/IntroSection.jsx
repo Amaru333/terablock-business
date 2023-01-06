@@ -9,35 +9,35 @@ import axios from "axios";
 function IntroSection() {
   const width = useScreenSize().width;
   const [buttonText, setButtonText] = useState("Get Started");
-  const [dictionary, setData] = useState([])
+  const [data, setData] = useState([])
   useEffect(() => {
     axios.get("https://tersblock-stats-be-p6as9.ondigitalocean.app/ecosystemstats").then((res) => {
-      let data = res.data.data;
-      setData([
-        {
-          id: 1,
-          title: 'Transaction Volume',
-          value: data?.totalVolume
-        },
-        {
-          id: 2,
-          title: 'Tokens Transacted',
-          value: data?.totalTokens
-        },
-        {
-          id: 3,
-          title: 'Secure Transactions',
-          value: data?.totalTransactions
-        },
-        {
-          id: 4,
-          title: 'Happy Users',
-          value: data?.uniqueUsers
-        }
-      ]);
+      setData(res.data.data);
       console.log(data, 'this is the api for market stats....')
     });
   }, []);
+  const dictionary = [
+    {
+      id: 1,
+      title: 'Transaction Volume',
+      value: data?.totalVolume
+    },
+    {
+      id: 2,
+      title: 'Tokens Transacted',
+      value: data?.totalTokens
+    },
+    {
+      id: 3,
+      title: 'Secure Transactions',
+      value: data?.totalTransactions
+    },
+    {
+      id: 4,
+      title: 'Happy Users',
+      value: data?.uniqueUsers
+    }
+  ]
   return (
     <div className={`bg-white text-center text-md-start position-relative ${(width > 1400 || width < 800) && "pt-5"}`}>
       <div className={`px-xl-5`}>
