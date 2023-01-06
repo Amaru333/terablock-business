@@ -9,35 +9,35 @@ import axios from "axios";
 function IntroSection() {
   const width = useScreenSize().width;
   const [buttonText, setButtonText] = useState("Get Started");
-  const [data, setData] = useState([])
+  const [dictionary, setData] = useState([])
   useEffect(() => {
     axios.get("https://tersblock-stats-be-p6as9.ondigitalocean.app/ecosystemstats").then((res) => {
-      setData(res.data.data);
+      let data = res.data.data;
+      setData([
+        {
+          id: 1,
+          title: 'Transaction Volume',
+          value: data?.totalVolume
+        },
+        {
+          id: 2,
+          title: 'Tokens Transacted',
+          value: data?.totalTokens
+        },
+        {
+          id: 3,
+          title: 'Secure Transactions',
+          value: data?.totalTransactions
+        },
+        {
+          id: 4,
+          title: 'Happy Users',
+          value: data?.uniqueUsers
+        }
+      ]);
       console.log(data, 'this is the api for market stats....')
     });
   }, []);
-  const dictionary = [
-    {
-      id: 1,
-      title: 'Transaction Volume',
-      value: data?.totalVolume
-    },
-    {
-      id: 2,
-      title: 'Tokens Transacted',
-      value: data?.totalTokens
-    },
-    {
-      id: 3,
-      title: 'Secure Transactions',
-      value: data?.totalTransactions
-    },
-    {
-      id: 4,
-      title: 'Happy Users',
-      value: data?.uniqueUsers
-    }
-  ]
   return (
     <div className={`bg-white text-center text-md-start position-relative ${(width > 1400 || width < 800) && "pt-5"}`}>
       <div className={`px-xl-5`}>
@@ -103,10 +103,10 @@ function IntroSection() {
 
       <div className="" style={{ backgroundColor: "#0251ff" }}>
         <div className="py-4 row px-0 px-sm-4 py-4 justify-content-center" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : "100%" }}>
-          {dictionary.map((el, index) => (
+          {dictionary?.map((el, index) => (
             <div className="py-4 col col-md px-2">
               <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600" }}>
-                ${width > 767 ? <CountUp duration={2} end={el.value} separator="," /> : abbreviateNumber(38940995)}
+                {index==0?'$':''} {width > 767 ? <CountUp duration={2} end={el.value} separator="," /> : abbreviateNumber(el.value)}
               </p>
               <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "14px" }}>
                 {el.title}
