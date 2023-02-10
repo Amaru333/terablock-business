@@ -155,7 +155,7 @@ function TeraBlockSwidgeSection() {
         </div>
       </div>
       <div className="d-flex align-items-center justify-content-center mt-2 mb-5">
-        <UIButton width="150px" onClick={() => openNewTab('https://app.terablock.com/')} onMouseOut={() => setButtonText("Get Started")}>
+        <UIButton width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
           {buttonText}
         </UIButton>
         <UIButton type="primary-light">Launch Swidge</UIButton>

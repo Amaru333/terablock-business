@@ -72,12 +72,12 @@ function IntroSection() {
               </div>
               <div className="d-flex my-2 justify-content-center justify-content-md-start">
                 {/* <Link href={'https://app.terablock.com/'}> */}
-                  <UIButton ml0 type="primary" width="150px" style={{ marginRight: "10px" }} onMouseOut={() => setButtonText("Get Started")} onClick={() => openNewTab('https://app.terablock.com/')}>
+                  <UIButton ml0 type="primary" width="150px" style={{ marginRight: "10px" }} onMouseOut={() => setButtonText("Get Started")} onClick={() => openNewTab('https://app.terablock.com/getstarted')}>
                     {buttonText}
                   </UIButton>
                 {/* </Link> */}
                 <UIButton type="secondary" onClick={() => {
-                  window.open("https://bridge.terablock.com/bridge", "_blank");
+                  window.open("https://app.terablock.com/login", "_blank");
                 }}>Launch App</UIButton>
               </div>
               <div className={["d-flex justify-content-around justify-content-md-start", IntroSectionStyles.bottom_logos].join(" ")}>

@@ -58,9 +58,9 @@ function Header() {
           </div>
           <div className="d-flex align-items-center">
             <p className="mb-0 me-3 pb-1" style={{ fontSize: "15px", fontWeight: 500, cursor: "pointer", borderBottom: "2px solid #E3297E" }}>
-              <a href="https://bridge.terablock.com/bridge" style={{ "text-decoration": "none", "color": "#111111" }}> Launch App → </a>
+              <a href="https://app.terablock.com/login" target='_blank' style={{ "text-decoration": "none", "color": "#111111" }}> Launch App → </a>
             </p>
-            <button className={["bg-primaryBlue text-white px-4 py-2 mx-2", HeaderStyle.button, HeaderStyle.button_primary].join(" ")} onClick={() => openNewTab('https://app.terablock.com/')} onMouseOut={() => setButtonText("Get Started")}>
+            <button className={["bg-primaryBlue text-white px-4 py-2 mx-2", HeaderStyle.button, HeaderStyle.button_primary].join(" ")} onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
               {buttonText}
             </button>
           </div>

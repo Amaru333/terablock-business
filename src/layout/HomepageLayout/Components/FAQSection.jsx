@@ -65,7 +65,7 @@ function FAQSection() {
             <br />
             <br />
             <div>
-              <UIButton onClick={() => openNewTab('https://app.terablock.com/')}>Get started</UIButton>
+              <UIButton onClick={() => openNewTab('https://app.terablock.com/getstarted')}>Get started</UIButton>
               <UIButton type="primary-light">Explore Products</UIButton>
             </div>
           </UIAccordion>
@@ -86,7 +86,7 @@ function FAQSection() {
             Get started with the step-by-step process and create your own non-custodial Web3 wallet for free in under 10mins!
             <br />
             <br />
-            <UIButton onClick={() => openNewTab('https://app.terablock.com/')}>Get started</UIButton>
+            <UIButton onClick={() => openNewTab('https://app.terablock.com/getstarted')}>Get started</UIButton>
           </UIAccordion>
           <UIAccordion index={4} title="What is TBC token?" homepage>
             Token name: <b>TeraBlock</b>
