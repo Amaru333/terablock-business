@@ -8,11 +8,14 @@ import EssentialsSectionStyle from "../Styles/EssentialsSection.module.css";
 function EssentialsSection() {
   const router = useRouter();
   const [essential_details, setEssentialDetails] = useState([])
+  const openNewTab = (link) => {
+    window.open(link, "_blank");
+  }
   useEffect(() => {
-      axios.get("https://blogv2.terablock.com/ghost/api/content/posts/?key=0489294cc94510ae9335da2c7f&&filter=tag:learn&include=tags").then((res) => {
-        setEssentialDetails(res.data.posts);
-        console.log(res, 'cryptoBasis from api....')
-      });
+    axios.get("https://blogv2.terablock.com/ghost/api/content/posts/?key=0489294cc94510ae9335da2c7f&&filter=tag:learn&include=tags").then((res) => {
+      setEssentialDetails(res.data.posts);
+      console.log(res, 'cryptoBasis from api....')
+    });
   }, [router]);
   const DifficultyTag = ({ level }) => {
     const color = {
@@ -69,7 +72,7 @@ function EssentialsSection() {
           ))}
         </div>
         <div className="d-flex justify-content-center mt-5">
-          <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+          <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/')} onMouseOut={() => setButtonText("Get Started")}>
             {buttonText}
           </UIButton>
           <UIButton onClick={() => router.push("/learn")}>Learn More</UIButton>

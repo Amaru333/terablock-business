@@ -5,6 +5,7 @@ import IntroSectionStyles from "../Styles/IntroSection.module.css";
 import CountUp from "react-countup";
 import { abbreviateNumber } from "../../../functions/abbreviateNumber";
 import axios from "axios";
+import Link from "next/link";
 
 function IntroSection() {
   const width = useScreenSize().width;
@@ -38,6 +39,9 @@ function IntroSection() {
       value: data?.uniqueUsers
     }
   ]
+  const openNewTab = (link) => {
+    window.open(link, "_blank");
+  }
   return (
     <div className={`bg-white text-center text-md-start position-relative ${(width > 1400 || width < 800) && "pt-5"}`}>
       <div className={`px-xl-5`}>
@@ -67,9 +71,11 @@ function IntroSection() {
                 </p>
               </div>
               <div className="d-flex my-2 justify-content-center justify-content-md-start">
-                <UIButton ml0 type="primary" width="150px" style={{ marginRight: "10px" }} onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
-                  {buttonText}
-                </UIButton>
+                {/* <Link href={'https://app.terablock.com/'}> */}
+                  <UIButton ml0 type="primary" width="150px" style={{ marginRight: "10px" }} onMouseOut={() => setButtonText("Get Started")} onClick={() => openNewTab('https://app.terablock.com/')}>
+                    {buttonText}
+                  </UIButton>
+                {/* </Link> */}
                 <UIButton type="secondary" onClick={() => {
                   window.open("https://bridge.terablock.com/bridge", "_blank");
                 }}>Launch App</UIButton>
@@ -103,10 +109,10 @@ function IntroSection() {
         <div className="py-4 row px-0 px-sm-4 py-4 justify-content-center" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : "100%" }}>
           {dictionary?.map((el, index) => (
             <div className="py-4 col col-md px-2">
-              <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600" , whiteSpace:'nowrap'}}>
+              <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600", whiteSpace: 'nowrap' }}>
                 {index == 0 ? '$' : ''} {width > 767 ? <CountUp duration={2} end={el.value} separator="," /> : abbreviateNumber(Math.round(el.value))}
               </p>
-              <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "14px"}}>
+              <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "14px" }}>
                 {el.title}
               </p>
             </div>

@@ -11,6 +11,9 @@ function CoinLists() {
   const router = useRouter();
 
   const [buttonText, setButtonText] = useState("Get Started");
+  const openNewTab = (link) => {
+    window.open(link, "_blank");
+  }
   return (
     <div className="py-5 bg-white px-0">
       <div className="text-center mb-2 px-3" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "68%" : width > 940 ? "80%" : "100%" }}>
@@ -32,7 +35,7 @@ function CoinLists() {
                 Our aim with CoinsList is to help you become an informed investor, no matter how much or how little you want to invest. CoinsListempowers you with simplified investments and helps you realise your financial goals from our easy-to-use unified platform.
               </p>
               <div className="d-flex justify-content-center justify-content-md-start">
-                <UIButton type="primary" style={{ marginRight: "10px" }} ml0 width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+                <UIButton type="primary" style={{ marginRight: "10px" }} ml0 width="150px" onClick={() => openNewTab('https://app.terablock.com/')} onMouseOut={() => setButtonText("Get Started")}>
                   {buttonText}
                 </UIButton>
                 <UIButton style={{ marginLeft: "20px !important" }} onClick={() => router.push("/coinslists")}>

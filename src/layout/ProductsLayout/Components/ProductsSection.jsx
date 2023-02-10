@@ -48,6 +48,9 @@ function ProductsSection() {
       icon: "./assets/icons/learn.svg",
     },
   ];
+  const openNewTab = (link) => {
+    window.open(link, '_blank')
+  }
   const WalletManagement = () => {
     return (
       <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-0 px-xl-2">
@@ -67,7 +70,7 @@ function ProductsSection() {
             <li>Get access to analytics-backed market insights on your portfolio through Lunarcrush.</li>
           </ul>
           <div className="mt-3 pt-2 d-flex justify-content-center justify-content-md-start">
-            <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+            <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/')} onMouseOut={() => setButtonText("Get Started")}>
               {buttonText}
             </UIButton>
             <UIButton type="secondary">Discover</UIButton>
