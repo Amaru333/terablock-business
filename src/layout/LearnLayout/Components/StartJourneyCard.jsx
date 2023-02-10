@@ -15,7 +15,7 @@ function StartJourneyCard() {
             {buttonText}
           </UIButton>
         </div>
-        <UIButton>Launch App</UIButton>
+        <UIButton onClick={() => openNewTab('https://app.terablock.com/login')}>Launch App</UIButton>
       </div>
     </div>
   );
