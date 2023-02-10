@@ -15,7 +15,7 @@ function TopNotification() {
             <img src="/assets/icons/close_button.svg" className="px-5" />
           </h6>
         </div>
-      ):null}
+      ) : null}
     </div>
   );
 }
