@@ -48,6 +48,9 @@ function ProductsSection() {
       icon: "./assets/icons/learn.svg",
     },
   ];
+  const openNewTab = (link) => {
+    window.open(link, '_blank')
+  }
   const WalletManagement = () => {
     return (
       <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-0 px-xl-2">
@@ -67,7 +70,7 @@ function ProductsSection() {
             <li>Get access to analytics-backed market insights on your portfolio through Lunarcrush.</li>
           </ul>
           <div className="mt-3 pt-2 d-flex justify-content-center justify-content-md-start">
-            <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+            <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
               {buttonText}
             </UIButton>
             <UIButton type="secondary">Discover</UIButton>
@@ -99,7 +102,7 @@ function ProductsSection() {
             <li>Keep more money in your portfolio with no advisory fee, only the fees associated with trading expenses.</li>
           </ul>
           <div className="mt-3 pt-2 d-flex justify-content-center justify-content-md-start">
-            <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+            <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
               {buttonText}
             </UIButton>
             <UIButton type="secondary">Discover CoinsLists</UIButton>
@@ -130,7 +133,7 @@ function ProductsSection() {
             <li>Fully transparent, all the transactions are publicly available on the blockchain explorers.</li>
           </ul>
           <div className="mt-3 pt-2 d-flex justify-content-center justify-content-md-start">
-            <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+            <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
               {buttonText}
             </UIButton>
             <UIButton type="secondary">Discover Swidge</UIButton>
@@ -165,7 +168,7 @@ function ProductsSection() {
             <li>Powered by Onramper, the #1 fiat-to-crypto onramp aggregator.</li>
           </ul>
           <div className="mt-3 pt-2 d-flex justify-content-center justify-content-md-start">
-            <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+            <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
               {buttonText}
             </UIButton>
             <UIButton type="secondary">Discover Buy</UIButton>
@@ -201,7 +204,7 @@ function ProductsSection() {
             <li>Fully transparent, all the transactions are publicly available on the blockchain explorers.</li>
           </ul>
           <div className="mt-3 pt-2 d-flex justify-content-center justify-content-md-start">
-            <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+            <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
               {buttonText}
             </UIButton>
             <UIButton type="secondary">Discover Swap</UIButton>
@@ -234,7 +237,7 @@ function ProductsSection() {
             <li>Multi-asset and multichain bridging.</li>
           </ul>
           <div className="mt-3 pt-2 d-flex justify-content-center justify-content-md-start">
-            <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+            <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
               {buttonText}
             </UIButton>
             <UIButton type="secondary">Discover Bridge</UIButton>
@@ -267,7 +270,7 @@ function ProductsSection() {
             <li>The Link is entirely free to use.</li>
           </ul>
           <div className="mt-3 pt-2 d-flex justify-content-center justify-content-md-start">
-            <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+            <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
               {buttonText}
             </UIButton>
             <UIButton type="secondary">Discover Link</UIButton>
@@ -301,7 +304,7 @@ function ProductsSection() {
             <li>Fully transparent, all the transactions are publicly available on the blockchain explorers.</li>
           </ul>
           <div className="mt-3 pt-2 d-flex justify-content-center justify-content-md-start">
-            <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+            <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
               {buttonText}
             </UIButton>
             <UIButton type="secondary">Discover Earn</UIButton>
@@ -331,7 +334,7 @@ function ProductsSection() {
             <li>Learn how to interact with TeraBlock's Defi utilities through step-by-step guided processes.</li>
           </ul>
           <div className="mt-3 pt-2 d-flex justify-content-center justify-content-md-start">
-            <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+            <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
               {buttonText}
             </UIButton>
             <UIButton type="secondary">Discover Learn</UIButton>

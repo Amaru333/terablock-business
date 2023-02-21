@@ -1,5 +1,6 @@
 import React from "react";
 import UIButton from "../../../widgets/UIButtons/UIButton";
+import Link from 'next/link'
 
 import HorizontalCardsStyle from "./HorizontalCards.module.css";
 
@@ -16,26 +17,29 @@ function HorizontalCards({ data, description_1, description_2, title }) {
       </span>
     );
   };
-  const NewsCard = ({ image, title, description, difficulty, time }) => {
+  const NewsCard = ({ image, title, description, difficulty, time, slug }) => {
     return (
-      <div className="card" style={{ width: "18rem", zIndex: 2, borderRadius: "16px", padding: "12px", boxShadow: "2px 2px 24px rgba(0, 0, 0, 0.06)" }}>
-        <img src={image} className="card-img" />
-        <div className="pt-3">
-          <h5 className="card-title" style={{ fontWeight: "600" }}>
-            {title}
-          </h5>
-          <div className="d-flex justify-content-between mb-2" style={{ fontSize: "14px" }}>
-            <DifficultyTag level={difficulty} />
-            <div className="d-flex align-items-center">
-              <img src="/assets/icons/time.svg" />
-              <span style={{ color: "#797979", marginLeft: "5px", fontWeight: "600" }}>{time} mins</span>
+      <Link href={`learn/${slug}`}>
+        <div className="card position-relative" style={{ width: "18rem", zIndex: 2, borderRadius: "16px", padding: "12px", boxShadow: "2px 2px 24px rgba(0, 0, 0, 0.06)", minHeight: '420px', cursor: 'pointer' }}>
+          <img src={image} className="card-img" />
+          <div className="pt-3 text-truncate-container">
+            <h5 className="card-title" style={{ fontWeight: "600" }}>
+              {title}
+            </h5>
+            <div className="d-flex justify-content-between mb-2" style={{ fontSize: "14px" }}>
+              <DifficultyTag level={difficulty} />
+              <div className="d-flex align-items-center">
+                <img src="/assets/icons/time.svg" />
+                <span style={{ color: "#797979", marginLeft: "5px", fontWeight: "600" }}>{time} mins</span>
+              </div>
             </div>
+            <p className={"card-text mt-3 truncate"} style={{ color: "#707070", fontSize: "14px", width: '250px' }}>
+              {description}
+            </p>
+            <span style={{ color: "#0052FF", fontWeight: "700" }} className='position-absolute bottom-0 pb-2'>Read More →</span>
           </div>
-          <p className="card-text mt-3" style={{ color: "#707070", fontSize: "14px", paddingBottom: "9px" }}>
-            {description} . . . <span style={{ color: "#0052FF", fontWeight: "700" }}>read more</span>
-          </p>
         </div>
-      </div>
+      </Link>
     );
   };
   return (
@@ -54,7 +58,7 @@ function HorizontalCards({ data, description_1, description_2, title }) {
       <div className={["d-flex ps-3 ps-md-5 ms-0 ms-md-5", HorizontalCardsStyle.horizontal_scroll].join(" ")}>
         {data?.map((item, index) => (
           <div className="pe-3 pe-md-5 mb-3" key={index}>
-            <NewsCard title={item.title} image={item.image} description={item.description} time={item.time} difficulty={item.difficulty} />
+            <NewsCard title={item.title} image={item.feature_image} description={item.excerpt} difficulty={item.tags[1]?.name} time={item.reading_time} slug={item.slug} />
           </div>
         ))}
       </div>

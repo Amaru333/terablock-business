@@ -222,7 +222,7 @@ function InvestmentGraph() {
             ))}
           </div> */}
           {width > 767 ? (
-            <div className="pt-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "68%" : width > 940 ? "77%" : "90%" }}>
+            <div style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "68%" : width > 940 ? "77%" : "90%" }}>
               <UICard>
                 <div className="d-flex align-items-center pb-3">
                   <div>

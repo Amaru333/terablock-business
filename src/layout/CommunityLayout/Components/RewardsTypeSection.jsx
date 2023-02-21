@@ -6,6 +6,9 @@ import UICard from "../../../widgets/UICard/UICard";
 function RewardsTypeSection() {
   const width = useScreenSize().width;
   const [buttonText, setButtonText] = useState("Get Started");
+  const openNewTab = (link) => {
+    window.open(link, '_blank')
+  }
   const CardWithLogo = ({ children, title, image }) => {
     return (
       <UICard>
@@ -51,7 +54,7 @@ function RewardsTypeSection() {
           {/* {width > 768 && <img src="/assets/icons/4x5.svg" style={{ width: "50px", position: "absolute", bottom: "2rem", left: "0.5rem" }} />} */}
         </div>
         <div className="d-flex flex-row justify-content-center mt-4">
-          <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+          <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
             {buttonText}
           </UIButton>
           <UIButton type="secondary">Learn More</UIButton>

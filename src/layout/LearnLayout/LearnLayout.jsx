@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState , useEffect} from "react";
+import axios from "axios";
 import HorizontalCards from "../../common/Cards/HorizontalCards/HorizontalCards";
 import LearnHeroComponent from "./Components/LearnHeroComponent";
 import PostsSection from "./Components/PostsSection";
@@ -6,51 +7,28 @@ import StartJourneyCard from "./Components/StartJourneyCard";
 import TutorialCards from "./Components/TutorialCards";
 
 function LearnLayout() {
-  const tips = [
-    {
-      image: "/assets/images/learn/learn_1.png",
-      title: "What is Ethereum?",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      difficulty: "Advanced",
-      time: 18,
-    },
-    {
-      image: "/assets/images/learn/learn_2.png",
-      title: "What is Ethereum?",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      difficulty: "Beginner",
-      time: 18,
-    },
-    {
-      image: "/assets/images/learn/learn_3.png",
-      title: "What is Ethereum?",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      difficulty: "Intermediate",
-      time: 18,
-    },
-    {
-      image: "/assets/images/learn/learn_4.png",
-      title: "What is Ethereum?",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      difficulty: "Beginner",
-      time: 18,
-    },
-    {
-      image: "/assets/images/learn/learn_5.png",
-      title: "What is Ethereum?",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      difficulty: "Intermediate",
-      time: 18,
-    },
-  ];
+  const [cryptoBasis, setCryptoBasis] = useState([])
+  const [cryptotips, setCryptotips] = useState([])
+  useEffect(() => {
+    axios.get("https://blogv2.terablock.com/ghost/api/content/posts?key=0489294cc94510ae9335da2c7f&&filter=tag:cryptobasics&include=tags").then((res) => {
+      setCryptoBasis(res.data.posts);
+      console.log(res,'cryptoBasis from api....')
+    });
+  }, []);
+  useEffect(() => {
+    axios.get("https://blogv2.terablock.com/ghost/api/content/posts?key=0489294cc94510ae9335da2c7f&&filter=tag:tips&include=tags").then((res) => {
+      setCryptotips(res.data.posts);
+      console.log(res,'cryptoBasis from api....')
+    });
+  }, []);
   return (
     <div>
       <LearnHeroComponent />
       <PostsSection />
       <TutorialCards />
-      <HorizontalCards data={tips} title="Crypto Basics" description_1="Cryptography is something you're new to." description_2="Not for long; begin with these instructions and explanations. " />
-      <HorizontalCards data={tips} title="Tips & Tutorials" description_1="Cryptography is something you're new to." description_2="Not for long; begin with these instructions and explanations. " />
-      <HorizontalCards data={tips} title="Market Updates" description_1="Cryptography is something you're new to." description_2="Not for long; begin with these instructions and explanations. " />
+      <HorizontalCards data={cryptoBasis} title="Crypto Basics" description_1="Cryptography is something you're new to." description_2="Not for long; begin with these instructions and explanations. " />
+      <HorizontalCards data={cryptotips} title="Tips & Tutorials" description_1="Cryptography is something you're new to." description_2="Not for long; begin with these instructions and explanations. " />
+      {/* <HorizontalCards data={cryptotips} title="Market Updates" description_1="Cryptography is something you're new to." description_2="Not for long; begin with these instructions and explanations. " /> */}
       <StartJourneyCard />
     </div>
   );

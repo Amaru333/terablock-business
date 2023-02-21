@@ -51,18 +51,9 @@ function BuyCryptoTable() {
   ]);
   const [reducerValue, forceUpdate] = useReducer((x) => x + 1, 0);
 
-  // useEffect(() => {
-  //   fetchData();
-  //   // if (response) {
-  //   //   // setInterval(fetchData, 30000)
-  //   // }
-  //   let intervalID = setInterval(forceUpdate, 30000);
-  //   // clearInterval(intervalID)
-  // }, [reducerValue]);
-
   useEffect(() => {
     fetchGraphData();
-    var timerID = setInterval(() => fetchData(), 4000);
+    var timerID = setInterval(() => fetchData(), 30000);
     return () => clearInterval(timerID);
   });
 

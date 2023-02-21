@@ -1,98 +1,58 @@
 import { useRouter } from "next/router";
-import React, { useState } from "react";
-import { useScreenSize } from "../../../functions/useScreenSize";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import UIButton from "../../../widgets/UIButtons/UIButton";
-import UIImageCard from "../../../widgets/UICard/UIImageCard";
-
+import Link from 'next/link'
 import EssentialsSectionStyle from "../Styles/EssentialsSection.module.css";
 
 function EssentialsSection() {
-  const width = useScreenSize().width;
   const router = useRouter();
-
-  const essential_details = [
-    {
-      image: "/assets/images/learn-image-1.png",
-      title: "Bitcoin; Explained",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      link: "https://blog.terablock.com/what-is-bitcoin/",
-    },
-    {
-      image: "/assets/images/learn-image-2.png",
-      title: "What is Ethereum?",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      link: "https://blog.terablock.com/what-is-ethereum/",
-    },
-    {
-      image: "/assets/images/learn-image-3.png",
-      title: "What is Decentralised Finance (DeFi)",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      link: "https://blog.terablock.com/what-is-decentralised-finance-defi/",
-    },
-    {
-      image: "/assets/images/learn-image-4.png",
-      title: "Understanding Web3: The gateway to a decentralized...",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      link: "https://blog.terablock.com/understand-web3/",
-    },
-    {
-      image: "/assets/images/learn-image-4.png",
-      title: "What is a Web3 Wallet?",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      link: "https://blog.terablock.com/web3-wallets/",
-    },
-    {
-      image: "/assets/images/learn-image-4.png",
-      title: "What is the difference between Tokens and Coins?",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      link: "https://blog.terablock.com/difference-between-tokens-and-coins/",
-    },
-    {
-      image: "/assets/images/learn-image-4.png",
-      title: "A beginner's guide to Altcoins",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      link: "https://blog.terablock.com/introduction-to-altcoins/",
-    },
-    {
-      image: "/assets/images/learn-image-4.png",
-      title: "What is Staking?",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      link: "https://blog.terablock.com/what-is-staking-all-about/",
-    },
-    {
-      image: "/assets/images/learn-image-4.png",
-      title: "What is a Blockchain Bridge?",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      link: "https://blog.terablock.com/what-are-blockchain-bridges/",
-    },
-    {
-      image: "/assets/images/learn-image-4.png",
-      title: "Everything you need to know about Gas",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
-      link: "https://blog.terablock.com/everything-you-need-to-know-about-gas/",
-    },
-  ];
-  // width: width > 1499 ? "71%" : width > 940 ? "83%" : "98%"
-  const [buttonText, setButtonText] = useState("Get Started");
-  const NewsCard = ({ image, title, description, index, link }) => {
+  const [essential_details, setEssentialDetails] = useState([])
+  const openNewTab = (link) => {
+    window.open(link, "_blank");
+  }
+  useEffect(() => {
+    axios.get("https://blogv2.terablock.com/ghost/api/content/posts/?key=0489294cc94510ae9335da2c7f&&filter=tag:learn&include=tags").then((res) => {
+      setEssentialDetails(res.data.posts);
+      console.log(res, 'cryptoBasis from api....')
+    });
+  }, [router]);
+  const DifficultyTag = ({ level }) => {
+    const color = {
+      Beginner: "#00C077",
+      Intermediate: "#FFA216",
+      Advanced: "#F92626",
+    };
     return (
-      <div className="card shadow p-2" style={{ width: "18rem", zIndex: 2, marginLeft: index == 0 && width > 1499 ? `${(14 * width) / 100}px` : index == 0 && width > 940 ? `${(7 * width) / 100}px` : index == 0 && `0px`, cursor: "pointer" }} onClick={() => window.open(link, "_blank")}>
-        <img src={image} className="card-img" />
-        <div className="pt-3">
-          <h5 className="card-title fw-bold" style={{ height: "48px" }}>
-            {title}
-          </h5>
-          <div className="d-flex justify-content-between mb-2" style={{ fontSize: "14px" }}>
-            <span className="fw-bold border rounded px-2 border-success">
-              <span className="text-success">• </span> Beginner
-            </span>
-            <span style={{ color: "#5a5b5b" }}>18 mins</span>
+      <span className="rounded px-2" style={{ border: `1px solid ${color[level]}`, fontWeight: "700" }}>
+        <span style={{ color: color[level] }}>• </span> {level}
+      </span>
+    );
+  };
+  const [buttonText, setButtonText] = useState("Get Started");
+  const NewsCard = ({ image, title, description, difficulty, time, slug, id }) => {
+    return (
+      <Link href={`learn/${slug}`}>
+        <div className="card position-relative" style={{ width: "18rem", zIndex: 2, borderRadius: "16px", padding: "12px", boxShadow: "2px 2px 24px rgba(0, 0, 0, 0.06)", minHeight: '420px', cursor: 'pointer' }}>
+          <img src={image} className="card-img" />
+          <div className="pt-3 text-truncate-container">
+            <h5 className="card-title" style={{ fontWeight: "600" }}>
+              {title}
+            </h5>
+            <div className="d-flex justify-content-between mb-2" style={{ fontSize: "14px" }}>
+              <DifficultyTag level={difficulty} />
+              <div className="d-flex align-items-center">
+                <img src="/assets/icons/time.svg" />
+                <span style={{ color: "#797979", marginLeft: "5px", fontWeight: "600" }}>{time} mins</span>
+              </div>
+            </div>
+            <p className={"card-text mt-3 truncate"} style={{ color: "#707070", fontSize: "14px", width: '250px' }}>
+              {description}
+            </p>
+            <span style={{ color: "#0052FF", fontWeight: "700" }} className='position-absolute bottom-0 pb-2'>Read More →</span>
           </div>
-          <p className="card-text mt-3" style={{ color: "#5a5b5b", fontSize: "14px" }}>
-            {description} . . . <span style={{ color: "#0251ff", fontWeight: "600" }}>read more</span>
-          </p>
         </div>
-      </div>
+      </Link>
     );
   };
   return (
@@ -107,12 +67,12 @@ function EssentialsSection() {
         <div className={["d-flex ps-5", EssentialsSectionStyle.horizontal_scroll].join(" ")}>
           {essential_details.map((item, index) => (
             <div className="pe-3 pe-md-5 mb-3" key={index}>
-              <NewsCard title={item.title} image={item.image} description={item.description} index={index} link={item.link} />
+              <NewsCard title={item.title} image={item.feature_image} description={item.excerpt} time={item.reading_time} difficulty={item.tags[1]?.name} slug={item.slug} id={item.id} />
             </div>
           ))}
         </div>
         <div className="d-flex justify-content-center mt-5">
-          <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+          <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
             {buttonText}
           </UIButton>
           <UIButton onClick={() => router.push("/learn")}>Learn More</UIButton>

@@ -1,10 +1,24 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect } from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
-
 import TutorialCardStyle from "../Styles/TutorialCards.module.css";
 
 function TutorialCards() {
   const width = useScreenSize().width;
+  const [crypto_basis, setCryptobasis] = React.useState([])
+  const [tips, setTips] = React.useState([])
+  useEffect(() => {
+    axios.get("https://blogv2.terablock.com/ghost/api/content/posts?key=0489294cc94510ae9335da2c7f&limit=1&&filter=tag:cryptobasics").then((res) => {
+      setCryptobasis(res.data.posts);
+      console.log(crypto_basis,'api crypto.....')
+    });
+  }, []);
+  useEffect(() => {
+    axios.get("https://blogv2.terablock.com/ghost/api/content/posts?key=0489294cc94510ae9335da2c7f&limit=1&&filter=tag:tips").then((res) => {
+      setTips(res.data.posts);
+      console.log(tips,'tips from api....')
+    });
+  }, []);
   const data = [
     {
       title: "Crypto Basics",
@@ -19,16 +33,20 @@ function TutorialCards() {
       icon: "market",
     },
   ];
-  const DataCard = ({ icon, title }) => {
+  const DataCard = ({ icon, title,desc }) => {
+  console.log(desc)
     return (
       <div className={TutorialCardStyle.data_card}>
         <div className={TutorialCardStyle.icon_container}>
-          <img src={`/assets/icons/learn/${icon}.svg`} style={{ width: "28px" }} />
+          <img src={`/assets/icons/learn/${icon}.svg`} style={{ width: "28px"}} />
         </div>
-        <div className="d-flex flex-column">
+        {/* {crypto_basis.map((post, i) => ( */}
+          <div className="d-flex flex-column">
           <p className={TutorialCardStyle.title}>{title}</p>
+          {/* <p className={TutorialCardStyle.desc}>{desc}</p> */}
           <p className={TutorialCardStyle.desc}>View more →</p>
         </div>
+        {/* ))} */}
       </div>
     );
   };
@@ -37,7 +55,7 @@ function TutorialCards() {
       <div className={TutorialCardStyle.container}>
         {data.map((individual, i) => (
           <div key={i} className={TutorialCardStyle.card_container}>
-            <DataCard icon={individual.icon} title={individual.title} />
+            <DataCard icon={individual.icon} title={individual.title}  />
           </div>
         ))}
       </div>
