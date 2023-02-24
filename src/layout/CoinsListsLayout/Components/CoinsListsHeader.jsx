@@ -32,7 +32,7 @@ function CoinsListsHeader() {
               )} */}
             </div>
             <div className={`col-12 col-md-6 d-flex ${width > 768 ? "justify-content-end" : "justify-content-center"}`}>
-              <div style={{ maxWidth: width > 768 ? "70%" : "70vw", maxHeight: width > 768 ? "300px" : "250px" }}>
+              <div style={{ maxWidth: width > 768 ? "420px" : "70vw", maxHeight: width > 768 ? "300px" : "250px" }}>
                 <UILottie animation={HeroAnimation1} />
               </div>
             </div>
