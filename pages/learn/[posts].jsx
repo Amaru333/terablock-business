@@ -55,26 +55,30 @@ const Posts = () => {
                 {/* <figcaption class="post-figcaption">Ethereum was founded by Vitalik Buterin and Gavin Wood in 2015.&nbsp;</figcaption> */}
               </figure>
             </header>
-            <div className="d-flex align-items-center mb-4" style={{ width: "90%" }}>
-              <img src={el.authors[0].profile_image} style={{ width: "42px", height: "42px", borderRadius: "50%" }} />
-              <p className="m-0 ms-2">
-                By <span>{el.authors[0].name}</span>
-              </p>
+            <div className="godo-canvas">
+              <div className="d-flex align-items-center mt-3">
+                <img src={el.authors[0].profile_image} style={{ width: "42px", height: "42px", borderRadius: "50%" }} />
+                <p className="m-0 ms-2">
+                  By <span>{el.authors[0].name}</span>
+                </p>
+              </div>
             </div>
-            <section id="post-body" class="post-body godo-canvas mx-auto relative font-serif">
+            <section id="post-body" class="post-body godo-canvas mx-auto relative font-serif pt-2">
               <div dangerouslySetInnerHTML={{ __html: sanitize(el.html ?? {}) }} style={{ justifyContent: "center", fontWeight: 500 }} />
             </section>
           </div>
-          <div className="flex" style={{ width: "90%", margin: "auto", marginBottom: "20px" }}>
-            <TwitterShareButton url={window.location.href} title={el.title} style={{ marginRight: "20px" }}>
-              <TwitterIcon />
-            </TwitterShareButton>
-            <FacebookShareButton url={window.location.href} title={el.title} style={{ marginRight: "20px" }}>
-              <FacebookIcon />
-            </FacebookShareButton>
-            <LinkedinShareButton url={window.location.href} title={el.title} style={{ marginRight: "20px" }}>
-              <LinkedinIcon />
-            </LinkedinShareButton>
+          <div className="godo-canvas pt-0">
+            <div className="d-flex" style={{ margin: "auto", marginBottom: "20px" }}>
+              <TwitterShareButton url={window.location.href} title={el.title} style={{ marginRight: "20px" }}>
+                <TwitterIcon />
+              </TwitterShareButton>
+              <FacebookShareButton url={window.location.href} title={el.title} style={{ marginRight: "20px" }}>
+                <FacebookIcon />
+              </FacebookShareButton>
+              <LinkedinShareButton url={window.location.href} title={el.title} style={{ marginRight: "20px" }}>
+                <LinkedinIcon />
+              </LinkedinShareButton>
+            </div>
           </div>
         </>
       ))}
