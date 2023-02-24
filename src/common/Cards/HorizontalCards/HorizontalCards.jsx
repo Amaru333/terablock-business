@@ -1,10 +1,10 @@
 import React from "react";
 import UIButton from "../../../widgets/UIButtons/UIButton";
-import Link from 'next/link'
+import Link from "next/link";
 
 import HorizontalCardsStyle from "./HorizontalCards.module.css";
 
-function HorizontalCards({ data, description_1, description_2, title  }) {
+function HorizontalCards({ data, description_1, description_2, title }) {
   const DifficultyTag = ({ level }) => {
     const color = {
       Beginner: "#00C077",
@@ -12,19 +12,20 @@ function HorizontalCards({ data, description_1, description_2, title  }) {
       Advanced: "#F92626",
     };
     return (
-      <span className="rounded px-2" style={{ border: `1px solid ${color[level]}`, fontWeight: "700" }}>
+      <span className="rounded px-2" style={{ border: `1px solid ${color[level] || "black"}`, fontWeight: "700" }}>
         <span style={{ color: color[level] }}>• </span> {level}
       </span>
     );
   };
-  const NewsCard = ({ image, title, description, difficulty, time, slug }) => {
+  const NewsCard = ({ image, title, description, difficulty, time, slug, author }) => {
     return (
-      <div className="card" style={{ width: "18rem", zIndex: 2, borderRadius: "16px", padding: "12px", boxShadow: "2px 2px 24px rgba(0, 0, 0, 0.06)" , minHeight:'420px'  , cursor:'pointer'}}>
+      <div className="card" style={{ width: "18rem", zIndex: 2, borderRadius: "16px", padding: "12px", boxShadow: "2px 2px 24px rgba(0, 0, 0, 0.06)", minHeight: "460px", cursor: "pointer" }}>
         <img src={image} className="card-img" />
         <div className="pt-3 text-truncate-container">
           <h5 className="card-title" style={{ fontWeight: "600" }}>
             {title}
           </h5>
+
           <div className="d-flex justify-content-between mb-2" style={{ fontSize: "14px" }}>
             <DifficultyTag level={difficulty} />
             <div className="d-flex align-items-center">
@@ -32,19 +33,17 @@ function HorizontalCards({ data, description_1, description_2, title  }) {
               <span style={{ color: "#797979", marginLeft: "5px", fontWeight: "600" }}>{time} mins</span>
             </div>
           </div>
-          <p className={"card-text mt-3 test relative"} style={{ color: "#707070", fontSize: "14px", width:'250px'}}>
+          <p className={"card-text mt-3 test relative"} style={{ color: "#707070", fontSize: "14px", width: "250px" }}>
             {description}
           </p>
           <Link href={`learn/${slug}`}>
-          <span style={{ color: "#0052FF", fontWeight: "700" }}>Read More →</span>
+            <span style={{ color: "#0052FF", fontWeight: "700" }}>Read More →</span>
           </Link>
         </div>
       </div>
     );
   };
-  let x = data.map((el) => (
-    console.log(el?.tags[1]?.name , 'testinggggg')
-  ))
+  let x = data.map((el) => console.log(el?.tags[1]?.name, "testinggggg"));
   // console.log(x)
   return (
     <div className="pb-5 bg-white border-bottom">
@@ -62,7 +61,17 @@ function HorizontalCards({ data, description_1, description_2, title  }) {
       <div className={["d-flex ps-3 ps-md-5 ms-0 ms-md-5", HorizontalCardsStyle.horizontal_scroll].join(" ")}>
         {data?.map((item, index) => (
           <div className="pe-3 pe-md-5 mb-3" key={index}>
-            <NewsCard title={item.title} image={item.feature_image} description={item.excerpt} time={item.reading_time} difficulty={item.id == "63abe3754dba2f1ec0e19f41" ? item.tags[1]?.name : item.tags[0]?.name ? item.id == "63abe3754dba2f1ec0e19f48" ? item.tags[4]?.name : item.tags[0]?.name : item.tags[1]?.name} slug={item.slug}/>
+            <NewsCard
+              title={item.title}
+              image={item.feature_image}
+              description={item.excerpt}
+              time={item.reading_time}
+              author={item.authors[0]}
+              difficulty={
+                item.id == "63abe3754dba2f1ec0e19f41" ? item.tags[1]?.name : item.tags[0]?.name ? (item.id == "63abe3754dba2f1ec0e19f48" ? item.tags[4]?.name : item.tags[0]?.name) : item.tags[1]?.name
+              }
+              slug={item.slug}
+            />
           </div>
         ))}
       </div>
