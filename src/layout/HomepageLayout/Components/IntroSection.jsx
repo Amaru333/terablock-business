@@ -1,13 +1,47 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
 import UIButton from "../../../widgets/UIButtons/UIButton";
 import IntroSectionStyles from "../Styles/IntroSection.module.css";
 import CountUp from "react-countup";
 import { abbreviateNumber } from "../../../functions/abbreviateNumber";
+import axios from "axios";
+import Link from "next/link";
 
 function IntroSection() {
   const width = useScreenSize().width;
   const [buttonText, setButtonText] = useState("Get Started");
+  const [data, setData] = useState([])
+  useEffect(() => {
+    axios.get("https://tersblock-stats-be-p6as9.ondigitalocean.app/ecosystemstats").then((res) => {
+      setData(res.data.data);
+      console.log(data, 'this is the api for market stats....')
+    });
+  }, []);
+  const dictionary = [
+    {
+      id: 1,
+      title: 'Transaction Volume',
+      value: data?.totalVolume
+    },
+    {
+      id: 2,
+      title: 'Tokens Transacted',
+      value: data?.totalTokens
+    },
+    {
+      id: 3,
+      title: 'Secure Transactions',
+      value: data?.totalTransactions
+    },
+    {
+      id: 4,
+      title: 'Happy Users',
+      value: data?.uniqueUsers
+    }
+  ]
+  const openNewTab = (link) => {
+    window.open(link, "_blank");
+  }
   return (
     <div className={`bg-white text-center text-md-start position-relative ${(width > 1400 || width < 800) && "pt-5"}`}>
       <div className={`px-xl-5`}>
@@ -37,11 +71,13 @@ function IntroSection() {
                 </p>
               </div>
               <div className="d-flex my-2 justify-content-center justify-content-md-start">
-                <UIButton ml0 type="primary" width="150px" style={{ marginRight: "10px" }} onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
-                  {buttonText}
-                </UIButton>
-                <UIButton type="secondary" onClick={()=>{
-                  window.open("https://bridge.terablock.com/bridge", "_blank");
+                {/* <Link href={'https://app.terablock.com/'}> */}
+                  <UIButton ml0 type="primary" width="150px" style={{ marginRight: "10px" }} onMouseOut={() => setButtonText("Get Started")} onClick={() => openNewTab('https://app.terablock.com/getstarted')}>
+                    {buttonText}
+                  </UIButton>
+                {/* </Link> */}
+                <UIButton type="secondary" onClick={() => {
+                  window.open("https://app.terablock.com/login", "_blank");
                 }}>Launch App</UIButton>
               </div>
               <div className={["d-flex justify-content-around justify-content-md-start", IntroSectionStyles.bottom_logos].join(" ")}>
@@ -68,43 +104,19 @@ function IntroSection() {
         </div>
       </div>
       {/* {width < 768 && <img src="/assets/icons/3x4.svg" className="position-absolute" style={{ width: "30px", bottom: "20rem", right: "0rem" }} />} */}
-
       {/* {width > 768 && <img src="/assets/icons/3x4.svg" className="position-absolute" style={{ width: "30px", bottom: "7rem", left: "5rem" }} />} */}
-
       <div className="" style={{ backgroundColor: "#0251ff" }}>
         <div className="py-4 row px-0 px-sm-4 py-4 justify-content-center" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : "100%" }}>
-          <div className="py-4 col col-md px-2">
-            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600" }}>
-              ${width > 767 ? <CountUp duration={2} end={38940995} separator="," /> : abbreviateNumber(38940995)}
-            </p>
-            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "14px" }}>
-              Transaction Volume
-            </p>
-          </div>
-          <div className="py-4 col col-md px-2">
-            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "14pt", fontWeight: "600" }}>
-              {width > 767 ? <CountUp duration={2} end={13976181174} separator="," /> : abbreviateNumber(13976181174)}
-            </p>
-            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "14px" }}>
-              Tokens Transacted
-            </p>
-          </div>
-          <div className="py-4 col col-md px-2">
-            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "14pt", fontWeight: "600" }}>
-              {width > 767 ? <CountUp duration={2} end={76495} separator="," /> : abbreviateNumber(76495)}
-            </p>
-            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "14px" }}>
-              Secure Transactions
-            </p>
-          </div>
-          <div className="py-4 col col-md px-2">
-            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "14pt", fontWeight: "600" }}>
-              {width > 767 ? <CountUp duration={2} end={13929} separator="," /> : abbreviateNumber(13929)}
-            </p>
-            <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "14px" }}>
-              Happy Users
-            </p>
-          </div>
+          {dictionary?.map((el, index) => (
+            <div className="py-4 col col-md px-2">
+              <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600", whiteSpace: 'nowrap' }}>
+                {index == 0 ? '$' : ''} {width > 767 ? <CountUp duration={2} end={el.value} separator="," /> : abbreviateNumber(Math.round(el.value))}
+              </p>
+              <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "14px" }}>
+                {el.title}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

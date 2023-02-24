@@ -7,8 +7,10 @@ import UICard from "../../../widgets/UICard/UICard";
 function GetStartedSection() {
   const width = useScreenSize().width;
   const router = useRouter();
-
   const [buttonText, setButtonText] = useState("Get Started");
+  const openNewTab = (link) => {
+    window.open(link, "_blank");
+  }
   return (
     <div>
       <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "80%" : "95%" }}>
@@ -66,7 +68,7 @@ function GetStartedSection() {
           {/* {width > 768 && <img src="/assets/icons/4x5.svg" style={{ width: "60px", position: "absolute", bottom: "2rem", left: "1rem" }} />} */}
         </div>
         <div className="d-flex align-items-center justify-content-center mt-2 mb-5">
-          <UIButton type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+          <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
             {buttonText}
           </UIButton>
           <UIButton onClick={() => router.push("/coinslists")}>Learn More</UIButton>

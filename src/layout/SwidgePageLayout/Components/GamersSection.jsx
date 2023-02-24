@@ -7,6 +7,9 @@ import GamersSectionStyle from "../Styles/GamersSection.module.css";
 function GamersSection() {
   const width = useScreenSize().width;
   const [buttonText, setButtonText] = useState("Get Started");
+  const openNewTab = (link) => {
+    window.open(link, '_blank')
+  }
   return (
     <div className="py-5 bg-white px-0">
       <div className="text-center mb-2 px-3">
@@ -28,7 +31,7 @@ function GamersSection() {
                 Swidge is a powerful Web3 multi-protocol automation that helps users buy, swap, bridge and transfer tokens from a multichain unified platform to a blockchain game (Play-to-earn) or a decentralised application (Dapp) in just a few clicks.
               </p>
               <div className="d-flex justify-content-center justify-content-md-start">
-                <UIButton ml0 type="primary" width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+                <UIButton ml0 type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
                   {buttonText}
                 </UIButton>
               </div>

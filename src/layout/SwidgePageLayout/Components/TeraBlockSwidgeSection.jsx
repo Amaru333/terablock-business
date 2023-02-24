@@ -57,6 +57,9 @@ function TeraBlockSwidgeSection() {
       image: "/assets/icons/terablock-swidge/support.svg",
     },
   ];
+  const openNewTab = (link) => {
+    window.open(link, '_blank')
+  }
   return (
     // <div className="primary-gradient px-0 px-md-2 px-xl-5">
     //   <div className="flex flex-column justify-content-center align-items-center pb-4">
@@ -152,7 +155,7 @@ function TeraBlockSwidgeSection() {
         </div>
       </div>
       <div className="d-flex align-items-center justify-content-center mt-2 mb-5">
-        <UIButton width="150px" onMouseOver={() => setButtonText("Coming Soon")} onMouseOut={() => setButtonText("Get Started")}>
+        <UIButton width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
           {buttonText}
         </UIButton>
         <UIButton type="primary-light">Launch Swidge</UIButton>
