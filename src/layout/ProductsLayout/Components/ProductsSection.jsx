@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
-
+import { useRouter } from "next/router";
 import UIButton from "../../../widgets/UIButtons/UIButton";
 
 import ProductStyle from "../Styles/ProductsSection.module.css";
@@ -149,7 +149,7 @@ function ProductsSection() {
     return (
       <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-0 px-xl-2">
         <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-4">
-          <h2 className="fw-normal text-center text-md-start" style={{ color: "#1b2b6b" }}>
+          <h2 className="fw-normal text-center text-md-start" id="buysection" style={{ color: "#1b2b6b" }}>
             <b>Buy</b>
           </h2>
           <p className="text-primaryBlue text-center text-md-start fw-bold fst-italic m-0">Jumpstart your crypto purchases in just a few clicks</p>

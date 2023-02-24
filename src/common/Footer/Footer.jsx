@@ -55,11 +55,11 @@ function Footer() {
           name: "Careers",
         },
         {
-          link: "/",
+          // link: "/",
           name: "Resources",
         },
         {
-          link: "/",
+          // link: "/",
           name: "Press",
         },
         {
@@ -67,7 +67,7 @@ function Footer() {
           name: "Security",
         },
         {
-          link: "/",
+          // link: "/",
           name: "Token Listing",
         },
         {
@@ -76,7 +76,7 @@ function Footer() {
         },
         {
           link: "/",
-          name: "Legacy & Privacy",
+          name: "Terms of Use",
         },
       ],
     },
@@ -84,11 +84,11 @@ function Footer() {
       title: "Products",
       pages: [
         {
-          link: "/",
+          link: "https://app.terablock.com/getstarted",
           name: "Get Started",
         },
         {
-          link: "/",
+          link: "/products#buysection",
           name: "Buy",
         },
         {
@@ -116,15 +116,15 @@ function Footer() {
           name: "Earn",
         },
         {
-          link: "/",
+          link: "/community#rewards",
           name: "Rewards Program",
         },
         {
-          link: "/",
+          // link: "/",
           name: "Referral Program",
         },
         {
-          link: "/",
+          link: "/community",
           name: "Ambassador Program",
         },
       ],
@@ -133,39 +133,39 @@ function Footer() {
       title: "Learn",
       pages: [
         {
-          link: "/",
+          link: "/learn",
           name: "Blog",
         },
         {
-          link: "/",
+          link: "https://app.terablock.com/getstarted",
           name: "Browse Cryptocurrencies",
         },
         {
-          link: "/",
+          link: "/learn",
           name: "Crypto Basics",
         },
         {
-          link: "/",
+          link: "https://blogv2.terablock.com/untitled-2/",
           name: "How to set up a web3 wallet?",
         },
         {
-          link: "/",
+          link: "https://blogv2.terablock.com/what-is-ethereum/",
           name: "How to buy crypto?",
         },
         {
-          link: "/",
+          link: "https://blogv2.terablock.com/what-is-bitcoin/",
           name: "What is Bitcoin & Ethereum?",
         },
         {
-          link: "/",
+          link: "https://blogv2.terablock.com/what-is-decentralised-finance-defi/",
           name: "What is DeFi?",
         },
         {
-          link: "/",
+          link: "https://blogv2.terablock.com/basics-of-blockchain-explained/",
           name: "What is Blockchain?",
         },
         {
-          link: "/",
+          link: "https://blogv2.terablock.com/what-is-staking-all-about/",
           name: "What is staking?",
         },
       ],
@@ -178,15 +178,15 @@ function Footer() {
           name: "Help Center",
         },
         {
-          link: "/",
+          // link: "/",
           name: "Contacts",
         },
         {
-          link: "/",
+          // link: "/",
           name: "Bug Bounty",
         },
         {
-          link: "/",
+          // link: "/",
           name: "Status",
         },
       ],
@@ -250,11 +250,19 @@ function Footer() {
         <div className="d-flex justify-content-between px-4 px-md-5 pt-0 pb-5 pt-md-4 pb-md-3">
           <div className="ps-md-4">
             <a href="https://twitter.com/myterablock" target="_blank">
-              <img src="/assets/icons/twitter-ico-filled.svg" />
+              <img src="/assets/icons/Tw.png" style={{width:33, height:33}}/>
             </a>
             &nbsp;&nbsp;
             <a href="https://www.linkedin.com/company/myTeraBlock/" target="_blank">
-              <img src="/assets/icons/linkedin-ico-filled.svg" />
+              <img src="/assets/icons/Li.png" style={{width:33, height:33}}/>
+            </a>
+            &nbsp;&nbsp;
+            <a href="https://www.instagram.com/myterablock/" target="_blank">
+              <img src="/assets/icons/I.png" style={{width:33, height:33}}/>
+            </a>
+            &nbsp;&nbsp;
+            <a href="https://t.me/TeraBlock" target="_blank">
+              <img src="/assets/icons/Tel.png" style={{width:33, height:33}}/>
             </a>
             &nbsp;&nbsp;
             <a href="mailto:support@terablock.com">
