@@ -87,25 +87,25 @@ function ProductsSection() {
       <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-0 px-xl-2">
         <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-4">
           <h2 className="fw-normal text-center text-md-start" style={{ color: "#1b2b6b" }}>
-            <b>CoinsLists</b>
+            <b>CoinsList</b>
           </h2>
           <p className="text-primaryBlue text-center text-md-start fw-bold fst-italic m-0">Invest with a long-term view of building crypto wealth.</p>
           <p className="mt-2" style={{ color: "#5a5b5b" }}>
-            CoinsLists is our carefully selected portfolio of cryptocurrencies that reflects a theme, idea or goal. It exposes you to the most sought-after cryptocurrencies without requiring you to invest time and effort in learning about them.
+            CoinsList is our carefully selected portfolio of cryptocurrencies that reflects a theme, idea or goal. It exposes you to the most sought-after cryptocurrencies without requiring you to invest time and effort in learning about them.
           </p>
           <ul style={{ color: "#5a5b5b" }}>
             <li>Place orders for multiple cryptocurrencies in 1 click as CoinsList and save time.</li>
             <li>Start small budget investment for $100.</li>
             <li>CoinsList is non-custodial, so your funds are always in your control.</li>
             <li>Track and manage seamlessly with a real-time value on a multi-protocol unified platform.</li>
-            <li>Invest in CoinsLists every week, month, or quarter with systematic investment plans (SIPs).</li>
+            <li>Invest in CoinsList every week, month, or quarter with systematic investment plans (SIPs).</li>
             <li>Keep more money in your portfolio with no advisory fee, only the fees associated with trading expenses.</li>
           </ul>
           <div className="mt-3 pt-2 d-flex justify-content-center justify-content-md-start">
             <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
               {buttonText}
             </UIButton>
-            <UIButton type="secondary">Discover CoinsLists</UIButton>
+            <UIButton type="secondary">Discover CoinsList</UIButton>
           </div>
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center">

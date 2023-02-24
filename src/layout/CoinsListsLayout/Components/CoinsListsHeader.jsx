@@ -15,10 +15,10 @@ function CoinsListsHeader() {
           <div className="row mx-0" style={{ zIndex: 1 }}>
             <div className="my-5 px-4 px-md-5 col-12 col-md-6 pe-0 pe-md-5 d-flex flex-column justify-content-center text-center pe-4 text-md-start">
               <h1 className="fw-bold" style={{ fontSize: width > 768 ? "50px" : "23px", width: width > 768 ? "75%" : "100%", color: "#1b2b6b" }}>
-                CoinsLists
+                CoinsList
               </h1>
               <p className="mb-0 fs-6" style={{ color: "#5a5b5d" }}>
-                CoinsLists is our carefully selected portfolio of cryptocurrencies that reflects a theme, idea or goal.
+                CoinsList is our carefully selected portfolio of cryptocurrencies that reflects a theme, idea or goal.
               </p>
               {/* {width > 940 && (
                 <>

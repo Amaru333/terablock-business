@@ -16,10 +16,10 @@ function GetStartedSection() {
       <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "80%" : "95%" }}>
         <div className="text-center mt-5 px-4 px-md-5">
           <h2 className="text-primaryTextDark fw-bold">
-            <b>Smart investing with CoinsLists</b>
+            <b>Smart investing with CoinsList</b>
           </h2>
           <p style={{ color: "#5a5b5b" }}>
-            Follow a guided step-by-step process to build your crypto portfolio with CoinsLists in under <b>15mins.</b>
+            Follow a guided step-by-step process to build your crypto portfolio with CoinsList in under <b>15mins.</b>
           </p>
         </div>
         <div className="row mx-0 mt-5 position-relative">
@@ -45,9 +45,9 @@ function GetStartedSection() {
                 </div>
                 <h1 className="text-lightBlueText fw-bolder">2</h1>
               </div>
-              <p className="fs-4 fw-bolder text-primaryBlue mt-2 text-center text-md-start">Select CoinsLists</p>
+              <p className="fs-4 fw-bolder text-primaryBlue mt-2 text-center text-md-start">Select CoinsList</p>
               <p style={{ color: "#5a5b5b", textAlign: "justify" }} className="fs-6">
-                We curate and optimise the most sought after crypto assets as CoinLists, so you can wisely invest in a range of crypto with ease.
+                We curate and optimise the most sought after crypto assets as CoinList, so you can wisely invest in a range of crypto with ease.
               </p>
             </UICard>
           </div>

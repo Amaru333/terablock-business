@@ -8,7 +8,7 @@ function CoinsListSection() {
   const width = useScreenSize().width;
 
   const CoinListCard = ({ data }) => {
-    const [cardButtonText, setCardButtonText] = useState("View CoinsLists");
+    const [cardButtonText, setCardButtonText] = useState("View CoinsList");
     return (
       <>
         {width > 767 ? (
@@ -184,9 +184,9 @@ function CoinsListSection() {
     <div className="py-5 position-relative px-0 text-white" style={{ backgroundColor: "#0251ff" }}>
       <div className="text-center pt-4 px-4 px-md-5 mx-0 mx-md-5 pb-4">
         <h2 className="fw-bold">
-          <b>Popular CoinsLists</b>
+          <b>Popular CoinsList</b>
         </h2>
-        <p className="fs-6">Looking to start with small investment? Bullish on Metaverse? Choose from diversified CoinsLists.</p>
+        <p className="fs-6">Looking to start with small investment? Bullish on Metaverse? Choose from diversified CoinsList.</p>
       </div>
       <div className="pb-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "73%" : width > 940 ? "86%" : "96%" }}>
         <div className="row mx-0 mx-md-4">

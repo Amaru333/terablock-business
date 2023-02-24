@@ -262,7 +262,7 @@ function InvestmentGraph() {
                     </div>
                   </div>
                   <div style={{ width: "20%", margin: "auto", display: "flex", justifyContent: "center", alignItems: "center" }}>
-                    <UIButton onMouseOver={() => setCardButtonText("Coming Soon")} onMouseOut={() => setCardButtonText("View CoinsLists")}>
+                    <UIButton onMouseOver={() => setCardButtonText("Coming Soon")} onMouseOut={() => setCardButtonText("View CoinsList")}>
                       {cardButtonText}
                     </UIButton>
                   </div>
