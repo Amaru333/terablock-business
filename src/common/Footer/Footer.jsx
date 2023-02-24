@@ -14,7 +14,7 @@ function Footer() {
       title: "TBC Token",
       pages: [
         {
-          link: "https://stake.terablock.com/pools",
+          link: "https://app.terablock.com/getstarted",
           name: "Stake TBC",
         },
         {
@@ -51,7 +51,7 @@ function Footer() {
       title: "Company",
       pages: [
         {
-          link: "https://angel.co/company/myterablock/jobs",
+          link: "https://www.linkedin.com/company/myterablock/jobs/",
           name: "Careers",
         },
         {
@@ -216,11 +216,14 @@ function Footer() {
         <p className="h4 mb-3" style={{ fontWeight: "bold" }}>
           {data.title}
         </p>
+        <div className="flex flex-col">
         {data.pages.map((page, index) => (
-          <p key={index} className="mb-0 fw-light my-2" style={{ cursor: "pointer" }} onClick={() => router.push(page.link)}>
+          <div className="mb-1 fw-light my-2">
+          <a href={page.link} target='_blank' key={index} className="mb-0 fw-light my-2 text-white" style={{ cursor: "pointer",textDecoration: "none" }}>
             {page.name}
-          </p>
+          </a></div>
         ))}
+        </div>
       </div>
     );
   };
