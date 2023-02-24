@@ -136,7 +136,7 @@ function ProductsSection() {
             <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
               {buttonText}
             </UIButton>
-            <UIButton type="secondary">Discover Swidge</UIButton>
+            <UIButton type="secondary" onClick={()=>{open("https://app.terablock.com/login")}}>Launch App</UIButton>
           </div>
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center">

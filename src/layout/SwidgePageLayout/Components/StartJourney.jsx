@@ -15,7 +15,7 @@ function StartJourney() {
             {buttonText}
           </UIButton>
         </div>
-        <UIButton>Launch Swidge</UIButton>
+        <UIButton onClick={()=>{open("https://app.terablock.com/login")}}>Launch Swidge</UIButton>
       </div>
     </div>
   );
