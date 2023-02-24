@@ -260,7 +260,7 @@ function BuyCryptoTable() {
               </p>
               <div className="col d-flex justify-content-center">
                 <p className="text-white mb-0" style={{ padding: "5px 35px", borderRadius: "8px", fontWeight: 600, backgroundColor: "#0251ff", cursor: "pointer" }}>
-                  Buy
+                  <a href="https://app.terablock.com/getstarted" target="_blank" style={{textDecoration : "none",color : "white" }}>Buy</a>
                 </p>
               </div>
             </div>
@@ -314,7 +314,7 @@ function BuyCryptoTable() {
               </p> */}
               <div className="col p-0 d-flex justify-content-center">
                 <p className="text-white mb-0" style={{ padding: "5px 20px", borderRadius: "8px", fontWeight: 600, backgroundColor: "#0251ff", cursor: "pointer", fontSize: "14px" }}>
-                  Buy
+                <a href="https://app.terablock.com/getstarted" target="_blank" style={{textDecoration : "none",color : "white"}}>Buy</a>
                 </p>
               </div>
             </div>
