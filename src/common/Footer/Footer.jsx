@@ -266,16 +266,17 @@ function Footer() {
       <div className="row mx-0 px-3 px-md-5 text-white text-center text-md-start pt-5 pt-md-0" style={{ fontWeight: 300 }}>
         <p className="mb-0 pb-3 col-12 col-md-4 px-4" style={{ textAlign: "justify" }}>
           This website is operated and maintained by TeraBlock Technologies Limited, Terms & Legal Privacy Policy. Unless otherwise specified, all return figures shown above are for illustrative purposes only, and are not actual customer or model returns. Actual returns will vary greatly and depend on personal and market circumstances.
+          <br />
+          <br />
+          © TeraBlock Technologies Limited
         </p>
         <p className="mb-0 pb-3 col-12 col-md-4 px-4" style={{ textAlign: "justify" }}>
           Investments: Not FDIC Insured • No Bank Guarantee • May Lose Value. Investing in Digital Currencies involves risks, and there is always the potential of losing money when you invest in Digital Currencies. Before investing, consider your investment objectives and TeraBlock’ charges and expenses. TeraBlock internet-based services are
           designed to assist clients in achieving discrete financial goals. They are not intended to provide comprehensive tax advice or financial planning with respect to every aspect of a client&apos;s financial situation and do not incorporate specific investments that clients hold elsewhere. Past performance does not guarantee future results,
           and the likelihood of investment outcomes are hypothetical in nature. Not an offer, solicitation of an offer, or advice to buy or sell Digital Currencies in jurisdictions where TeraBlock is not registered.{" "}
         </p>
-        <p className="mb-0 pb-3 col-12 col-md-4 px-4 text-center text-md-end" style={{ textAlign: "justify" }}>
-          The information provided by TeraBlock is educational only and is not investment or tax advice.
-          <br />
-          <br />© TeraBlock Technologies Limited
+        <p className="mb-0 pb-3 col-12 col-md-4 px-4" style={{ textAlign: "justify" }}>
+          TeraBlock is not a broker, financial institution or intermediary and is in no way your agent, advisor, or custodian. TeraBlock is not FDIC insured and does not give any Bank guarantee. You acknowledge, understand, agree, and assume the risks involved in transacting in digital assets, you may lose value. Before transacting, consider your investment objectives, TeraBlock’s charges and expenses. TeraBlock’s services are neither investment advise, nor financial planning or tax advisory. Past performance of any advise, does not guarantee future results, and the likelihood of investment outcomes are hypothetical in nature. Services of TeraBlock may not be construed as an offer, solicitation of an offer, or advice to transact in Digital assets in jurisdictions where TeraBlock is not registered. TeraBlock is a non-custodial platform. TeraBlock cannot initiate a transfer of any of your cryptocurrency or digital assets or otherwise access your digital assets. TeraBlock has no fiduciary relationship or obligation to you regarding any decisions or activities that you affect in connection with your use of the Services. Unless explicitly provided in writing, TeraBlock does not host or maintain ecosystem partners accessible on our Services, do not participate in any transactions on such ecosystem partners’ platforms, and TeraBlock does not recommend, endorse, or otherwise take a position on your use of these services.
         </p>
       </div>
     </div>
