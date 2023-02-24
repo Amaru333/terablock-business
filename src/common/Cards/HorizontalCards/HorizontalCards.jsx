@@ -1,6 +1,6 @@
 import React from "react";
 import UIButton from "../../../widgets/UIButtons/UIButton";
-import Link from 'next/link'
+import Link from "next/link";
 
 import HorizontalCardsStyle from "./HorizontalCards.module.css";
 
@@ -12,15 +12,18 @@ function HorizontalCards({ data, description_1, description_2, title }) {
       Advanced: "#F92626",
     };
     return (
-      <span className="rounded px-2" style={{ border: `1px solid ${color[level]}`, fontWeight: "700" }}>
+      <span className="rounded px-2" style={{ border: `1px solid ${color[level] || "black"}`, fontWeight: "700" }}>
         <span style={{ color: color[level] }}>• </span> {level}
       </span>
     );
   };
-  const NewsCard = ({ image, title, description, difficulty, time, slug }) => {
+  const NewsCard = ({ image, title, description, difficulty, time, slug, author }) => {
     return (
       <Link href={`learn/${slug}`}>
-        <div className="card position-relative" style={{ width: "18rem", zIndex: 2, borderRadius: "16px", padding: "12px", boxShadow: "2px 2px 24px rgba(0, 0, 0, 0.06)", minHeight: '420px', cursor: 'pointer' }}>
+        <div
+          className="card position-relative"
+          style={{ width: "18rem", zIndex: 2, borderRadius: "16px", padding: "12px", boxShadow: "2px 2px 24px rgba(0, 0, 0, 0.06)", minHeight: "420px", cursor: "pointer" }}
+        >
           <img src={image} className="card-img" />
           <div className="pt-3 text-truncate-container">
             <h5 className="card-title" style={{ fontWeight: "600" }}>
@@ -33,10 +36,12 @@ function HorizontalCards({ data, description_1, description_2, title }) {
                 <span style={{ color: "#797979", marginLeft: "5px", fontWeight: "600" }}>{time} mins</span>
               </div>
             </div>
-            <p className={"card-text mt-3 truncate"} style={{ color: "#707070", fontSize: "14px", width: '250px' }}>
+            <p className={"card-text mt-3 truncate"} style={{ color: "#707070", fontSize: "14px", width: "250px" }}>
               {description}
             </p>
-            <span style={{ color: "#0052FF", fontWeight: "700" }} className='position-absolute bottom-0 pb-2'>Read More →</span>
+            <span style={{ color: "#0052FF", fontWeight: "700" }} className="position-absolute bottom-0 pb-2">
+              Read More →
+            </span>
           </div>
         </div>
       </Link>
