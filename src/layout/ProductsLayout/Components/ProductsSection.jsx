@@ -10,15 +10,29 @@ function ProductsSection() {
   const [tab, setTab] = useState("Wallet Manager");
   const ref = useRef({});
   const [buttonText, setButtonText] = useState("Get Started");
-  const query = useRouter();
+  const [query] = useState(useRouter());
+  
+  const scrollIntoTheView = (id) => {
+    let element = document.getElementById(id);
+    console.log(1)
+    if (!element) return;
+    console.log(2)
+
+    element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+    });
+};
 
   useEffect(() => {
-    
-    let tabq = query.asPath.split("?")[1]?.split("&")?.filter(q => q.split("=")[0] == 'tab')[0]?.split("=")[1]?.toLowerCase();
-    tabq = tabq?.charAt(0).toUpperCase() + tabq?.slice(1)
-    console.log(tabq)
-    setTab(tabq)
-  }, [query.asPath]);
+      let tabq = query.asPath.split("?")[1]?.split("&")?.filter(q => q.split("=")[0] == 'tab')[0]?.split("=")[1]?.toLowerCase();
+      tabq = tabq?.charAt(0).toUpperCase() + tabq?.slice(1)
+      console.log(tabq)
+      if(!tabq) return
+      scrollIntoTheView('tabsection') 
+      setTab(tabq)
+  }, [query.asPath != '']);
   const tab_list = [
     {
       name: "Wallet Manager",
@@ -389,7 +403,7 @@ function ProductsSection() {
   };
 
   return (
-    <div className="pt-5 pb-5 bg-white">
+    <div className="pt-5 pb-5 bg-white"  id="tabsection">
       <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "83%" : "95%" }}>
         <div className="text-center mb-2 px-4 px-md-2 pb-2">
           <h2 className="text-primaryTextDark fw-bolder">

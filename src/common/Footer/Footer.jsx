@@ -88,7 +88,7 @@ function Footer() {
           name: "Get Started",
         },
         {
-          link: "/products?tab=buysection",
+          link: "/products#tabsection?tab=buy",
           name: "Buy",
         },
         {
@@ -100,19 +100,19 @@ function Footer() {
           name: "Swidge",
         },
         {
-          link: "/",
+          link: "/products#tabsection?tab=swap",
           name: "Swap",
         },
         {
-          link: "http://bridge.terablock.com",
+          link: "/products#tabsection?tab=bridge",
           name: "Bridge",
         },
         {
-          link: "/",
+          link: "/products#tabsection?tab=link",
           name: "Link",
         },
         {
-          link: "/",
+          link: "/products#tabsection?tab=earn",
           name: "Earn",
         },
         {
