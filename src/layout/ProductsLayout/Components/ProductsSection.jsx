@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
 import { useRouter } from "next/router";
 import UIButton from "../../../widgets/UIButtons/UIButton";
@@ -10,6 +10,15 @@ function ProductsSection() {
   const [tab, setTab] = useState("Wallet Manager");
   const ref = useRef({});
   const [buttonText, setButtonText] = useState("Get Started");
+  const query = useRouter();
+
+  useEffect(() => {
+    
+    let tabq = query.asPath.split("?")[1]?.split("&")?.filter(q => q.split("=")[0] == 'tab')[0]?.split("=")[1]?.toLowerCase();
+    tabq = tabq.charAt(0).toUpperCase() + tabq.slice(1)
+    console.log(tabq)
+    setTab(tabq)
+  }, [query.asPath]);
   const tab_list = [
     {
       name: "Wallet Manager",

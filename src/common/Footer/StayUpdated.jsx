@@ -10,9 +10,13 @@ function StayUpdated() {
         <b>Stay updated on the latest TeraBlock news</b>
       </p>
       <div className="d-flex align-items-center justify-content-center">
-        <input type="text" placeholder="Enter your email address" className="w-100 px-3 py-2 rounded border" style={{ maxWidth: width > 767 ? "300px" : "250px" }} />
+        {/* <input type="text" placeholder="Enter your email address" className="w-100 px-3 py-2 rounded border" style={{ maxWidth: width > 767 ? "300px" : "250px" }} />
         <div>
           <UIButton type="primary">Sign Up</UIButton>
+        </div> */}
+        <div class="ml-form-embed"
+          data-account="3712445:n4a2k0o1k0"
+          data-form="5253668:n7a1k9">
         </div>
       </div>
     </div>
