@@ -75,7 +75,7 @@ function Footer() {
           name: "Supporters",
         },
         {
-          link: "/",
+          link: "/tnc",
           name: "Terms of Use",
         },
       ],
@@ -88,7 +88,7 @@ function Footer() {
           name: "Get Started",
         },
         {
-          link: "/products#buysection",
+          link: "/products?tab=buysection",
           name: "Buy",
         },
         {

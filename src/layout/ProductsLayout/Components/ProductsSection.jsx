@@ -15,7 +15,7 @@ function ProductsSection() {
   useEffect(() => {
     
     let tabq = query.asPath.split("?")[1]?.split("&")?.filter(q => q.split("=")[0] == 'tab')[0]?.split("=")[1]?.toLowerCase();
-    tabq = tabq.charAt(0).toUpperCase() + tabq.slice(1)
+    tabq = tabq?.charAt(0).toUpperCase() + tabq?.slice(1)
     console.log(tabq)
     setTab(tabq)
   }, [query.asPath]);
