@@ -52,27 +52,22 @@ function BuyCryptoTable() {
   const [reducerValue, forceUpdate] = useReducer((x) => x + 1, 0);
 
   useEffect(() => {
-    fetchGraphData();
+    fetchData();
     var timerID = setInterval(() => fetchData(), 30000);
     return () => clearInterval(timerID);
-  });
+  },[]);
 
   const fetchData = async () => {
-    const result = await axios("https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&ids=ethereum,cardano,matic-network,bitcoin,polkadot,terablock");
-
+    const result = await axios("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=ethereum,cardano,matic-network,bitcoin,polkadot,terablock&sparkline=true&price_change_percentage=24h");
     setData(result.data);
-    // return true;
-  };
-
-  const fetchGraphData = async () => {
-    const result = await axios("https://geniuseado.terablock.com/api2/get-coins");
-    Object.entries(result.data).forEach((value, index) => {
+    let labels = [];
+    result.data?.map((res, i) => {
       let graphData = {
-        labels: value[1].labels,
+        labels: new Array(res?.sparkline_in_7d?.price?.length).fill(1),
         datasets: [
           {
             label: "First dataset",
-            data: value[1].prices,
+            data: res?.sparkline_in_7d?.price,
             fill: true,
             backgroundColor: (context) => {
               const ctx = context.chart.ctx;
@@ -86,9 +81,10 @@ function BuyCryptoTable() {
           },
         ],
       };
-      graph_data[index] = graphData;
+      labels[i] = graphData;
     });
-    setGraphData(graph_data);
+    setGraphData(labels);
+    setData(result.data);
   };
 
   const lineChart = ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler, {
@@ -233,9 +229,9 @@ function BuyCryptoTable() {
                 $
                 {data?.current_price > 0
                   ? data?.current_price.toLocaleString(undefined, {
-                      minimumFractionDigits: 0,
-                      maximumFractionDigits: 3,
-                    })
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 3,
+                  })
                   : data?.current_price}
                 {/* ${data.current_price.toLocaleString(undefined, {
                   minimumFractionDigits: 0,
@@ -260,7 +256,7 @@ function BuyCryptoTable() {
               </p>
               <div className="col d-flex justify-content-center">
                 <p className="text-white mb-0" style={{ padding: "5px 35px", borderRadius: "8px", fontWeight: 600, backgroundColor: "#0251ff", cursor: "pointer" }}>
-                  <a href="https://app.terablock.com/getstarted" target="_blank" style={{textDecoration : "none",color : "white" }}>Buy</a>
+                  <a href="https://app.terablock.com/getstarted" target="_blank" style={{ textDecoration: "none", color: "white" }}>Buy</a>
                 </p>
               </div>
             </div>
@@ -294,9 +290,9 @@ function BuyCryptoTable() {
                 $
                 {data?.current_price > 0
                   ? data?.current_price.toLocaleString(undefined, {
-                      minimumFractionDigits: 0,
-                      maximumFractionDigits: 3,
-                    })
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 3,
+                  })
                   : data?.current_price}
               </p>
               <p className="col p-0 mb-0 d-flex justify-content-center" style={{ fontWeight: 600, color: data.price_change_percentage_24h >= 0 ? "#6cc870" : "#e33536" }}>
@@ -314,7 +310,7 @@ function BuyCryptoTable() {
               </p> */}
               <div className="col p-0 d-flex justify-content-center">
                 <p className="text-white mb-0" style={{ padding: "5px 20px", borderRadius: "8px", fontWeight: 600, backgroundColor: "#0251ff", cursor: "pointer", fontSize: "14px" }}>
-                <a href="https://app.terablock.com/getstarted" target="_blank" style={{textDecoration : "none",color : "white"}}>Buy</a>
+                  <a href="https://app.terablock.com/getstarted" target="_blank" style={{ textDecoration: "none", color: "white" }}>Buy</a>
                 </p>
               </div>
             </div>
