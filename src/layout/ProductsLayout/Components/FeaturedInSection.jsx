@@ -74,7 +74,7 @@ function FeaturedInSection() {
   return (
     <div className="py-5 position-relative px-0 px-md-2" style={{ backgroundColor: "#0251ff" }}>
       <div className="text-center px-4 px-md-5 mx-0 mx-md-5 pb-0 pb-sm-3 pb-md-4">
-        <h2 className="text-white fw-bold">Supporters</h2>
+        <h2 className="text-white fw-bold" id="supporters">Supporters</h2>
         <p className="text-white mb-0">TeraBlock is supported by industry leading investors, partners, advisors and publications.</p>
       </div>
       <div ref={ref} className={["py-4", FeaturedInStyle.scroll].join(" ")} style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "83%" : "95%" }}>

@@ -66,7 +66,7 @@ function FAQSection() {
             <br />
             <div>
               <UIButton onClick={() => openNewTab('https://app.terablock.com/getstarted')}>Get started</UIButton>
-              <UIButton type="primary-light">Explore Products</UIButton>
+              <UIButton onClick={() => openNewTab('/products')} type="primary-light">Explore Products</UIButton>
             </div>
           </UIAccordion>
           <UIAccordion index={2} title="What is a non-custodial Web3 wallet?" homepage>
@@ -116,8 +116,8 @@ function FAQSection() {
             <br />
             <br />
             <div>
-              <UIButton>Buy TBC</UIButton>
-              <UIButton type="primary-light">Rewards</UIButton>
+              <UIButton onClick={() => openNewTab("https://pancakeswap.finance/swap?inputCurrency=0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c&outputCurrency=0x9798dF2f5d213a872c787bD03b2b91F54D0D04A1")}>Buy TBC</UIButton>
+              <UIButton type="primary-light" onClick={()=>open("/community")}>Rewards</UIButton>
             </div>
           </UIAccordion>
         </div>

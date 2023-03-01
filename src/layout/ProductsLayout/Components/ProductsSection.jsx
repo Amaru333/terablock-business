@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
-
+import { useRouter } from "next/router";
 import UIButton from "../../../widgets/UIButtons/UIButton";
 
 import ProductStyle from "../Styles/ProductsSection.module.css";
@@ -10,6 +10,29 @@ function ProductsSection() {
   const [tab, setTab] = useState("Wallet Manager");
   const ref = useRef({});
   const [buttonText, setButtonText] = useState("Get Started");
+  const [query] = useState(useRouter());
+  
+  const scrollIntoTheView = (id) => {
+    let element = document.getElementById(id);
+    console.log(1)
+    if (!element) return;
+    console.log(2)
+
+    element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+    });
+};
+
+  useEffect(() => {
+      let tabq = query.asPath.split("?")[1]?.split("&")?.filter(q => q.split("=")[0] == 'tab')[0]?.split("=")[1]?.toLowerCase();
+      tabq = tabq?.charAt(0).toUpperCase() + tabq?.slice(1)
+      console.log(tabq)
+      if(!tabq) return
+      scrollIntoTheView('tabsection') 
+      setTab(tabq)
+  }, [query.asPath != '']);
   const tab_list = [
     {
       name: "Wallet Manager",
@@ -87,25 +110,25 @@ function ProductsSection() {
       <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-0 px-xl-2">
         <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-4">
           <h2 className="fw-normal text-center text-md-start" style={{ color: "#1b2b6b" }}>
-            <b>CoinsLists</b>
+            <b>CoinsList</b>
           </h2>
           <p className="text-primaryBlue text-center text-md-start fw-bold fst-italic m-0">Invest with a long-term view of building crypto wealth.</p>
           <p className="mt-2" style={{ color: "#5a5b5b" }}>
-            CoinsLists is our carefully selected portfolio of cryptocurrencies that reflects a theme, idea or goal. It exposes you to the most sought-after cryptocurrencies without requiring you to invest time and effort in learning about them.
+            CoinsList is our carefully selected portfolio of cryptocurrencies that reflects a theme, idea or goal. It exposes you to the most sought-after cryptocurrencies without requiring you to invest time and effort in learning about them.
           </p>
           <ul style={{ color: "#5a5b5b" }}>
             <li>Place orders for multiple cryptocurrencies in 1 click as CoinsList and save time.</li>
             <li>Start small budget investment for $100.</li>
             <li>CoinsList is non-custodial, so your funds are always in your control.</li>
             <li>Track and manage seamlessly with a real-time value on a multi-protocol unified platform.</li>
-            <li>Invest in CoinsLists every week, month, or quarter with systematic investment plans (SIPs).</li>
+            <li>Invest in CoinsList every week, month, or quarter with systematic investment plans (SIPs).</li>
             <li>Keep more money in your portfolio with no advisory fee, only the fees associated with trading expenses.</li>
           </ul>
           <div className="mt-3 pt-2 d-flex justify-content-center justify-content-md-start">
             <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
               {buttonText}
             </UIButton>
-            <UIButton type="secondary">Discover CoinsLists</UIButton>
+            <UIButton type="secondary">Discover CoinsList</UIButton>
           </div>
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center">
@@ -136,7 +159,7 @@ function ProductsSection() {
             <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
               {buttonText}
             </UIButton>
-            <UIButton type="secondary">Discover Swidge</UIButton>
+            <UIButton type="secondary" onClick={()=>{open("https://app.terablock.com/login")}}>Launch App</UIButton>
           </div>
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center">
@@ -149,7 +172,7 @@ function ProductsSection() {
     return (
       <div className="row mx-0 d-flex flex-column-reverse flex-md-row px-0 px-md-0 px-xl-2">
         <div className="col-12 col-md-6 mt-3 px-3 pb-4 px-md-4">
-          <h2 className="fw-normal text-center text-md-start" style={{ color: "#1b2b6b" }}>
+          <h2 className="fw-normal text-center text-md-start" id="buysection" style={{ color: "#1b2b6b" }}>
             <b>Buy</b>
           </h2>
           <p className="text-primaryBlue text-center text-md-start fw-bold fst-italic m-0">Jumpstart your crypto purchases in just a few clicks</p>
@@ -380,7 +403,7 @@ function ProductsSection() {
   };
 
   return (
-    <div className="pt-5 pb-5 bg-white">
+    <div className="pt-5 pb-5 bg-white"  id="tabsection">
       <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "83%" : "95%" }}>
         <div className="text-center mb-2 px-4 px-md-2 pb-2">
           <h2 className="text-primaryTextDark fw-bolder">

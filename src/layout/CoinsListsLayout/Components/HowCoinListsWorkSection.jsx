@@ -137,7 +137,7 @@ function HowCoinListsWorkSection() {
           <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
             {buttonText}
           </UIButton>
-          <UIButton type="">Discover CoinsLists</UIButton>
+          <UIButton type="">Discover CoinsList</UIButton>
         </div>
       </div>
     </div>

@@ -24,7 +24,7 @@ function LanguageSelector() {
     <div style={{ width: "135px" }}>
       <OutsideAlerter func={() => setActive(false)}>
         <div className="position-relative">
-          <div className="text-white d-flex align-items-center py-2 px-3 border-white border rounded" style={{ width: "135px", cursor: "pointer" }} onClick={() => setActive(!active)}>
+          <div className="text-white d-flex align-items-center py-2 px-3 border-white border rounded" style={{ width: "135px", cursor: "pointer" }} onClick={() => {}}>
             <img src={selectedLanguage.icon} />
             <p className="mb-0 px-2">{selectedLanguage.name}</p>
             <img src="/assets/icons/drop-down.svg" />

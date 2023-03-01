@@ -19,7 +19,7 @@ function Header() {
   };
   const menu_items = [
     {
-      name: "CoinsLists",
+      name: "CoinsList",
       link: "/coinslists",
     },
     {

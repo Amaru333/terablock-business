@@ -67,7 +67,7 @@ function IntroSection() {
                   The wiser way to invest in crypto assets
                 </p>
                 <p className="my-4" style={{ color: "#5a5b5b" }}>
-                  TeraBlock is a truly decentralised platform that gives you the knowledge, tools and support to manage your crypto better.
+                  TeraBlock is a truly decentralised platform that gives you the knowledge, tools, and support to transition to a decentralised Web3 economy easily
                 </p>
               </div>
               <div className="d-flex my-2 justify-content-center justify-content-md-start">
