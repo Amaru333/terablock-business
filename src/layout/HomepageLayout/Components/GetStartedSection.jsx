@@ -68,7 +68,7 @@ function GetStartedSection() {
           {/* {width > 768 && <img src="/assets/icons/4x5.svg" style={{ width: "60px", position: "absolute", bottom: "2rem", left: "1rem" }} />} */}
         </div>
         <div className="d-flex align-items-center justify-content-center mt-2 mb-5">
-          <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
+          <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/login')} onMouseOut={() => setButtonText("Get Started")}>
             {buttonText}
           </UIButton>
           <UIButton onClick={() => router.push("/coinslists")}>Learn More</UIButton>

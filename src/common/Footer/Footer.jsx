@@ -14,7 +14,7 @@ function Footer() {
       title: "TBC Token",
       pages: [
         {
-          link: "https://app.terablock.com/getstarted",
+          link: "https://app.terablock.com/login",
           name: "Stake TBC",
         },
         {
@@ -84,7 +84,7 @@ function Footer() {
       title: "Products",
       pages: [
         {
-          link: "https://app.terablock.com/getstarted",
+          link: "https://app.terablock.com/login",
           name: "Get Started",
         },
         {
@@ -137,7 +137,7 @@ function Footer() {
           name: "Blog",
         },
         {
-          link: "https://app.terablock.com/getstarted",
+          link: "https://app.terablock.com/login",
           name: "Browse Cryptocurrencies",
         },
         {

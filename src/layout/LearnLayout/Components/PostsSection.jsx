@@ -77,7 +77,7 @@ function PostsSection() {
                         {post.tags[1]?.name}
                       </p>
                       <Link href={`learn/${post.slug}`}>
-                      <p className="m-0 fs-5 postHover" style={{ fontWeight: "700" }}>
+                      <p className="m-0 fs-5" style={{ fontWeight: "700" }}>
                         {post.title}
                       </p>
                       </Link>

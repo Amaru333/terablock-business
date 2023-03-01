@@ -35,7 +35,7 @@ function CoinLists() {
                 Our aim with CoinsList is to help you become an informed investor, no matter how much or how little you want to invest. CoinsListempowers you with simplified investments and helps you realise your financial goals from our easy-to-use unified platform.
               </p>
               <div className="d-flex justify-content-center justify-content-md-start">
-                <UIButton type="primary" style={{ marginRight: "10px" }} ml0 width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
+                <UIButton type="primary" style={{ marginRight: "10px" }} ml0 width="150px" onClick={() => openNewTab('https://app.terablock.com/login')} onMouseOut={() => setButtonText("Get Started")}>
                   {buttonText}
                 </UIButton>
                 <UIButton style={{ marginLeft: "20px !important" }} onClick={() => router.push("/coinslists")}>

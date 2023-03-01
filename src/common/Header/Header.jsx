@@ -60,9 +60,9 @@ function Header() {
             <p className="mb-0 me-3 pb-1" style={{ fontSize: "15px", fontWeight: 500, cursor: "pointer", borderBottom: "2px solid #E3297E" }}>
               <a href="https://app.terablock.com/login" target='_blank' style={{ "text-decoration": "none", "color": "#111111" }}> Launch App → </a>
             </p>
-            <button className={["bg-primaryBlue text-white px-4 py-2 mx-2", HeaderStyle.button, HeaderStyle.button_primary].join(" ")} onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
+            {/* <button className={["bg-primaryBlue text-white px-4 py-2 mx-2", HeaderStyle.button, HeaderStyle.button_primary].join(" ")} onClick={() => openNewTab('https://app.terablock.com/login')} onMouseOut={() => setButtonText("Get Started")}>
               {buttonText}
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
@@ -72,11 +72,11 @@ function Header() {
       <div className="d-flex justify-content-between px-3 py-3 bg-white" style={{ boxShadow: "0px 2px 20px 0px rgba(0, 0, 0, 0.15)" }}>
         <img src="/assets/icons/logo-blue.svg" className="pe-2" style={{ cursor: "pointer" }} onClick={() => router.push("/")} />
         <div className="d-flex align-items-center">
-          <button className={["bg-primaryBlue text-white px-4 py-2 mx-2", HeaderStyle.button_mobile, HeaderStyle.button_primary].join(" ")}>
-            <p className="mb-0 text-nowrap" style={{ fontSize: "14px" }} onClick={() => openNewTab('https://app.terablock.com/')} onMouseOut={() => setButtonText("Get Started")}>
+          {/* <button className={["bg-primaryBlue text-white px-4 py-2 mx-2", HeaderStyle.button_mobile, HeaderStyle.button_primary].join(" ")}>
+            <p className="mb-0 text-nowrap" style={{ fontSize: "14px" }} onClick={() => openNewTab('https://app.terablock.com/login')} onMouseOut={() => setButtonText("Get Started")}>
               {buttonText}
             </p>
-          </button>
+          </button> */}
           <img src="/assets/icons/hamburger-menu.svg" style={{ cursor: "pointer" }} className="ms-2" onClick={() => setIsOpen(true)} />
         </div>
         {isOpen && (
