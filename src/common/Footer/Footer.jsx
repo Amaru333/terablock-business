@@ -254,7 +254,7 @@ function Footer() {
             </a>
             &nbsp;&nbsp;
             <a href="https://www.linkedin.com/company/myTeraBlock/" target="_blank">
-              <img src="/assets/icons/Li.png" style={{width:33, height:33}}/>
+              <img src="/assets/icons/LI.png" style={{width:33, height:33}}/>
             </a>
             &nbsp;&nbsp;
             <a href="https://www.instagram.com/myterablock/" target="_blank">
