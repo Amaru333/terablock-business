@@ -32,7 +32,7 @@ function CoinLists() {
                 CoinsList is our carefully selected portfolio of cryptocurrencies that reflects a theme, idea or goal. It exposes you to the most sought-after cryptocurrencies without requiring you to invest time and effort in learning about them.
               </p>
               <p className="text-cardDescriptionColor fs-6 mb-4" style={{ textAlign: "justify", lineHeight: "30px" }}>
-                Our aim with CoinsList is to help you become an informed investor, no matter how much or how little you want to invest. CoinsListempowers you with simplified investments and helps you realise your financial goals from our easy-to-use unified platform.
+                Our aim with CoinsList is to help you become an informed investor, no matter how much or how little you want to invest. CoinsList empowers you with simplified investments and helps you realise your financial goals from our easy-to-use unified platform.
               </p>
               <div className="d-flex justify-content-center justify-content-md-start">
                 <UIButton type="primary" style={{ marginRight: "10px" }} ml0 width="150px" onClick={() => openNewTab('https://app.terablock.com/login')} onMouseOut={() => setButtonText("Get Started")}>
