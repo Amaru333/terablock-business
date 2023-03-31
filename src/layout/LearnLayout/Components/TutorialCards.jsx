@@ -24,12 +24,12 @@ function TutorialCards() {
     {
       title: "Crypto Basics",
       icon: "basics",
-      link: "crypto-basics",
+      link: "cryptobasics",
     },
     {
       title: "Tips & Tutorials",
       icon: "tips",
-      link: "tips-and-tutorials",
+      link: "tips",
     },
     {
       title: "Market Updates",

@@ -27,14 +27,14 @@ function LearnLayout() {
       <PostsSection />
       <TutorialCards />
       <HorizontalCards
-        id="crypto-basics"
+        id="cryptobasics"
         data={cryptoBasis}
         title="Crypto Basics"
         description_1="Cryptography is something you're new to."
         description_2="Not for long; begin with these instructions and explanations. "
       />
       <HorizontalCards
-        id="tips-and-tutorials"
+        id="tips"
         data={cryptotips}
         title="Tips & Tutorials"
         description_1="Cryptography is something you're new to."
