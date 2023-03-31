@@ -4,9 +4,9 @@ import { useScreenSize } from "../../../functions/useScreenSize";
 function RewardsProgramSection() {
   const width = useScreenSize().width;
   return (
-    <div style={{ backgroundColor: "#204ff4" }}>
+    <div style={{ backgroundColor: "#204ff4" }} id="rewards">
       <div className="py-4" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : width > 940 ? "83%" : "96%" }}>
-        <div className="text-white text-center mt-5 px-4 px-md-2">
+        <div className="text-white text-center mt-5 px-4 px-md-2" >
           <h2 className="fw-bold">Rewards Program</h2>
           <p className="mb-0">TeraBlock rewards incentivise the community to acquire, utilise and stake TBC.</p>
           <div className="row d-flex flex-column-reverse flex-md-row mt-0 mt-xl-3 pb-5">

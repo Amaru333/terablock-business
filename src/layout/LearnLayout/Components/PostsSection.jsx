@@ -47,7 +47,7 @@ function PostsSection() {
                     <div key={index}>
                       <img src={el.feature_image} className="rounded w-100" />
                       <div className="my-4 d-flex align-items-center justify-content-between">
-                        <DifficultyTag level={el.tags[1].name} />
+                        <DifficultyTag level={el.tags[1]?.name} />
                         <div className="d-flex align-items-center">
                           <img src="/assets/icons/time.svg" />
                           <span style={{ color: "#797979", fontSize: "14px", marginLeft: "5px", fontWeight: "600" }}>{el.reading_time} mins</span>
@@ -74,10 +74,10 @@ function PostsSection() {
                 {popular_posts.map((post, i) => (
                   <div className="my-3" key={i} style={{ cursor: 'pointer' }}>
                       <p className="m-0" style={{ color: "#636363", fontSize: "14px", fontWeight: "600" }}>
-                        {post.tags[1].name}
+                        {post.tags[1]?.name}
                       </p>
                       <Link href={`learn/${post.slug}`}>
-                      <p className="m-0 fs-5 postHover" style={{ fontWeight: "700" }}>
+                      <p className="m-0 fs-5" style={{ fontWeight: "700" }}>
                         {post.title}
                       </p>
                       </Link>

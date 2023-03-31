@@ -72,7 +72,7 @@ function EssentialsSection() {
           ))}
         </div>
         <div className="d-flex justify-content-center mt-5">
-          <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
+          <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/login')} onMouseOut={() => setButtonText("Get Started")}>
             {buttonText}
           </UIButton>
           <UIButton onClick={() => router.push("/learn")}>Learn More</UIButton>

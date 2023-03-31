@@ -67,12 +67,12 @@ function IntroSection() {
                   The wiser way to invest in crypto assets
                 </p>
                 <p className="my-4" style={{ color: "#5a5b5b" }}>
-                  TeraBlock is a truly decentralised platform that gives you the knowledge, tools and support to manage your crypto better.
+                  TeraBlock is a truly decentralised platform that gives you the knowledge, tools, and support to transition to a decentralised Web3 economy easily
                 </p>
               </div>
               <div className="d-flex my-2 justify-content-center justify-content-md-start">
                 {/* <Link href={'https://app.terablock.com/'}> */}
-                  <UIButton ml0 type="primary" width="150px" style={{ marginRight: "10px" }} onMouseOut={() => setButtonText("Get Started")} onClick={() => openNewTab('https://app.terablock.com/getstarted')}>
+                  <UIButton ml0 type="primary" width="150px" style={{ marginRight: "10px" }} onMouseOut={() => setButtonText("Get Started")} onClick={() => openNewTab('https://app.terablock.com/login')}>
                     {buttonText}
                   </UIButton>
                 {/* </Link> */}

@@ -21,7 +21,7 @@ function WhatAreCoinlistsSection() {
           <div className="col-12 col-md-6 mt-4 mt-md-0 d-flex align-items-center">
             <div style={{ color: "#5a5b5d" }}>
               <p className="fs-6" style={{ textAlign: "justify", lineHeight: "30px" }}>
-                CoinsLists is our carefully selected portfolio of cryptocurrencies that reflects a theme, idea or goal. It exposes you to the most sought-after cryptocurrencies without requiring you to invest time and effort in learning about them.
+                CoinsList is our carefully selected portfolio of cryptocurrencies that reflects a theme, idea or goal. It exposes you to the most sought-after cryptocurrencies without requiring you to invest time and effort in learning about them.
               </p>
               <p className="fs-6" style={{ textAlign: "justify", lineHeight: "30px" }}>
                 Our aim with CoinsList is to help you become an informed investor, no matter how much or how little you want to invest. CoinsList empowers you with simplified investments and helps you realise your financial goals from our easy-to-use unified platform.

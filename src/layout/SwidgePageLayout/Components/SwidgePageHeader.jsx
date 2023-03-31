@@ -29,7 +29,7 @@ function SwidgePageHeader() {
               )} */}
             </div>
             <div className={`col-12 col-md-6 d-flex ${width > 768 ? "justify-content-end" : "justify-content-center"}`}>
-              <div style={{ maxWidth: width > 767 ? "80%" : "70vw", maxHeight: width > 767 ? "350px" : "300px", padding: width > 767 ? "50px" : "0px" }}>
+              <div style={{ maxWidth: width > 767 ? "430px" : "70vw", maxHeight: width > 767 ? "350px" : "300px", padding: width > 767 ? "50px" : "0px" }}>
                 <UILottie animation={HeroAnimation1} />
               </div>
             </div>

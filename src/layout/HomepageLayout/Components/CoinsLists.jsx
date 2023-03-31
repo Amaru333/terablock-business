@@ -18,7 +18,7 @@ function CoinLists() {
     <div className="py-5 bg-white px-0">
       <div className="text-center mb-2 px-3" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "68%" : width > 940 ? "80%" : "100%" }}>
         <h2 className="text-primaryTextDark fw-bold pt-4">
-          <b>Build your long-term crypto portfolio with CoinsLists</b>
+          <b>Build your long-term crypto portfolio with CoinsList</b>
         </h2>
         <p className="fs-6" style={{ color: "#5a5b5b" }}>
           CoinsList is a set and forget approach to investing in Cryptocurrencies. Set your financial goals and let your money work for you.
@@ -29,13 +29,13 @@ function CoinLists() {
           <div className="col-12 col-md-6 mt-4 mt-md-0 d-flex align-items-center p-0 px-0 px-md-3">
             <div style={{ width: width < 768 ? "100%" : "85%" }}>
               <p className="text-cardDescriptionColor fs-6" style={{ textAlign: "justify", lineHeight: "30px" }}>
-                CoinsLists is our carefully selected portfolio of cryptocurrencies that reflects a theme, idea or goal. It exposes you to the most sought-after cryptocurrencies without requiring you to invest time and effort in learning about them.
+                CoinsList is our carefully selected portfolio of cryptocurrencies that reflects a theme, idea or goal. It exposes you to the most sought-after cryptocurrencies without requiring you to invest time and effort in learning about them.
               </p>
               <p className="text-cardDescriptionColor fs-6 mb-4" style={{ textAlign: "justify", lineHeight: "30px" }}>
-                Our aim with CoinsList is to help you become an informed investor, no matter how much or how little you want to invest. CoinsListempowers you with simplified investments and helps you realise your financial goals from our easy-to-use unified platform.
+                Our aim with CoinsList is to help you become an informed investor, no matter how much or how little you want to invest. CoinsList empowers you with simplified investments and helps you realise your financial goals from our easy-to-use unified platform.
               </p>
               <div className="d-flex justify-content-center justify-content-md-start">
-                <UIButton type="primary" style={{ marginRight: "10px" }} ml0 width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
+                <UIButton type="primary" style={{ marginRight: "10px" }} ml0 width="150px" onClick={() => openNewTab('https://app.terablock.com/login')} onMouseOut={() => setButtonText("Get Started")}>
                   {buttonText}
                 </UIButton>
                 <UIButton style={{ marginLeft: "20px !important" }} onClick={() => router.push("/coinslists")}>

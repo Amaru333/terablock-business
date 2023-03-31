@@ -12,7 +12,7 @@ function StartCryptoJourneyCard() {
         </p>
         <div className="d-flex flex-column flex-md-row align-items-center align-items-md-start">
           <div className="mb-4 mb-md-0">
-            <UIButton type="secondary" onClick={() => window.open("https://app.terablock.com/getstarted", "_blank")}>Get started</UIButton>
+            <UIButton type="secondary" onClick={() => window.open("https://app.terablock.com/login", "_blank")}>Get started</UIButton>
           </div>
           <UIButton type="primary-light">Learn more</UIButton>
         </div>

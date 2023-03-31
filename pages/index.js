@@ -11,7 +11,6 @@ export default function Home() {
         <meta name="description" content="Crypto Products Aggregator" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <HomepageLayout />
     </div>
   );

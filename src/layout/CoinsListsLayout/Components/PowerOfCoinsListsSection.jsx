@@ -15,7 +15,7 @@ function PowerOfCoinsListsSection() {
   const descriptionData = [
     {
       title: "Be in control",
-      description: "Unlike most  platforms, CoinsLists are Non-Custodial and fully Decentralized.",
+      description: "Unlike most  platforms, CoinsList are Non-Custodial and fully Decentralized.",
       image: "/assets/icons/terablock-swidge/ease.svg",
     },
     {
@@ -80,13 +80,13 @@ function PowerOfCoinsListsSection() {
       img: "9",
     },
     {
-      title: "Track CoinsLists",
+      title: "Track CoinsList",
       desc: "Track and manage seamlessly with a real-time value on a multi-protocol unified platform.",
       img: "12",
     },
     {
       title: "Invest regularly with SIPs",
-      desc: "Start a SIP on your CoinsLists for every week, month, or quarter to invest systematically.",
+      desc: "Start a SIP on your CoinsList for every week, month, or quarter to invest systematically.",
       img: "27",
     },
     {
