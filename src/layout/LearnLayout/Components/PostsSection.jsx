@@ -1,8 +1,7 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useScreenSize } from "../../../functions/useScreenSize";
-import Link from 'next/link'
-
+import Link from "next/link";
 
 function PostsSection() {
   const width = useScreenSize().width;
@@ -17,7 +16,7 @@ function PostsSection() {
   useEffect(() => {
     axios.get("https://blogv2.terablock.com/ghost/api/content/posts/?key=0489294cc94510ae9335da2c7f&filter=featured:true&limit=1&include=tags").then((res) => {
       setFeaturePost(res.data.posts);
-      console.log(featured_post, 'featurepost data')
+      console.log(res.data.posts, "res.data.posts");
     });
   }, []);
   const DifficultyTag = ({ level }) => {
@@ -53,9 +52,9 @@ function PostsSection() {
                           <span style={{ color: "#797979", fontSize: "14px", marginLeft: "5px", fontWeight: "600" }}>{el.reading_time} mins</span>
                         </div>
                       </div>
-                      <h4 className="fw-bold">{featured_post.title}</h4>
+                      <h4 className="fw-bold">{el.meta_title}</h4>
                       <Link href={`learn/${el.slug}`}>
-                        <p className="my-2 fs-6" style={{ color: "#5a5b5d", cursor: 'pointer' }}>
+                        <p className="my-2 fs-6" style={{ color: "#5a5b5d", cursor: "pointer" }}>
                           {el.excerpt} . . .<span style={{ color: "#0052FF", fontWeight: "700" }}> read more</span>
                         </p>
                       </Link>
@@ -72,16 +71,16 @@ function PostsSection() {
               </h4>
               <div className="d-flex flex-column">
                 {popular_posts.map((post, i) => (
-                  <div className="my-3" key={i} style={{ cursor: 'pointer' }}>
-                      <p className="m-0" style={{ color: "#636363", fontSize: "14px", fontWeight: "600" }}>
-                        {post.tags[1]?.name}
-                      </p>
-                      <Link href={`learn/${post.slug}`}>
+                  <div className="my-3" key={i} style={{ cursor: "pointer" }}>
+                    <p className="m-0" style={{ color: "#636363", fontSize: "14px", fontWeight: "600" }}>
+                      {post.tags[1]?.name.charAt(0).toUpperCase() + post.tags[1]?.name.slice(1) || ""}
+                    </p>
+                    <Link href={`learn/${post.slug}`}>
                       <p className="m-0 fs-5 postHover" style={{ fontWeight: "700" }}>
                         {post.title}
                       </p>
-                      </Link>
-                    </div>
+                    </Link>
+                  </div>
                 ))}
               </div>
             </div>
