@@ -12,7 +12,11 @@ function Header() {
   const [buttonText, setButtonText] = useState("Get Started");
   const NavbarMenu = ({ name, link }) => {
     return (
-      <p className="mb-0 px-3 fw-bold px-xxl-4" onClick={() => router.push(link)} style={{ fontSize: "15px", fontWeight: 500, cursor: "pointer", color: router.pathname == link ? "#0251ff" : "#212529" }}>
+      <p
+        className="mb-0 px-3 fw-bold px-xxl-4"
+        onClick={() => router.push(link)}
+        style={{ fontSize: "15px", fontWeight: 500, cursor: "pointer", color: router.pathname == link ? "#0251ff" : "#212529" }}
+      >
         {name}
       </p>
     );
@@ -20,7 +24,7 @@ function Header() {
   const menu_items = [
     {
       name: "CoinsList",
-      link: "/coinslists",
+      link: "/coinslist",
     },
     {
       name: "Swidge",
@@ -45,7 +49,7 @@ function Header() {
   ];
   const openNewTab = (link) => {
     window.open(link, "_blank");
-  }
+  };
   if (width > 1000) {
     return (
       <div className="bg-white" style={{ boxShadow: "0px 2px 20px 0px rgba(0, 0, 0, 0.15)" }}>
@@ -58,9 +62,16 @@ function Header() {
           </div>
           <div className="d-flex align-items-center">
             <p className="mb-0 me-3 pb-1" style={{ fontSize: "15px", fontWeight: 500, cursor: "pointer", borderBottom: "2px solid #E3297E" }}>
-              <a href="https://app.terablock.com/login" target='_blank' style={{ "text-decoration": "none", "color": "#111111" }}> Launch App → </a>
+              <a href="https://app.terablock.com/login" target="_blank" style={{ "text-decoration": "none", color: "#111111" }}>
+                {" "}
+                Launch App →{" "}
+              </a>
             </p>
-            <button className={["bg-primaryBlue text-white px-4 py-2 mx-2", HeaderStyle.button, HeaderStyle.button_primary].join(" ")} onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
+            <button
+              className={["bg-primaryBlue text-white px-4 py-2 mx-2", HeaderStyle.button, HeaderStyle.button_primary].join(" ")}
+              onClick={() => openNewTab("https://app.terablock.com/getstarted")}
+              onMouseOut={() => setButtonText("Get Started")}
+            >
               {buttonText}
             </button>
           </div>
@@ -73,7 +84,7 @@ function Header() {
         <img src="/assets/icons/logo-blue.svg" className="pe-2" style={{ cursor: "pointer" }} onClick={() => router.push("/")} />
         <div className="d-flex align-items-center">
           <button className={["bg-primaryBlue text-white px-4 py-2 mx-2", HeaderStyle.button_mobile, HeaderStyle.button_primary].join(" ")}>
-            <p className="mb-0 text-nowrap" style={{ fontSize: "14px" }} onClick={() => openNewTab('https://app.terablock.com/')} onMouseOut={() => setButtonText("Get Started")}>
+            <p className="mb-0 text-nowrap" style={{ fontSize: "14px" }} onClick={() => openNewTab("https://app.terablock.com/")} onMouseOut={() => setButtonText("Get Started")}>
               {buttonText}
             </p>
           </button>

@@ -44,7 +44,7 @@ function Footer() {
         {
           link: "https://www.coingecko.com/en/coins/terablock",
           name: "TBC on CoinGecko",
-        }
+        },
       ],
     },
     {
@@ -92,7 +92,7 @@ function Footer() {
           name: "Buy",
         },
         {
-          link: "/coinslists",
+          link: "/coinslist",
           name: "CoinsList",
         },
         {
@@ -217,19 +217,24 @@ function Footer() {
           {data.title}
         </p>
         <div className="flex flex-col">
-        {data.pages.map((page, index) => (
-          <div className="mb-1 fw-light my-2">
-          <a href={page.link} target='_blank' key={index} className="mb-0 fw-light my-2 text-white" style={{ cursor: "pointer",textDecoration: "none" }}>
-            {page.name}
-          </a></div>
-        ))}
+          {data.pages.map((page, index) => (
+            <div className="mb-1 fw-light my-2">
+              <a href={page.link} target="_blank" key={index} className="mb-0 fw-light my-2 text-white" style={{ cursor: "pointer", textDecoration: "none" }}>
+                {page.name}
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     );
   };
   return (
     <div className="bg-footerBg">
-      <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossOrigin="anonymous"></Script>
+      <Script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossOrigin="anonymous"
+      ></Script>
 
       <div className="px-4 px-md-5 py-5 text-white">
         <div className="row mx-0">
@@ -250,19 +255,19 @@ function Footer() {
         <div className="d-flex justify-content-between px-4 px-md-5 pt-0 pb-5 pt-md-4 pb-md-3">
           <div className="ps-md-4">
             <a href="https://twitter.com/myterablock" target="_blank">
-              <img src="/assets/icons/Tw.png" style={{width:33, height:33}}/>
+              <img src="/assets/icons/Tw.png" style={{ width: 33, height: 33 }} />
             </a>
             &nbsp;&nbsp;
             <a href="https://www.linkedin.com/company/myTeraBlock/" target="_blank">
-              <img src="/assets/icons/Li.png" style={{width:33, height:33}}/>
+              <img src="/assets/icons/Li.png" style={{ width: 33, height: 33 }} />
             </a>
             &nbsp;&nbsp;
             <a href="https://www.instagram.com/myterablock/" target="_blank">
-              <img src="/assets/icons/I.png" style={{width:33, height:33}}/>
+              <img src="/assets/icons/I.png" style={{ width: 33, height: 33 }} />
             </a>
             &nbsp;&nbsp;
             <a href="https://t.me/TeraBlock" target="_blank">
-              <img src="/assets/icons/Tel.png" style={{width:33, height:33}}/>
+              <img src="/assets/icons/Tel.png" style={{ width: 33, height: 33 }} />
             </a>
             &nbsp;&nbsp;
             <a href="mailto:support@terablock.com">
@@ -276,17 +281,21 @@ function Footer() {
       </div>
       <div className="row mx-0 px-3 px-md-5 text-white text-center text-md-start pt-5 pt-md-0" style={{ fontWeight: 300 }}>
         <p className="mb-0 pb-3 col-12 col-md-4 px-4" style={{ textAlign: "justify" }}>
-        TeraBlock is not a broker, financial institution or intermediary and is in no way your agent, advisor, or custodian. TeraBlock is not FDIC insured and does not give any Bank guarantee. You acknowledge, understand, agree, and assume the risks involved in transacting in digital assets, you may lose value. Before transacting, consider your investment objectives, TeraBlock’s charges and expenses. TeraBlock is a non-custodial platform. TeraBlock cannot initiate a transfer of any of your cryptocurrency or digital assets or otherwise access your digital assets.
-          
+          TeraBlock is not a broker, financial institution or intermediary and is in no way your agent, advisor, or custodian. TeraBlock is not FDIC insured and does not give any Bank guarantee. You
+          acknowledge, understand, agree, and assume the risks involved in transacting in digital assets, you may lose value. Before transacting, consider your investment objectives, TeraBlock’s
+          charges and expenses. TeraBlock is a non-custodial platform. TeraBlock cannot initiate a transfer of any of your cryptocurrency or digital assets or otherwise access your digital assets.
         </p>
         <p className="mb-0 pb-3 col-12 col-md-4 px-4" style={{ textAlign: "justify" }}>
-        TeraBlock’s services are neither investment advise, nor financial planning or tax advisory. Past performance of any advise, does not guarantee future results, and the likelihood of investment outcomes are hypothetical in nature. Services of TeraBlock may not be construed as an offer, solicitation of an offer, or advice to transact in Digital assets in jurisdictions where TeraBlock is not registered.
-        <br />
+          TeraBlock’s services are neither investment advise, nor financial planning or tax advisory. Past performance of any advise, does not guarantee future results, and the likelihood of
+          investment outcomes are hypothetical in nature. Services of TeraBlock may not be construed as an offer, solicitation of an offer, or advice to transact in Digital assets in jurisdictions
+          where TeraBlock is not registered.
           <br />
-          © TeraBlock Technologies Limited
+          <br />© TeraBlock Technologies Limited
         </p>
         <p className="mb-0 pb-3 col-12 col-md-4 px-4" style={{ textAlign: "justify" }}>
-             TeraBlock has no fiduciary relationship or obligation to you regarding any decisions or activities that you affect in connection with your use of the Services. Unless explicitly provided in writing, TeraBlock does not host or maintain ecosystem partners accessible on our Services, do not participate in any transactions on such ecosystem partners’ platforms, and TeraBlock does not recommend, endorse, or otherwise take a position on your use of these services.
+          TeraBlock has no fiduciary relationship or obligation to you regarding any decisions or activities that you affect in connection with your use of the Services. Unless explicitly provided in
+          writing, TeraBlock does not host or maintain ecosystem partners accessible on our Services, do not participate in any transactions on such ecosystem partners’ platforms, and TeraBlock does
+          not recommend, endorse, or otherwise take a position on your use of these services.
         </p>
       </div>
     </div>
