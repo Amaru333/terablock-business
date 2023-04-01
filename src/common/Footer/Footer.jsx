@@ -14,7 +14,7 @@ function Footer() {
       title: "TBC Token",
       pages: [
         {
-          link: "https://app.terablock.com/getstarted",
+          link: "https://app.terablock.com/login",
           name: "Stake TBC",
         },
         {
@@ -84,7 +84,7 @@ function Footer() {
       title: "Products",
       pages: [
         {
-          link: "https://app.terablock.com/getstarted",
+          link: "https://app.terablock.com/login",
           name: "Get Started",
         },
         {
@@ -137,7 +137,7 @@ function Footer() {
           name: "Blog",
         },
         {
-          link: "https://app.terablock.com/getstarted",
+          link: "https://app.terablock.com/login",
           name: "Browse Cryptocurrencies",
         },
         {
@@ -145,27 +145,27 @@ function Footer() {
           name: "Crypto Basics",
         },
         {
-          link: "https://blogv2.terablock.com/untitled-2/",
+          link: "https://blog.terablock.com/untitled-2/",
           name: "How to set up a web3 wallet?",
         },
         {
-          link: "https://blogv2.terablock.com/what-is-ethereum/",
+          link: "https://terablock.com/learn/what-is-ethereum/",
           name: "How to buy crypto?",
         },
         {
-          link: "https://blogv2.terablock.com/what-is-bitcoin/",
+          link: "https://terablock.com/learn/what-is-bitcoin/",
           name: "What is Bitcoin & Ethereum?",
         },
         {
-          link: "https://blogv2.terablock.com/what-is-decentralised-finance-defi/",
+          link: "https://terablock.com/learn/what-is-decentralised-finance-defi/",
           name: "What is DeFi?",
         },
         {
-          link: "https://blogv2.terablock.com/basics-of-blockchain-explained/",
+          link: "https://terablock.com/learn/basics-of-blockchain-explained/",
           name: "What is Blockchain?",
         },
         {
-          link: "https://blogv2.terablock.com/what-is-staking-all-about/",
+          link: "https://terablock.com/learn/what-is-staking-all-about/",
           name: "What is staking?",
         },
       ],
@@ -259,7 +259,7 @@ function Footer() {
             </a>
             &nbsp;&nbsp;
             <a href="https://www.linkedin.com/company/myTeraBlock/" target="_blank">
-              <img src="/assets/icons/Li.png" style={{ width: 33, height: 33 }} />
+              <img src="/assets/icons/LI.png" style={{width:33, height:33}}/>
             </a>
             &nbsp;&nbsp;
             <a href="https://www.instagram.com/myterablock/" target="_blank">

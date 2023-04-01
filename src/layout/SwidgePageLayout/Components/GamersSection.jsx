@@ -31,7 +31,7 @@ function GamersSection() {
                 Swidge is a powerful Web3 multi-protocol automation that helps users buy, swap, bridge and transfer tokens from a multichain unified platform to a blockchain game (Play-to-earn) or a decentralised application (Dapp) in just a few clicks.
               </p>
               <div className="d-flex justify-content-center justify-content-center">
-                <UIButton ml0 type="primary" width="160px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
+                <UIButton ml0 type="primary" width="160px" onClick={() => openNewTab('https://app.terablock.com/login')} onMouseOut={() => setButtonText("Get Started")}>
                   {buttonText}
                 </UIButton>
               </div>

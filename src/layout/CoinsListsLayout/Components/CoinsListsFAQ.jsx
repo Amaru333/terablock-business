@@ -39,7 +39,7 @@ function CoinsListsFAQ() {
             <br />
             <br />
             <div>
-              <UIButton onClick={()=>{open("https://app.terablock.com/getstarted")}}>Earn Rewards</UIButton>
+              <UIButton onClick={()=>{open("https://app.terablock.com/login")}}>Earn Rewards</UIButton>
               <UIButton type="primary-light" onClick={()=>{open("/community#rewards")}}>Learn More</UIButton>
             </div>
           </UIAccordion>

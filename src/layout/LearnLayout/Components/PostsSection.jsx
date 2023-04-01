@@ -71,12 +71,12 @@ function PostsSection() {
               </h4>
               <div className="d-flex flex-column">
                 {popular_posts.map((post, i) => (
-                  <div className="my-3" key={i} style={{ cursor: "pointer" }}>
-                    <p className="m-0" style={{ color: "#636363", fontSize: "14px", fontWeight: "600" }}>
-                      {post.tags[1]?.name.charAt(0).toUpperCase() + post.tags[1]?.name.slice(1) || ""}
-                    </p>
-                    <Link href={`learn/${post.slug}`}>
-                      <p className="m-0 fs-5 postHover" style={{ fontWeight: "700" }}>
+                  <div className="my-3" key={i} style={{ cursor: 'pointer' }}>
+                      <p className="m-0" style={{ color: "#636363", fontSize: "14px", fontWeight: "600" }}>
+                        {post.tags[1]?.name}
+                      </p>
+                      <Link href={`learn/${post.slug}`}>
+                      <p className="m-0 fs-5" style={{ fontWeight: "700" }}>
                         {post.title}
                       </p>
                     </Link>

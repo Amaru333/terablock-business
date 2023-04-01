@@ -11,11 +11,11 @@ function StartJourney() {
       <p className="text-primaryDark mb-4 pt-3 fs-4 fs-md-1 fw-bold text-center">Start your crypto journey, today!</p>
       <div className="d-flex flex-row align-items-center justify-content-center">
         <div className="mb-0">
-          <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/getstarted')} onMouseOut={() => setButtonText("Get Started")}>
+          <UIButton type="primary" width="150px" onClick={() => openNewTab('https://app.terablock.com/login')} onMouseOut={() => setButtonText("Get Started")}>
             {buttonText}
           </UIButton>
         </div>
-        <UIButton>Discover Swidge</UIButton>
+        <UIButton onClick={() => openNewTab('https://app.terablock.com/login')}>Launch App</UIButton>
       </div>
     </div>
   );

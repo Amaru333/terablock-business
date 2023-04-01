@@ -72,7 +72,7 @@ function IntroSection() {
               </div>
               <div className="d-flex my-2 justify-content-center justify-content-md-start">
                 {/* <Link href={'https://app.terablock.com/'}> */}
-                  <UIButton ml0 type="primary" width="150px" style={{ marginRight: "10px" }} onMouseOut={() => setButtonText("Get Started")} onClick={() => openNewTab('https://app.terablock.com/getstarted')}>
+                  <UIButton ml0 type="primary" width="150px" style={{ marginRight: "10px" }} onMouseOut={() => setButtonText("Get Started")} onClick={() => openNewTab('https://app.terablock.com/login')}>
                     {buttonText}
                   </UIButton>
                 {/* </Link> */}
