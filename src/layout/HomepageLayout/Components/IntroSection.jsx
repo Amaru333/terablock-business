@@ -10,75 +10,95 @@ import Link from "next/link";
 function IntroSection() {
   const width = useScreenSize().width;
   const [buttonText, setButtonText] = useState("Get Started");
-  const [data, setData] = useState([])
+  const [data, setData] = useState([]);
   useEffect(() => {
     axios.get("https://tersblock-stats-be-p6as9.ondigitalocean.app/ecosystemstats").then((res) => {
       setData(res.data.data);
-      console.log(data, 'this is the api for market stats....')
+      console.log(data, "this is the api for market stats....");
     });
   }, []);
   const dictionary = [
     {
       id: 1,
-      title: 'Transaction Volume',
-      value: data?.totalVolume
+      title: "Transaction Volume",
+      value: data?.totalVolume,
     },
     {
       id: 2,
-      title: 'Tokens Transacted',
-      value: data?.totalTokens
+      title: "Tokens Transacted",
+      value: data?.totalTokens,
     },
     {
       id: 3,
-      title: 'Secure Transactions',
-      value: data?.totalTransactions
+      title: "Secure Transactions",
+      value: data?.totalTransactions,
     },
     {
       id: 4,
-      title: 'Happy Users',
-      value: data?.uniqueUsers
-    }
-  ]
+      title: "Happy Users",
+      value: data?.uniqueUsers,
+    },
+  ];
   const openNewTab = (link) => {
     window.open(link, "_blank");
-  }
+  };
   return (
     <div className={`bg-white text-center text-md-start position-relative ${(width > 1400 || width < 800) && "pt-5"}`}>
       <div className={`px-xl-5`}>
         {/* <div style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : "83%" }}> */}
         <div style={{ width: width > 1499 ? "81%" : "100%", margin: "auto", maxWidth: "1700px" }}>
           <div className={`row mx-0 px-sm-4 px-md-2 pt-0 pt-md-4`}>
-            <div className="col-12 col-md-8 align-self-center">
+            {width < 768 && (
+              <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md start position-relative mb-5" style={{ alignItems: "start" }}>
+                <img src="/assets/icons/homepage/HeroSection.png" style={{ zIndex: 2, objectFit: "contain", width: width < 1400 || width > 800 ? "90%" : "90%", maxWidth: "600px" }} />
+              </div>
+            )}
+            <div className="col-12 col-md-6 align-self-center">
               <div className="d-flex flex-column mb-3 m-auto m-md-0" style={{ width: "fit-content" }}>
                 <div className="d-flex align-items-center">
                   <div>
-                    <img src="/assets/icons/homepage/notif.png" style={{ width: "16px" }} />
+                    <img src="/assets/icons/homepage/launch.png" style={{ width: "12px" }} />
                   </div>
                   <div>
-                    <p className="mb-0 mx-2 fw-medium text-center text-md-start" style={{ color: "#0251ff" }}>
-                      Your crypto in your control
+                    <p className="mb-0 mx-2 fw-bold text-center text-md-start" style={{ color: "#0251ff" }}>
+                      #TimeforDeFi
                     </p>
                   </div>
                 </div>
                 {/* <img src="/assets/images/underline.svg" style={{ width: "80px", alignSelf: "flex-end", marginRight: "10px" }} /> */}
               </div>
               <div className={IntroSectionStyles.intro_text_section}>
-                <p className={`${(width < 1400 || width > 800) && "mb-0"} mt-3`} style={{ color: "#1b2b6b", fontSize: width > 1500 ? "40pt" : width > 767 ? "24pt" : "30px", fontWeight: "600", lineHeight: width > 1500 ? "65px" : "40px" }}>
-                  The wiser way to invest in crypto assets
+                <p
+                  className={`${(width < 1400 || width > 800) && "mb-0"} mt-3`}
+                  style={{ color: "#1b2b6b", fontSize: width > 1500 ? "32pt" : width > 767 ? "24pt" : "30px", fontWeight: "600", lineHeight: width > 1500 ? "56px" : "40px" }}
+                >
+                  Launch DeFi Solutions Effortlessly, Without Technical Expertise
                 </p>
                 <p className="my-4" style={{ color: "#5a5b5b" }}>
-                  TeraBlock is a truly decentralised platform that gives you the knowledge, tools, and support to transition to a decentralised Web3 economy easily
+                  Comprehensive DeFi solutions, cross-chain bridging, swapping and fiat to crypto on-ramp to boost global multi-chain user adoption strategy.
                 </p>
               </div>
               <div className="d-flex my-2 justify-content-center justify-content-md-start">
                 {/* <Link href={'https://app.terablock.com/'}> */}
-                  <UIButton ml0 type="primary" width="150px" style={{ marginRight: "10px" }} onMouseOut={() => setButtonText("Get Started")} onClick={() => openNewTab('https://app.terablock.com/login')}>
-                    {buttonText}
-                  </UIButton>
+                <UIButton
+                  ml0
+                  type="primary"
+                  width="150px"
+                  style={{ marginRight: "10px" }}
+                  onMouseOut={() => setButtonText("Get Started")}
+                  onClick={() => openNewTab("https://app.terablock.com/login")}
+                >
+                  {buttonText}
+                </UIButton>
                 {/* </Link> */}
-                <UIButton type="secondary" onClick={() => {
-                  window.open("https://app.terablock.com/login", "_blank");
-                }}>Launch App</UIButton>
+                {/* <UIButton
+                  type="secondary"
+                  onClick={() => {
+                    window.open("https://app.terablock.com/login", "_blank");
+                  }}
+                >
+                  Launch App
+                </UIButton> */}
               </div>
               <div className={["d-flex justify-content-around justify-content-md-start", IntroSectionStyles.bottom_logos].join(" ")}>
                 <a href="https://cointelegraph.com/press-releases/terablock-and-splinterlands-collaborate-take-defi-gaming-to-new-heights" target="_blank">
@@ -95,11 +115,11 @@ function IntroSection() {
                 </a>
               </div>
             </div>
-            <div className="col-12 col-md-4 d-flex justify-content-center justify-content-md start position-relative" style={{ alignItems: "end" }}>
-              <img src="/assets/icons/homepage/Hero_Trade2.png" style={{ zIndex: 2, objectFit: "contain", width: width < 1400 || width > 800 ? "75%" : "90%", maxWidth: "300px" }} />
-              {/* <img src="/assets/icons/ellipse-red.svg" className="position-absolute" style={{ width: "50px", top: "0rem", right: "1rem" }} />
-            <img src="/assets/icons/ellipse-blue.svg" className="position-absolute" style={{ width: "25px", bottom: "0rem", left: "1rem" }} /> */}
-            </div>
+            {width > 767 && (
+              <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md start position-relative" style={{ alignItems: "start" }}>
+                <img src="/assets/icons/homepage/HeroSection.png" style={{ zIndex: 2, objectFit: "contain", width: width < 1400 || width > 800 ? "90%" : "90%", maxWidth: "600px" }} />
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -109,8 +129,8 @@ function IntroSection() {
         <div className="py-4 row px-0 px-sm-4 py-4 justify-content-center" style={{ maxWidth: "1700px", margin: "auto", width: width > 1499 ? "70%" : "100%" }}>
           {dictionary?.map((el, index) => (
             <div className="py-4 col col-md px-2">
-              <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600", whiteSpace: 'nowrap' }}>
-                {index == 0 ? '$' : ''} {width > 767 ? <CountUp duration={2} end={el.value} separator="," /> : abbreviateNumber(Math.round(el.value))}
+              <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "20pt" : "17pt", fontWeight: "600", whiteSpace: "nowrap" }}>
+                {index == 0 ? "$" : ""} {width > 767 ? <CountUp duration={2} end={el.value} separator="," /> : abbreviateNumber(Math.round(el.value))}
               </p>
               <p className="mb-0 text-center text-white" style={{ fontSize: width > 767 ? "12pt" : "14px" }}>
                 {el.title}
